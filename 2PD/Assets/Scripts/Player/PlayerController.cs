@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             EventOnDown.AddListener (MoveDown);
     }
 
-	void Update()
+	void FixedUpdate()
 	{
       
         //if (!isLocalPlayer) return;
