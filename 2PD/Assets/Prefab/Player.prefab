@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1453793797800494
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +292,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventOnDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114626849707412224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   playerSpeed: 1
-  playerMovement: 1
+  canMove: 1
   canInteract: 1
   canCombat: 1
   direction: {x: 0, y: 0, z: 0}
