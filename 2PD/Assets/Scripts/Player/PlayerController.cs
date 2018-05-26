@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject projectileSpawnPoint;
    
 
-    void Start()
+    public virtual void Start()
     {
        foreach (var item in Input.GetJoystickNames())
        {
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             EventOnDown.AddListener (MoveDown);
     }
 
-	void FixedUpdate()
+	public virtual void FixedUpdate()
 	{
       
         //if (!isLocalPlayer) return;
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
     
 
-    public void MoveLeft()
+    public virtual void MoveLeft()
 	{
 		{
 			transform.position += new Vector3 ( -1 * playerSpeed * Time.deltaTime , 0, 0);
@@ -208,7 +208,7 @@ public class PlayerController : MonoBehaviour
             //transform.eulerAngles = transform.forward * 90;
 		}
 	}
-	public void MoveRight()
+	public virtual void MoveRight()
 	{
 		{
 			transform.position += new Vector3 ( 1 * playerSpeed * Time.deltaTime , 0, 0);
@@ -218,7 +218,7 @@ public class PlayerController : MonoBehaviour
             //transform.eulerAngles = -transform.forward * 90;
 		}
 	}
-    public void MoveUp()
+    public virtual void MoveUp()
 	{
 		{
 			transform.position += new Vector3 ( 0, 1 * playerSpeed * Time.deltaTime, 0);
@@ -228,7 +228,7 @@ public class PlayerController : MonoBehaviour
             //transform.eulerAngles = transform.forward * 0;
 		}
 	}
-	public void MoveDown()
+	public virtual void MoveDown()
 	{
 		{
 			transform.position += new Vector3 ( 0, -1 * playerSpeed * Time.deltaTime, 0);
