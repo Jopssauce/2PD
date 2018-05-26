@@ -10,11 +10,18 @@ public class InventoryActor : MonoBehaviour
 	void Start () {
 		//The code below is just test code to sample inventory stacking. Just delete it
 		inventory = GetComponent<Inventory>();
-		for (int i = 0; i < 645; i++)
+		for (int i = 0; i < 700; i++)
 		{
 			inventory.AddItem(testItem);
 		}
-		//inventory.MoveAndReplaceItem(1,6);
+		inventory.MoveAndReplaceItem(0,6);
+		Debug.Log (inventory.GetItemBySlot(0));
+		Debug.Log (inventory.GetItemSlot(testItem));
+		Debug.Log (inventory.GetItem(testItem));
+		inventory.RemoveItem (testItem);
+		inventory.RemoveItemBySlot (9);
+
+		//inventory.RemoveItemBySlot(0);
 	}
 	
 	// Update is called once per frame

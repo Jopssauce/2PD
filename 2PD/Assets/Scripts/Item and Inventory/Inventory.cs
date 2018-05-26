@@ -20,30 +20,35 @@ public class Inventory : MonoBehaviour
 		int current = 0;
 		if (item.isStackable == true)
 		{
-			if (FindItem(item) != -1)
+			//Code that auto stacks
+			//If no item of same id is found run code
+			if (FindItemSlot(item) != -1)
 			{
-				i = FindItem(item);
+				i = FindItemSlot(item);
 				
 				prev = itemInventory[i].stacksAmount;
+				//Adds item stack to add
 				toAdd = item.stacksAmount;
-
+				//Adds toAdd and prev stacks
 				current = toAdd + prev;
+				//Extra stacks are remembered to add them to next slot
 				extraStack =  (current - itemInventory[i].maxStacks);	
 				if (extraStack < 0)
 				{
 					extraStack = 0;
 				}
+				//Then extra stacks are subtracted from current
 				itemInventory[i].stacksAmount = current - extraStack;
-				Debug.Log(i + " " + prev + " " + toAdd + " " + extraStack + " " + current + " " + itemInventory[i].stacksAmount);
+				//Debug.Log(i + " " + prev + " " + toAdd + " " + extraStack + " " + current + " " + itemInventory[i].stacksAmount);
 			}
 			else
 			{
+				//If there is an empty slot and no item of same ID is found then add new item to inventory
 				if (FindEmptySlot() != -1)
 				{
+					//If an empty slot is found instantiate clone and child item to inventory transform
 					i = FindEmptySlot();
-					itemInventory[i] = Instantiate(item);
-					
-					
+					itemInventory[i] = Instantiate(item, transform);
 				}
 			}
 		}
@@ -68,41 +73,92 @@ public class Inventory : MonoBehaviour
 		{
 			if (itemInventory[i] == null)
 			{
-				Debug.Log("Found empty");
+				//Debug.Log("Found empty");
 				return i;
 			}
 		}
-		Debug.Log("No slots left");
+		//Debug.Log("No slots left");
 		return -1;
 	}
 
 	//Returns index of first item found with the same ITEMID. Returns -1 if no item of type found
-	//If item found has full stacks proceed repeat operation
-	public int FindItem(BaseItem item)
+	public BaseItem GetItem(BaseItem item)
 	{
-		for (int i = 0; i < itemInventory.Length; i++)
+		foreach (var i in itemInventory) 
 		{
-			if (itemInventory[i] != null)
+			if (i != null)
 			{
-				if (itemInventory[i].itemID == item.itemID )
+				if (i.itemID == item.itemID )
 				{
-					if (itemInventory[i].stacksAmount >= itemInventory[i].maxStacks)
+					//Debug.Log("Found same item of same id");
+					return i;
+				}
+			}	
+		}
+		//Debug.Log("No item of same id found");
+		return null;
+	}
+	//Finds the first item slot but ignores items with full stacks
+	int FindItemSlot(BaseItem item)
+	{
+		int index = -1;
+		foreach (var i in itemInventory) 
+		{
+			index++;
+			if (i != null)
+			{
+				if (i.itemID == item.itemID )
+				{
+					if (i.stacksAmount >= i.maxStacks)
 					{
 						continue;
 					}
-					Debug.Log("Found same item of same id");
-					return i;
+					//Debug.Log("Found same item of same id");
+					return index;
 				}
-			}
-			
+			}	
 		}
-		Debug.Log("No item of same id found");
+		//Debug.Log("No item of same id found");
+		return -1;
+	}
+	//Gets the first item of type slot number
+	public int GetItemSlot(BaseItem item)
+	{
+		int index = -1;
+		foreach (var i in itemInventory) 
+		{
+			index++;
+			if (i != null)
+			{
+				if (i.itemID == item.itemID )
+				{
+					return index;
+				}
+			}	
+		}
+		//Debug.Log("No item of same id found");
 		return -1;
 	}
 
+	//Finds item by inventory slot
+	public BaseItem GetItemBySlot(int index)
+	{
+		inventoryChanged.Invoke();
+		return itemInventory[index];
+	}
+	//Removes first item found
 	public void RemoveItem(BaseItem item)
 	{
-		itemInventory[ FindItem(item)] = null;
+		BaseItem temp = itemInventory[ GetItemSlot(item)];
+		itemInventory [GetItemSlot (item)] = null;
+		Destroy (temp.gameObject);
+		inventoryChanged.Invoke();
+	}
+	public void RemoveItemBySlot(int index)
+	{
+		BaseItem temp = itemInventory [index];
+		itemInventory [index] = null;
+		Destroy (temp.gameObject);
 		inventoryChanged.Invoke();
 	}
 
@@ -111,7 +167,7 @@ public class Inventory : MonoBehaviour
 	{
 		if(itemInventory[slot1] == null || itemInventory[slot1] == null)
 		{
-			Debug.Log("No item to switch with"); 
+			//Debug.Log("No item to switch with"); 
 			inventoryChanged.Invoke();
 			return;
 		} 
@@ -128,13 +184,13 @@ public class Inventory : MonoBehaviour
 		itemInventory[slot1] = null;
 		inventoryChanged.Invoke();
 	}
-
-	//Simply Returns Item in specified slot 
-	public BaseItem GetItemFromSlot(int slot1)
-	{
-		inventoryChanged.Invoke();
-		return itemInventory[slot1];
-	}
+		
 	
-
+	public bool IsInventoryFull()
+	{
+		if (FindEmptySlot() == -1 && itemInventory[itemInventory.Length - 1].stacksAmount == itemInventory[itemInventory.Length - 1].maxStacks) {
+			return true;
+		}
+		return false;
+	}
 }

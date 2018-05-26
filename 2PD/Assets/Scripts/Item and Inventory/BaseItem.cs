@@ -11,6 +11,7 @@ public class BaseItem : MonoBehaviour
 	public string itemName = "Default";
 	public int 	itemID;
 	public bool isUsable;
+	public bool isConsumable;
 	public bool isStackable;
 	public bool isEquipable;
 	public int maxStacks = 64;
