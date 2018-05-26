@@ -19,7 +19,7 @@ public class Door : Interactable
 
 	public override void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Single(player => player.playerID != col.gameObject.GetComponent<PlayerController>().playerID))
+		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID != col.gameObject.GetComponent<PlayerController>().playerID))
 		{		
 			currentPlayer = col.gameObject.GetComponent<PlayerController>();
 			players.Add(currentPlayer);
@@ -30,7 +30,7 @@ public class Door : Interactable
 	}
 	public override void OnCollisionExit2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Single(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
+		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			EventOutRange.Invoke();

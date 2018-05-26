@@ -38,8 +38,7 @@ public class MultipleTargetCamera : MonoBehaviour
 
 	void Zoom()
 	{
-		//Debug.Log( playerBounds.size.x + "  "  + playerBounds.size.x / maxWidth );
-		float zoom = Mathf.Lerp(minZoom, maxZoom, playerBounds.size.x - playerBounds.size.y / maxWidth);
+		float zoom = Mathf.Lerp(minZoom, maxZoom, playerBounds.size.magnitude / maxWidth);
 		Camera.main.fieldOfView =  Mathf.Lerp(Camera.main.fieldOfView, zoom, Time.deltaTime);
 	}
 

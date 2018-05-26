@@ -3523,7 +3523,7 @@ MonoBehaviour:
     m_Extent: {x: 0, y: 0, z: 0}
   minZoom: 5
   maxZoom: 15
-  cameraSpeed: 4
+  cameraSpeed: 10
   offset: {x: 0, y: 0, z: -10}
   smooth: 0.5
   maxWidth: 2
