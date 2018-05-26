@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour {
 		gold = 200;
 	}
 	
-	public void Damage(float damage)
+	public virtual void DeductHp(float damage)
 	{
 		//if(!isServer) return;
 		hp -= damage;
@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour {
 		Debug.Log("Hit");
 		EventOnStatChanged.Invoke();
 	}
-	public void AddHp(float damage)
+	public virtual void AddHp(float damage)
 	{
 		//if(!isServer) return;
 		hp += damage;
@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour {
 		Debug.Log("heal");
 		EventOnStatChanged.Invoke();
 	}
-	public void AddCurrency(float damage)
+	public virtual void AddCurrency(float damage)
 	{
 		//if(!isServer) return;
 		gold += damage;

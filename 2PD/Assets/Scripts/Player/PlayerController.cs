@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public int playerID;
     public float playerSpeed;
-	public bool playerMovement = true;
+	public bool canMove = true;
 	public bool canInteract = true;
     public bool canCombat = true;
     public Vector3 direction;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 	{
       
         //if (!isLocalPlayer) return;
-		if (playerMovement == true && playerID == 0) 
+		if (canMove == true && playerID == 0) 
 		{
 			if (Input.GetAxisRaw("Horizontal") < 0) 
 			{
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
                 EventOnMove.Invoke();
 			}
 		}
-		if (playerMovement == true && playerID == 1) 
+		if (canMove == true && playerID == 1) 
 		{
 			if (Input.GetAxisRaw("Horizontal2") < 0) 
 			{

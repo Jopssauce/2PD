@@ -20,7 +20,7 @@ public class Door : Interactable
 	}
 	public override void Interact(PlayerController player)
 	{
-		if (buttons.All(button => button.isInteracted = true))
+		if (buttons.All(button => button.isInteracted == true))
 		{	
 			OpenDoor();
 			EventInteract.Invoke();

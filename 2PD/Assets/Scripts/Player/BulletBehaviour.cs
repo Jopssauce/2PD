@@ -14,7 +14,7 @@ public class BulletBehaviour : MonoBehaviour {
     {
 		if (col.gameObject.GetComponent<PlayerStats>()) 
 		{
-			col.gameObject.GetComponent<PlayerStats>().Damage(5);
+			col.gameObject.GetComponent<PlayerStats>().DeductHp(5);
 		}
 		
         Destroy(gameObject);
