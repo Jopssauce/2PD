@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour {
 	public float maxHp;
 	public float gold = 200;
 	public UnityEvent EventOnStatChanged;
+	public UnityEvent EventOnDead;
 	void Awake()
 	{
 		hp = maxHp;
@@ -20,7 +21,11 @@ public class PlayerStats : MonoBehaviour {
 	{
 		//if(!isServer) return;
 		hp -= damage;
-		if(hp < 0) hp = 0;
+		if(hp < 0)
+		{
+			hp = 0;
+			EventOnDead.Invoke();	
+		} 
 		Debug.Log("Hit");
 		EventOnStatChanged.Invoke();
 	}

@@ -9,6 +9,7 @@ public class Door : Interactable
 	public int requiredPlayers = 2;
 	public List<ButtonObject> buttons;
 	public List<PlayerController> players;
+	public List<EnemyController> enemies;
 	public GameObject targetLocation;
 	public override void Start()
 	{
@@ -17,6 +18,7 @@ public class Door : Interactable
 		{
 			item.EventOnInteract.AddListener(Interact);
 		}
+		requiredPlayers = gameManager.playerList.Capacity;
 	}
 	public override void Interact(PlayerController player)
 	{
@@ -61,7 +63,7 @@ public class Door : Interactable
 
 	void OpenDoor()
 	{
-		if (players.Count == requiredPlayers)
+		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null))
 		{
 			isOpen = true;
 		}
