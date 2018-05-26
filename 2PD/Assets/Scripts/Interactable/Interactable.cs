@@ -35,7 +35,13 @@ public class Interactable : MonoBehaviour
 
 	public GameManager gameManager;
 
-	public virtual void Start(){}
+	public virtual void Start()
+	{
+		currentPlayer = null;
+		isInteractable = false;
+		gameManager = GameManager.instance;
+
+	}
 
 	public virtual void Interact(PlayerController player){}
 
