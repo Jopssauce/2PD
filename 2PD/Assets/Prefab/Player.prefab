@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
-  playerSpeed: 2
+  playerSpeed: 1
   playerMovement: 1
   canInteract: 1
   canCombat: 1

@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void LateUpdate () 
+	{
 		
 	}
 
@@ -42,4 +42,6 @@ public class GameManager : MonoBehaviour {
 		}
 		return false;
 	}
+
+	
 }
