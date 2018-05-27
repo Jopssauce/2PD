@@ -6,8 +6,8 @@ using System.Linq;
 
 public class Inventory : MonoBehaviour 
 {
-	public const int inventorySlots = 10;
-	public BaseItem[] itemInventory = new BaseItem[inventorySlots];
+	public int inventorySlots = 10;
+	public List<BaseItem> itemInventory;
 
 	public UnityEvent inventoryChanged;
 	//Adds the item and automatically uses a stacking system
@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
 			if (FindEmptySlot() != -1)
 			{
 				i = FindEmptySlot();
-				itemInventory[i] = Instantiate(item);
+				itemInventory[i] = Instantiate(item, transform);
 				//Debug.Log(i + " " + prev + " " + toAdd + " " + extraStack + " " + current + " " + itemInventory[i].stacksAmount);
 			}
 		}
@@ -69,7 +69,7 @@ public class Inventory : MonoBehaviour
 	//Returns index of first empty slot found. Returns -1 if not empty slot fond
 	public int FindEmptySlot()
 	{
-		for (int i = 0; i < itemInventory.Length; i++)
+		for (int i = 0; i < itemInventory.Count; i++)
 		{
 			if (itemInventory[i] == null)
 			{
@@ -188,7 +188,7 @@ public class Inventory : MonoBehaviour
 	
 	public bool IsInventoryFull()
 	{
-		if (FindEmptySlot() == -1 && itemInventory[itemInventory.Length - 1].stacksAmount == itemInventory[itemInventory.Length - 1].maxStacks) {
+		if (FindEmptySlot() == -1 && itemInventory[itemInventory.Count - 1].stacksAmount == itemInventory[itemInventory.Count - 1].maxStacks) {
 			return true;
 		}
 		return false;

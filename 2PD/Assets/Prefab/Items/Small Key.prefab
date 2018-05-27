@@ -54,6 +54,7 @@ MonoBehaviour:
   itemName: Small Key
   itemID: 0
   isUsable: 0
+  isConsumable: 1
   isStackable: 0
   isEquipable: 0
   maxStacks: 64

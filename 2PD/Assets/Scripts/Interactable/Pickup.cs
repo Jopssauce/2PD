@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
 	public UnityEvent EventPickUp;
 	public float Amount = 5;
 	public Collider2D phyCollider;
+	public GameManager gameManager;
 
 	public virtual void OnTriggerEnter2D(Collider2D col)
 	{

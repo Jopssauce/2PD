@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 	public List<PlayerController> playerList;
+	public Inventory sharedInventory;
 	void Awake()
 	{
 		instance = this;

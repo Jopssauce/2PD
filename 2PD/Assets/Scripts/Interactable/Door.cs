@@ -10,13 +10,14 @@ public class Door : Interactable
 	public List<ButtonObject> buttons;
 	public List<PlayerController> players;
 	public List<EnemyController> enemies;
+	public BaseItem keyRequired;
 	public GameObject targetLocation;
 	public override void Start()
 	{
 		base.Start();
 		foreach (var item in gameManager.playerList)
 		{
-			item.EventOnInteract.AddListener(Interact);
+			//item.EventOnInteract.AddListener(Interact);
 		}
 		requiredPlayers = gameManager.playerList.Capacity;
 	}
@@ -35,8 +36,8 @@ public class Door : Interactable
 	{
 		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
 		{		
-			currentPlayer = col.gameObject.GetComponent<PlayerController>();
-			players.Add(currentPlayer);
+			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
+			players.Add(col.gameObject.GetComponent<PlayerController>());
 			EventInRange.Invoke();
 			isInteractable = true;
 		}
@@ -47,6 +48,7 @@ public class Door : Interactable
 		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
+			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
 			EventOutRange.Invoke();
 			isInteractable = false;
 		}
@@ -63,11 +65,27 @@ public class Door : Interactable
 
 	void OpenDoor()
 	{
-		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null))
+		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true )
 		{
 			isOpen = true;
 		}
 	}
+
+	bool SearchForKey()
+	{
+		if(keyRequired == null) return true;
+		foreach (var item in gameManager.sharedInventory.itemInventory)
+		{
+			if (item.itemName == keyRequired.itemName)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+
 
 
 }

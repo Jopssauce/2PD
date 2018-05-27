@@ -104,11 +104,6 @@ public class PlayerController : MonoBehaviour
                 EventOnMove.Invoke();
 			}
 		}
-		
-	
-	}
-	void Update()
-	{
 		if (Input.GetKeyDown(interact) && canInteract == true) 
 		{
 			EventOnInteract.Invoke(this);
@@ -117,7 +112,9 @@ public class PlayerController : MonoBehaviour
 		{
 			EventOnAttack.Invoke();
 		}
+	
 	}
+	
 
 
     //public override void OnStartLocalPlayer()

@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
 	public bool isInteractable;
 	public bool isCarryable;
 	public PlayerController currentPlayer;
+	public Sprite interactableSprite;
 
 	public enum InteractableType
 	{
