@@ -6,6 +6,7 @@ public class Container : Interactable {
 
 	public bool isInteracted = false;
 	public List<Pickup> itemsToDrop;
+	public List<Pickup> guaranteedItemsToDrop;
 	public int itemDropAmt = 3;
 	public override void Start () 
 	{
@@ -41,12 +42,24 @@ public class Container : Interactable {
 		
 	}
 
+	void DropGuaranteedItems()
+	{
+		foreach (var item in guaranteedItemsToDrop)
+		{
+			Pickup pickup = Instantiate(item, this.transform.position, item.transform.rotation);
+			pickup.EnableGravity();
+		}
+	}
+
 	void OpenContainer()
 	{
+		if(isInteracted == true) return;
 		for (int i = 0; i < itemDropAmt; i++)
 		{
 			DropItemsRandom();
 		}
+		DropGuaranteedItems();
+		isInteracted = true;
 	}
 
 

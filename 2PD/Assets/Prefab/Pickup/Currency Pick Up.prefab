@@ -99,7 +99,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987035066424624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00073207915, y: -0.0043924265}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.04, y: 0.02, z: 0.04, w: 0.04}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 0.16, y: 0.16}
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300330, guid: 8a4d71bc9b44c3f4886650b0236c64ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76912a9eb81e29a4ca1be55fd36bb795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

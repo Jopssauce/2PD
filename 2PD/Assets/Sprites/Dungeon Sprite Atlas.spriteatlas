@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Dungeon Sprite Atlas
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300062, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300060, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300066, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300064, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300070, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300068, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300074, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300072, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300078, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300076, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300038, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300036, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300026, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300024, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300056, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300022, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300058, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300020, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300052, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300034, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300054, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300032, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300048, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300030, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300050, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300028, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300044, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300046, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300040, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300042, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300016, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300018, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300000, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300002, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300004, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300006, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300008, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300010, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300012, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300014, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300088, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300090, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300092, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300094, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300114, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300080, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300112, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300082, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300110, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300084, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300108, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300086, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300106, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300104, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300136, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300102, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300138, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300100, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300096, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300098, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300158, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300124, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300156, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300126, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300120, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300118, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300122, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300150, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300116, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300132, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300148, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300134, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300154, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300128, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300152, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300130, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300142, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300140, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300146, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  - {fileID: 21300144, guid: abd5495f54cb0614099f245489fcff81, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Spritesheet_Dungeon_Final (1)_31
+  - Spritesheet_Dungeon_Final (1)_30
+  - Spritesheet_Dungeon_Final (1)_33
+  - Spritesheet_Dungeon_Final (1)_32
+  - Spritesheet_Dungeon_Final (1)_35
+  - Spritesheet_Dungeon_Final (1)_34
+  - Spritesheet_Dungeon_Final (1)_37
+  - Spritesheet_Dungeon_Final (1)_36
+  - Spritesheet_Dungeon_Final (1)_39
+  - Spritesheet_Dungeon_Final (1)_38
+  - Spritesheet_Dungeon_Final (1)_19
+  - Spritesheet_Dungeon_Final (1)_18
+  - Spritesheet_Dungeon_Final (1)_13
+  - Spritesheet_Dungeon_Final (1)_12
+  - Spritesheet_Dungeon_Final (1)_28
+  - Spritesheet_Dungeon_Final (1)_11
+  - Spritesheet_Dungeon_Final (1)_29
+  - Spritesheet_Dungeon_Final (1)_10
+  - Spritesheet_Dungeon_Final (1)_26
+  - Spritesheet_Dungeon_Final (1)_17
+  - Spritesheet_Dungeon_Final (1)_27
+  - Spritesheet_Dungeon_Final (1)_16
+  - Spritesheet_Dungeon_Final (1)_24
+  - Spritesheet_Dungeon_Final (1)_15
+  - Spritesheet_Dungeon_Final (1)_25
+  - Spritesheet_Dungeon_Final (1)_14
+  - Spritesheet_Dungeon_Final (1)_22
+  - Spritesheet_Dungeon_Final (1)_23
+  - Spritesheet_Dungeon_Final (1)_20
+  - Spritesheet_Dungeon_Final (1)_21
+  - Spritesheet_Dungeon_Final (1)_8
+  - Spritesheet_Dungeon_Final (1)_9
+  - Spritesheet_Dungeon_Final (1)_0
+  - Spritesheet_Dungeon_Final (1)_1
+  - Spritesheet_Dungeon_Final (1)_2
+  - Spritesheet_Dungeon_Final (1)_3
+  - Spritesheet_Dungeon_Final (1)_4
+  - Spritesheet_Dungeon_Final (1)_5
+  - Spritesheet_Dungeon_Final (1)_6
+  - Spritesheet_Dungeon_Final (1)_7
+  - Spritesheet_Dungeon_Final (1)_44
+  - Spritesheet_Dungeon_Final (1)_45
+  - Spritesheet_Dungeon_Final (1)_46
+  - Spritesheet_Dungeon_Final (1)_47
+  - Spritesheet_Dungeon_Final (1)_57
+  - Spritesheet_Dungeon_Final (1)_40
+  - Spritesheet_Dungeon_Final (1)_56
+  - Spritesheet_Dungeon_Final (1)_41
+  - Spritesheet_Dungeon_Final (1)_55
+  - Spritesheet_Dungeon_Final (1)_42
+  - Spritesheet_Dungeon_Final (1)_54
+  - Spritesheet_Dungeon_Final (1)_43
+  - Spritesheet_Dungeon_Final (1)_53
+  - Spritesheet_Dungeon_Final (1)_52
+  - Spritesheet_Dungeon_Final (1)_68
+  - Spritesheet_Dungeon_Final (1)_51
+  - Spritesheet_Dungeon_Final (1)_69
+  - Spritesheet_Dungeon_Final (1)_50
+  - Spritesheet_Dungeon_Final (1)_48
+  - Spritesheet_Dungeon_Final (1)_49
+  - Spritesheet_Dungeon_Final (1)_79
+  - Spritesheet_Dungeon_Final (1)_62
+  - Spritesheet_Dungeon_Final (1)_78
+  - Spritesheet_Dungeon_Final (1)_63
+  - Spritesheet_Dungeon_Final (1)_60
+  - Spritesheet_Dungeon_Final (1)_59
+  - Spritesheet_Dungeon_Final (1)_61
+  - Spritesheet_Dungeon_Final (1)_75
+  - Spritesheet_Dungeon_Final (1)_58
+  - Spritesheet_Dungeon_Final (1)_66
+  - Spritesheet_Dungeon_Final (1)_74
+  - Spritesheet_Dungeon_Final (1)_67
+  - Spritesheet_Dungeon_Final (1)_77
+  - Spritesheet_Dungeon_Final (1)_64
+  - Spritesheet_Dungeon_Final (1)_76
+  - Spritesheet_Dungeon_Final (1)_65
+  - Spritesheet_Dungeon_Final (1)_71
+  - Spritesheet_Dungeon_Final (1)_70
+  - Spritesheet_Dungeon_Final (1)_73
+  - Spritesheet_Dungeon_Final (1)_72
+  m_Tag: Dungeon Sprite Atlas
+  m_IsVariant: 0
