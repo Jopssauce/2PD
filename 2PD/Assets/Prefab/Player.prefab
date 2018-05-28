@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4540601978670544}
   - component: {fileID: 212265263585438818}
   - component: {fileID: 114971330575192454}
-  - component: {fileID: 114626849707412224}
+  - component: {fileID: 114834254585345936}
   - component: {fileID: 114098767914402596}
   - component: {fileID: 114843587992053112}
   - component: {fileID: 61038400473626138}
@@ -142,7 +142,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.251, y: 0, z: 0}
+  m_LocalPosition: {x: 0.197, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -297,7 +297,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114626849707412224
+--- !u!114 &114834254585345936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -305,10 +305,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453793797800494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45cf8d084a65cf41b26c434d7eb0f92, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d4a98500c41e854d975ccd36269af06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objPrefab: {fileID: 1588254809027310, guid: eb4411d963fe37343aefd3dc6920cbf8, type: 2}
+  objPrefab: {fileID: 1483431508703012, guid: 36e28fcf598118740988397f80fa1419, type: 2}
   playercontroller: {fileID: 0}
 --- !u!114 &114843587992053112
 MonoBehaviour:

@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     }
 
 	//[Command]
-	public void CmdSpawnObject(GameObject obj)
+	public virtual void CmdSpawnObject(GameObject obj)
 	{
 		GameObject bullet = Instantiate(obj, playercontroller.directions[playercontroller.lastDirection].transform.position, playercontroller.directions[playercontroller.lastDirection].transform.rotation);
 		//NetworkServer.Spawn(bullet);

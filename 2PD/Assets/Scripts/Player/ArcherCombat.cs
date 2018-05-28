@@ -6,10 +6,10 @@ using UnityEngine.Networking;
 
 public class ArcherCombat : PlayerCombat 
 {
- 	public override void Attack()
+		public override void Attack()
     {
 		CmdSpawnObject(objPrefab);
-		Debug.Log("test");
+		Debug.Log("projectile");
     }
 	
 }
