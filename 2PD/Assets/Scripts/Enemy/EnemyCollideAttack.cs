@@ -13,8 +13,11 @@ public class EnemyCollideAttack : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player")
 		{	
-			if(enemyAI.players[0] == null) return;		
-			StartCoroutine(Attack());
+			if(enemyAI.players.Count > 0) 
+			{
+				StartCoroutine(Attack());
+			}		
+			
 		}
 		
 	}
@@ -22,13 +25,13 @@ public class EnemyCollideAttack : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player")
 		{
-			StopCoroutine(Attack());
+			StopAllCoroutines();
 		}
 	}
 
 	public IEnumerator Attack()
 	{
-		while (enemyAI.players[0] != null)
+		while (enemyAI.players.Count > 0)
 		{
 			enemyAI.players[0].GetComponent<PlayerStats>().DeductHp(damage);
 			yield return new WaitForSeconds(attackTimer);

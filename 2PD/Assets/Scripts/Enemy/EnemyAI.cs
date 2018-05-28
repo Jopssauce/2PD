@@ -16,8 +16,17 @@ public class EnemyAI : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if(players.Count == 0) return;
-		ChasePlayer ();
+		if(players.Count == 0)
+		{
+			//StartCoroutine(Wander());
+			return;
+		}
+		else
+		{
+			StopCoroutine(Wander());
+			ChasePlayer ();
+		} 
+		
 	}
 
 	public virtual void ChasePlayer ()
@@ -28,9 +37,17 @@ public class EnemyAI : MonoBehaviour {
 		transform.position += targetDirection * moveSpeed * Time.deltaTime;
 	}
 
-	public virtual void MoveAround()
+	public virtual IEnumerator Wander()
 	{
-
+		while (players.Count == 0)
+		{
+			int rngX = Random.Range(-1, 2);
+			int rngY = Random.Range(-1, 2);
+			targetDirection.x = rngX;
+			targetDirection.y = rngY;
+			yield return new WaitForSeconds(Random.Range(1, 3));
+		}
+		
 	}
 
 	public void ResetDirection()
