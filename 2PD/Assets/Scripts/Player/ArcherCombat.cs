@@ -11,5 +11,12 @@ public class ArcherCombat : PlayerCombat
 		CmdSpawnObject(objPrefab);
 		Debug.Log("projectile");
     }
+
+		public override void CmdSpawnObject(GameObject obj)
+	{
+		GameObject bullet = Instantiate(obj, playercontroller.directions[playercontroller.lastDirection].transform.position, playercontroller.directions[playercontroller.lastDirection].transform.rotation);
+		bullet.GetComponent<BulletBehaviour>().direction = playercontroller.direction;
+		//NetworkServer.Spawn(bullet);
+	}
 	
 }

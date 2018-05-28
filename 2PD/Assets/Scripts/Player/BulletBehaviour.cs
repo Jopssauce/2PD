@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour {
 	public float moveSpeed = 2;
-	public Vector3 direction;
+	public float damage;
+	public Vector2 direction;
+	public float knocbackForce = 0.5f;
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		direction.x = 0;
-		direction.y = 1;
 		//GetComponent<Rigidbody2D>().velocity = transform.up * 6;
 		this.transform.position += transform.up * moveSpeed * Time.deltaTime;
 		Destroy(this.gameObject, 2.0f);
 	}
 	void OnTriggerEnter2D(Collider2D col)
     {
-		if (col.gameObject.GetComponent<PlayerStats>()) 
+		if (col.gameObject.GetComponentInParent<PlayerStats>()) 
 		{
-			col.gameObject.GetComponent<PlayerStats>().DeductHp(5);
+			col.gameObject.GetComponentInParent<PlayerStats>().DeductHp(5);
+			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
 		
         Destroy(gameObject);

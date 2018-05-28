@@ -5,6 +5,8 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour 
 {
 	public float damage;
+	public Vector2 direction;
+	public float knocbackForce = 0.5f;
 	void Start()
 	{
 		Destroy(this.gameObject, 0.1f);
@@ -13,9 +15,10 @@ public class MeleeAttack : MonoBehaviour
 	public void OnTriggerEnter2D(Collider2D col)
 	{
 		Debug.Log(col);
-		if(col.gameObject.GetComponent<PlayerStats>())
+		if(col.gameObject.GetComponentInParent<PlayerStats>())
 		{
-			col.gameObject.GetComponent<PlayerStats>().DeductHp(damage);
+			col.gameObject.GetComponentInParent<PlayerStats>().DeductHp(damage);
+			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
 		
 	}
