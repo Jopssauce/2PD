@@ -32,7 +32,7 @@ public class Door : Interactable
 		}
 	}
 
-	public override void OnCollisionEnter2D(Collision2D col)
+	public override void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
 		{		
@@ -43,7 +43,7 @@ public class Door : Interactable
 		}
 		
 	}
-	public override void OnCollisionExit2D(Collision2D col)
+	public override void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
 		{

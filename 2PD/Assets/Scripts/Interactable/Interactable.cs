@@ -46,7 +46,7 @@ public class Interactable : MonoBehaviour
 
 	public virtual void Interact(PlayerController player){}
 
-	public virtual void OnCollisionEnter2D(Collision2D col)
+	public virtual void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player")
 		{
@@ -56,7 +56,7 @@ public class Interactable : MonoBehaviour
 		}
 		
 	}
-	public virtual void OnCollisionExit2D(Collision2D col)
+	public virtual void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player")
 		{

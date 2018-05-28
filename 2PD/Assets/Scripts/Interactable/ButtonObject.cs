@@ -8,6 +8,9 @@ public class ButtonObject : Interactable {
 	public int buttonID;
 	public bool isInteracted;
 
+	public Sprite on;
+	public Sprite off;
+
 	public override void Start()
 	{
 		base.Start();
@@ -19,6 +22,7 @@ public class ButtonObject : Interactable {
 		if (player.playerID == playerIDRequired)
 		{
 			isInteracted = true;
+			GetComponent<SpriteRenderer>().sprite = on;
 			EventInteract.Invoke();
 		}
 	}
