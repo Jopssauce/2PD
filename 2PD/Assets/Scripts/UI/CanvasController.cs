@@ -29,5 +29,7 @@ public class CanvasController : MonoBehaviour {
 	{
 		player1Health.text = gameManager.playerList[0].GetComponent<PlayerStats>().hp.ToString();
 		player1Gold.text = gameManager.playerList[0].GetComponent<PlayerStats>().gold.ToString();
+		player2Health.text = gameManager.playerList[1].GetComponent<PlayerStats>().hp.ToString();
+		player2Gold.text = gameManager.playerList[1].GetComponent<PlayerStats>().gold.ToString();
 	}
 }
