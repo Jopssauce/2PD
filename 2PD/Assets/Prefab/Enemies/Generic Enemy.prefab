@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4228135112376444}
   - component: {fileID: 61028716656649248}
+  - component: {fileID: 114399185961002704}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.872, y: -3.1274571, z: 0}
+  m_LocalPosition: {x: -0.158, y: -3.1274571, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
@@ -226,6 +227,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114399185961002704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392305247391950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e056606585df87489e84a7f31d925b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTimer: 2
+  damage: 5
+  enemyAI: {fileID: 114342001538399390}
 --- !u!114 &114439275090388498
 MonoBehaviour:
   m_ObjectHideFlags: 1
