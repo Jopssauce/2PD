@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public KeyCode attack = KeyCode.Joystick1Button1;
 	public KeyCode interact = KeyCode.Joystick1Button0;
 
+	public KeyCode attackController = KeyCode.Joystick1Button1;
+	public KeyCode interactController = KeyCode.Joystick1Button0;
+
     public delegate void MovementDelegate();
     //[SyncEvent]
 	public UnityEvent EventOnLeft;
@@ -60,55 +63,63 @@ public class PlayerController : MonoBehaviour
         //if (!isLocalPlayer) return;
 		if (canMove == true && playerID == 0) 
 		{
-			if (Input.GetAxisRaw("Horizontal") < 0) 
+			if (Input.GetAxisRaw("Horizontal3") < 0) 
 			{
+				Debug.Log ("Horizontal");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Horizontal") > 0) 
+			if (Input.GetAxisRaw("Horizontal3") > 0) 
 			{
+				Debug.Log ("Horizontal");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
-            if (Input.GetAxisRaw("Vertical") < 0) 
+            if (Input.GetAxisRaw("Vertical3") < 0) 
 			{
+				Debug.Log ("Vertical");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Vertical") > 0) 
+			if (Input.GetAxisRaw("Vertical3") > 0) 
 			{
+				Debug.Log ("Vertical");
 				EventOnUp.Invoke();
                 EventOnMove.Invoke();
 			}
 		}
 		if (canMove == true && playerID == 1) 
 		{
-			if (Input.GetAxisRaw("Horizontal2") < 0) 
+			if (Input.GetAxisRaw("Horizontal4") < 0) 
 			{
+				Debug.Log ("Horizontal2");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Horizontal2") > 0) 
+			if (Input.GetAxisRaw("Horizontal4") > 0) 
 			{
+				Debug.Log ("Horizontal2");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
-            if (Input.GetAxisRaw("Vertical2") < 0) 
+            if (Input.GetAxisRaw("Vertical4") < 0) 
 			{
+				Debug.Log ("Vertical2");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Vertical2") > 0) 
+			if (Input.GetAxisRaw("Vertical4") > 0) 
 			{
+				Debug.Log ("Vertical2");
 				EventOnUp.Invoke();
                 EventOnMove.Invoke();
 			}
 		}
-		if (Input.GetKeyDown(interact) && canInteract == true) 
+		if (Input.GetKeyDown(interact) || Input.GetKeyDown(interactController) && canInteract == true) 
 		{
 			EventOnInteract.Invoke(this);
 		}
-        if (Input.GetKeyDown(attack) && canCombat == true) 
+		if (Input.GetKeyDown(attack) || Input.GetKeyDown(attackController) && canCombat == true) 
 		{
 			EventOnAttack.Invoke();
 		}

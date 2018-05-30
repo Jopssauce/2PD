@@ -11435,6 +11435,16 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.176
       objectReference: {fileID: 0}
+    - target: {fileID: 114157229714259216, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: attackController
+      value: 410
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157229714259216, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: interactController
+      value: 411
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
   m_IsPrefabParent: 0
