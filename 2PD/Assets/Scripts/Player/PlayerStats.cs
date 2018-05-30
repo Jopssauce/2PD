@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour {
 	public float gold = 200;
 	public UnityEvent EventOnStatChanged;
 	public UnityEvent EventOnDead;
+	public ParticleSystem particleOnDeath;
 	void Awake()
 	{
 		hp = maxHp;
@@ -24,6 +25,7 @@ public class PlayerStats : MonoBehaviour {
 		if(hp < 0)
 		{
 			hp = 0;
+			if(particleOnDeath != null) Instantiate(particleOnDeath, transform.position, transform.rotation);
 			EventOnDead.Invoke();	
 		} 
 		Debug.Log("Hit");

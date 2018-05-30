@@ -6,7 +6,7 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: KeyboardX1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -22,7 +22,7 @@ InputManager:
     axis: 0
     joyNum: 3
   - serializedVersion: 3
-    m_Name: Horizontal2
+    m_Name: KeyboardX2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -38,7 +38,7 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
-    m_Name: Vertical
+    m_Name: KeyboardY1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: s
@@ -54,7 +54,7 @@ InputManager:
     axis: 0
     joyNum: 3
   - serializedVersion: 3
-    m_Name: Vertical2
+    m_Name: KeyboardY2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down

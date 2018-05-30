@@ -10,6 +10,7 @@ public class EnemyStats : PlayerStats
 		base.DeductHp(damage);
 		if (hp <= 0)
 		{
+			if(particleOnDeath != null) Instantiate(particleOnDeath, transform.position, particleOnDeath.transform.rotation);
 			Destroy(this.gameObject);
 		}
 	}
