@@ -38,7 +38,7 @@ public class Door : Interactable
 		{		
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
 			players.Add(col.gameObject.GetComponent<PlayerController>());
-			EventInRange.Invoke(col.gameObject);
+			EventInRange.Invoke();
 			isInteractable = true;
 		}
 		
@@ -49,7 +49,7 @@ public class Door : Interactable
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
-			EventOutRange.Invoke(col.gameObject);
+			EventOutRange.Invoke();
 			isInteractable = false;
 		}
 	}
