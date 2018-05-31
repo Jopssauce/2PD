@@ -6,23 +6,23 @@ public class WallAnimator : MonoBehaviour {
 
 	Animator animator;
 	public Interactable pressurepad;
-	// Use this for initialization
-	void Start () 
+
+	void Start()
 	{
-		
+		animator = GetComponent<Animator>();
 	}
-	
-	void AnimLeft()
+
+	public void AnimLeft()
 	{
 		animator.SetTrigger("Left");
 	}
 
-	void AnimRight()
+	public void AnimRight()
 	{
 		animator.SetTrigger("Right");
 	}
 
-	void AnimIdle()
+	public void AnimIdle()
 	{
 		animator.SetTrigger("Idle");
 	}
