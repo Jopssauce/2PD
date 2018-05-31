@@ -7,7 +7,7 @@ public class Door : Interactable
 {
 	public bool isOpen;
 	public int requiredPlayers = 2;
-	public List<ButtonObject> buttons;
+	public List<Switch> switches;
 	public List<PlayerController> players;
 	public List<EnemyController> enemies;
 	public BaseItem keyRequired;
@@ -23,7 +23,7 @@ public class Door : Interactable
 	}
 	public override void Interact(PlayerController player)
 	{
-		if (buttons.All(button => button.isInteracted == true))
+		if (switches.All(button => button.isInteracted == true))
 		{	
 			OpenDoor();
 			EventInteract.Invoke();
@@ -38,7 +38,7 @@ public class Door : Interactable
 		{		
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
 			players.Add(col.gameObject.GetComponent<PlayerController>());
-			EventInRange.Invoke();
+			EventInRange.Invoke(col.gameObject);
 			isInteractable = true;
 		}
 		
@@ -49,7 +49,7 @@ public class Door : Interactable
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
-			EventOutRange.Invoke();
+			EventOutRange.Invoke(col.gameObject);
 			isInteractable = false;
 		}
 	}

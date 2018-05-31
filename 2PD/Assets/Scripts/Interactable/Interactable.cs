@@ -28,9 +28,10 @@ public class Interactable : MonoBehaviour
 	}
 	public InteractableType interactableType;
 	public LockType lockType;
+	public class EventRange : UnityEvent<GameObject>	{	}
 	public UnityEvent EventInteract;
-	public UnityEvent EventInRange;
-	public UnityEvent EventOutRange;
+	public EventRange EventInRange;
+	public EventRange EventOutRange;
 	public UnityEvent EventInteracted;
 	public UnityEvent EventInteractable;
 
@@ -38,6 +39,8 @@ public class Interactable : MonoBehaviour
 
 	public virtual void Start()
 	{
+		EventInRange = new EventRange();
+		EventOutRange = new EventRange();
 		currentPlayer = null;
 		isInteractable = false;
 		gameManager = GameManager.instance;
@@ -51,7 +54,7 @@ public class Interactable : MonoBehaviour
 		if (col.gameObject.tag == "Player")
 		{
 			currentPlayer = col.gameObject.GetComponent<PlayerController>();
-			EventInRange.Invoke();
+			EventInRange.Invoke(col.gameObject);
 			isInteractable = true;
 		}
 		
@@ -60,7 +63,7 @@ public class Interactable : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Player")
 		{
-			EventOutRange.Invoke();
+			EventOutRange.Invoke(col.gameObject);
 			isInteractable = false;
 		}
 	}

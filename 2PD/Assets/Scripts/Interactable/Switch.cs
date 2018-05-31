@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ButtonObject : Interactable {
+public class Switch : Interactable {
 	public int playerIDRequired;
 	public int buttonID;
 	public bool isInteracted;
 
-	public Sprite on;
 	public Sprite off;
+	public Sprite on;
+	
 
 	public override void Start()
 	{
