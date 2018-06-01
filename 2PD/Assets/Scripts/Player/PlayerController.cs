@@ -218,6 +218,7 @@ public class PlayerController : MonoBehaviour
 			direction.x = -1;
         	direction.y = 0;
             //transform.eulerAngles = transform.forward * 90;
+			GetComponent<SpriteRenderer> ().flipX = false;
 		}
 	}
 	public virtual void MoveRight()
@@ -227,6 +228,7 @@ public class PlayerController : MonoBehaviour
 			lastDirection = 3;
 			direction.x = 1;
         	direction.y = 0;
+			GetComponent<SpriteRenderer> ().flipX = true;
             //transform.eulerAngles = -transform.forward * 90;
 		}
 	}
