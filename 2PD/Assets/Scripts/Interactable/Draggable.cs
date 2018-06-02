@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pushable : Interactable {
+public class Draggable : Interactable {
 
 	public override void Start () 
 	{
@@ -10,19 +10,15 @@ public class Pushable : Interactable {
 		isInteractable = false;
 		isGrabbable = true;
 		gameManager = GameManager.instance;
-		foreach (var player in gameManager.playerList)
-		{
-			player.EventOnInteract.AddListener (Interact);
-		}
 	}
 	
 	public override void Interact(PlayerController player)
 	{
-		if (currentPlayer == player && isInteractable == true)
+		if (player != null)
 		{
 			player.GetComponent<PlayerActions>().objectToActOn = this;
 			player.GetComponent<PlayerActions>().canAction = true;
-			player.GetComponent<PlayerActions>().Lift();
+			player.GetComponent<PlayerActions>().Grab();
 			Debug.Log("Interactable");
 			EventInteract.Invoke();
 		}

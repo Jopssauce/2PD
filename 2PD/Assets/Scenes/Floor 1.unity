@@ -554,8 +554,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -12649,8 +12651,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -13387,8 +13391,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -13828,6 +13834,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &796883025
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+      propertyPath: m_RootOrder
+      value: 59
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &825718598 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114524001776740356, guid: 5156a15d91ebdc14496a8bb788687ea9,
@@ -13920,8 +13968,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -15171,8 +15221,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -15881,8 +15933,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -16032,8 +16086,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -16833,8 +16889,10 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
+  players: []
   interactableType: 0
   lockType: 0
   EventInteract:

@@ -12,6 +12,10 @@ public class PlayerActions : MonoBehaviour {
 	{
 		canAction = false;
 		GetComponent<PlayerController>().EventOnInteract.AddListener(Throw);
+
+
+
+		GetComponent<PlayerController>().EventOnInteract.AddListener(LetGo);
 	}
 	
 	// Update is called once per frame
@@ -41,7 +45,20 @@ public class PlayerActions : MonoBehaviour {
 
 	public void Grab()
 	{
-		if (objectToActOn == null && objectToActOn.isGrabbable == false) return;
-		//push da object
+		if (objectToActOn != null && objectToActOn.isGrabbable == true)
+		{
+			objectToActOn.transform.parent = GetComponent<PlayerController>().directions[GetComponent<PlayerController>().lastDirection].transform;
+		}
+
+	}
+
+	public void LetGo(PlayerController player)
+	{
+		if (objectToActOn != null && objectToActOn.isGrabbable == true)
+		{
+			objectToActOn.transform.SetParent(null);
+			objectToActOn = null;
+		}
+		
 	}
 }
