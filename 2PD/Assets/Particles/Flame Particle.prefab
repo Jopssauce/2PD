@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152725736302550}
   - component: {fileID: 198853681857355840}
+  - component: {fileID: 114688140212629750}
   - component: {fileID: 199304981725191914}
   m_Layer: 0
   m_Name: Flame Particle
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114688140212629750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819098023576676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f8f1c8d827024c8dfd9c7c3b3a5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198853681857355840
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +113,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1894501613
+  randomSeed: 628095133
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2466,7 +2478,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
