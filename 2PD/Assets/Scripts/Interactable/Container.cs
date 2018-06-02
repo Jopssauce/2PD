@@ -13,11 +13,9 @@ public class Container : Interactable {
 		currentPlayer = null;
 		isInteractable = false;
 		gameManager = GameManager.instance;
-		foreach (var player in gameManager.playerList)
-		{
-			player.EventOnInteract.AddListener (Interact);
-			EventInteract.AddListener(OpenContainer);
-		}
+
+		EventInteract.AddListener(OpenContainer);
+		
 	}
 
 	void Update()
@@ -27,10 +25,10 @@ public class Container : Interactable {
 	
 	public override void Interact(PlayerController player)
 	{
-		if (isInteractable == true && player == currentPlayer)
-		{
+		//if (isInteractable == true && player == currentPlayer)
+		//{
 			EventInteract.Invoke();
-		}
+		//}
 	}
 
 	void DropItemsRandom()
