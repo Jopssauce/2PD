@@ -6,6 +6,7 @@ public class PlayerActions : MonoBehaviour {
 	public Interactable objectToActOn;
 	public bool canAction;
 	bool isLiftable;
+	bool isPushing;
 	// Use this for initialization
 	void Start () 
 	{
@@ -36,5 +37,11 @@ public class PlayerActions : MonoBehaviour {
 			objectToActOn.currentPlayer = null;
 			objectToActOn = null;
 		}
+	}
+
+	public void Grab()
+	{
+		if (objectToActOn == null && objectToActOn.isGrabbable == false) return;
+		//push da object
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Events;
+using System.Linq;
 
 public class Interactable : MonoBehaviour 
 {	
@@ -10,14 +11,15 @@ public class Interactable : MonoBehaviour
 	bool isHighestPriority;
 	public bool isInteractable;
 	public bool isCarryable;
+	public bool isGrabbable;
 	public PlayerController currentPlayer;
 	public Sprite interactableSprite;
-
+	public List<PlayerController> players;
 	public enum InteractableType
 	{
 		touch,
 		carry,
-		pickup
+		pickup,
 	}
 
 	public enum LockType
@@ -48,21 +50,26 @@ public class Interactable : MonoBehaviour
 
 	public virtual void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player")
-		{
-			currentPlayer = col.gameObject.GetComponent<PlayerController>();
+		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
+		{		
+			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
+			players.Add(col.gameObject.GetComponent<PlayerController>());
 			EventInRange.Invoke();
 			isInteractable = true;
 		}
-		
+
 	}
 	public virtual void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
 		{
+			players.Remove(col.gameObject.GetComponent<PlayerController>());
+			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
 			EventOutRange.Invoke();
 			isInteractable = false;
 		}
 	}
+
+	
 
 }

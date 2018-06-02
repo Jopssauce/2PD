@@ -65,25 +65,25 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetAxisRaw("Horizontal3") < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
 			{
-				Debug.Log ("Horizontal");
+				//Debug.Log ("Horizontal");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
 			if (Input.GetAxisRaw("Horizontal3") > 0 || Input.GetAxisRaw("KeyboardX1") > 0) 
 			{
-				Debug.Log ("Horizontal");
+				//Debug.Log ("Horizontal");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
             if (Input.GetAxisRaw("Vertical3") < 0 || Input.GetAxisRaw("KeyboardY1") < 0) 
 			{
-				Debug.Log ("Vertical");
+				//Debug.Log ("Vertical");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
 			if (Input.GetAxisRaw("Vertical3") > 0 || Input.GetAxisRaw("KeyboardY1") > 0) 
 			{
-				Debug.Log ("Vertical");
+				//Debug.Log ("Vertical");
 				EventOnUp.Invoke();
                 EventOnMove.Invoke();
 			}
@@ -92,25 +92,25 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetAxisRaw("Horizontal4") < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
 			{
-				Debug.Log ("Horizontal2");
+				//Debug.Log ("Horizontal2");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
 			if (Input.GetAxisRaw("Horizontal4") > 0 || Input.GetAxisRaw("KeyboardX2") > 0) 
 			{
-				Debug.Log ("Horizontal2");
+				//Debug.Log ("Horizontal2");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
             if (Input.GetAxisRaw("Vertical4") < 0 || Input.GetAxisRaw("KeyboardY2") < 0) 
 			{
-				Debug.Log ("Vertical2");
+				//Debug.Log ("Vertical2");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
 			if (Input.GetAxisRaw("Vertical4") > 0 || Input.GetAxisRaw("KeyboardY2") > 0) 
 			{
-				Debug.Log ("Vertical2");
+				//Debug.Log ("Vertical2");
 				EventOnUp.Invoke();
                 EventOnMove.Invoke();
 			}
