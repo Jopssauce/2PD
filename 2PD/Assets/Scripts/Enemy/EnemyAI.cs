@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour {
 	public float moveSpeed;
 	public Vector3 targetDirection;
 	public float distanceToTarget;
+	public float stopRange = 0.14f;
 
 	public UnityEvent EventInRange;
 	public UnityEvent EventExitRange;
@@ -53,7 +54,7 @@ public class EnemyAI : MonoBehaviour {
 	public void ResetDirection()
 	{
 		distanceToTarget = Vector2.Distance(players[0].transform.position, this.transform.position);
-		if(distanceToTarget <= 0.2f) targetDirection = Vector2.zero;
+		if(distanceToTarget < stopRange) targetDirection = Vector2.zero;
 	}
 
 
