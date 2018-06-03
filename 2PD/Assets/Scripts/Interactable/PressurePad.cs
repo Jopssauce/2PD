@@ -40,7 +40,7 @@ public class PressurePad : Interactable
 
 	void SetInteracted()
 	{
-		//if(players.Count == 0) return;
+		if(players.Count == 0) return;
 		if (players.Any(player => player.playerID == playerIDRequired) || allObjects.Any(item => item.gemType == GemType.Sapphire) )
 		{
 			OnSprite();
