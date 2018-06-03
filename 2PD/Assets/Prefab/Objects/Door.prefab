@@ -236,6 +236,8 @@ MonoBehaviour:
   currentPlayer: {fileID: 0}
   interactableSprite: {fileID: 0}
   players: []
+  allObjects: []
+  gemType: 0
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -265,6 +267,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   gameManager: {fileID: 0}
   isOpen: 0
+  autoOpen: 1
   requiredPlayers: 2
   switches:
   - {fileID: 0}
@@ -293,7 +296,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventOnClose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114100469667870336}
+        m_MethodName: AnimClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   doorCol: {fileID: 61740214642887508}

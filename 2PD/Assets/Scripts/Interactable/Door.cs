@@ -7,6 +7,7 @@ using System.Linq;
 public class Door : Interactable 
 {
 	public bool isOpen;
+	public bool autoOpen = true;
 	public int requiredPlayers = 2;
 	public List<Switch> switches;
 	public List<EnemyController> enemies;
@@ -18,20 +19,28 @@ public class Door : Interactable
 	public override void Start()
 	{
 		base.Start();
-		foreach (var item in gameManager.playerList)
-		{
-			//item.EventOnInteract.AddListener(Interact);
-		}
 		requiredPlayers = gameManager.playerList.Capacity;
 	}
 	public override void Interact(PlayerController player)
 	{
-		if (switches.All(button => button.isInteracted == true))
+		if (switches.All(button => button.isInteracted))
 		{	
 			OpenDoor();
 			EventInteract.Invoke();
 			if(isOpen == false) return;
 			//SetPlayersLocation(targetLocation.transform.position);
+		}
+	}
+
+	void LateUpdate()
+	{
+		if (autoOpen == true)
+		{
+			OpenDoor();
+		}
+		else
+		{
+			CloseDoor();
 		}
 	}
 
@@ -47,12 +56,18 @@ public class Door : Interactable
 
 	void OpenDoor()
 	{
-		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true )
+		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
 		{
 			doorCol.enabled = false;
 			EventOnOpen.Invoke();
 			isOpen = true;
 		}
+	}
+	void CloseDoor()
+	{
+			doorCol.enabled = true;
+			EventOnClose.Invoke();
+			isOpen = false;
 	}
 
 	bool SearchForKey()
