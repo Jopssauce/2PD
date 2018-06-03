@@ -296,6 +296,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  doorCol: {fileID: 61740214642887508}
 --- !u!212 &212811094259899218
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -329,7 +330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: bbaca1976daa9db4ab433afadc84490c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

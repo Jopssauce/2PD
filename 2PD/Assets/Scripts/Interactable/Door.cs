@@ -14,6 +14,7 @@ public class Door : Interactable
 	public GameObject targetLocation;
 	public UnityEvent EventOnOpen;
 	public UnityEvent EventOnClose;
+	public Collider2D doorCol;
 	public override void Start()
 	{
 		base.Start();
@@ -48,6 +49,7 @@ public class Door : Interactable
 	{
 		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true )
 		{
+			doorCol.enabled = false;
 			EventOnOpen.Invoke();
 			isOpen = true;
 		}

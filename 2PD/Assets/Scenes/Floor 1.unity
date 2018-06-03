@@ -48193,6 +48193,11 @@ Prefab:
       propertyPath: targetLocation
       value: 
       objectReference: {fileID: 1846193417}
+    - target: {fileID: 212811094259899218, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
   m_IsPrefabParent: 0
