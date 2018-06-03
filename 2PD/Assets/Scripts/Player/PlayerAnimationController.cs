@@ -16,9 +16,11 @@ public class PlayerAnimationController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		animator.SetBool ("IsWalking", false);
+		
+		if(playerController.isMoving == false ) animator.SetBool ("IsWalking", false);
 		animator.SetFloat ("X", playerController.direction.x);
 		animator.SetFloat ("Y", playerController.direction.y);
+		
 	}
 
 	void AnimationTrigger()

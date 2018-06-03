@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
 	public bool canMove = true;
 	public bool canInteract = true;
     public bool canCombat = true;
+	public bool isMoving = false;
     public Vector3 direction;
 	public int lastDirection;
+	Vector3 lastPos;
 	public List<GameObject> directions;
 
     public KeyCode attack = KeyCode.Joystick1Button1;
@@ -59,7 +61,17 @@ public class PlayerController : MonoBehaviour
 
 	public virtual void FixedUpdate()
 	{
-      
+		Vector3 curPos = transform.position;
+		if(curPos == lastPos)
+		{
+			isMoving = false;
+		}
+		else
+		{
+			isMoving = true;
+		}
+		lastPos = curPos;
+
         //if (!isLocalPlayer) return;
 		if (canMove == true && playerID == 0) 
 		{
