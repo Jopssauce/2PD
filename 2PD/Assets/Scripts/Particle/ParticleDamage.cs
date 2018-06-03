@@ -18,7 +18,6 @@ public class ParticleDamage : MonoBehaviour {
 		
 		foreach (var item in collisionEvents)
 		{
-			Debug.Log(item.colliderComponent.gameObject);
 			if (item.colliderComponent.gameObject.tag != "Player")
        	 	{
            		return;
