@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System.Linq;
 
 public class Door : Interactable 
@@ -11,6 +12,8 @@ public class Door : Interactable
 	public List<EnemyController> enemies;
 	public BaseItem keyRequired;
 	public GameObject targetLocation;
+	public UnityEvent EventOnOpen;
+	public UnityEvent EventOnClose;
 	public override void Start()
 	{
 		base.Start();
@@ -27,7 +30,7 @@ public class Door : Interactable
 			OpenDoor();
 			EventInteract.Invoke();
 			if(isOpen == false) return;
-			SetPlayersLocation(targetLocation.transform.position);
+			//SetPlayersLocation(targetLocation.transform.position);
 		}
 	}
 
@@ -45,6 +48,7 @@ public class Door : Interactable
 	{
 		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true )
 		{
+			EventOnOpen.Invoke();
 			isOpen = true;
 		}
 	}
