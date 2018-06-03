@@ -17337,6 +17337,11 @@ Prefab:
       propertyPath: buttons.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: switches.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4519691818615436, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.003
@@ -17866,6 +17871,11 @@ Prefab:
     - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
         type: 2}
       propertyPath: enemies.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: switches.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4519691818615436, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
@@ -48193,11 +48203,6 @@ Prefab:
       propertyPath: targetLocation
       value: 
       objectReference: {fileID: 1846193417}
-    - target: {fileID: 212811094259899218, guid: ca7831a1161d0b54294a527cb7e1a60c,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
   m_IsPrefabParent: 0
@@ -48294,6 +48299,11 @@ Prefab:
     - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
         type: 2}
       propertyPath: enemies.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: switches.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4519691818615436, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
