@@ -6,7 +6,7 @@ using System.Linq;
 public class PressurePad : Interactable 
 {
 	public int playerIDRequired;
-	public int buttonID;
+	public Interactable objectRequired;
 	public bool isInteracted;
 
 	public Sprite off;
@@ -22,11 +22,26 @@ public class PressurePad : Interactable
 		//gameManager.playerList.First(player => player.playerID == playerIDRequired).EventOnInteract.AddListener(Interact);
 	}
 
+	void LateUpdate()
+	{
+		if (players.Any(player => player.playerID == playerIDRequired) || allObjects.Any(item => item.gemType == GemType.Sapphire) )
+		{
+			OnSprite();
+			isInteracted = true;
+		}
+		else
+		{
+			OffSprite();
+			isInteracted = false;
+		}
+		
+	}
+
 
 	void SetInteracted()
 	{
-		if(players.Count == 0) return;
-		if (players.Any(player => player.playerID == playerIDRequired) == true)
+		//if(players.Count == 0) return;
+		if (players.Any(player => player.playerID == playerIDRequired) || allObjects.Any(item => item.gemType == GemType.Sapphire) )
 		{
 			OnSprite();
 			isInteracted = !isInteracted;

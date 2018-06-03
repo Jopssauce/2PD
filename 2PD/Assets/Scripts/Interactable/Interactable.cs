@@ -15,11 +15,19 @@ public class Interactable : MonoBehaviour
 	public PlayerController currentPlayer;
 	public Sprite interactableSprite;
 	public List<PlayerController> players;
+	public List<Interactable> allObjects;
 	public enum InteractableType
 	{
 		touch,
 		carry,
 		pickup,
+	}
+	
+	public enum GemType
+	{
+		none,
+		Quartz,
+		Sapphire
 	}
 
 	public enum LockType
@@ -28,6 +36,7 @@ public class Interactable : MonoBehaviour
 		small,
 		big
 	}
+	public GemType gemType;
 	public InteractableType interactableType;
 	public LockType lockType;
 	public UnityEvent EventInteract;
@@ -57,6 +66,12 @@ public class Interactable : MonoBehaviour
 			EventInRange.Invoke();
 			isInteractable = true;
 		}
+		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()) == false)
+		{
+			allObjects.Add(col.gameObject.GetComponent<Interactable>());
+			EventInRange.Invoke();
+		} 
+		
 
 	}
 	public virtual void OnTriggerExit2D(Collider2D col)
@@ -68,6 +83,11 @@ public class Interactable : MonoBehaviour
 			EventOutRange.Invoke();
 			isInteractable = false;
 		}
+		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()))
+		{
+			allObjects.Remove(col.gameObject.GetComponent<Interactable>());
+			EventOutRange.Invoke();
+		} 
 	}
 
 	
