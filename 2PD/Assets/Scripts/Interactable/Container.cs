@@ -8,6 +8,12 @@ public class Container : Interactable {
 	public List<Pickup> itemsToDrop;
 	public List<Pickup> guaranteedItemsToDrop;
 	public int itemDropAmt = 3;
+
+	public Sprite ChestOpen;
+	public Sprite ChestClose;
+
+	private SpriteRenderer spritePlace;
+
 	public override void Start () 
 	{
 		currentPlayer = null;
@@ -15,7 +21,7 @@ public class Container : Interactable {
 		gameManager = GameManager.instance;
 
 		EventInteract.AddListener(OpenContainer);
-		
+		spritePlace = GetComponent<SpriteRenderer> ();
 	}
 
 	void Update()
@@ -58,7 +64,6 @@ public class Container : Interactable {
 		}
 		DropGuaranteedItems();
 		isInteracted = true;
+		spritePlace.sprite = ChestOpen;
 	}
-
-
 }
