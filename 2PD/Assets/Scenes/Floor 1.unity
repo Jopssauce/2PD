@@ -635,7 +635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &157250172
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -677,7 +677,7 @@ MonoBehaviour:
   isCarryable: 0
   isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   gemType: 0
@@ -13104,7 +13104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &580844209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13146,7 +13146,7 @@ MonoBehaviour:
   isCarryable: 0
   isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   gemType: 0
@@ -14261,18 +14261,6 @@ Prefab:
     - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
       propertyPath: m_RootOrder
       value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.9675343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.9675343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.9675343
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
@@ -15487,7 +15475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1130364922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15529,7 +15517,7 @@ MonoBehaviour:
   isCarryable: 0
   isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   gemType: 0
@@ -16203,7 +16191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1322215514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16245,7 +16233,7 @@ MonoBehaviour:
   isCarryable: 0
   isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   gemType: 0
@@ -16360,7 +16348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1341644441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16402,7 +16390,7 @@ MonoBehaviour:
   isCarryable: 0
   isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   gemType: 0
@@ -18334,11 +18322,6 @@ Prefab:
       propertyPath: targetLocation
       value: 
       objectReference: {fileID: 1793093441}
-    - target: {fileID: 95189859053707976, guid: 0413ba005ff3ae049a0d821c09130917,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b89601a62a56aa74bb7ba5cdd2dbf1ec, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0413ba005ff3ae049a0d821c09130917, type: 2}
   m_IsPrefabParent: 0
