@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
+  m_Name: Machalite
+  m_EditorClassIdentifier: 
+  ItemName: Machalite
+  Description: "Malachite is used as a source of copper and as a gemstone. It often
+    occurs with azurite in copper deposits.\r\n\r\nThe history of malachite goes back
+    to the ancient Egyptians, Greeks and Romans, who used malachite to make jewellery
+    and amulets, and ground it into powder to make eyeshadow."
+  Location: "1st Floor main dungeon, 1st Dungeon\r\n2nd Dungeon\r\n3rd Dungeon"
+  IsDiscovered: 1

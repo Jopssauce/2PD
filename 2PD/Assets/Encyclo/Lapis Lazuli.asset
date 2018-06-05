@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
+  m_Name: Lapis Lazuli
+  m_EditorClassIdentifier: 
+  ItemName: Lapis Lazuli
+  Description: "Lapis lazuli, often referred to as just 'lapis', has been used as
+    a gemstone for thousands of years. It has been mined from Afghanistan since the
+    early 7th millennium BC, and it was discovered in ancient burial sites throughout
+    the Caucasus, the Mehrgarh and even as far as the Republic of Mauritania.\r\n\r\nThe
+    funeral mask for the ancient Egyptian pharaoh 'King Tutankhamun' was even discovered
+    to have been decorated with lapis lazuli."
+  Location: 2nd Dungeon
+  IsDiscovered: 1

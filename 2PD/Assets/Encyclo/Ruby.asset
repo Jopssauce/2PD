@@ -9,11 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sapphire
+  m_Name: Ruby
   m_EditorClassIdentifier: 
-  ItemName: Sapphire
-  Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
-    from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
-    for many centuries and has been discovered in Viking burial mounds."
-  Location: Travelling Merchant
+  ItemName: Ruby
+  Description: "Ruby is one of the highest valued colored gemstones. Ruby is a variety
+    of corundum that gets its red color from chromium.\r\n\r\nMedieval Europeans believed
+    that rubies assured good health, prosperity, wisdom and a successful love life.\n\nNOTE:
+    GANGBANG RUBY"
+  Location: 2nd floor main dungeon
   IsDiscovered: 1
