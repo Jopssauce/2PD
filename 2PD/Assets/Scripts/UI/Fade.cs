@@ -16,6 +16,7 @@ public class Fade : MonoBehaviour {
 
 	public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
+		Debug.Log("test");
 		animator.SetTrigger ("Fade");
 	}
 }
