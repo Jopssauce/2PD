@@ -12,7 +12,6 @@ public class EnemyStats : PlayerStats
 
 	void DestroySelf()
 	{
-		if(particleOnDeath != null) Instantiate(particleOnDeath, transform.position, particleOnDeath.transform.rotation);
 		Destroy(this.gameObject);
 	}
 }
