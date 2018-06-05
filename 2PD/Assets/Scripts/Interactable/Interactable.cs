@@ -59,6 +59,7 @@ public class Interactable : MonoBehaviour
 
 	void TogglePrompt()
 	{
+		if(prompt == null) return;
 		prompt.GetComponent<SpriteRenderer>().enabled = !prompt.GetComponent<SpriteRenderer>().enabled; 
 	}
 
