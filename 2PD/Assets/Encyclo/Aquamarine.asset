@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sapphire
+  m_Name: Aquamarine
   m_EditorClassIdentifier: 
-  ItemName: Sapphire
-  Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
-    from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
-    for many centuries and has been discovered in Viking burial mounds."
-  Location: Travelling Merchant
+  ItemName: Aquamarine
+  Description: "Aquamarine is a blue to green-blue gem-quality variety of beryl. \r\n\r\nOften
+    found in the bedrock undersea, it gives off a soft-pale blue color when submerged
+    in water."
+  Location: 3rd Dungeon
   IsDiscovered: 1

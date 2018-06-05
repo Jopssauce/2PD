@@ -9,11 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sapphire
+  m_Name: Topaz
   m_EditorClassIdentifier: 
-  ItemName: Sapphire
-  Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
-    from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
-    for many centuries and has been discovered in Viking burial mounds."
-  Location: Travelling Merchant
+  ItemName: Topaz
+  Description: "Topaz in its natural state is a golden brown to yellow, a characteristic
+    which means it is sometimes confused with the less valuable gemstone citrine.\r\n\r\nTopaz
+    is commonly associated with silicic igneous rocks of the granite and rhyolite
+    type."
+  Location: 3rd dungeon
   IsDiscovered: 1

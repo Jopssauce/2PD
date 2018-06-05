@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sapphire
+  m_Name: Amber
   m_EditorClassIdentifier: 
-  ItemName: Sapphire
-  Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
-    from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
-    for many centuries and has been discovered in Viking burial mounds."
-  Location: Travelling Merchant
+  ItemName: Amber
+  Description: "One of the few gemstones of organic origin. Formed approximately 50
+    million years ago.\r\n\r\nOccasionally amber is found with interesting inclusions
+    of insects or parts of plants."
+  Location: "1st  Dungeon\r\n3rd Dungeon"
   IsDiscovered: 1

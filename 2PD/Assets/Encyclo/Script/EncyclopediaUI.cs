@@ -20,6 +20,13 @@ public class EncyclopediaUI : MonoBehaviour {
 	[SerializeField]
 	private List<Text> ButtonText;
 
+	void Start()
+	{
+		for (int i = 0; i < Items.Count; i++) 
+		{
+			ButtonText [i].text = Items [i].ItemName;
+		}
+	}
 	// Use this for initialization
 
 	public void DisplayUI(int index)

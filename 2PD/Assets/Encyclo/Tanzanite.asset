@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
+  m_Name: Tanzanite
+  m_EditorClassIdentifier: 
+  ItemName: Tanzanite
+  Description: "Tanzanite is a blue to violet gemstone which is a member of the zoisite
+    mineral group.\r\n\r\nTanzanite is pleochroic, which means that it shows different
+    colors depending on the viewing angle. In order to get the preferred blue or violet-blue
+    hue, gem artisans must properly orient tanzanite gemstones."
+  Location: 1st Dungeon
+  IsDiscovered: 1
