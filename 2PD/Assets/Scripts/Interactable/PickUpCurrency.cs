@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpCurrency : Pickup {
 
-	public override void OnTriggerEnter2D(Collider2D col)
+	public override void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.GetComponent<PlayerController>())
 		{

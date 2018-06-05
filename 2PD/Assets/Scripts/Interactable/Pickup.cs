@@ -9,7 +9,7 @@ public class Pickup : MonoBehaviour
 	public Collider2D phyCollider;
 	public GameManager gameManager;
 
-	public virtual void OnTriggerEnter2D(Collider2D col)
+	public virtual void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.GetComponent<PlayerController>())
 		{
