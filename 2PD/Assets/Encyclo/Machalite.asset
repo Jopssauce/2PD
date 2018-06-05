@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Machalite
   m_EditorClassIdentifier: 
+  GemImage: {fileID: 21300000, guid: 02b334d614f023e4795375f4dd802b22, type: 3}
   ItemName: Machalite
   Description: "Malachite is used as a source of copper and as a gemstone. It often
     occurs with azurite in copper deposits.\r\n\r\nThe history of malachite goes back

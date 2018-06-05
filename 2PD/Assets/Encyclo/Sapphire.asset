@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Sapphire
   m_EditorClassIdentifier: 
+  GemImage: {fileID: 21300000, guid: 444f9b328fa1e3140b073d5fad3f8f76, type: 3}
   ItemName: Sapphire
   Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
     from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
