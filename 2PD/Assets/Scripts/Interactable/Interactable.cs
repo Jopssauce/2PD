@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
 	public bool isCarryable;
 	public bool isGrabbable;
 	public PlayerController currentPlayer;
-	public Sprite interactableSprite;
+	public GameObject prompt;
 	public List<PlayerController> players;
 	public List<Interactable> allObjects;
 	public enum InteractableType
@@ -57,6 +57,11 @@ public class Interactable : MonoBehaviour
 
 	public virtual void Interact(PlayerController player){}
 
+	void TogglePrompt()
+	{
+		prompt.GetComponent<SpriteRenderer>().enabled = !prompt.GetComponent<SpriteRenderer>().enabled; 
+	}
+
 	public virtual void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
@@ -65,6 +70,7 @@ public class Interactable : MonoBehaviour
 			players.Add(col.gameObject.GetComponent<PlayerController>());
 			EventInRange.Invoke();
 			isInteractable = true;
+			TogglePrompt();
 		}
 		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()) == false)
 		{
@@ -82,6 +88,7 @@ public class Interactable : MonoBehaviour
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
 			EventOutRange.Invoke();
 			isInteractable = false;
+			TogglePrompt();
 		}
 		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()))
 		{
