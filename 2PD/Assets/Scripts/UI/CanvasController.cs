@@ -16,6 +16,8 @@ public class CanvasController : MonoBehaviour {
 	public TextMeshProUGUI player1Gold;
 	public TextMeshProUGUI player2Gold;
 
+	public GameObject encyclopedia;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -25,6 +27,14 @@ public class CanvasController : MonoBehaviour {
 			player.GetComponent<PlayerStats>().EventOnStatChanged.AddListener(UpdateUIText);
 		}
 		UpdateUIText();
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			encyclopedia.GetComponent<Animator>().SetTrigger("Open");
+		}
 	}
 
 	

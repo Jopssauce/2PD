@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EncyclopediaUI : MonoBehaviour {
 
 	public List<EncyclopediaItems> Items;
 
 	[SerializeField]
-	private Text ItemNameUI;
+	private TextMeshProUGUI ItemNameUI;
 
 	[SerializeField]
-	private Text ItemDescriptionUI;
+	private TextMeshProUGUI ItemDescriptionUI;
 
 	[SerializeField]
-	private Text ItemLocationUI;
+	private TextMeshProUGUI ItemLocationUI;
 
 	// Use this for initialization
 
