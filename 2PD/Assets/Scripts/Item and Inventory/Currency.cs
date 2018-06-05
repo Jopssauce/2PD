@@ -9,7 +9,13 @@ public class Currency : MonoBehaviour {
 
 	void Start()
 	{
+		float goldtoAdd = 0;
 		gameManager = GameManager.instance;
+		foreach (var item in gameManager.playerList)
+		{
+			goldtoAdd += item.GetComponent<PlayerStats>().gold;
+		}
+		gold = goldtoAdd;
 	}
 
 	void LateUpdate()
