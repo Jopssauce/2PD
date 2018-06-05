@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846226199868116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.998, y: -6.845597, z: -0.02564685}
+  m_LocalPosition: {x: 0.9918216, y: -0.68351865, z: -0.02564685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4905118734446284}
@@ -204,8 +204,7 @@ MonoBehaviour:
   itemsToDrop:
   - {fileID: 114269987921358578, guid: 2014478609861d5479263cbea00d0d3b, type: 2}
   - {fileID: 114181298281989726, guid: 4cc266d90d1c9fc4c8aa2a3ca8c715c4, type: 2}
-  guaranteedItemsToDrop:
-  - {fileID: 114392607037064894, guid: 0560e58164db47a42bf814cb69c19124, type: 2}
+  guaranteedItemsToDrop: []
   itemDropAmt: 3
   ChestOpen: {fileID: 21300000, guid: 9c71ecd51ec50ee4e9862e278a2ee830, type: 3}
   ChestClose: {fileID: 21300000, guid: d9755869bdbfa6c4593f6146ddf70fb2, type: 3}
