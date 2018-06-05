@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114392607037064894}
   - component: {fileID: 61305514461414792}
   - component: {fileID: 50079914646104566}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Key Pick Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}

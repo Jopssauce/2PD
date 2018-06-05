@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114212741376805768}
   - component: {fileID: 61635191490808866}
   - component: {fileID: 50204577357603832}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Malachite Pick Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
