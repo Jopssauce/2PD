@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
 
 	bool isUIOpen()
 	{
-		Scene UIscene = SceneManager.GetSceneByBuildIndex(1);
+		Scene UIscene = SceneManager.GetSceneByName("UI Scene");
 		for (int i = 0; i < SceneManager.sceneCount; i++)
 		{
 			if (SceneManager.GetSceneAt(i) == UIscene)
