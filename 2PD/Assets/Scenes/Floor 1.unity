@@ -365,18 +365,6 @@ Prefab:
       propertyPath: m_Name
       value: Draggable (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.9675343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.9675343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351966756031332, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.9675343
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8, type: 2}
   m_IsPrefabParent: 0
