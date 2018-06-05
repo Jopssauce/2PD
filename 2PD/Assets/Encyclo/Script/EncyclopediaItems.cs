@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item Description", menuName = "Gem Description")]
 public class EncyclopediaItems : ScriptableObject
 {
+	public Sprite GemImage;
+	
 	public string ItemName;
 
 	[TextArea]
