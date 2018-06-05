@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114987814277451990}
   - component: {fileID: 114439275090388498}
   - component: {fileID: 114342001538399390}
+  - component: {fileID: 114987374637630960}
   - component: {fileID: 58239476775714606}
   - component: {fileID: 50317707029574482}
   m_Layer: 0
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.167, y: -3.1274571, z: 0}
+  m_LocalPosition: {x: -0.158, y: -3.1274571, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
@@ -217,6 +218,7 @@ MonoBehaviour:
   moveSpeed: 1
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
+  stopRange: 0.14
   EventInRange:
     m_PersistentCalls:
       m_Calls: []
@@ -262,11 +264,43 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventOnDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114987374637630960}
+        m_MethodName: DropItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 198176942293827298, guid: c4c074c265184f849a2635c06d254943,
     type: 2}
+--- !u!114 &114987374637630960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671564799364820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45313131548a9a4aa9e850eae96df4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropOnDestroy: 1
+  pickupsToDrop:
+  - {fileID: 114212741376805768, guid: 132c1dabfadde20479efe0c6a7f3aa13, type: 2}
+  guaranteedPickupsToDrop: []
+  itemDropAmt: 1
+  EventOnDrop:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114987814277451990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,6 +317,7 @@ MonoBehaviour:
   canMove: 1
   canInteract: 1
   canCombat: 1
+  isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
   directions: []

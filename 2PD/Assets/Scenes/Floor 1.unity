@@ -1523,7 +1523,7 @@ BoxCollider2D:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114987814277451990, guid: c9c8ca530d50bc04fbfb400033be6808,
     type: 2}
-  m_PrefabInternal: {fileID: 1579454364}
+  m_PrefabInternal: {fileID: 1555781189}
   m_Script: {fileID: 11500000, guid: 48e7d2ab67dbe9a4d92f394b3e04a533, type: 3}
 --- !u!1 &446752928
 GameObject:
@@ -17245,19 +17245,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &1574657773 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114573264822575314, guid: 82c4d15f5915fa14aa79d2fad89250ab,
-    type: 2}
-  m_PrefabInternal: {fileID: 29776121}
-  m_Script: {fileID: 11500000, guid: 95cda13a841848344821684004773e79, type: 3}
---- !u!1001 &1579454364
+--- !u!1001 &1555781189
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114987374637630960, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: itemsToDrop.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4114231429329046, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.158
@@ -17290,9 +17294,45 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114987374637630960, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: dropOnDestroy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1733066693}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DropItems
+      objectReference: {fileID: 0}
+    - target: {fileID: 114439275090388498, guid: c9c8ca530d50bc04fbfb400033be6808,
+        type: 2}
+      propertyPath: EventOnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1574657773 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114573264822575314, guid: 82c4d15f5915fa14aa79d2fad89250ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 29776121}
+  m_Script: {fileID: 11500000, guid: 95cda13a841848344821684004773e79, type: 3}
 --- !u!1001 &1601336830
 Prefab:
   m_ObjectHideFlags: 0
@@ -17752,6 +17792,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1733066693 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114987374637630960, guid: c9c8ca530d50bc04fbfb400033be6808,
+    type: 2}
+  m_PrefabInternal: {fileID: 1555781189}
+  m_Script: {fileID: 11500000, guid: c45313131548a9a4aa9e850eae96df4f, type: 3}
 --- !u!1001 &1735818223
 Prefab:
   m_ObjectHideFlags: 0

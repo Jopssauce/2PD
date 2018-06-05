@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EnemyStats : PlayerStats 
 {
-
-	public override void DeductHp(float damage)
+	void Start()
 	{
-		base.DeductHp(damage);
-		if (hp <= 0)
-		{
-			if(particleOnDeath != null) Instantiate(particleOnDeath, transform.position, particleOnDeath.transform.rotation);
-			Destroy(this.gameObject);
-		}
+		EventOnDead.AddListener(DestroySelf);
+	}
+
+
+	void DestroySelf()
+	{
+		if(particleOnDeath != null) Instantiate(particleOnDeath, transform.position, particleOnDeath.transform.rotation);
+		Destroy(this.gameObject);
 	}
 }
