@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 423105746}
   - component: {fileID: 423105745}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Gem Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,8 +1513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 632, y: 440}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 603.7, y: 411.7}
+  m_SizeDelta: {x: 156.7, y: 156.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423105745
 MonoBehaviour:
@@ -4389,7 +4389,7 @@ GameObject:
   - component: {fileID: 1758826987}
   - component: {fileID: 1758826986}
   m_Layer: 5
-  m_Name: Image
+  m_Name: The Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
