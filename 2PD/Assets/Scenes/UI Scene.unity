@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9803922, b: 0.9333334, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4988,6 +4988,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4e608c08a8d5e8409518d1e2d9458fb, type: 2}
   - {fileID: 11400000, guid: 1911f3c49a928b0479285f1199abf924, type: 2}
   - {fileID: 11400000, guid: 11065427404898147bbaee4564ed0792, type: 2}
+  GemPlace: {fileID: 423105745}
   ItemNameUI: {fileID: 1417700580}
   ItemDescriptionUI: {fileID: 1206159050}
   ItemLocationUI: {fileID: 1880478546}

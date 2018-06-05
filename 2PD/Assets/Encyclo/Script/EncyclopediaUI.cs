@@ -8,6 +8,8 @@ public class EncyclopediaUI : MonoBehaviour {
 
 	public List<EncyclopediaItems> Items;
 
+	public Image GemPlace;
+
 	[SerializeField]
 	private TextMeshProUGUI ItemNameUI;
 
@@ -36,6 +38,7 @@ public class EncyclopediaUI : MonoBehaviour {
 			ItemNameUI.text = Items [index].ItemName;
 			ItemDescriptionUI.text = Items [index].Description;
 			ItemLocationUI.text = Items [index].Location;
+			GemPlace.sprite = Items [index].GemImage;
 		}
 	}
 }
