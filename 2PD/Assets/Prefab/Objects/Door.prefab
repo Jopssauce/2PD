@@ -299,13 +299,8 @@ MonoBehaviour:
   isOpen: 0
   autoOpen: 1
   requiredPlayers: 2
-  switches:
-  - {fileID: 0}
-  - {fileID: 0}
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  switches: []
+  enemies: []
   keyRequired: {fileID: 0}
   targetLocation: {fileID: 0}
   EventOnOpen:
