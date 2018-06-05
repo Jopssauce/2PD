@@ -1184,6 +1184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373282251}
   - component: {fileID: 373282249}
+  - component: {fileID: 373282250}
   m_Layer: 0
   m_Name: Shared Inventory
   m_TagString: Untagged
@@ -1229,6 +1230,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &373282250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 373282248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85084d530f8e33e42851f485b4ab5377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
 --- !u!4 &373282251
 Transform:
   m_ObjectHideFlags: 0

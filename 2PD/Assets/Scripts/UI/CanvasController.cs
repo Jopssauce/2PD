@@ -13,8 +13,7 @@ public class CanvasController : MonoBehaviour {
 	public Image player1HpBar;
 	public Image player2HpBar;
 
-	public TextMeshProUGUI player1Gold;
-	public TextMeshProUGUI player2Gold;
+	public TextMeshProUGUI sharedGold;
 
 	public GameObject encyclopedia;
 
@@ -41,9 +40,8 @@ public class CanvasController : MonoBehaviour {
 	void UpdateUIText()
 	{
 		player1Health.text = gameManager.playerList[0].GetComponent<PlayerStats>().hp.ToString();
-		player1Gold.text = gameManager.playerList[0].GetComponent<PlayerStats>().gold.ToString();
+		sharedGold.text = gameManager.sharedInventory.GetComponent<Currency>().gold.ToString();
 		player2Health.text = gameManager.playerList[1].GetComponent<PlayerStats>().hp.ToString();
-		player2Gold.text = gameManager.playerList[1].GetComponent<PlayerStats>().gold.ToString();
 
 
 		
