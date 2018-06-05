@@ -18,7 +18,7 @@ public class EncyclopediaUI : MonoBehaviour {
 	private TextMeshProUGUI ItemLocationUI;
 
 	[SerializeField]
-	private List<Text> ButtonText;
+	private List<TextMeshProUGUI> ButtonText;
 
 	void Start()
 	{
