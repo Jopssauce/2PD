@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Amber
   m_EditorClassIdentifier: 
-  GemImage: {fileID: 21300000, guid: 7a873c0fcbbc0324baf812f482859197, type: 3}
+  GemImage: {fileID: 21300000, guid: 6ba03dbc477c7744fb235601662185f2, type: 3}
   ItemName: Amber
   Description: "One of the few gemstones of organic origin. Formed approximately 50
     million years ago.\r\n\r\nOccasionally amber is found with interesting inclusions
