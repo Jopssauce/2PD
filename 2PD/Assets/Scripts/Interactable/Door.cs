@@ -8,7 +8,7 @@ public class Door : Interactable
 {
 	public bool isOpen;
 	public bool autoOpen = true;
-	public int requiredPlayers = 2;
+	public int requiredPlayers;
 	public List<Switch> switches;
 	public List<EnemyController> enemies;
 	public BaseItem keyRequired;
@@ -19,7 +19,7 @@ public class Door : Interactable
 	public override void Start()
 	{
 		base.Start();
-		requiredPlayers = gameManager.playerList.Capacity;
+		//requiredPlayers = gameManager.playerList.Capacity;
 	}
 	public override void Interact(PlayerController player)
 	{
@@ -58,6 +58,7 @@ public class Door : Interactable
 	{
 		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
 		{
+			Debug.Log(players.Count + " " + requiredPlayers);
 			doorCol.enabled = false;
 			EventOnOpen.Invoke();
 			isOpen = true;
