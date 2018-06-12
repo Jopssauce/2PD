@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
+using XInputDotNetPure;
 
 public class PlayerController : MonoBehaviour 
 {
     public int playerID;
+	[SerializeField]
+    PlayerIndex playerIndex;
+	GamePadState state;
+	GamePadState prevState;
     public float playerSpeed;
 	public bool canMove = true;
 	public bool canInteract = true;
@@ -58,9 +63,22 @@ public class PlayerController : MonoBehaviour
             EventOnUp.AddListener (MoveUp);
             EventOnDown.AddListener (MoveDown);
     }
-
+	void Update()
+	{
+		prevState = state;
+        state = GamePad.GetState(playerIndex);
+		if (Input.GetKeyDown(interact) || prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && canInteract == true) 
+		{
+			EventOnInteract.Invoke(this);
+		}
+		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && canCombat == true) 
+		{
+			EventOnAttack.Invoke();
+		}
+	}
 	public virtual void FixedUpdate()
 	{
+		
 		Vector3 curPos = transform.position;
 		if(curPos == lastPos)
 		{
@@ -75,25 +93,25 @@ public class PlayerController : MonoBehaviour
         //if (!isLocalPlayer) return;
 		if (canMove == true && playerID == 0) 
 		{
-			if (Input.GetAxisRaw("Horizontal3") < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
+			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
 			{
 				//Debug.Log ("Horizontal");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Horizontal3") > 0 || Input.GetAxisRaw("KeyboardX1") > 0) 
+			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX1") > 0) 
 			{
 				//Debug.Log ("Horizontal");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
-            if (Input.GetAxisRaw("Vertical3") < 0 || Input.GetAxisRaw("KeyboardY1") < 0) 
+            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY1") < 0) 
 			{
 				//Debug.Log ("Vertical");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Vertical3") > 0 || Input.GetAxisRaw("KeyboardY1") > 0) 
+			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY1") > 0) 
 			{
 				//Debug.Log ("Vertical");
 				EventOnUp.Invoke();
@@ -102,43 +120,34 @@ public class PlayerController : MonoBehaviour
 		}
 		if (canMove == true && playerID == 1) 
 		{
-			if (Input.GetAxisRaw("Horizontal4") < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
+			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
 			{
 				//Debug.Log ("Horizontal2");
 				EventOnLeft.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Horizontal4") > 0 || Input.GetAxisRaw("KeyboardX2") > 0) 
+			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX2") > 0) 
 			{
 				//Debug.Log ("Horizontal2");
 				EventOnRight.Invoke();
                 EventOnMove.Invoke();
 			}
-            if (Input.GetAxisRaw("Vertical4") < 0 || Input.GetAxisRaw("KeyboardY2") < 0) 
+            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY2") < 0) 
 			{
 				//Debug.Log ("Vertical2");
 				EventOnDown.Invoke();
                 EventOnMove.Invoke();
 			}
-			if (Input.GetAxisRaw("Vertical4") > 0 || Input.GetAxisRaw("KeyboardY2") > 0) 
+			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY2") > 0) 
 			{
 				//Debug.Log ("Vertical2");
 				EventOnUp.Invoke();
                 EventOnMove.Invoke();
 			}
 		}
-		if (Input.GetKeyDown(interact) || Input.GetKeyDown(interactController) && canInteract == true) 
-		{
-			EventOnInteract.Invoke(this);
-		}
-		if (Input.GetKeyDown(attack) || Input.GetKeyDown(attackController) && canCombat == true) 
-		{
-			EventOnAttack.Invoke();
-		}
+	
 	
 	}
-	
-
 
     //public override void OnStartLocalPlayer()
    // {
