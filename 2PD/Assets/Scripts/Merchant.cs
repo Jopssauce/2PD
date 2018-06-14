@@ -10,10 +10,9 @@ public class Merchant : MonoBehaviour {
 		if (GameManager.instance != null)
 			gameManager = GameManager.instance;
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+	public void DeductCurrencyMerchant(int amount)
 	{
-		
+		gameManager.sharedInventory.GetComponent<Currency> ().DeductCurrency (amount);
 	}
 }
