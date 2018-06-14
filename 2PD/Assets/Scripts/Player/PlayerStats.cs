@@ -5,17 +5,20 @@ using UnityEngine.Networking;
 using UnityEngine.Events;
 
 public class PlayerStats : MonoBehaviour {
-	//[SyncVar]
+	Inventory sharedInventory;
 	public float hp;
 	public float maxHp;
-	public float gold = 200;
 	public UnityEvent EventOnStatChanged;
 	public UnityEvent EventOnDead;
 	public ParticleSystem particleOnDeath;
 	void Awake()
 	{
 		hp = maxHp;
-		gold = 200;
+	}
+
+	void Start()
+	{
+		sharedInventory = GameManager.instance.sharedInventory;
 	}
 	
 	public virtual void DeductHp(float damage)
@@ -42,8 +45,7 @@ public class PlayerStats : MonoBehaviour {
 	public virtual void AddCurrency(float damage)
 	{
 		//if(!isServer) return;
-		gold += damage;
-		Debug.Log("currency");
+		sharedInventory.GetComponent<Currency>().AddCurrency(damage);
 		EventOnStatChanged.Invoke();
 	}
 	
