@@ -47,7 +47,6 @@ public class Door : Interactable
 
 	void SetPlayersLocation(Vector3 targetLocation)
 	{
-		if(targetLocation == null) return;
 		foreach (var item in players)
 		{
 			item.transform.position = targetLocation;

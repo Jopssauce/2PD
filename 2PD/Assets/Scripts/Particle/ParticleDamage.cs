@@ -14,7 +14,7 @@ public class ParticleDamage : MonoBehaviour {
 
 	void OnParticleCollision(GameObject other)
     {
-		int numCollisionEvents = GetComponent<ParticleSystem>().GetCollisionEvents(other, collisionEvents);
+		//int numCollisionEvents = GetComponent<ParticleSystem>().GetCollisionEvents(other, collisionEvents);
 		
 		foreach (var item in collisionEvents)
 		{
