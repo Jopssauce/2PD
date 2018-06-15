@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class BaseSkill : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
+public class BaseSkill : MonoBehaviour 
+{
+	public enum SkillType
+	{
+		buff,
+		attack
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public UnityEvent EventOnActivate;
+	public virtual void Activate<T>(ref T actor, ref T target) { }	
 }

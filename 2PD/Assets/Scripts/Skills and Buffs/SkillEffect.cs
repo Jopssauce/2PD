@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillActor : MonoBehaviour {
-	public List<BaseSkill> skills;
+public class SkillEffect : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		

@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class BaseBuff : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
+public class BaseBuff : MonoBehaviour 
+{
+	public enum BuffType
+	{
+		standard,
+		infuse
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public bool isActivated;
+	public UnityEvent EventOnActivate;
+	public virtual void Activate<T>(ref T actor, ref T target) { }	
 }

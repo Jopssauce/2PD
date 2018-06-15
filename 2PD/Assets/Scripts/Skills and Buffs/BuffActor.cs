@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BuffActor : MonoBehaviour {
-
+	public List<BaseBuff> buffs;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +14,6 @@ public class BuffActor : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
 }
