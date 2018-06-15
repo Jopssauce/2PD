@@ -15,4 +15,9 @@ public class Merchant : MonoBehaviour {
 	{
 		gameManager.sharedInventory.GetComponent<Currency> ().DeductCurrency (amount);
 	}
+
+	public void AddCurrencyMerchant(int amount)
+	{
+		gameManager.sharedInventory.GetComponent<Currency> ().AddCurrency(amount);
+	}
 }
