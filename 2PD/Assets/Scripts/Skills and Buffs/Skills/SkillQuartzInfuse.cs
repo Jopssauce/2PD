@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillQuartzInfuse : MonoBehaviour {
+public class SkillQuartzInfuse : BaseSkill 
+{
+	BuffQuartzInfuse buff;
+	public override void Activate(GameObject actor, GameObject target)
+	{
+		if (target.GetComponent<BuffReceiver>())
+		{
+			BuffReceiver receiver = target.GetComponent<BuffReceiver>();
+			receiver.AddBuff(buff);
+		}
+	}	
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

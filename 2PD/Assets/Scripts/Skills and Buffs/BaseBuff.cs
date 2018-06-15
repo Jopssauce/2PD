@@ -10,7 +10,12 @@ public class BaseBuff : MonoBehaviour
 		standard,
 		infuse
 	}
+	BuffReceiver receiver;
 	public bool isActivated;
 	public UnityEvent EventOnActivate;
-	public virtual void Activate<T>(ref T actor, ref T target) { }	
+	public virtual void Start()
+	{
+		receiver = GetComponent<BuffReceiver>();
+	}
+	public virtual void Activate<T>(ref T receiver) { }	
 }

@@ -10,6 +10,13 @@ public class BaseSkill : MonoBehaviour
 		buff,
 		attack
 	}
+	SkillActor actor;
 	public UnityEvent EventOnActivate;
-	public virtual void Activate<T>(ref T actor, ref T target) { }	
+
+	public virtual void Start()
+	{
+		actor = GetComponent<SkillActor>();
+	}
+
+	public virtual void Activate(GameObject actor, GameObject target) { }	
 }
