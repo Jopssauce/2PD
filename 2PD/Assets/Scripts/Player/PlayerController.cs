@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     public KeyCode attack = KeyCode.Joystick1Button1;
 	public KeyCode interact = KeyCode.Joystick1Button0;
+	public KeyCode switchSkill = KeyCode.Z;
 
 	public KeyCode attackController = KeyCode.Joystick1Button1;
 	public KeyCode interactController = KeyCode.Joystick1Button0;
@@ -74,6 +75,10 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && canCombat == true) 
 		{
 			EventOnAttack.Invoke();
+		}
+		if ((Input.GetKeyDown(switchSkill)))
+		{
+			GetComponent<SkillActor>().EventOnSwitchSkill.Invoke();
 		}
 	}
 	public virtual void FixedUpdate()

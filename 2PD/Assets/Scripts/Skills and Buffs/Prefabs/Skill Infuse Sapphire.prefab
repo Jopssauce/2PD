@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1865385814209440}
+  m_RootGameObject: {fileID: 1256160208376066}
   m_IsPrefabParent: 1
---- !u!1 &1865385814209440
+--- !u!1 &1256160208376066
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4257648084498748}
-  - component: {fileID: 114003822024481908}
+  - component: {fileID: 4861671324843360}
+  - component: {fileID: 114137789328579102}
   m_Layer: 0
-  m_Name: Skill Infuse Quartz
+  m_Name: Skill Infuse Sapphire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4257648084498748
+--- !u!4 &4861671324843360
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865385814209440}
+  m_GameObject: {fileID: 1256160208376066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.030998, y: 6.0872545, z: 0.18359375}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,15 +40,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114003822024481908
+--- !u!114 &114137789328579102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865385814209440}
+  m_GameObject: {fileID: 1256160208376066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c1eeea00ffda7b48a243b09ca84c20b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fe3832e649eaf2478d3b047b0b8f4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EventOnActivate:
@@ -56,4 +56,4 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  buff: {fileID: 114644835275779810, guid: 550a10af03adedf4ca144e9dc2740dc3, type: 2}
+  buff: {fileID: 114194459958551418, guid: 2bfa9503e8889204c95aea059816c25c, type: 2}

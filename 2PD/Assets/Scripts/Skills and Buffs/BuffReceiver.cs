@@ -11,10 +11,6 @@ public class BuffReceiver : MonoBehaviour {
 		instance = this;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void AddBuff(BaseBuff buff)
 	{

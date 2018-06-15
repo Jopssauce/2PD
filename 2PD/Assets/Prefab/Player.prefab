@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 114834254585345936}
   - component: {fileID: 114098767914402596}
   - component: {fileID: 114843587992053112}
+  - component: {fileID: 114427544604220428}
+  - component: {fileID: 114167242028783292}
   - component: {fileID: 61038400473626138}
   - component: {fileID: 50467451944638832}
   - component: {fileID: 95022446226604136}
@@ -144,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.142, y: -1.866, z: 0}
+  m_LocalPosition: {x: -0.83, y: 1.8019996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -305,7 +307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 100
-  gold: 200
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -317,6 +318,39 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 0}
+--- !u!114 &114167242028783292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453793797800494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e9c3c627f23438d75917a1781048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  instance: {fileID: 0}
+--- !u!114 &114427544604220428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453793797800494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166aa2d66b1415f498cc50a2574c0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills:
+  - {fileID: 114003822024481908, guid: d9b37891833815344a6b8366bbd74b9b, type: 2}
+  - {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31, type: 2}
+  currentSkill: {fileID: 0}
+  EventOnSwitchSkill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114587856632812124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,10 +400,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
+  playerIndex: 0
   playerSpeed: 1
   canMove: 1
   canInteract: 1
   canCombat: 1
+  isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
   directions:
@@ -379,6 +415,7 @@ MonoBehaviour:
   - {fileID: 1742442534280574}
   attack: 103
   interact: 104
+  switchSkill: 113
   attackController: 351
   interactController: 350
   EventOnLeft:

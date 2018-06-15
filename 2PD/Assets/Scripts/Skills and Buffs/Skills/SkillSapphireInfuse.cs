@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillQuartzInfuse : BaseSkill 
+public class SkillSapphireInfuse : BaseSkill 
 {
-	public BuffQuartzInfuse buff;
+    public BuffSapphireInfuse buff;
 	public override void Activate(GameObject actor, GameObject target)
 	{
 		if (target.GetComponent<BuffReceiver>())

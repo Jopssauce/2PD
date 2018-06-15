@@ -18,5 +18,5 @@ public class BaseSkill : MonoBehaviour
 		actor = GetComponent<SkillActor>();
 	}
 
-	public virtual void Activate(GameObject actor, GameObject target) { }	
+	public virtual void Activate(GameObject actor, GameObject target) { Debug.Log("Buff Activated"); }	
 }
