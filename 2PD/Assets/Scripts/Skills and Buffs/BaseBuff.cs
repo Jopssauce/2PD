@@ -10,12 +10,18 @@ public class BaseBuff : MonoBehaviour
 		standard,
 		infuse
 	}
-	BuffReceiver receiver;
-	public bool isActivated;
+	public BuffType buffType;
+	public BuffReceiver receiver;
+	public bool isActivated = false;
 	public UnityEvent EventOnActivate;
+	public UnityEvent EventOnActivated;
 	public virtual void Start()
 	{
 		receiver = GetComponent<BuffReceiver>();
 	}
-	public virtual void Activate<T>(ref T receiver) { }	
+	public virtual void Activate(BuffReceiver receiver) 
+	{ 
+		isActivated = !isActivated;
+		EventOnActivated.Invoke(); 
+	}	
 }

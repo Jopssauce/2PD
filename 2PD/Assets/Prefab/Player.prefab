@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 50467451944638832}
   - component: {fileID: 95022446226604136}
   - component: {fileID: 114587856632812124}
+  - component: {fileID: 114542999056310302}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -351,6 +352,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114542999056310302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453793797800494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b37f5e20008b74087603a916142b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 103
+  interact: 104
+  switchSkill: 122
 --- !u!114 &114587856632812124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,16 +423,12 @@ MonoBehaviour:
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
+  lastPos: {x: 0, y: 0, z: 0}
   directions:
   - {fileID: 1793585112031984}
   - {fileID: 1978311893902018}
   - {fileID: 1581135814778674}
   - {fileID: 1742442534280574}
-  attack: 103
-  interact: 104
-  switchSkill: 113
-  attackController: 351
-  interactController: 350
   EventOnLeft:
     m_PersistentCalls:
       m_Calls: []

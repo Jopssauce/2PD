@@ -9,9 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     public int playerID;
 	[SerializeField]
-    PlayerIndex playerIndex;
-	GamePadState state;
-	GamePadState prevState;
+    public PlayerIndex playerIndex;
+
     public float playerSpeed;
 	public bool canMove = true;
 	public bool canInteract = true;
@@ -19,15 +18,10 @@ public class PlayerController : MonoBehaviour
 	public bool isMoving = false;
     public Vector3 direction;
 	public int lastDirection;
-	Vector3 lastPos;
+	public Vector3 lastPos;
 	public List<GameObject> directions;
 
-    public KeyCode attack = KeyCode.Joystick1Button1;
-	public KeyCode interact = KeyCode.Joystick1Button0;
-	public KeyCode switchSkill = KeyCode.Z;
-
-	public KeyCode attackController = KeyCode.Joystick1Button1;
-	public KeyCode interactController = KeyCode.Joystick1Button0;
+  
 
     public delegate void MovementDelegate();
     //[SyncEvent]
@@ -55,104 +49,11 @@ public class PlayerController : MonoBehaviour
 
     public virtual void Start()
     {
-       foreach (var item in Input.GetJoystickNames())
-       {
-           Debug.Log(item);
-       }
-            EventOnLeft.AddListener (MoveLeft);
-            EventOnRight.AddListener (MoveRight);
-            EventOnUp.AddListener (MoveUp);
-            EventOnDown.AddListener (MoveDown);
+        EventOnLeft.AddListener (MoveLeft);
+        EventOnRight.AddListener (MoveRight);
+        EventOnUp.AddListener (MoveUp);
+         EventOnDown.AddListener (MoveDown);
     }
-	void Update()
-	{
-		prevState = state;
-        state = GamePad.GetState(playerIndex);
-		if (Input.GetKeyDown(interact) || prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && canInteract == true) 
-		{
-			EventOnInteract.Invoke(this);
-		}
-		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && canCombat == true) 
-		{
-			EventOnAttack.Invoke();
-		}
-		if ((Input.GetKeyDown(switchSkill)))
-		{
-			GetComponent<SkillActor>().EventOnSwitchSkill.Invoke();
-		}
-	}
-	public virtual void FixedUpdate()
-	{
-		
-		Vector3 curPos = transform.position;
-		if(curPos == lastPos)
-		{
-			isMoving = false;
-		}
-		else
-		{
-			isMoving = true;
-		}
-		lastPos = curPos;
-
-        //if (!isLocalPlayer) return;
-		if (canMove == true && playerID == 0) 
-		{
-			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
-			{
-				//Debug.Log ("Horizontal");
-				EventOnLeft.Invoke();
-                EventOnMove.Invoke();
-			}
-			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX1") > 0) 
-			{
-				//Debug.Log ("Horizontal");
-				EventOnRight.Invoke();
-                EventOnMove.Invoke();
-			}
-            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY1") < 0) 
-			{
-				//Debug.Log ("Vertical");
-				EventOnDown.Invoke();
-                EventOnMove.Invoke();
-			}
-			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY1") > 0) 
-			{
-				//Debug.Log ("Vertical");
-				EventOnUp.Invoke();
-                EventOnMove.Invoke();
-			}
-		}
-		if (canMove == true && playerID == 1) 
-		{
-			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
-			{
-				//Debug.Log ("Horizontal2");
-				EventOnLeft.Invoke();
-                EventOnMove.Invoke();
-			}
-			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX2") > 0) 
-			{
-				//Debug.Log ("Horizontal2");
-				EventOnRight.Invoke();
-                EventOnMove.Invoke();
-			}
-            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY2") < 0) 
-			{
-				//Debug.Log ("Vertical2");
-				EventOnDown.Invoke();
-                EventOnMove.Invoke();
-			}
-			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY2") > 0) 
-			{
-				//Debug.Log ("Vertical2");
-				EventOnUp.Invoke();
-                EventOnMove.Invoke();
-			}
-		}
-	
-	
-	}
 
     //public override void OnStartLocalPlayer()
    // {

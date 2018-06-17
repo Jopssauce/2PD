@@ -16,7 +16,7 @@ public class BuffReceiver : MonoBehaviour {
 	{
 		BaseBuff temp = Instantiate(buff);
 		buffs.Add(temp);
-		temp.Activate(ref instance);
+		temp.Activate(this);
 	}
 
 }

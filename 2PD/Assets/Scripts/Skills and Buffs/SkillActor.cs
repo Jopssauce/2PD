@@ -27,6 +27,12 @@ public class SkillActor : MonoBehaviour {
 		BaseSkill temp = skillQueue.Dequeue();
 		currentSkill = skillQueue.Peek();
 		skillQueue.Enqueue(temp);
+		UseSkill(this.gameObject);
+	}
+
+	public void UseSkill(GameObject target)
+	{
+		currentSkill.Activate(this.gameObject, target);
 	}
 
 }

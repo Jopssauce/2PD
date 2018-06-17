@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 50552977141100980}
   - component: {fileID: 95169363181584986}
   - component: {fileID: 114876301403890932}
+  - component: {fileID: 114927841364417708}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -118,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051295440420622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86100054, y: -0.98, z: 0}
+  m_LocalPosition: {x: 0.86100054, y: 1.8019996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510165312953486}
@@ -312,15 +313,12 @@ MonoBehaviour:
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
+  lastPos: {x: 0, y: 0, z: 0}
   directions:
   - {fileID: 1334614303273728}
   - {fileID: 1961899430316512}
   - {fileID: 1253160395836242}
   - {fileID: 1458455904734456}
-  attack: 106
-  interact: 107
-  attackController: 410
-  interactController: 411
   EventOnLeft:
     m_PersistentCalls:
       m_Calls: []
@@ -372,7 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 30
-  gold: 200
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -408,6 +405,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc3e0adc0300d743a3b71a9b1d8a348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114927841364417708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051295440420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b37f5e20008b74087603a916142b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 106
+  interact: 107
+  switchSkill: 122
 --- !u!114 &114929823329720262
 MonoBehaviour:
   m_ObjectHideFlags: 1
