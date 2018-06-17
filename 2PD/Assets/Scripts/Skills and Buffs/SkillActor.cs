@@ -24,6 +24,7 @@ public class SkillActor : MonoBehaviour {
 
 	public void NextSkill()
 	{
+		
 		BaseSkill temp = skillQueue.Dequeue();
 		currentSkill = skillQueue.Peek();
 		skillQueue.Enqueue(temp);

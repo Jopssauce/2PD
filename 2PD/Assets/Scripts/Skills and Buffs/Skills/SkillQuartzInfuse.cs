@@ -12,14 +12,22 @@ public class SkillQuartzInfuse : BaseSkill
 		if (target.GetComponent<BuffReceiver>())
 		{
 			BuffReceiver receiver = target.GetComponent<BuffReceiver>();
-			if (receiver.buffs.First(item => item == buff) == true)
+			if (receiver.buffs.Any(item => item.buffType == buff.buffType) == true)
 			{
-				buff.Activate(receiver);
+				//BaseBuff temp = receiver.buffs.First(item => item.buffType == buff.buffType);
+				foreach (var item in receiver.buffs.ToArray())
+				{
+					if (item.buffType == buff.buffType)
+					{
+						item.Activate(receiver);
+						receiver.RemoveBuff(item);
+					}
+				}
+				//temp.Activate(receiver);			
 			}
-			if (receiver.buffs.Any(item => item == buff) == false)
+			if (receiver.buffs.Any(item => item.ID == buff.ID) == false)
 			{
 				receiver.AddBuff(buff);
-				buff.Activate(receiver);
 			}
 		}
 	}	

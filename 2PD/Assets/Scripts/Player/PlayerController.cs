@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         EventOnLeft.AddListener (MoveLeft);
         EventOnRight.AddListener (MoveRight);
         EventOnUp.AddListener (MoveUp);
-         EventOnDown.AddListener (MoveDown);
+		EventOnDown.AddListener (MoveDown);
     }
 
     //public override void OnStartLocalPlayer()

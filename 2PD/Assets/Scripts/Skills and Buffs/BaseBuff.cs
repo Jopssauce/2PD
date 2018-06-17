@@ -10,6 +10,7 @@ public class BaseBuff : MonoBehaviour
 		standard,
 		infuse
 	}
+	public int ID;
 	public BuffType buffType;
 	public BuffReceiver receiver;
 	public bool isActivated = false;

@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 95169363181584986}
   - component: {fileID: 114876301403890932}
   - component: {fileID: 114927841364417708}
+  - component: {fileID: 114445179642250828}
+  - component: {fileID: 114225704708674108}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -381,6 +383,37 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 0}
+--- !u!114 &114225704708674108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051295440420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166aa2d66b1415f498cc50a2574c0a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills: []
+  currentSkill: {fileID: 0}
+  EventOnSwitchSkill:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114445179642250828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051295440420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e9c3c627f23438d75917a1781048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  instance: {fileID: 0}
 --- !u!114 &114868789992088210
 MonoBehaviour:
   m_ObjectHideFlags: 1

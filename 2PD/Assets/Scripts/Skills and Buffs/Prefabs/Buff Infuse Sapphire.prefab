@@ -51,8 +51,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf2e2d41e1032e40bcaae341e4924ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 1
+  buffType: 0
+  receiver: {fileID: 0}
   isActivated: 0
   EventOnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnActivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

@@ -12,11 +12,19 @@ public class BuffReceiver : MonoBehaviour {
 	}
 	
 
-	public void AddBuff(BaseBuff buff)
+	public BaseBuff AddBuff(BaseBuff buff)
 	{
-		BaseBuff temp = Instantiate(buff);
+		BaseBuff temp = Instantiate(buff, this.transform);
 		buffs.Add(temp);
 		temp.Activate(this);
+		return temp;
+	}
+
+	public void RemoveBuff(BaseBuff buff)
+	{
+		BaseBuff temp = buff;
+		Destroy(temp.gameObject);
+		buffs.Remove(temp);	
 	}
 
 }

@@ -10,11 +10,11 @@ public class BuffQuartzInfuse : BaseBuff
         base.Activate(receiver);
         if (isActivated == true)
         {
-            Debug.Log("Do Buff");
+            Debug.Log("Do" + this.name);
         }
-        else
+         if (isActivated == false)
         {
-            Debug.Log("Undo Buff");
+            Debug.Log("Undo" + this.name);
         }
     }
 }
