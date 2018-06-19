@@ -24,6 +24,7 @@ public class ParticleDamage : MonoBehaviour {
         	}
 			if (item.colliderComponent.gameObject.tag == "Player")
        	 	{
+           		//item.colliderComponent.gameObject.GetComponent<PlayerStats>().DeductHp(4);
 				GetComponent<DamageActor>().DealDamage(4, item.colliderComponent.gameObject, GetComponent<DamageActor>().damageType);
 				Vector3 direction = item.colliderComponent.transform.position - transform.position;
             	direction = direction.normalized;

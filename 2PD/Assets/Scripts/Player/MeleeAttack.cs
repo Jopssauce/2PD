@@ -17,7 +17,7 @@ public class MeleeAttack : MonoBehaviour
 		Debug.Log(col);
 		if(col.gameObject.GetComponentInParent<PlayerStats>())
 		{
-			GetComponent<DamageActor>().DealDamage(damage, col.transform.parent.gameObject, GetComponent<DamageActor>().damageType);
+			GetComponent<DamageActor>().DealDamage(damage, col.gameObject, GetComponent<DamageActor>().damageType);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
 		

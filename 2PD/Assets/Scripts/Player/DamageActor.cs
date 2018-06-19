@@ -14,7 +14,7 @@ public class DamageActor : MonoBehaviour {
 
 	public void DealDamage(float damage, GameObject target, DamageTypes type)
 	{
-		PlayerStats player = target.GetComponent<PlayerStats>();
+		PlayerStats player = target.GetComponentInParent<PlayerStats>();
 		switch (type)
 		{
 			case DamageTypes.standard :
