@@ -18,7 +18,7 @@ public class BulletBehaviour : MonoBehaviour {
     {
 		if (col.gameObject.GetComponentInParent<PlayerStats>()) 
 		{
-			GetComponent<DamageActor>().DealDamage(5, col.gameObject, GetComponent<DamageActor>().damageType);
+			GetComponent<DamageActor>().DealDamage(damage, col.gameObject, GetComponent<DamageActor>().damageType);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
 		

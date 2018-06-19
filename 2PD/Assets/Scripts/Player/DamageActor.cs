@@ -18,10 +18,10 @@ public class DamageActor : MonoBehaviour {
 		switch (type)
 		{
 			case DamageTypes.standard :
-			player.DeductHp(damage);
+			player.DeductHp(damage + (damage * player.globalModifier) );
 			break;
 			case DamageTypes.fire :
-			player.DeductHp(damage * player.fireModifier);
+			player.DeductHp(damage * (damage + player.fireModifier * player.globalModifier) );
 			break;
 		}
 		
