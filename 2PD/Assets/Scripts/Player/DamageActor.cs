@@ -6,7 +6,8 @@ public class DamageActor : MonoBehaviour {
 	public enum DamageTypes
 	{
 		standard,
-		fire
+		fire,
+		lava
 	}
 
 	public DamageTypes damageType;
@@ -21,7 +22,10 @@ public class DamageActor : MonoBehaviour {
 			player.DeductHp(damage + (damage * player.globalModifier) );
 			break;
 			case DamageTypes.fire :
-			player.DeductHp(damage * (damage + player.fireModifier * player.globalModifier) );
+			player.DeductHp(damage + (damage + player.fireModifier * player.globalModifier) );
+			break;
+			case DamageTypes.lava :
+			player.DeductHp(damage + (damage + player.fireModifier * player.globalModifier) );
 			break;
 		}
 		

@@ -15,6 +15,9 @@ public class PlayerStats : MonoBehaviour {
 	[Header("Damage Modifiers")]
 	public float globalModifier = 1;
 	public float fireModifier = 1;
+	public float lavaModifier = 1;
+
+
 
 	void Awake()
 	{
