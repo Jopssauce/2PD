@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4228135112376444}
   - component: {fileID: 61028716656649248}
   - component: {fileID: 114399185961002704}
+  - component: {fileID: 114182785821204888}
   m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.158, y: -3.1274571, z: 0}
+  m_LocalPosition: {x: -0.158, y: 3.6345427, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
@@ -203,6 +204,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114182785821204888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392305247391950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fa1baa897a8cf41b012a3e330c0834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 0
 --- !u!114 &114342001538399390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,7 +269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 15
-  gold: 200
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -280,6 +292,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 198176942293827298, guid: c4c074c265184f849a2635c06d254943,
     type: 2}
+  fireModifier: 1
 --- !u!114 &114987374637630960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
+  playerIndex: 0
   playerSpeed: 0
   canMove: 1
   canInteract: 1
@@ -320,11 +334,8 @@ MonoBehaviour:
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
+  lastPos: {x: 0, y: 0, z: 0}
   directions: []
-  attack: 351
-  interact: 350
-  attackController: 351
-  interactController: 350
   EventOnLeft:
     m_PersistentCalls:
       m_Calls: []

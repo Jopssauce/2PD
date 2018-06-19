@@ -57,7 +57,6 @@ public class Door : Interactable
 	{
 		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
 		{
-			Debug.Log(players.Count + " " + requiredPlayers);
 			doorCol.enabled = false;
 			EventOnOpen.Invoke();
 			isOpen = true;

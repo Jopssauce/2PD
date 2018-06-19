@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114516491101777224}
   - component: {fileID: 61936611707993108}
   - component: {fileID: 50873204327136462}
+  - component: {fileID: 114209573754736540}
   m_Layer: 10
   m_Name: Melee Attack Sprite
   m_TagString: Untagged
@@ -88,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.37309694}
   m_EdgeRadius: 0
+--- !u!114 &114209573754736540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483431508703012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fa1baa897a8cf41b012a3e330c0834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 0
 --- !u!114 &114516491101777224
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -33,7 +33,8 @@ public class EnemyCollideAttack : MonoBehaviour {
 	{
 		while (enemyAI.players.Count > 0)
 		{
-			enemyAI.players[0].GetComponent<PlayerStats>().DeductHp(damage);
+			//enemyAI.players[0].GetComponent<PlayerStats>().DeductHp(damage);
+			GetComponent<DamageActor>().DealDamage(damage, enemyAI.players[0].gameObject, GetComponent<DamageActor>().damageType);
 			yield return new WaitForSeconds(attackTimer);
 		}
 		

@@ -5,12 +5,16 @@ using UnityEngine.Networking;
 using UnityEngine.Events;
 
 public class PlayerStats : MonoBehaviour {
+	
 	Inventory sharedInventory;
 	public float hp;
 	public float maxHp;
 	public UnityEvent EventOnStatChanged;
 	public UnityEvent EventOnDead;
 	public ParticleSystem particleOnDeath;
+	[Header("Damage Modifiers")]
+	public float fireModifier = 1;
+
 	void Awake()
 	{
 		hp = maxHp;
