@@ -229,6 +229,7 @@ MonoBehaviour:
   player2HpBar: {fileID: 1271508537}
   sharedGold: {fileID: 407705797}
   encyclopedia: {fileID: 1552567353}
+  merchant: {fileID: 471090324}
 --- !u!1 &55298468
 GameObject:
   m_ObjectHideFlags: 0

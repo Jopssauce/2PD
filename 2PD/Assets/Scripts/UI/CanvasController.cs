@@ -17,6 +17,8 @@ public class CanvasController : MonoBehaviour {
 
 	public GameObject encyclopedia;
 
+	public GameObject merchant;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -34,6 +36,11 @@ public class CanvasController : MonoBehaviour {
 		{
 			encyclopedia.GetComponent<Animator>().SetTrigger("Open");
 		}
+	}
+
+	public void ActivatUI(GameObject UI)
+	{
+		UI.gameObject.SetActive (true);
 	}
 
 	
