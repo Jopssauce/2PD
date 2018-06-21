@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour {
 	public static UIManager instance;
 	[HideInInspector]
 	public GameManager gameManager;
+	public CanvasController CanvasUI;
 	
 	void Awake()
 	{

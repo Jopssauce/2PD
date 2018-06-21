@@ -38,9 +38,9 @@ public class CanvasController : MonoBehaviour {
 		}
 	}
 
-	public void ActivatUI(GameObject UI)
+	public void ActivateUIMerchant()
 	{
-		UI.gameObject.SetActive (true);
+		merchant.gameObject.SetActive (true);
 	}
 
 	

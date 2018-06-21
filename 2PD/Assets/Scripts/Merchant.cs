@@ -5,6 +5,10 @@ using UnityEngine;
 public class Merchant : MonoBehaviour {
 
 	private GameManager gameManager;
+
+	[SerializeField]
+	private GameObject MerchantMenu;
+
 	void Start () 
 	{
 		if (GameManager.instance != null)
@@ -19,5 +23,22 @@ public class Merchant : MonoBehaviour {
 	public void AddCurrencyMerchant(int amount)
 	{
 		gameManager.sharedInventory.GetComponent<Currency> ().AddCurrency(amount);
+	}
+
+	public void DeactivateSelf()
+	{
+		gameObject.SetActive (false);
+	}
+
+	public void ActivateUI(GameObject UI)
+	{
+		UI.gameObject.SetActive (true);
+		MerchantMenu.SetActive (false);
+	}
+
+	public void BackToMerchantMenu(GameObject UI)
+	{
+		UI.gameObject.SetActive (false);
+		MerchantMenu.SetActive (true);
 	}
 }
