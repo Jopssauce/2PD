@@ -19,15 +19,15 @@ public class BuffRubyInfuse : BaseBuff
 			if (rubyLight != null)
 			{
 				tempLight = Instantiate(rubyLight, new Vector3 (playerPos.x, playerPos.y, rubyLight.transform.position.z), rubyLight.transform.rotation, player.transform);
-				tempModifier = player.GetComponent<PlayerStats>().globalModifier;
-            	player.GetComponent<PlayerStats>().globalModifier = damageModifier;
+				//tempModifier = player.GetComponent<PlayerStats>().globalModifier;
+            	//player.GetComponent<PlayerStats>().globalModifier = damageModifier;
 			}
             Debug.Log("Do" + this.name);
         }
          if (isActivated == false)
         {
 			Destroy(tempLight);
-			player.GetComponent<PlayerStats>().globalModifier = tempModifier;
+			//player.GetComponent<PlayerStats>().globalModifier = tempModifier;
             Debug.Log("Undo" + this.name);
         }
     }
