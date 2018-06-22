@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour {
 	
 	public virtual void DeductHp(float damage)
 	{
+		if (damage < 0) damage = 0;
 		//if(!isServer) return;
 		hp -= damage;
 		if(hp < 0)

@@ -66,3 +66,5 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   rubyLight: {fileID: 1063180227660138, guid: 3c176d4673cb0b04c9fe367d6b1029f4, type: 2}
+  damageModifier: 0.5
+  tempModifier: 0
