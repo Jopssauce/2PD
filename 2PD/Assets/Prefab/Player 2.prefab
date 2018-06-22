@@ -26,11 +26,11 @@ GameObject:
   - component: {fileID: 114929823329720262}
   - component: {fileID: 61670755998775274}
   - component: {fileID: 50552977141100980}
-  - component: {fileID: 95169363181584986}
   - component: {fileID: 114876301403890932}
   - component: {fileID: 114927841364417708}
   - component: {fileID: 114445179642250828}
   - component: {fileID: 114225704708674108}
+  - component: {fileID: 95314466473589144}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051295440420622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86100054, y: 1.8019996, z: 0}
+  m_LocalPosition: {x: 0.86100054, y: 1.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510165312953486}
@@ -242,7 +242,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13295245, y: 0.19690669}
   m_EdgeRadius: 0
---- !u!95 &95169363181584986
+--- !u!95 &95314466473589144
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -251,7 +251,7 @@ Animator:
   m_GameObject: {fileID: 1051295440420622}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b8482843c7a7d724f9ac63ed6cc0dd31, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5b75fc7628bf984499c78fe997aabf54, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -383,6 +383,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 0}
+  globalModifier: 1
+  fireModifier: 1
+  lavaModifier: 1
 --- !u!114 &114225704708674108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,8 +502,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 7d508e19a70d70746ae412fe8710433a, type: 3}
-  m_Color: {r: 0.1544118, g: 1, b: 0.8950305, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3a0d37c1946653940af8081cbf79c51c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

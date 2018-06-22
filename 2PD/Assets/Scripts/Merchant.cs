@@ -9,7 +9,7 @@ public class Merchant : MonoBehaviour {
 	[SerializeField]
 	private GameObject MerchantMenu;
 
-	void Start () 
+	void Awake () 
 	{
 		if (GameManager.instance != null)
 			gameManager = GameManager.instance;
