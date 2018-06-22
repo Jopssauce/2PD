@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 6.48, z: 0}
+  m_LocalPosition: {x: -0.83, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -319,7 +319,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 0}
+  globalModifier: 1
   fireModifier: 1
+  lavaModifier: 1
 --- !u!114 &114167242028783292
 MonoBehaviour:
   m_ObjectHideFlags: 1

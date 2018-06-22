@@ -171,7 +171,12 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
+  prompt: {fileID: 0}
+  players: []
+  allObjects: []
+  gemType: 0
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -204,7 +209,10 @@ MonoBehaviour:
   itemsToDrop:
   - {fileID: 114269987921358578, guid: 2014478609861d5479263cbea00d0d3b, type: 2}
   - {fileID: 114181298281989726, guid: 4cc266d90d1c9fc4c8aa2a3ca8c715c4, type: 2}
+  guaranteedItemsToDrop: []
   itemDropAmt: 3
+  ChestOpen: {fileID: 0}
+  ChestClose: {fileID: 0}
 --- !u!212 &694010
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5568,7 +5576,12 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
+  prompt: {fileID: 0}
+  players: []
+  allObjects: []
+  gemType: 0
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -5731,6 +5744,7 @@ MonoBehaviour:
   playerList:
   - {fileID: 543698840}
   - {fileID: 2027657475}
+  sharedInventory: {fileID: 0}
 --- !u!1 &1726084969
 GameObject:
   m_ObjectHideFlags: 0
