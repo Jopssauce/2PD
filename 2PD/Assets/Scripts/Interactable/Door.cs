@@ -36,12 +36,16 @@ public class Door : Interactable
 	{
 		if (autoOpen == true)
 		{
-			OpenDoor();
+			if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
+			{
+				OpenDoor();
+			}
+			else
+			{
+				CloseDoor();
+			}
 		}
-		else
-		{
-			CloseDoor();
-		}
+		
 	}
 
 
@@ -55,12 +59,9 @@ public class Door : Interactable
 
 	public void OpenDoor()
 	{
-		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
-		{
 			doorCol.enabled = false;
 			EventOnOpen.Invoke();
 			isOpen = true;
-		}
 	}
 	public void CloseDoor()
 	{
