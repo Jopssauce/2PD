@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830632477742040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.69, y: -14.157, z: -0.0007324219}
+  m_LocalPosition: {x: 19.797, y: -2.506, z: -0.0007324219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,9 +54,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.00000047683716}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 0.16, y: 0.16}
@@ -65,7 +65,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.098195076, y: 0.080534935}
   m_EdgeRadius: 0
 --- !u!114 &114775771844253590
 MonoBehaviour:
@@ -81,13 +81,49 @@ MonoBehaviour:
   id: 
   isInteractable: 0
   isCarryable: 0
+  isGrabbable: 0
   currentPlayer: {fileID: 0}
-  interactableSprite: {fileID: 0}
+  prompt: {fileID: 0}
+  players: []
+  allObjects: []
+  gemType: 0
   interactableType: 0
   lockType: 0
   EventInteract:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventInRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: AnimLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOutRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: AnimRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventInteracted:
@@ -102,10 +138,10 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   gameManager: {fileID: 0}
   playerIDRequired: 0
-  buttonID: 0
+  objectRequired: {fileID: 0}
   isInteracted: 0
-  off: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  on: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  off: {fileID: 21300000, guid: 3a567e6a988af694a90a9cbdeaa2dac2, type: 3}
+  on: {fileID: 21300000, guid: 01e9cde329935e54ea6f656cd31b8f7c, type: 3}
 --- !u!212 &212654288778762922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 3a567e6a988af694a90a9cbdeaa2dac2, type: 3}
   m_Color: {r: 1, g: 0.39310342, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
