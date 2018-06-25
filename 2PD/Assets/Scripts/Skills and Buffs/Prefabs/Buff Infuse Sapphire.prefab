@@ -65,3 +65,5 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  sapphireArrow: {fileID: 1102428951859864, guid: 1e49ea0cafe162f4aaf12f886f97b5dc,
+    type: 2}
