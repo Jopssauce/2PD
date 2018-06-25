@@ -7,6 +7,7 @@ public class BulletBehaviour : MonoBehaviour {
 	public float damage;
 	public Vector2 direction;
 	public float knocbackForce = 0.5f;
+	public Interactable.GemType gemType;
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
