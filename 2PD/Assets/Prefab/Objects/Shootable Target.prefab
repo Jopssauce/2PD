@@ -9,32 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1012044482262928}
+  m_RootGameObject: {fileID: 1051410042458816}
   m_IsPrefabParent: 1
---- !u!1 &1012044482262928
+--- !u!1 &1051410042458816
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4362886972681708}
-  - component: {fileID: 212245566967900422}
-  - component: {fileID: 114567789000367848}
-  - component: {fileID: 61113616075068826}
+  - component: {fileID: 4829408168582344}
+  - component: {fileID: 212477917905839412}
+  - component: {fileID: 114195462749349304}
+  - component: {fileID: 61474540144347696}
   m_Layer: 0
-  m_Name: Sapphire Interactable
+  m_Name: Shootable Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4362886972681708
+--- !u!4 &4829408168582344
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012044482262928}
+  m_GameObject: {fileID: 1051410042458816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 29.853, y: 4.07, z: -0.0087890625}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -42,12 +42,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61113616075068826
+--- !u!61 &61474540144347696
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012044482262928}
+  m_GameObject: {fileID: 1051410042458816}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -67,12 +67,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114567789000367848
+--- !u!114 &114195462749349304
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012044482262928}
+  m_GameObject: {fileID: 1051410042458816}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00c8ce823f671a84f837e0f575f6d004, type: 3}
@@ -86,7 +86,7 @@ MonoBehaviour:
   prompt: {fileID: 0}
   players: []
   allObjects: []
-  gemType: 0
+  gemType: 2
   interactableType: 0
   lockType: 0
   EventInteract:
@@ -127,12 +127,12 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   gameManager: {fileID: 0}
   stayOnAfterHit: 0
---- !u!212 &212245566967900422
+--- !u!212 &212477917905839412
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012044482262928}
+  m_GameObject: {fileID: 1051410042458816}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0.83448267, b: 1, a: 1}
   m_FlipX: 0

@@ -2342,6 +2342,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &381999742
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 29.853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.0087890625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362886972681708, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+      propertyPath: m_RootOrder
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 614206265}
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567789000367848, guid: cbb9e0d508cbc0047aec5be9fe54d32c,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cbb9e0d508cbc0047aec5be9fe54d32c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &396577377 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114050235455424946, guid: 40022f6d1f9e6994fb6dedbd9d54f2c8,
@@ -34564,6 +34636,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 606023805}
   m_Script: {fileID: 11500000, guid: bb6efb35f8f14014eb7eba3b12cdae18, type: 3}
+--- !u!114 &614206265 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1333465251}
+  m_Script: {fileID: 11500000, guid: bb6efb35f8f14014eb7eba3b12cdae18, type: 3}
 --- !u!114 &619668276 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114971330575192454, guid: 23b42d1a3f8d75b4783386c907c7dc09,
@@ -39369,7 +39447,7 @@ Prefab:
     - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
         type: 2}
       propertyPath: autoOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
         type: 2}
