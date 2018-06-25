@@ -22,6 +22,7 @@ public class SapphireInteractable : Interactable {
 			EventInRange.Invoke();
 			hasBeenHit = true;
 		} 
+		Debug.Log("test");
 	}
 	public override void OnTriggerExit2D(Collider2D col)
 	{
