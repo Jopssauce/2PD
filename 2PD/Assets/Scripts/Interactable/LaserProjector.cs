@@ -13,14 +13,13 @@ public class LaserProjector : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        Vector3 forward = transform.TransformDirection(Vector3.up) * range;
-        Debug.DrawRay(transform.position, forward, Color.green);
+
 	}
 
 
-	 void OnDrawGizmosSelected() {
+	 void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Vector3 direction = transform.TransformDirection(Vector3.forward) * range;
+        Vector3 direction = transform.TransformDirection(Vector3.up) * range;
         Gizmos.DrawRay(transform.position, direction);
     }
 }

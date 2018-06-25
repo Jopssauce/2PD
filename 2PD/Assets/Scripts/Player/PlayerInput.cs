@@ -10,7 +10,8 @@ public class PlayerInput : MonoBehaviour {
 
 	public KeyCode attack;
 	public KeyCode interact;
-	public KeyCode switchSkill = KeyCode.Z;
+	public KeyCode skillForward = KeyCode.X;
+	public KeyCode skillBackward = KeyCode.Z;
 
 
 	 public virtual void Start()
@@ -29,9 +30,13 @@ public class PlayerInput : MonoBehaviour {
 		{
 			player.EventOnAttack.Invoke();
 		}
-		if ((Input.GetKeyDown(switchSkill)))
+		if ((Input.GetKeyDown(skillForward)) || prevState.Buttons.RightShoulder == ButtonState.Released && state.Buttons.RightShoulder == ButtonState.Pressed)
 		{
-			GetComponent<SkillActor>().EventOnSwitchSkill.Invoke();
+			GetComponent<SkillActor>().EventOnSkillForward.Invoke();
+		}
+		if ((Input.GetKeyDown(skillBackward)) || prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed)
+		{
+			GetComponent<SkillActor>().EventOnSkillBackward.Invoke();
 		}
 	}
 	public virtual void FixedUpdate()
