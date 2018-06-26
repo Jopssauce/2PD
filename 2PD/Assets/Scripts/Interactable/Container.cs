@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Container : Interactable {
 
-	public bool isInteracted = false;
 	public List<Pickup> itemsToDrop;
 	public List<Pickup> guaranteedItemsToDrop;
 	public int itemDropAmt = 3;

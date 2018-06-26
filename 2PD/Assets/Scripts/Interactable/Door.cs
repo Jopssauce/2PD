@@ -10,6 +10,7 @@ public class Door : Interactable
 	public bool autoOpen = true;
 	public int requiredPlayers;
 	public List<Switch> switches;
+	public List<SapphireInteractable> sapphireInteractables;
 	public List<EnemyController> enemies;
 	public BaseItem keyRequired;
 	public GameObject targetLocation;
@@ -36,7 +37,8 @@ public class Door : Interactable
 	{
 		if (autoOpen == true)
 		{
-			if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted))
+			if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted)
+			 && (sapphireInteractables.All(saph => saph.hasBeenHit) || sapphireInteractables.All(saph => saph.isOn)) ) 
 			{
 				OpenDoor();
 			}

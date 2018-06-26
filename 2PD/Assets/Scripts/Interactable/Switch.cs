@@ -6,7 +6,6 @@ using System.Linq;
 public class Switch : Interactable {
 	public int playerIDRequired;
 	public int buttonID;
-	public bool isInteracted;
 
 	public Sprite off;
 	public Sprite on;
