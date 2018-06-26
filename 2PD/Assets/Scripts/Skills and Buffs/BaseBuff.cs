@@ -10,7 +10,7 @@ public class BaseBuff : MonoBehaviour
 		standard,
 		infuse
 	}
-	public int ID;
+	public string ID;
 	public string buffName;
 	public Sprite sprite;
 	public BuffType buffType;

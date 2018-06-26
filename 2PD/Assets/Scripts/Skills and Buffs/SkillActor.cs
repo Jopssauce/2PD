@@ -46,4 +46,9 @@ public class SkillActor : MonoBehaviour {
 		currentSkill.Activate(this.gameObject, target);
 	}
 
+	public void AddSkill(BaseSkill skill)
+	{
+		skills.Add(skill);
+	}
+
 }

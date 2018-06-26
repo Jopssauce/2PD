@@ -11,6 +11,7 @@ public class BaseSkill : MonoBehaviour
 		attack
 	}
 	SkillActor actor;
+	public string ID;
 	public UnityEvent EventOnActivate;
 
 	public virtual void Start()
