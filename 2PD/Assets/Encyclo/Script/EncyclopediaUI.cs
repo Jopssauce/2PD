@@ -40,5 +40,6 @@ public class EncyclopediaUI : MonoBehaviour {
 			ItemLocationUI.text = Items [index].Location;
 			GemPlace.sprite = Items [index].GemImage;
 		}
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
 	}
 }
