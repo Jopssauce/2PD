@@ -7,7 +7,6 @@ public class PressurePad : Interactable
 {
 	public int playerIDRequired;
 	public Interactable objectRequired;
-	public bool isInteracted;
 	public bool playerCanTrigger;
 	public Sprite off;
 	public Sprite on;
