@@ -7,8 +7,9 @@ public class SkillActor : MonoBehaviour {
 	public List<BaseSkill> skills;
 	public Queue<BaseSkill> skillQueue;
 	public BaseSkill currentSkill;
-
-	public UnityEvent EventOnSwitchSkill;
+	public int index;
+	public UnityEvent EventOnSkillForward;
+	public UnityEvent EventOnSkillBackward;
 	
 	void Start()
 	{
@@ -19,15 +20,24 @@ public class SkillActor : MonoBehaviour {
 			skillQueue.Enqueue(temp);
 		}
 		currentSkill = skillQueue.Peek();
-		EventOnSwitchSkill.AddListener(NextSkill);
+		EventOnSkillForward.AddListener(SkillForward);
+		EventOnSkillBackward.AddListener(SkillBackward);
 	}
 
-	public void NextSkill()
+	public void SkillForward()
 	{
-		
-		BaseSkill temp = skillQueue.Dequeue();
-		currentSkill = skillQueue.Peek();
-		skillQueue.Enqueue(temp);
+		if(skills.Count <= 0) return;
+		index++;
+		if(index > skills.Count - 1) index = 0;
+		currentSkill = skills[index];
+        UseSkill(this.gameObject);
+	}
+	public void SkillBackward()
+	{
+		if(skills.Count <= 0) return;
+		index--;
+		if(index < 0) index = skills.Count - 1;
+		currentSkill = skills[index];
 		UseSkill(this.gameObject);
 	}
 

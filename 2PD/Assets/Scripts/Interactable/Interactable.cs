@@ -27,7 +27,9 @@ public class Interactable : MonoBehaviour
 	{
 		none,
 		Quartz,
-		Sapphire
+		Sapphire,
+		Obsidian,
+		Diamond
 	}
 
 	public enum LockType

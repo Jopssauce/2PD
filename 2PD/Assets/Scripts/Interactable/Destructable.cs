@@ -7,6 +7,7 @@ public class Destructable : MonoBehaviour {
 	public UnityEvent EventOnHit;
 	public LayerMask layerMask;
 	
+	public Interactable.GemType type;
 	public GameObject itemtoDrop;
 
 	public void OnTriggerEnter2D(Collider2D col)
