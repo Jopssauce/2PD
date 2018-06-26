@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour 
 {
-	void Update()
-	{
-		if (Input.GetKeyDown (KeyCode.B))
-			FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
-	}
-
 	public void LoadScene(string name)
 	{
-		
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
+		SceneManager.LoadSceneAsync(name);
+	}
+
+	// Only Works on build
+	public void QuitApplication()
+	{
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
+		Application.Quit ();
 	}
 }
