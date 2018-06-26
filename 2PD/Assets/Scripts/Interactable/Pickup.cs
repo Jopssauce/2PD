@@ -13,7 +13,7 @@ public class Pickup : MonoBehaviour
 	{
 		if (col.gameObject.GetComponent<PlayerController>())
 		{
-			col.gameObject.GetComponent<PlayerStats>().AddHp(Amount);
+			col.gameObject.GetComponent<Health>().AddHp(Amount);
 			EventPickUp.Invoke();
 			Destroy(this.gameObject);
 		}

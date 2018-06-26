@@ -8,7 +8,7 @@ void OnTriggerEnter2D(Collider2D col)
     {
 		if (col.gameObject.GetComponentInParent<PlayerStats>()) 
 		{
-			col.gameObject.GetComponentInParent<PlayerStats>().AddHp(heal);
+			col.gameObject.GetComponentInParent<Health>().AddHp(heal);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
 		

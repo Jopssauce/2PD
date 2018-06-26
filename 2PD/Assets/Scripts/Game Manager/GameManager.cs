@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
 	
 	void LateUpdate () 
 	{
-		if (playerList.Any(player => player.GetComponent<PlayerStats>().hp <= 0))
+		if (playerList.Any(player => player.GetComponent<Health>().health <= 0))
 		{
 			SceneManager.LoadSceneAsync("Game Over Scene");
 			SceneManager.UnloadSceneAsync("UI Scene");

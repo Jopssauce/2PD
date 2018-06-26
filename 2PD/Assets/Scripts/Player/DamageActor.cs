@@ -16,17 +16,18 @@ public class DamageActor : MonoBehaviour {
 
 	public void DealDamage(float damage, GameObject target, DamageTypes type)
 	{
-		PlayerStats player = target.GetComponentInParent<PlayerStats>();
+		Health player = target.GetComponentInParent<Health>();
+		PlayerStats stats = target.GetComponent<PlayerStats>();
 		switch (type)
 		{
 			case DamageTypes.standard :
-			player.DeductHp( (damage * player.globalModifier) );
+			player.DeductHp( (damage * stats.globalModifier) );
 			break;
 			case DamageTypes.fire :
-			player.DeductHp( (damage * player.fireModifier * player.globalModifier) );
+			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier) );
 			break;
 			case DamageTypes.lava :
-			player.DeductHp( (damage * player.fireModifier * player.globalModifier) );
+			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier) );
 			break;
 		}
 		

@@ -45930,6 +45930,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  type: 0
   itemtoDrop: {fileID: 0}
 --- !u!212 &1448001515
 SpriteRenderer:

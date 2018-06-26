@@ -25,7 +25,7 @@ public class CanvasController : MonoBehaviour {
 		gameManager = UIManager.instance.gameManager;
 		foreach (var player in gameManager.playerList)
 		{
-			player.GetComponent<PlayerStats>().EventOnStatChanged.AddListener(UpdateUIText);
+			player.GetComponent<Health>().EventOnHealthChange.AddListener(UpdateUIText);
 		}
 		UpdateUIText();
 	}
@@ -46,13 +46,13 @@ public class CanvasController : MonoBehaviour {
 	
 	void UpdateUIText()
 	{
-		player1Health.text = gameManager.playerList[0].GetComponent<PlayerStats>().hp.ToString();
+		player1Health.text = gameManager.playerList[0].GetComponent<Health>().health.ToString();
 		sharedGold.text = gameManager.sharedInventory.GetComponent<Currency>().gold.ToString();
-		player2Health.text = gameManager.playerList[1].GetComponent<PlayerStats>().hp.ToString();
+		player2Health.text = gameManager.playerList[1].GetComponent<Health>().health.ToString();
 
 
 		
-		player1HpBar.fillAmount = gameManager.playerList[0].GetComponent<PlayerStats>().hp / gameManager.playerList[0].GetComponent<PlayerStats>().maxHp;
-		player2HpBar.fillAmount = gameManager.playerList[1].GetComponent<PlayerStats>().hp / gameManager.playerList[1].GetComponent<PlayerStats>().maxHp;
+		player1HpBar.fillAmount = gameManager.playerList[0].GetComponent<Health>().health / gameManager.playerList[0].GetComponent<Health>().maxHealth;
+		player2HpBar.fillAmount = gameManager.playerList[1].GetComponent<Health>().health / gameManager.playerList[1].GetComponent<Health>().maxHealth;
 	}
 }

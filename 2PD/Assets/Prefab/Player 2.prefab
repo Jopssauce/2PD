@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114445179642250828}
   - component: {fileID: 114225704708674108}
   - component: {fileID: 95314466473589144}
+  - component: {fileID: 114100067195324470}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -295,6 +296,29 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114100067195324470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051295440420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heath: 0
+  maxHealth: 30
+  EventOnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114157229714259216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,8 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f32697c967a5448809a9efe228974a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 30
+  healthComponent: {fileID: 0}
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -402,7 +425,13 @@ MonoBehaviour:
   - {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31, type: 2}
   - {fileID: 114441675975026584, guid: e96c62c06fd49cd46812941cc0538c83, type: 2}
   currentSkill: {fileID: 0}
-  EventOnSwitchSkill:
+  index: 0
+  EventOnSkillForward:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnSkillBackward:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -457,7 +486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 106
   interact: 107
-  switchSkill: 109
+  skillForward: 120
+  skillBackward: 122
 --- !u!114 &114929823329720262
 MonoBehaviour:
   m_ObjectHideFlags: 1

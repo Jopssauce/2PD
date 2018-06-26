@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114987374637630960}
   - component: {fileID: 58239476775714606}
   - component: {fileID: 50317707029574482}
+  - component: {fileID: 114436874485243116}
   m_Layer: 0
   m_Name: Generic Enemy
   m_TagString: Untagged
@@ -74,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.158, y: 3.6345427, z: 0}
+  m_LocalPosition: {x: 12.177, y: -14.675, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
@@ -216,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 0
+  type: 0
 --- !u!114 &114342001538399390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +258,29 @@ MonoBehaviour:
   attackTimer: 2
   damage: 5
   enemyAI: {fileID: 114342001538399390}
+--- !u!114 &114436874485243116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671564799364820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heath: 0
+  maxHealth: 15
+  EventOnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114439275090388498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,8 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4560d4d6a8cd44aa7506160919117f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 15
+  healthComponent: {fileID: 0}
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -292,7 +316,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 198176942293827298, guid: c4c074c265184f849a2635c06d254943,
     type: 2}
+  globalModifier: 1
   fireModifier: 1
+  lavaModifier: 1
 --- !u!114 &114987374637630960
 MonoBehaviour:
   m_ObjectHideFlags: 1

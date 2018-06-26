@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 95022446226604136}
   - component: {fileID: 114587856632812124}
   - component: {fileID: 114542999056310302}
+  - component: {fileID: 114839025566115880}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -147,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 1.35, z: 0}
+  m_LocalPosition: {x: 27.73, y: 3.3500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -306,8 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f32697c967a5448809a9efe228974a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 100
+  healthComponent: {fileID: 0}
   EventOnStatChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -351,7 +351,13 @@ MonoBehaviour:
   - {fileID: 114003822024481908, guid: d9b37891833815344a6b8366bbd74b9b, type: 2}
   - {fileID: 114347694970758000, guid: 4e4bc48aa2692404abebb61508a6fe86, type: 2}
   currentSkill: {fileID: 0}
-  EventOnSwitchSkill:
+  index: 0
+  EventOnSkillForward:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnSkillBackward:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -369,7 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 103
   interact: 104
-  switchSkill: 122
+  skillForward: 120
+  skillBackward: 122
 --- !u!114 &114587856632812124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,6 +401,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 1483431508703012, guid: 36e28fcf598118740988397f80fa1419, type: 2}
   playercontroller: {fileID: 0}
+--- !u!114 &114839025566115880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453793797800494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heath: 0
+  maxHealth: 100
+  EventOnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114843587992053112
 MonoBehaviour:
   m_ObjectHideFlags: 1
