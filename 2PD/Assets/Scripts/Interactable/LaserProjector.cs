@@ -23,17 +23,18 @@ public class LaserProjector : MonoBehaviour {
 		}
 		lr.SetPosition(0, this.transform.position);
 		lr.SetPosition(1, laserTargetPos);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
-        if (hit.collider != null && hit.collider.name != "Walls") 
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        if (hit.collider != null && hit.collider.name != "Walls" && Vector2.Distance(this.transform.position, hit.collider.transform.position) < range ) 
 		{
-			if (Vector2.Distance(this.transform.position, hit.collider.transform.position) < range )
-			{
-				laserTargetPos = new Vector3( this.transform.position.x, ( hit.transform.position.y), this.transform.position.z);
-			}
+			Debug.Log(hit.collider);
+			
+			//laserTargetPos = new Vector3( this.transform.position.x, ( hit.transform.position.y), this.transform.position.z);
+			laserTargetPos = hit.transform.position;
+			
         }
 		else
 		{
-			laserTargetPos = transform.position + Vector3.up * range;
+			laserTargetPos = transform.position + transform.up * range;
 		}
 		
     }
@@ -41,7 +42,7 @@ public class LaserProjector : MonoBehaviour {
 
 	 void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
-        Vector3 direction = transform.TransformDirection(Vector3.up) * range;
+        Vector3 direction = transform.up * range;
         Gizmos.DrawRay(transform.position, direction);
     }
 }
