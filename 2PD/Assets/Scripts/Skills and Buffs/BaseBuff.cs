@@ -11,6 +11,8 @@ public class BaseBuff : MonoBehaviour
 		infuse
 	}
 	public int ID;
+	public string buffName;
+	public Sprite sprite;
 	public BuffType buffType;
 	public BuffReceiver receiver;
 	public bool isActivated = false;
