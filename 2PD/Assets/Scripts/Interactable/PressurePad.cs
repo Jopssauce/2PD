@@ -24,7 +24,8 @@ public class PressurePad : Interactable
 
 	void LateUpdate()
 	{
-		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == GemType.Sapphire) )
+		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == GemType.Sapphire
+		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();
 			isInteracted = true;
