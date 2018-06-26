@@ -13,6 +13,6 @@ public class SceneController : MonoBehaviour
 
 	public void LoadScene(string name)
 	{
-		
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
 	}
 }
