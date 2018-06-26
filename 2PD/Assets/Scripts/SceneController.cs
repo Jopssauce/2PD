@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour 
 {
-	void Update()
-	{
-		if(Input.GetKeyDown("Vertical"))
-			FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Hover);
-	}
-
 	public void LoadScene(string name)
 	{
 		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
