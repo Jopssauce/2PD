@@ -23,9 +23,10 @@ public class DestructableHealth : Health {
 			}
 			return;
 		}
-		base.DeductHp(amt, actor);
-		
-		
+		if (!ds.takesHitsToDestroy)
+		{
+			base.DeductHp(amt, actor);
+		}		
 	}
 
 }
