@@ -7,8 +7,8 @@ public class SceneController : MonoBehaviour
 {
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.B))
-			FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
+		if(Input.GetButtonDown("Vertical"))
+			FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Hover);
 	}
 
 	public void LoadScene(string name)
