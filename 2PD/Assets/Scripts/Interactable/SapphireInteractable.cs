@@ -5,12 +5,13 @@ using System.Linq;
 
 public class SapphireInteractable : Interactable {
 	public bool stayOnAfterHit = false;
+	bool isOn = false;
 	bool hasBeenHit = false;
 	void LateUpdate()
 	{
 		if (stayOnAfterHit && hasBeenHit)
 		{
-			EventInRange.Invoke();
+			isOn = true;
 		}
 		
 	}
