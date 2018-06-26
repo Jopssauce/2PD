@@ -6,7 +6,7 @@ public class EnemyStats : PlayerStats
 {
 	void Start()
 	{
-		EventOnDead.AddListener(DestroySelf);
+		healthComponent.EventOnHealthDepleted.AddListener(DestroySelf);
 	}
 
 
