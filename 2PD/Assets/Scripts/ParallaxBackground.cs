@@ -12,6 +12,7 @@ public class ParallaxBackground : MonoBehaviour {
 	void Start () 
 	{
 		startPos = transform.position;
+		Debug.Log (transform.position);
 	}
 	
 	// Update is called once per frame
