@@ -17,8 +17,9 @@ public class BulletBehaviour : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
     {
-		if (col.gameObject.GetComponentInParent<PlayerStats>()) 
+		if (col.gameObject.GetComponentInParent<Health>()) 
 		{
+			
 			GetComponent<DamageActor>().DealDamage(damage, col.gameObject, GetComponent<DamageActor>().damageType);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}

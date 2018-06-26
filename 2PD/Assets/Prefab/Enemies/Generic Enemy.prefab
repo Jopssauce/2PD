@@ -74,9 +74,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.177, y: -14.675, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.156, y: -2.078, z: 0}
+  m_LocalScale: {x: 0.80808014, y: 0.8333326, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
   - {fileID: 4918828765869634}
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heath: 0
+  health: 0
   maxHealth: 15
   EventOnHealthChange:
     m_PersistentCalls:
@@ -281,6 +281,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  globalModifier: 1
+  fireModifier: 1
+  lavaModifier: 1
 --- !u!114 &114439275090388498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,9 +319,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   particleOnDeath: {fileID: 198176942293827298, guid: c4c074c265184f849a2635c06d254943,
     type: 2}
-  globalModifier: 1
-  fireModifier: 1
-  lavaModifier: 1
 --- !u!114 &114987374637630960
 MonoBehaviour:
   m_ObjectHideFlags: 1
