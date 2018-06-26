@@ -6,6 +6,8 @@ public class ParticleDamage : MonoBehaviour {
 
 	public List<GameObject> objects;
 	public List<ParticleCollisionEvent> collisionEvents;
+	[Range(0,100)]
+	public float knockbackForce = 5;
 
 	void Start()
 	{
@@ -28,7 +30,7 @@ public class ParticleDamage : MonoBehaviour {
 				GetComponent<DamageActor>().DealDamage(4, item.colliderComponent.gameObject, GetComponent<DamageActor>().damageType);
 				Vector3 direction = item.colliderComponent.transform.position - transform.position;
             	direction = direction.normalized;
-				item.colliderComponent.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 5);
+				item.colliderComponent.GetComponent<Rigidbody2D>().AddForce(transform.up * knockbackForce);
         	}
 		}
 
