@@ -6,22 +6,11 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
-	public static AudioManager instance;
 	public SoundFX[] Sounds;
 	public SoundFX[] Music;
 	// Use this for initialization
 	void Awake () 
 	{
-
-		if (instance == null) 
-		{
-			instance = this;	
-		}
-		else if (instance != this) 
-		{
-			Destroy (gameObject);
-		}
-
 		foreach (SoundFX s in Sounds)
 		{
 			s.Source = gameObject.AddComponent<AudioSource> ();
@@ -39,18 +28,11 @@ public class AudioManager : MonoBehaviour {
 			// this is to help jops not get heart attack
 			s.Source.volume = s.Volume;
 		}
-
-		DontDestroyOnLoad (gameObject);
-	}
-
-	void OnDestroy()
-	{
-		instance = null;
 	}
 
 	void Start()
 	{
-		PlayMusic (MusicStrings.BGM);
+		PlayMusic (MusicStrings.Music_BGM);
 	}
 
 	public void Play (string name)

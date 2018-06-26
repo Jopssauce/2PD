@@ -20,5 +20,7 @@ public class SoundFX
 
 public class MusicStrings
 {
-	public static string BGM = "BGM";
+	public static string Music_BGM = "BGM";
+	public static string SoundFx_Select = "Select";
+	public static string SoundFx_Hover = "Hover";
 }
