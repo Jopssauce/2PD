@@ -68,7 +68,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   color:
     serializedVersion: 2
-    rgba: 723918
+    rgba: 4278190335
   rubyLight: {fileID: 1063180227660138, guid: 3c176d4673cb0b04c9fe367d6b1029f4, type: 2}
   damageModifier: 0.5
   tempModifier: 0

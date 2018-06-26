@@ -68,6 +68,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   color:
     serializedVersion: 2
-    rgba: 15918848
+    rgba: 4294950912
   sapphireArrow: {fileID: 1102428951859864, guid: 1e49ea0cafe162f4aaf12f886f97b5dc,
     type: 2}

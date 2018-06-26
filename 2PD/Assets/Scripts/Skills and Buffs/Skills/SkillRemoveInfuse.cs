@@ -5,7 +5,7 @@ using System.Linq;
 
 public class SkillRemoveInfuse : BaseSkill 
 {
-	public BuffRubyInfuse buff;
+	public BuffRemoveInfuse buff;
 	public override void Activate(GameObject actor, GameObject target)
 	{
 		base.Activate(actor, target);
@@ -27,7 +27,7 @@ public class SkillRemoveInfuse : BaseSkill
 			}
 			if (receiver.buffs.Any(item => item.ID == buff.ID) == false)
 			{
-				//receiver.AddBuff(buff);
+				receiver.AddBuff(buff);
 			}
 		}
 	}	
