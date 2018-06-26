@@ -21,13 +21,13 @@ public class DamageActor : MonoBehaviour {
 		switch (type)
 		{
 			case DamageTypes.standard :
-			player.DeductHp( (damage * stats.globalModifier) );
+			player.DeductHp( (damage * stats.globalModifier), this.gameObject );
 			break;
 			case DamageTypes.fire :
-			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier) );
+			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier), this.gameObject );
 			break;
 			case DamageTypes.lava :
-			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier) );
+			player.DeductHp( (damage * stats.fireModifier * stats.globalModifier), this.gameObject );
 			break;
 		}
 		
