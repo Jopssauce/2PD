@@ -8,7 +8,7 @@ using System.Linq;
 public class Interactable : MonoBehaviour 
 {	
 	public string id;
-	bool isHighestPriority;
+	public bool isInteracted;
 	public bool isInteractable;
 	public bool isCarryable;
 	public bool isGrabbable;
