@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour {
 
 	void Start()
 	{
-		Play (MusicStrings.BGM);
+		PlayMusic (MusicStrings.BGM);
 	}
 
 	public void Play (string name)
