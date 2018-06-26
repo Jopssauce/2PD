@@ -18,6 +18,7 @@ public class SapphireInteractable : Interactable {
 
 	public override void OnTriggerEnter2D(Collider2D col)
 	{
+		if(!col.gameObject.GetComponent<BulletBehaviour>()) return;
 		if(col.gameObject.GetComponent<BulletBehaviour>().gemType == gemType)
 		{
 			EventInRange.Invoke();
