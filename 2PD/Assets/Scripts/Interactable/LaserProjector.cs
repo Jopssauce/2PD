@@ -24,7 +24,6 @@ public class LaserProjector : MonoBehaviour {
 		lr.SetPosition(0, this.transform.position);
 		lr.SetPosition(1, laserTargetPos);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
-		Debug.Log(hit.collider);
         if (hit.collider != null && hit.collider.name != "Walls") 
 		{
 			if (Vector2.Distance(this.transform.position, hit.collider.transform.position) < range )

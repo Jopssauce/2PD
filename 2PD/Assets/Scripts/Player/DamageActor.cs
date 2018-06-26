@@ -11,6 +11,7 @@ public class DamageActor : MonoBehaviour {
 	}
 
 	public DamageTypes damageType;
+	public Interactable.GemType type;
 	
 
 	public void DealDamage(float damage, GameObject target, DamageTypes type)
