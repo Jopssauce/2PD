@@ -8,23 +8,23 @@ public class DestructableHealth : Health {
 	void Start()
 	{
 		ds = GetComponent<Destructable>();
+		hitsToDestroy = ds.hitsToDestroy;
 	}
 
 	public override void DeductHp(float amt, GameObject actor)
 	{
-		base.DeductHp(amt, actor);
-		if (health < 0)
+		DamageActor da = actor.GetComponent<DamageActor>();
+		if(ds.takesHitsToDestroy && ds.type == da.type) 
 		{
-			if (actor.gameObject.GetComponent<DamageActor>())
+			hitsToDestroy--;
+			if (hitsToDestroy <= 0)
 			{
-			if (ds.itemtoDrop != null)
-			{
-				ds.DropItem(ds.itemtoDrop);
+				EventOnHealthDepleted.Invoke();
 			}
-			//Drop item if any
-			Destroy(this.gameObject);
-			}
+			return;
 		}
+		base.DeductHp(amt, actor);
+		
 		
 	}
 

@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Destructable : MonoBehaviour {
 	public UnityEvent EventOnHit;
-	public LayerMask layerMask;
-	
+	public bool takesHitsToDestroy;
+	public float hitsToDestroy;
 	public Interactable.GemType type;
 	public GameObject itemtoDrop;
 	
@@ -15,12 +15,14 @@ public class Destructable : MonoBehaviour {
 	void Start()
 	{
 		health = GetComponent<Health>();
+		health.EventOnHealthDepleted.AddListener(DropItem);
 	}
 
 
-	public virtual void DropItem(GameObject item)
+	public virtual void DropItem()
 	{
-		Instantiate(item, this.transform.position, item.transform.rotation).GetComponent<Pickup>().EnableGravity();
+		Instantiate(itemtoDrop, this.transform.position, itemtoDrop.transform.rotation).GetComponent<Pickup>().EnableGravity();
+		Destroy(this.gameObject);
 	}
 
 	

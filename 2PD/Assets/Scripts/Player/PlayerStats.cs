@@ -11,10 +11,7 @@ public class PlayerStats : MonoBehaviour {
 	public UnityEvent EventOnStatChanged;
 	public UnityEvent EventOnDead;
 	public ParticleSystem particleOnDeath;
-	[Header("Damage Modifiers")]
-	public float globalModifier = 1;
-	public float fireModifier = 1;
-	public float lavaModifier = 1;
+
 
 
 

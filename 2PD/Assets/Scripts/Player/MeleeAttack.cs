@@ -15,7 +15,7 @@ public class MeleeAttack : MonoBehaviour
 	public void OnTriggerEnter2D(Collider2D col)
 	{
 		Debug.Log(col);
-		if(col.gameObject.GetComponentInParent<PlayerStats>())
+		if(col.gameObject.GetComponentInParent<Health>())
 		{
 			GetComponent<DamageActor>().DealDamage(damage, col.gameObject, GetComponent<DamageActor>().damageType);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);

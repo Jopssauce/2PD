@@ -20,15 +20,15 @@ public class BuffQuartzInfuse : BaseBuff
             tempSpeed = player.playerSpeed * slowModifier;
             player.playerSpeed = tempSpeed; 
             
-            tempModifier = player.GetComponent<PlayerStats>().fireModifier;
-            player.GetComponent<PlayerStats>().fireModifier = damageModifier;
+            tempModifier = player.GetComponent<Health>().fireModifier;
+            player.GetComponent<Health>().fireModifier = damageModifier;
             Debug.Log("Do" + this.name);
         }
          if (isActivated == false)
         {
             player.playerSpeed = speed;
             tempSpeed = 0;
-            player.GetComponent<PlayerStats>().fireModifier += tempModifier;
+            player.GetComponent<Health>().fireModifier += tempModifier;
             Debug.Log("Undo" + this.name);
         }
     }
