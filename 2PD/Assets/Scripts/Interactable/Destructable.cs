@@ -9,26 +9,19 @@ public class Destructable : MonoBehaviour {
 	
 	public Interactable.GemType type;
 	public GameObject itemtoDrop;
+	
+	Health health;
 
-	public void OnTriggerEnter2D(Collider2D col)
+	void Start()
 	{
-		Debug.Log(layerMask);
-		if (col.gameObject.layer == 10)
-		{
-			EventOnHit.Invoke();
-			if (itemtoDrop != null)
-			{
-				DropItem(itemtoDrop);
-			}
-			//Drop item if any
-			Destroy(this.gameObject);
-		}
-		
+		health = GetComponent<Health>();
 	}
+
 
 	public virtual void DropItem(GameObject item)
 	{
 		Instantiate(item, this.transform.position, item.transform.rotation).GetComponent<Pickup>().EnableGravity();
 	}
+
 	
 }
