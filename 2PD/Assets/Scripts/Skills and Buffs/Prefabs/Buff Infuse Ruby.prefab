@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d8e860aedabf3499539f9adb943479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: Ruby
+  sprite: {fileID: 0}
   buffType: 0
   receiver: {fileID: 0}
   isActivated: 0
@@ -65,6 +66,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  color:
+    serializedVersion: 2
+    rgba: 723918
   rubyLight: {fileID: 1063180227660138, guid: 3c176d4673cb0b04c9fe367d6b1029f4, type: 2}
   damageModifier: 0.5
   tempModifier: 0

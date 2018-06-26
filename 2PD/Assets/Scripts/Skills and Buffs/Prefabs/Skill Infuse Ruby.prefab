@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88973e51ab145354aa1c72f95a63d1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: Ruby
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4257648084498748}
   - component: {fileID: 114003822024481908}
   m_Layer: 0
-  m_Name: Skill Infuse Quartz
+  m_Name: Skill Infuse Obsidian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,9 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1eeea00ffda7b48a243b09ca84c20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  buff: {fileID: 114644835275779810, guid: 550a10af03adedf4ca144e9dc2740dc3, type: 2}
+  buff: {fileID: 114644835275779810, guid: 89b772c56e0ddb5438e5571f713ce3b8, type: 2}

@@ -11,13 +11,13 @@ public class BaseBuff : MonoBehaviour
 		infuse
 	}
 	public string ID;
-	public string buffName;
 	public Sprite sprite;
 	public BuffType buffType;
 	public BuffReceiver receiver;
 	public bool isActivated = false;
 	public UnityEvent EventOnActivate;
 	public UnityEvent EventOnActivated;
+	public Color32 color;
 	public virtual void Start()
 	{
 		receiver = GetComponent<BuffReceiver>();
@@ -25,6 +25,8 @@ public class BaseBuff : MonoBehaviour
 	public virtual void Activate(BuffReceiver receiver) 
 	{ 
 		isActivated = !isActivated;
+		receiver.GetComponent<SpriteRenderer>().color = color;
 		EventOnActivated.Invoke(); 
-	}	
+	}
+
 }

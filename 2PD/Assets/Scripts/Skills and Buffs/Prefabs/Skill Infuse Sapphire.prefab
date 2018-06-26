@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe3832e649eaf2478d3b047b0b8f4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: Sapphire
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []

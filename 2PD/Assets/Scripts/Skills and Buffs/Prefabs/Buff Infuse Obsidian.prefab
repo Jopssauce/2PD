@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4108400301322404}
   - component: {fileID: 114644835275779810}
   m_Layer: 0
-  m_Name: Buff Infuse Quartz
+  m_Name: Buff Infuse Obsidian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,9 +51,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3694d7e01a364954398db3b0cfaad80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: Obsidian
+  sprite: {fileID: 0}
+  buffType: 0
+  receiver: {fileID: 0}
   isActivated: 0
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventOnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  color:
+    serializedVersion: 2
+    rgba: 4473940
+  slowModifier: 0.2
+  damageModifier: 0
+  tempModifier: 0
