@@ -24,7 +24,8 @@ public class Door : Interactable
 	}
 	public override void Interact(PlayerController player)
 	{
-		if (switches.All(button => button.isInteracted))
+		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted)
+			 && (sapphireInteractables.All(saph => saph.hasBeenHit) || sapphireInteractables.All(saph => saph.isOn)) ) 
 		{	
 			OpenDoor();
 			EventInteract.Invoke();
