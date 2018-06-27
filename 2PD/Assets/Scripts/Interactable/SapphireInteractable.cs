@@ -21,8 +21,8 @@ public class SapphireInteractable : Interactable {
 		if(!col.gameObject.GetComponent<BulletBehaviour>()) return;
 		if(col.gameObject.GetComponent<BulletBehaviour>().gemType == gemType)
 		{
-			EventInRange.Invoke();
 			hasBeenHit = true;
+			EventInRange.Invoke();
 		} 
 		Debug.Log("test");
 	}
