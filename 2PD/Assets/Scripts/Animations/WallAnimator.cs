@@ -15,6 +15,7 @@ public class WallAnimator : MonoBehaviour {
 
 	public void AnimLeft()
 	{
+		Debug.Log("test");
 		if(pressurepads.All(pad => pad.isInteracted == true))
 		{
 			animator.SetTrigger("Left");
