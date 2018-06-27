@@ -7,7 +7,6 @@ public class PressurePad : Interactable
 {
 	public int playerIDRequired;
 	public Interactable objectRequired;
-	public bool playerCanTrigger;
 	public Sprite off;
 	public Sprite on;
 	
@@ -23,16 +22,16 @@ public class PressurePad : Interactable
 
 	void LateUpdate()
 	{
-		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == GemType.Sapphire
+		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
 		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();
-			isInteracted = true;
+			//isInteracted = true;
 		}
 		else
 		{
 			OffSprite();
-			isInteracted = false;
+			//isInteracted = false;
 		}
 		
 	}
@@ -40,11 +39,13 @@ public class PressurePad : Interactable
 
 	void SetInteracted()
 	{
-		if(players.Count == 0) return;
-		if (players.Any(player => player.playerID == playerIDRequired) || allObjects.Any(item => item.gemType == GemType.Sapphire) )
+		//if(players.Count == 0) return;
+		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
+		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();
 			isInteracted = !isInteracted;
+			EventInteracted.Invoke();
 		}
 	}
 

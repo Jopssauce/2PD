@@ -15,14 +15,20 @@ public class WallAnimator : MonoBehaviour {
 
 	public void AnimLeft()
 	{
-		if(pressurepads.All(pad => pad.isInteracted == false)) return;
-		animator.SetTrigger("Left");
+		if(pressurepads.All(pad => pad.isInteracted == true))
+		{
+			animator.SetTrigger("Left");
+		}
+		
 	}
 
 	public void AnimRight()
 	{
-		if(pressurepads.All(pad => pad.isInteracted == false)) return;
-		animator.SetTrigger("Right");
+		if(pressurepads.All(pad => pad.isInteracted == true))
+		{
+			animator.SetTrigger("Right");
+		}
+		
 	}
 
 	public void AnimIdle()
