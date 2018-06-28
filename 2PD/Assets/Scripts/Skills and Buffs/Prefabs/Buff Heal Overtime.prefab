@@ -69,6 +69,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   color:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   effectInterval: 1
   heal: 2

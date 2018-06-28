@@ -15,19 +15,21 @@ public class BuffHealOvertime : BaseBuff
         if (isActivated == true)
         {
 			StartCoroutine(OvertimeEffect(receiver));
+			StartCoroutine(Duration(receiver));
             Debug.Log("Do" + this.name);
         }
          if (isActivated == false)
         {
 			StopCoroutine(OvertimeEffect(receiver));
 			StopCoroutine(Duration(receiver));
+			receiver.RemoveBuff(this);
             Debug.Log("Undo" + this.name);
         }
     }
 
 	public IEnumerator OvertimeEffect(BuffReceiver receiver)
 	{
-		StartCoroutine(Duration(receiver));
+
 		while(true)
 		{
 			receiver.GetComponent<Health>().AddHp(heal);
@@ -39,6 +41,8 @@ public class BuffHealOvertime : BaseBuff
 	public IEnumerator Duration(BuffReceiver receiver)
 	{
 		yield return new WaitForSeconds(duration);
-		StopCoroutine(OvertimeEffect(receiver));	
+		Debug.Log("stop");
+		StopCoroutine(OvertimeEffect(receiver));
+		receiver.RemoveBuff(this);	
 	}
 }
