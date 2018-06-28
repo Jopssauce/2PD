@@ -8,6 +8,7 @@ public class SpawnerEvents : UnityEvent<GameObject> {}
 
 public class Spawner : MonoBehaviour 
 {
+	public bool isActivated;
 	public bool infiniteSpawning;
 	public float maxSpawn;
 	public float spawnInterval;
