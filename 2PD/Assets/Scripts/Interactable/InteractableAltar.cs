@@ -15,7 +15,7 @@ public class InteractableAltar : Interactable
 		if(!actor.skills.Any(item => item.ID == skill.ID) && !giveToSpecificPlayer) actor.AddSkill(skill);
 		if(!actor.skills.Any(item => item.ID == skill.ID) && giveToSpecificPlayer)
 		{
-			if (player.playerID == playerID)
+			if (player.ID == playerID)
 			{
 				actor.AddSkill(skill);
 			}

@@ -54,7 +54,7 @@ public class PlayerInput : MonoBehaviour {
 		player.lastPos = curPos;
 
         //if (!isLocalPlayer) return;
-		if (player.canMove == true && player.playerID == 0) 
+		if (player.canMove == true && player.ID == 0) 
 		{
 			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
 			{
@@ -81,7 +81,7 @@ public class PlayerInput : MonoBehaviour {
                 player.EventOnMove.Invoke();
 			}
 		}
-		if (player.canMove == true && player.playerID == 1) 
+		if (player.canMove == true && player.ID == 1) 
 		{
 			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
 			{

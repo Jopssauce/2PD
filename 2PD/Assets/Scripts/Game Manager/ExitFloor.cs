@@ -28,7 +28,7 @@ public class ExitFloor : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID) == false)
 		{		
 			players.Add(col.gameObject.GetComponent<PlayerController>());
 			EventInRange.Invoke();
@@ -39,7 +39,7 @@ public class ExitFloor : MonoBehaviour {
 	}
 	public void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			EventOutRange.Invoke();

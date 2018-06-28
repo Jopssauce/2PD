@@ -18,7 +18,7 @@ public class Switch : Interactable {
 
 	public override void Interact(PlayerController player)
 	{
-		if (player.playerID == playerIDRequired)
+		if (player.ID == playerIDRequired)
 		{
 			isInteracted = true;
 			GetComponent<SpriteRenderer>().sprite = on;

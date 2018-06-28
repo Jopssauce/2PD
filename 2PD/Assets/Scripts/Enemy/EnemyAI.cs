@@ -60,7 +60,7 @@ public class EnemyAI : MonoBehaviour {
 
 	public virtual void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false)
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID) == false)
 		{		
 			players.Add(col.gameObject.GetComponent<PlayerController>());
 			EventInRange.Invoke();
@@ -69,7 +69,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 	public virtual void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID))
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			EventExitRange.Invoke();

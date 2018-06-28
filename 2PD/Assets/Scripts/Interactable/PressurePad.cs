@@ -22,7 +22,7 @@ public class PressurePad : Interactable
 
 	void LateUpdate()
 	{
-		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
+		if (players.Any(player => player.ID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
 		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();
@@ -40,7 +40,7 @@ public class PressurePad : Interactable
 	void SetInteracted()
 	{
 		//if(players.Count == 0) return;
-		if (players.Any(player => player.playerID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
+		if (players.Any(player => player.ID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
 		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();

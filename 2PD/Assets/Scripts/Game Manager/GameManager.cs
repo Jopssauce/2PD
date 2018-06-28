@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 		int id = 0;
 		foreach (var player in playerList)
 		{
-			player.playerID = id;
+			player.ID = id;
 			id++;
 		}
 		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);

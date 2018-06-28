@@ -68,7 +68,7 @@ public class Interactable : MonoBehaviour
 
 	public virtual void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID) == false && playerCanTrigger)
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID) == false && playerCanTrigger)
 		{		
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
 			players.Add(col.gameObject.GetComponent<PlayerController>());
@@ -86,7 +86,7 @@ public class Interactable : MonoBehaviour
 	}
 	public virtual void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player" && players.Any(player => player.playerID == col.gameObject.GetComponent<PlayerController>().playerID && playerCanTrigger))
+		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID && playerCanTrigger))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);

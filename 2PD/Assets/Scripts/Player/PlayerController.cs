@@ -7,7 +7,7 @@ using XInputDotNetPure;
 
 public class PlayerController : MonoBehaviour 
 {
-    public int playerID;
+    public int ID;
 	[SerializeField]
     public PlayerIndex playerIndex;
 
