@@ -18,10 +18,6 @@ public class TitleManager : MonoBehaviour {
 	{
 		if(!isAudioOpen())
 			SceneManager.LoadSceneAsync("Audio", LoadSceneMode.Additive);
-		StartButton.interactable = false;
-		Debug.Log (StartButton.IsInteractable());
-		ExitButton.interactable = false;
-		Debug.Log (ExitButton.IsInteractable());
 		
 	}
 
@@ -47,10 +43,10 @@ public class TitleManager : MonoBehaviour {
 
 	void ButtonHandler()
 	{
-		if (Timer <= 0.0f && !StartButton.IsInteractable() && !ExitButton.IsInteractable()) 
+		if (Timer <= 0.0f) 
 		{
-			StartButton.interactable = true;
-			ExitButton.interactable = true;
+			StartButton.gameObject.SetActive (true);
+			ExitButton.gameObject.SetActive (true);
 		}
 	}
 
