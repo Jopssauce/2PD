@@ -18,6 +18,7 @@ public class InteractableAltar : Interactable
 			if (player.playerID == playerID)
 			{
 				actor.AddSkill (skill);
+				Debug.Log ("OOOH Intersting Power");
 			} 
 
 			else

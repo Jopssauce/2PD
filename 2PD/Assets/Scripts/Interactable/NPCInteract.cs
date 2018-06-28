@@ -19,7 +19,6 @@ public class NPCInteract : Interactable {
 	public override void Interact(PlayerController player)
 	{
 		EventInteract.Invoke();
-		uiManager.CanvasUI.GetComponent<CanvasController> ().ActivateUIMerchant ();
 		Debug.Log ("Merchant");
 	}
 }

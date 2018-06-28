@@ -17,7 +17,11 @@ public class CanvasController : MonoBehaviour {
 
 	public GameObject encyclopedia;
 
-	public GameObject merchant;
+	public GameObject dialogueBox;
+
+	public TextMeshProUGUI dialogue;
+
+
 
 	// Use this for initialization
 	void Start () 
@@ -36,11 +40,6 @@ public class CanvasController : MonoBehaviour {
 		{
 			encyclopedia.GetComponent<Animator>().SetTrigger("Open");
 		}
-	}
-
-	public void ActivateUIMerchant()
-	{
-		merchant.gameObject.SetActive (true);
 	}
 
 	
