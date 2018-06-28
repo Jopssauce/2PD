@@ -5,7 +5,6 @@ using System.Linq;
 public class WallAnimator : MonoBehaviour {
 
 	Animator animator;
-	public List<Interactable> pressurepads;
 	
 
 	void Start()
@@ -16,20 +15,12 @@ public class WallAnimator : MonoBehaviour {
 	public void AnimLeft()
 	{
 		Debug.Log("test");
-		if(pressurepads.All(pad => pad.isInteracted == true))
-		{
-			animator.SetTrigger("Left");
-		}
-		
+		animator.SetTrigger("Left");
 	}
 
 	public void AnimRight()
 	{
-		if(pressurepads.All(pad => pad.isInteracted == true))
-		{
-			animator.SetTrigger("Right");
-		}
-		
+		animator.SetTrigger("Right");
 	}
 
 	public void AnimIdle()

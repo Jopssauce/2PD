@@ -178,11 +178,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.36
+      value: 26.51
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -13.16
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3332,11 +3332,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -3880,11 +3880,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -4167,11 +4167,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -45022,6 +45022,70 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1041195767 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1311975643425396, guid: 3626ee97942ca644c868b38c4ea9b399,
+    type: 2}
+  m_PrefabInternal: {fileID: 1246652173}
+--- !u!114 &1041195768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041195767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60222b25945b2f4b96fb07544179457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areAllInteractablesInteracted: 0
+  areAllEnemiesDead: 0
+  areItemsInInventory: 0
+  areAllEnemiesInSpawnerDead: 0
+  TriggerChecks:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 464761590}
+        m_MethodName: AnimLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllEnemiesDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllItemsInInventory:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnEnemiesInSpawnerDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  genericInteractable:
+  - {fileID: 1701632706}
+  - {fileID: 1766684677}
+  - {fileID: 2032382076}
+  - {fileID: 566618389}
+  enemies: []
+  itemsRequired: []
+  spawner: {fileID: 0}
 --- !u!1 &1043813277
 GameObject:
   m_ObjectHideFlags: 0
@@ -49006,11 +49070,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -49359,11 +49423,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -49584,11 +49648,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.88
+      value: 27.470001
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -13.070002
+      value: 3.7399986
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -51229,11 +51293,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -55984,11 +56048,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
@@ -145989,11 +146053,11 @@ Prefab:
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 464761590}
+      objectReference: {fileID: 1041195768}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AnimLeft
+      value: InvokeCheck
       objectReference: {fileID: 0}
     - target: {fileID: 114775771844253590, guid: 3a0dbb5e3fbe44041a319b223b56f0a3,
         type: 2}
