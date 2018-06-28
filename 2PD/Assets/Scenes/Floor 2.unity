@@ -2238,7 +2238,7 @@ MonoBehaviour:
   playerList:
   - {fileID: 797348120}
   - {fileID: 719450369}
-  sharedInventory: {fileID: 0}
+  sharedInventory: {fileID: 1681136500}
 --- !u!4 &1884233234
 Transform:
   m_ObjectHideFlags: 0
