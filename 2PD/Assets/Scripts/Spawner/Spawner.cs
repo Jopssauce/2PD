@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
 [System.Serializable]
-public class SpawnerEvents : UnityEvent<GameObject> {}
+public class SpawnerEvents : UnityEvent {}
 
 public class Spawner : MonoBehaviour 
 {
@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 	public List<GameObject> allPrefabs;
 	public List<GameObject> spawnAreas;
 	public SpawnerEvents EventOnActivate;
-	public SpawnerEvents EventOnDeActivate;
+	public SpawnerEvents EventOnDeactivate;
 
 	void Start()
 	{
@@ -110,13 +110,13 @@ public class Spawner : MonoBehaviour
 
 	}
 
-	public void Activate(GameObject actor)
+	public void Activate()
 	{
 		Debug.Log("Spawner Activated");
 		StartCoroutine(Spawning());
 	}
 
-	public void Deactivate(GameObject actor)
+	public void Deactivate()
 	{
 		StopCoroutine(Spawning());
 	}
