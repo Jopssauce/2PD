@@ -87,7 +87,7 @@ public class Spawner : MonoBehaviour
 		StartCoroutine(Spawning());
 	}
 
-	public void DeActivate(GameObject actor)
+	public void Deactivate(GameObject actor)
 	{
 		StopCoroutine(Spawning());
 	}
