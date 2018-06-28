@@ -59,7 +59,8 @@ public class Interactable : MonoBehaviour
 	}
 
 	public virtual void Interact(PlayerController player){}
-	public virtual void UnInteract(PlayerController player){}
+	public virtual void Activate(PlayerController player){}
+	public virtual void Deactivate(PlayerController player){}
 
 	void TogglePrompt()
 	{
