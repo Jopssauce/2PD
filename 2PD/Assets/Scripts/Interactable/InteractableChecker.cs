@@ -41,7 +41,6 @@ public class InteractableChecker : MonoBehaviour
 
 	public void checkAllInteracted()
 	{
-		Debug.Log(genericInteractable.All(pad => pad.isInteracted == true));
 		if(genericInteractable.All(pad => pad.isInteracted == true)) 
 		{
 			areAllInteractablesInteracted = true;
