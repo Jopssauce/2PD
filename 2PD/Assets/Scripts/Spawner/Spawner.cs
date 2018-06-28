@@ -27,6 +27,9 @@ public class Spawner : MonoBehaviour
 	{
 		EventOnActivate = new SpawnerEvents();
 		EventOnDeActivate = new SpawnerEvents();
+
+		EventOnActivate.AddListener(Activate);
+		EventOnActivate.AddListener(DeActivate);
 	}
 
 	public void Spawn(GameObject prefab, Vector2 pos)
@@ -45,7 +48,7 @@ public class Spawner : MonoBehaviour
 	{
 		int spawnIndex = Random.Range(0, allPrefabs.Count - 1);
 		int prefabIndex = Random.Range(0, prefabs.Count - 1);
-		
+
 		for (int i = 0; i < enemiesPerWave; i++)
 		{
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
@@ -79,12 +82,12 @@ public class Spawner : MonoBehaviour
 
 	}
 
-	public void Activate()
+	public void Activate(GameObject actor)
 	{
 		StartCoroutine(Spawning());
 	}
 
-	public void DeActivate()
+	public void DeActivate(GameObject actor)
 	{
 		StopCoroutine(Spawning());
 	}
