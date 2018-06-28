@@ -15,6 +15,7 @@ public class BaseBuff : MonoBehaviour
 	public BuffType buffType;
 	public BuffReceiver receiver;
 	public bool isActivated = false;
+	public float duration = 1;
 	public UnityEvent EventOnActivate;
 	public UnityEvent EventOnActivated;
 	public Color32 color;
