@@ -17,7 +17,12 @@ public class InteractableAltar : Interactable
 		{
 			if (player.playerID == playerID)
 			{
-				actor.AddSkill(skill);
+				actor.AddSkill (skill);
+			} 
+
+			else
+			{
+				Debug.Log ("This is not for me but for other");
 			}
 			
 		}
