@@ -9,7 +9,7 @@ public class InteractableChecker : MonoBehaviour
 	GameManager gameManager;
 	
 
-	public bool areAllInteracted;
+	public bool areAllInteractablesInteracted;
 	public bool areAllEnemiesDead;
 	public bool areItemsInInventory;
 	public bool areAllEnemiesInSpawnerDead;
@@ -38,10 +38,10 @@ public class InteractableChecker : MonoBehaviour
 	{
 		if(genericInteractable.All(pad => pad.isInteracted == true)) 
 		{
-			areAllInteracted = true;
+			areAllInteractablesInteracted = true;
 			EventOnAllInteracted.Invoke();
 		}
-		areAllInteracted = false;
+		areAllInteractablesInteracted = false;
 	}
 
 	public void checkEnemies()
