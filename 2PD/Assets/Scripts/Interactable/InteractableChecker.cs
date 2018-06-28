@@ -12,15 +12,18 @@ public class InteractableChecker : MonoBehaviour
 	public bool areAllInteracted;
 	public bool areAllEnemiesDead;
 	public bool areItemsInInventory;
+	public bool areAllEnemiesInSpawnerDead;
 	
 	public UnityEvent TriggerChecks;
 	public UnityEvent EventOnAllInteracted;
 	public UnityEvent EventOnAllEnemiesDead;
 	public UnityEvent EventOnAllItemsInInventory;
+	public UnityEvent EventOnEnemiesInSpawnerDead;
 
 	public List<Interactable> genericInteractable;
 	public List<EnemyController> enemies;
 	public List<BaseItem> itemsRequired;
+	public Spawner spawner;
 
 	void Start()
 	{
@@ -28,6 +31,7 @@ public class InteractableChecker : MonoBehaviour
 		TriggerChecks.AddListener(checkAllInteracted);
 		TriggerChecks.AddListener(checkEnemies);
 		TriggerChecks.AddListener(checkItems);
+		TriggerChecks.AddListener(checkSpawnerEnemies);
 	}
 
 	public void checkAllInteracted()
@@ -62,5 +66,16 @@ public class InteractableChecker : MonoBehaviour
 		}
 		areAllEnemiesDead = true;
 		EventOnAllItemsInInventory.Invoke();
+	}
+
+	public void checkSpawnerEnemies()
+	{
+		
+		if(spawner.allPrefabs.All(enemies => enemies.GetComponent<EnemyController>() == null)) 
+		{
+			areAllEnemiesInSpawnerDead = true;
+			EventOnEnemiesInSpawnerDead.Invoke();
+		}
+		areAllEnemiesInSpawnerDead = false;
 	}
 }
