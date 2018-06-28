@@ -114,11 +114,13 @@ public class Spawner : MonoBehaviour
 	{
 		Debug.Log("Spawner Activated");
 		StartCoroutine(Spawning());
+		OnSprite();
 	}
 
 	public void Deactivate()
 	{
-		StopCoroutine(Spawning());
+		StopAllCoroutines();
+		OffSprite();
 	}
 
 	public void OnSprite()
