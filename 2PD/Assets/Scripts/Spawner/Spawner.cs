@@ -10,11 +10,13 @@ public class Spawner : MonoBehaviour
 {
 	public bool isActivated;
 	public bool infiniteSpawning;
-	public float maxSpawn;
+	public bool roundRobin;
+	public float maxTotalSpawn;
 	public float spawnInterval;
 	public float spawnWaves;
 	public float currentWave;
 	public float enemiesPerWave;
+	int spawnIndex;
 	public Sprite on;
 	public Sprite off;
 	public List<SpawnEntities> prefabs;
@@ -25,8 +27,8 @@ public class Spawner : MonoBehaviour
 
 	void Start()
 	{
-		EventOnActivate = new SpawnerEvents();
-		EventOnDeActivate = new SpawnerEvents();
+		//EventOnActivate = new SpawnerEvents();
+		//EventOnDeActivate = new SpawnerEvents();
 
 		EventOnActivate.AddListener(Activate);
 		EventOnActivate.AddListener(Deactivate);
@@ -46,27 +48,38 @@ public class Spawner : MonoBehaviour
 
 	public void SpawnWave()
 	{
-		int spawnIndex = Random.Range(0, allPrefabs.Count - 1);
-		int prefabIndex = Random.Range(0, prefabs.Count - 1);
+		int tempSpawnIndex = spawnIndex;
+		if(roundRobin)
+		{
+			if(spawnIndex > spawnAreas.Count - 1) spawnIndex = 0;
+			tempSpawnIndex = spawnIndex;
+			spawnIndex++;
+		}
+		else
+		{
+			tempSpawnIndex = Random.Range(0, spawnAreas.Count);
+		}
+		int prefabIndex = Random.Range(0, prefabs.Count);
+		Debug.Log(tempSpawnIndex);
+		
 
 		for (int i = 0; i < enemiesPerWave; i++)
 		{
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
-			GameObject spawnArea = spawnAreas[spawnIndex];
+			GameObject spawnArea = spawnAreas[tempSpawnIndex];
+			int spawnEntityCount = allPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID);
 
-			if (allPrefabs.Count - 1 < maxSpawn && infiniteSpawning)
+			if (allPrefabs.Count - 1 <= maxTotalSpawn && infiniteSpawning)
 			{
-				if (toSpawnEntity.amountToSpawn < 
-				allPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID))
+				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
 					Spawn(toSpawn, GetRandomPoint2D(spawnArea));
 				}
 			}
-			else if(allPrefabs.Count - 1 < maxSpawn && !infiniteSpawning && currentWave != spawnWaves)
+			else if(allPrefabs.Count - 1 <= maxTotalSpawn && !infiniteSpawning)
 			{
-				if (toSpawnEntity.amountToSpawn < 
-				allPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID))
+				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
 					Spawn(toSpawn, GetRandomPoint2D(spawnArea));
 				}
@@ -77,19 +90,51 @@ public class Spawner : MonoBehaviour
 
 	public IEnumerator Spawning()
 	{
-		yield return new WaitForSeconds(spawnInterval);
-		currentWave++;
+		
+		while (spawnWaves > 0 || infiniteSpawning)
+		{
+			
+			if (currentWave != spawnWaves && !infiniteSpawning)
+			{
+				SpawnWave();
+				currentWave++;
+			}
+			if (infiniteSpawning)
+			{
+				SpawnWave();
+				currentWave++;
+			}
+			
+			yield return new WaitForSeconds(spawnInterval);
+		}
 
 	}
 
 	public void Activate(GameObject actor)
 	{
+		Debug.Log("Spawner Activated");
 		StartCoroutine(Spawning());
 	}
 
 	public void Deactivate(GameObject actor)
 	{
 		StopCoroutine(Spawning());
+	}
+
+	public void OnSprite()
+	{
+		if (GetComponent<SpriteRenderer>() && on != null)
+		{
+			GetComponent<SpriteRenderer>().sprite = on;
+		}
+	}
+
+	public void OffSprite()
+	{
+		if (GetComponent<SpriteRenderer>() && off != null)
+		{
+			GetComponent<SpriteRenderer>().sprite = off;
+		}
 	}
 	
 }
