@@ -53,4 +53,9 @@ public class TitleManager : MonoBehaviour {
 			ExitButton.interactable = true;
 		}
 	}
+
+	public void SelectSound()
+	{
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
+	}
 }
