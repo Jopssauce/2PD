@@ -6,21 +6,61 @@ using System.Linq;
 
 public class InteractableChecker : MonoBehaviour 
 {
-	public List<Interactable> genericInteractable;
+	GameManager gameManager;
+	
 
 	public bool areAllInteracted;
+	public bool areAllEnemiesDead;
+	public bool areItemsInInventory;
 	
+	public UnityEvent TriggerChecks;
 	public UnityEvent EventOnAllInteracted;
+	public UnityEvent EventOnAllEnemiesDead;
+	public UnityEvent EventOnAllItemsInInventory;
 
-	public bool checkAllInteracted()
+	public List<Interactable> genericInteractable;
+	public List<EnemyController> enemies;
+	public List<BaseItem> itemsRequired;
+
+	void Start()
+	{
+		gameManager = GameManager.instance;
+		TriggerChecks.AddListener(checkAllInteracted);
+		TriggerChecks.AddListener(checkEnemies);
+		TriggerChecks.AddListener(checkItems);
+	}
+
+	public void checkAllInteracted()
 	{
 		if(genericInteractable.All(pad => pad.isInteracted == true)) 
 		{
 			areAllInteracted = true;
 			EventOnAllInteracted.Invoke();
-			return true;
 		}
 		areAllInteracted = false;
-		return false;
+	}
+
+	public void checkEnemies()
+	{
+		if(enemies.All(enemies => enemies == null)) 
+		{
+			areAllEnemiesDead = true;
+			EventOnAllEnemiesDead.Invoke();
+		}
+		areAllEnemiesDead = false;
+	}
+
+	public void checkItems()
+	{
+		foreach (var item in itemsRequired)
+		{
+			if(!gameManager.sharedInventory.itemInventory.Any(t => t.itemID == item.itemID)) 
+			{
+				areAllEnemiesDead = false;
+				return;
+			}
+		}
+		areAllEnemiesDead = true;
+		EventOnAllItemsInInventory.Invoke();
 	}
 }
