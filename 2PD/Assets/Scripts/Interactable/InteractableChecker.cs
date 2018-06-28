@@ -41,10 +41,12 @@ public class InteractableChecker : MonoBehaviour
 
 	public void checkAllInteracted()
 	{
+		Debug.Log(genericInteractable.All(pad => pad.isInteracted == true));
 		if(genericInteractable.All(pad => pad.isInteracted == true)) 
 		{
 			areAllInteractablesInteracted = true;
 			EventOnAllInteracted.Invoke();
+			return;
 		}
 		areAllInteractablesInteracted = false;
 	}
@@ -55,6 +57,7 @@ public class InteractableChecker : MonoBehaviour
 		{
 			areAllEnemiesDead = true;
 			EventOnAllEnemiesDead.Invoke();
+			return;
 		}
 		areAllEnemiesDead = false;
 	}
@@ -80,6 +83,7 @@ public class InteractableChecker : MonoBehaviour
 		{
 			areAllEnemiesInSpawnerDead = true;
 			EventOnEnemiesInSpawnerDead.Invoke();
+			return;
 		}
 		areAllEnemiesInSpawnerDead = false;
 	}
