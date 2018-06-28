@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 		EventOnDeActivate = new SpawnerEvents();
 
 		EventOnActivate.AddListener(Activate);
-		EventOnActivate.AddListener(DeActivate);
+		EventOnActivate.AddListener(Deactivate);
 	}
 
 	public void Spawn(GameObject prefab, Vector2 pos)
