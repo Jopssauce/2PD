@@ -34,6 +34,11 @@ public class InteractableChecker : MonoBehaviour
 		TriggerChecks.AddListener(checkSpawnerEnemies);
 	}
 
+	public void InvokeCheck()
+	{
+		TriggerChecks.Invoke();
+	}
+
 	public void checkAllInteracted()
 	{
 		if(genericInteractable.All(pad => pad.isInteracted == true)) 
@@ -70,7 +75,7 @@ public class InteractableChecker : MonoBehaviour
 
 	public void checkSpawnerEnemies()
 	{
-		
+		if(spawner == null) return;
 		if(spawner.allPrefabs.All(enemies => enemies.GetComponent<EnemyController>() == null)) 
 		{
 			areAllEnemiesInSpawnerDead = true;
