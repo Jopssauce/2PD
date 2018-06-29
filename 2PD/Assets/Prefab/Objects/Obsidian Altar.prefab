@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671568075596032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.636, y: -11.751, z: 0}
+  m_LocalPosition: {x: 12.636, y: -6.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4384846944571890}
@@ -172,11 +172,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   gameManager: {fileID: 0}
-  skill: {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d, type: 2}
+  skill: {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31, type: 2}
   giveToSpecificPlayer: 1
-  playerID: 0
-  off: {fileID: 21300000, guid: b8ae9797ea2c47c49b39f9a3b9b024ee, type: 3}
-  on: {fileID: 21300000, guid: e23f631f28499824ca4f483d06b5ac91, type: 3}
+  playerID: 1
+  off: {fileID: 21300000, guid: 86b1c0a3affbb9f408d57d05dac015a3, type: 3}
+  on: {fileID: 21300000, guid: b8ae9797ea2c47c49b39f9a3b9b024ee, type: 3}
 --- !u!212 &212842560156716096
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -210,8 +210,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b8ae9797ea2c47c49b39f9a3b9b024ee, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 86b1c0a3affbb9f408d57d05dac015a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
