@@ -48,6 +48,14 @@ public class Door : Interactable
 				CloseDoor();
 			}
 		}
+		if (isOpen) 
+		{
+			OpenDoor();
+		}
+		else
+		{
+			CloseDoor();
+		}
 		
 	}
 
@@ -62,15 +70,15 @@ public class Door : Interactable
 
 	public void OpenDoor()
 	{
-			doorCol.enabled = false;
-			EventOnOpen.Invoke();
-			isOpen = true;
+		doorCol.enabled = false;
+		EventOnOpen.Invoke();
+		isOpen = true;
 	}
 	public void CloseDoor()
 	{
-			doorCol.enabled = true;
-			EventOnClose.Invoke();
-			isOpen = false;
+		doorCol.enabled = true;
+		EventOnClose.Invoke();
+		isOpen = false;
 	}
 
 	bool SearchForKey()
