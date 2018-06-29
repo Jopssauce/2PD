@@ -17,6 +17,8 @@ public class BulletBehaviour : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
     {
+		if (col.gameObject.GetComponent<BulletBehaviour> ())
+			return;
 		if (col.gameObject.GetComponentInParent<Health>()) 
 		{
 			

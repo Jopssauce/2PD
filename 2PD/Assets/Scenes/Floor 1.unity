@@ -40679,7 +40679,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -40717,7 +40717,7 @@ Prefab:
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1066182343}
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (4)
@@ -40730,7 +40730,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PlayAnim
       objectReference: {fileID: 0}
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
@@ -40751,6 +40751,16 @@ Prefab:
         type: 2}
       propertyPath: stayOnAfterHit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -43480,7 +43490,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -43518,7 +43528,7 @@ Prefab:
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 760590174}
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (2)
@@ -43531,7 +43541,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PlayAnim
       objectReference: {fileID: 0}
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
@@ -43552,6 +43562,16 @@ Prefab:
         type: 2}
       propertyPath: stayOnAfterHit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -47990,7 +48010,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -48028,7 +48048,7 @@ Prefab:
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 564071732}
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (1)
@@ -48041,7 +48061,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PlayAnim
       objectReference: {fileID: 0}
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
@@ -48062,6 +48082,26 @@ Prefab:
         type: 2}
       propertyPath: stayOnAfterHit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -51401,7 +51441,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -51439,7 +51479,7 @@ Prefab:
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1963306414}
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (3)
@@ -51452,7 +51492,7 @@ Prefab:
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PlayAnim
       objectReference: {fileID: 0}
     - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
         type: 2}
@@ -51473,6 +51513,16 @@ Prefab:
         type: 2}
       propertyPath: stayOnAfterHit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
