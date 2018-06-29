@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 61054135081478496}
   - component: {fileID: 95345465186126716}
   - component: {fileID: 114100469667870336}
+  - component: {fileID: 114448271868044004}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -248,6 +249,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf96eda6bb0b9047b6d9589a2e4b28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114448271868044004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939112927862646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60222b25945b2f4b96fb07544179457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areAllInteractablesInteracted: 0
+  areAllEnemiesDead: 0
+  areItemsInInventory: 0
+  areAllEnemiesInSpawnerDead: 0
+  TriggerChecks:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllInteracted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllEnemiesDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllItemsInInventory:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnEnemiesInSpawnerDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  genericInteractable: []
+  enemies: []
+  itemsRequired: []
+  spawner: {fileID: 0}
 --- !u!114 &114752555235706468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,9 +305,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  isInteracted: 0
   isInteractable: 0
   isCarryable: 0
   isGrabbable: 0
+  playerCanTrigger: 1
   currentPlayer: {fileID: 0}
   prompt: {fileID: 1989836458030918}
   players: []
@@ -300,6 +347,7 @@ MonoBehaviour:
   autoOpen: 1
   requiredPlayers: 0
   switches: []
+  sapphireInteractables: []
   enemies: []
   keyRequired: {fileID: 0}
   targetLocation: {fileID: 0}
