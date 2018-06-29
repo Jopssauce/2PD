@@ -8,6 +8,10 @@ public class InteractableAltar : Interactable
 	public BaseSkill skill;
 	public bool giveToSpecificPlayer;
 	public int playerID;
+
+	public Sprite off;
+	public Sprite on;
+
 	public override void Interact(PlayerController player)
 	{
 		SkillActor actor = player.GetComponent<SkillActor>();
@@ -19,6 +23,7 @@ public class InteractableAltar : Interactable
 			{
 				actor.AddSkill (skill);
 				Debug.Log ("OOOH Intersting Power");
+				GetComponent<SpriteRenderer>().sprite = on;
 			} 
 
 			else
