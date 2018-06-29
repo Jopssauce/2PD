@@ -7,6 +7,14 @@ public class SapphireInteractable : Interactable {
 	public bool stayOnAfterHit = false;
 	public bool isOn = false;
 	public bool hasBeenHit = false;
+	Animator am;
+
+	public override void Start ()
+	{
+		base.Start ();
+		am = GetComponent<Animator> ();
+	}
+
 	void LateUpdate()
 	{
 		if (stayOnAfterHit && hasBeenHit)
@@ -29,5 +37,10 @@ public class SapphireInteractable : Interactable {
 	public override void OnTriggerExit2D(Collider2D col)
 	{
 		
+	}
+
+	public void PlayAnim()
+	{
+		am.SetBool ("On", true);
 	}
 }
