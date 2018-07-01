@@ -41,7 +41,6 @@ public class BuffHealOvertime : BaseBuff
 	public IEnumerator Duration(BuffReceiver receiver)
 	{
 		yield return new WaitForSeconds(duration);
-		Debug.Log("stop");
 		StopCoroutine(OvertimeEffect(receiver));
 		receiver.RemoveBuff(this);	
 	}
