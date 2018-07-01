@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
 	public bool infiniteSpawning;
 	public bool roundRobin;
 	public bool activateOnTriggerEnter;
+	public bool autoDeactivate;
 	public float maxTotalSpawn;
 	public float waveInterval;
 	public float spawnInterval;
@@ -90,8 +91,8 @@ public class Spawner : MonoBehaviour
 				SpawnWave();
 				currentWave++;
 			}
-			
 			yield return new WaitForSeconds(waveInterval);
+			if(autoDeactivate) EventDeactivate.Invoke();
 			StopCoroutine(spawnPrefab);
 		}
 
