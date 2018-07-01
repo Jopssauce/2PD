@@ -6,6 +6,7 @@ using System.Linq;
 public class HealingAura : MonoBehaviour 
 {
 	public bool isActivated;
+	public bool autoDeactivate;
 	public BaseBuff buff;
 	public List<PlayerController> players;
 
@@ -53,6 +54,10 @@ public class HealingAura : MonoBehaviour
 		if (col.gameObject.tag == "Player" && players.Any(player => player.ID == col.gameObject.GetComponent<PlayerController>().ID))
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
+		}
+		if (players.Count == 0 && autoDeactivate)
+		{
+			EventDeactivate.Invoke();
 		}
 		
 	}
