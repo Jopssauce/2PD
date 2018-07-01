@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
 	public bool isActivated;
 	public bool infiniteSpawning;
 	public bool roundRobin;
+	public bool activateOnTriggerEnter;
 	public float maxTotalSpawn;
 	public float waveInterval;
 	public float spawnInterval;
@@ -165,6 +166,12 @@ public class Spawner : MonoBehaviour
 		{
 			GetComponent<SpriteRenderer>().sprite = off;
 		}
+	}
+
+	public void OnTriggerEnter2D(Collider2D col)
+	{
+		if(!activateOnTriggerEnter) return;
+
 	}
 	
 }
