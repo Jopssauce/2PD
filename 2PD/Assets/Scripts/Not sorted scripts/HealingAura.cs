@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System.Linq;
 public class HealingAura : MonoBehaviour 
 {
+	public bool isActivated;
 	public BaseBuff buff;
 	public List<PlayerController> players;
+	public UnityEvent EventOnActivate;
+	public UnityEvent EventOnDeactivate;
 
 	void LateUpdate()
 	{
+		if(isActivated == false) return; 
 		foreach (var item in players)
 		{
 			BuffReceiver receiver = item.GetComponent<BuffReceiver>();
@@ -41,5 +46,18 @@ public class HealingAura : MonoBehaviour
 		}
 		
 	}
+
+	public virtual void Activate()
+	{
+		isActivated = true;
+		EventOnActivate.Invoke();
+	}
+
+	public virtual void Deactivate()
+	{
+		isActivated = false;
+		EventOnDeactivate.Invoke();
+	}
+	
 	
 }

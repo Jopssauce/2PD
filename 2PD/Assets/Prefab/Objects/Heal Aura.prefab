@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114706464355207690}
   - component: {fileID: 58266296571701536}
   - component: {fileID: 212299081162998682}
+  - component: {fileID: 114410612167248736}
   m_Layer: 0
   m_Name: Heal Aura
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762041695673048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2353617, y: 0.013260735, z: 0.15039062}
+  m_LocalPosition: {x: -0.308, y: 0.013260735, z: 0.15039062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,6 +58,50 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.45
+--- !u!114 &114410612167248736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762041695673048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60222b25945b2f4b96fb07544179457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areAllInteractablesInteracted: 0
+  areAllEnemiesDead: 0
+  areItemsInInventory: 0
+  areAllEnemiesInSpawnerDead: 0
+  TriggerChecks:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllInteracted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllEnemiesDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllItemsInInventory:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnEnemiesInSpawnerDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  genericInteractable: []
+  enemies: []
+  itemsRequired: []
+  spawner: {fileID: 0}
 --- !u!114 &114706464355207690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +113,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3ec0cdc6198974e94405c38245d1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
   buff: {fileID: 114715181074686634, guid: 77a9d57c678be7d488f1cfd2612b7b4e, type: 2}
+  players: []
+  EventOnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212299081162998682
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,14 +159,14 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 0.014705896, b: 0.76896554, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
