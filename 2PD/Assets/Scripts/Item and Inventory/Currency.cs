@@ -5,14 +5,12 @@ using UnityEngine.Events;
 
 public class Currency : MonoBehaviour {
 
-	GameManager gameManager;
 	public float gold;
 	public UnityEvent onCurrencyChanged;
 
 	void Start()
 	{
 		gold = 200;
-		gameManager = GameManager.instance;
 	}
 
 	public virtual void AddCurrency(float amt)
