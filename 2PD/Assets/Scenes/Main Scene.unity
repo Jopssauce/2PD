@@ -6560,10 +6560,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
-  infiniteSpawning: 1
+  infiniteSpawning: 0
   roundRobin: 1
   maxTotalSpawn: 100
-  spawnInterval: 1
+  waveInterval: 4
+  spawnInterval: 0.5
   spawnWaves: 4
   currentWave: 0
   enemiesPerWave: 4

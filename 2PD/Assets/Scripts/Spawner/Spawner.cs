@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
 	public bool infiniteSpawning;
 	public bool roundRobin;
 	public float maxTotalSpawn;
+	public float waveInterval;
 	public float spawnInterval;
 	public float spawnWaves;
 	public float currentWave;
@@ -24,6 +25,8 @@ public class Spawner : MonoBehaviour
 	public List<GameObject> spawnAreas;
 	public SpawnerEvents EventOnActivate;
 	public SpawnerEvents EventOnDeactivate;
+
+	IEnumerator spawnPrefab;
 
 	void Start()
 	{
@@ -62,8 +65,40 @@ public class Spawner : MonoBehaviour
 		int prefabIndex = Random.Range(0, prefabs.Count);
 		Debug.Log(tempSpawnIndex);
 		
+		spawnPrefab = SpawnPrefab(prefabIndex, tempSpawnIndex);
+		StartCoroutine(SpawnPrefab(prefabIndex, tempSpawnIndex));
+		
+	}
 
-		for (int i = 0; i < enemiesPerWave; i++)
+	public IEnumerator Spawning()
+	{
+		
+		while (spawnWaves > 0 || infiniteSpawning)
+		{
+			
+			if (currentWave != spawnWaves && !infiniteSpawning)
+			{
+				SpawnWave();
+				currentWave++;
+			}
+			if (infiniteSpawning)
+			{
+				SpawnWave();
+				currentWave++;
+			}
+			
+			yield return new WaitForSeconds(waveInterval);
+			StopCoroutine(spawnPrefab);
+
+			Debug.Log("stop");
+		}
+
+	}
+
+	public IEnumerator SpawnPrefab(int prefabIndex, int tempSpawnIndex)
+	{
+		float counter = 0;
+		while (counter != enemiesPerWave)
 		{
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
@@ -85,29 +120,11 @@ public class Spawner : MonoBehaviour
 				}
 				
 			}
-		}
-	}
-
-	public IEnumerator Spawning()
-	{
-		
-		while (spawnWaves > 0 || infiniteSpawning)
-		{
-			
-			if (currentWave != spawnWaves && !infiniteSpawning)
-			{
-				SpawnWave();
-				currentWave++;
-			}
-			if (infiniteSpawning)
-			{
-				SpawnWave();
-				currentWave++;
-			}
-			
+			counter++;
 			yield return new WaitForSeconds(spawnInterval);
 		}
-
+		
+		
 	}
 
 	public void Activate()
