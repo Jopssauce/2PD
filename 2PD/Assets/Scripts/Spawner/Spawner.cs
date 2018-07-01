@@ -27,9 +27,11 @@ public class Spawner : MonoBehaviour
 	public List<GameObject> spawnAreas;
 	public SpawnerEvents EventActivate;
 	public SpawnerEvents EventDeactivate;
+	public SpawnerEvents EventCleanList;
 
 	public SpawnerEvents EventOnActivate;
 	public SpawnerEvents EventOnDeactivate;
+	public SpawnerEvents EventOnCleanList;
 
 	IEnumerator spawnPrefab;
 
@@ -40,11 +42,13 @@ public class Spawner : MonoBehaviour
 
 		EventActivate.AddListener(Activate);
 		EventDeactivate.AddListener(Deactivate);
+		EventCleanList.AddListener(CleanSpawnedPrefabsList);
 	}
 
 	public void Spawn(GameObject prefab, Vector2 pos)
 	{
 		GameObject temp = Instantiate(prefab, pos, prefab.transform.rotation);
+		AttachCleanListToObject(temp);
 		allSpawnedPrefabs.Add(temp);
 	}
 
@@ -174,6 +178,20 @@ public class Spawner : MonoBehaviour
 		if(!activateOnTriggerEnter) return;
 		EventActivate.Invoke();
 
+	}
+
+	public void CleanSpawnedPrefabsList()
+	{
+		allSpawnedPrefabs = allSpawnedPrefabs.Where(obj => obj != null).ToList();
+		EventOnCleanList.Invoke();
+	}
+
+	public void AttachCleanListToObject(GameObject obj)
+	{
+		if(obj.GetComponent<Health>())
+		{
+			obj.GetComponent<Health>().EventOnDestroy.AddListener(CleanSpawnedPrefabsList);
+		}
 	}
 	
 }
