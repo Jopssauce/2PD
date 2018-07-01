@@ -23,6 +23,9 @@ public class Spawner : MonoBehaviour
 	public List<SpawnEntities> prefabs;
 	public List<GameObject> allPrefabs;
 	public List<GameObject> spawnAreas;
+	public SpawnerEvents EventActivate;
+	public SpawnerEvents EventDeactivate;
+
 	public SpawnerEvents EventOnActivate;
 	public SpawnerEvents EventOnDeactivate;
 
@@ -33,8 +36,8 @@ public class Spawner : MonoBehaviour
 		//EventOnActivate = new SpawnerEvents();
 		//EventOnDeActivate = new SpawnerEvents();
 
-		EventOnActivate.AddListener(Activate);
-		EventOnActivate.AddListener(Deactivate);
+		EventActivate.AddListener(Activate);
+		EventDeactivate.AddListener(Deactivate);
 	}
 
 	public void Spawn(GameObject prefab, Vector2 pos)
@@ -133,6 +136,7 @@ public class Spawner : MonoBehaviour
 			Debug.Log("Spawner Activated");
 			StartCoroutine(Spawning());
 			OnSprite();
+			EventOnActivate.Invoke();
 		}
 	}
 
@@ -143,6 +147,7 @@ public class Spawner : MonoBehaviour
 			isActivated = false;
 			StopAllCoroutines();
 			OffSprite();
+			EventOnDeactivate.Invoke();
 		}
 	}
 
