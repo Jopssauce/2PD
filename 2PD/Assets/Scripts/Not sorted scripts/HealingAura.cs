@@ -8,8 +8,18 @@ public class HealingAura : MonoBehaviour
 	public bool isActivated;
 	public BaseBuff buff;
 	public List<PlayerController> players;
+
+	public UnityEvent EventActivate;
+	public UnityEvent EventDeactivate;
+
 	public UnityEvent EventOnActivate;
 	public UnityEvent EventOnDeactivate;
+
+	void Start()
+	{
+		EventActivate.AddListener(Activate);
+		EventDeactivate.AddListener(Deactivate);
+	}
 
 	void LateUpdate()
 	{
@@ -49,14 +59,21 @@ public class HealingAura : MonoBehaviour
 
 	public virtual void Activate()
 	{
-		isActivated = true;
-		EventOnActivate.Invoke();
+		if (!isActivated)
+		{
+			isActivated = true;
+			EventOnActivate.Invoke();
+		}
+		
 	}
 
 	public virtual void Deactivate()
 	{
-		isActivated = false;
-		EventOnDeactivate.Invoke();
+		if (isActivated)
+		{
+			isActivated = false;
+			EventOnDeactivate.Invoke();
+		}
 	}
 	
 	
