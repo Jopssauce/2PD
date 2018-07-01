@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour {
+	public bool destroyOnHealthDepleted;
 	public float health;
 	public float maxHealth;
 	public UnityEvent EventOnHealthChange;
 	public UnityEvent EventOnHealthDepleted;
+	public UnityEvent EventOnDestroy;
 
 	[Header("Damage Modifiers")]
 	public float globalModifier = 1;
@@ -28,6 +30,7 @@ public class Health : MonoBehaviour {
 		{
 			health = 0;
 			EventOnHealthDepleted.Invoke();	
+			if(destroyOnHealthDepleted) OnHealthDepeleted();
 			Debug.Log("Depleted");
 		} 
 		
@@ -43,6 +46,7 @@ public class Health : MonoBehaviour {
 		{
 			health = 0;
 			EventOnHealthDepleted.Invoke();
+			if(destroyOnHealthDepleted) OnHealthDepeleted();
 			Debug.Log("Depleted");	
 		} 
 		Debug.Log("Hit");
@@ -56,5 +60,15 @@ public class Health : MonoBehaviour {
 		if(health > maxHealth) health = maxHealth;
 		Debug.Log("heal");
 		EventOnHealthChange.Invoke();
+	}
+	
+	public void OnHealthDepeleted()
+	{
+		Destroy(this.gameObject);
+	}
+
+	void OnDestroy()
+	{
+		EventOnDestroy.Invoke();
 	}
 }
