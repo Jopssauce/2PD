@@ -145,17 +145,22 @@ MonoBehaviour:
   infiniteSpawning: 0
   roundRobin: 0
   activateOnTriggerEnter: 1
-  maxTotalSpawn: 0
-  waveInterval: 0
-  spawnInterval: 0
-  spawnWaves: 0
+  autoDeactivate: 1
+  maxTotalSpawn: 5
+  waveInterval: 1
+  spawnInterval: 0.5
+  spawnWaves: 3
   currentWave: 0
-  enemiesPerWave: 0
+  enemiesPerWave: 2
   on: {fileID: 0}
   off: {fileID: 0}
-  prefabs: []
-  allPrefabs: []
-  spawnAreas: []
+  prefabs:
+  - prefab: {fileID: 114987814277451990, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
+    amountToSpawn: 100
+  allSpawnedPrefabs: []
+  spawnAreas:
+  - {fileID: 1372013427}
+  - {fileID: 646536440}
   EventActivate:
     m_PersistentCalls:
       m_Calls: []
@@ -166,12 +171,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: SpawnerEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  EventCleanList:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: SpawnerEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: SpawnerEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   EventOnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: SpawnerEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventOnCleanList:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: SpawnerEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
