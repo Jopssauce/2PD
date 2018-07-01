@@ -100,7 +100,7 @@ public class Spawner : MonoBehaviour
 	public IEnumerator SpawnPrefab(int prefabIndex, int tempSpawnIndex)
 	{
 		float counter = 0;
-		while (counter != enemiesPerWave || enemiesPerWave == 0)
+		while (counter != enemiesPerWave)
 		{
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
@@ -109,14 +109,14 @@ public class Spawner : MonoBehaviour
 
 			if (allSpawnedPrefabs.Count - 1 <= maxTotalSpawn && infiniteSpawning)
 			{
-				if (spawnEntityCount <= toSpawnEntity.amountToSpawn || toSpawnEntity.amountToSpawn == 0 )
+				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
 					Spawn(toSpawn, GetRandomPoint2D(spawnArea));
 				}
 			}
 			else if(allSpawnedPrefabs.Count - 1 <= maxTotalSpawn && !infiniteSpawning)
 			{
-				if (spawnEntityCount <= toSpawnEntity.amountToSpawn || toSpawnEntity.amountToSpawn == 0)
+				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
 					Spawn(toSpawn, GetRandomPoint2D(spawnArea));
 				}
