@@ -43,7 +43,6 @@ public class Pickup : MonoBehaviour
 	{
 		float direction = (Random.Range(-1f,2f));
 		float force = Random.Range( 50f, 100f);
-		Debug.Log(direction);
 		GetComponent<Rigidbody2D>().AddForce(new Vector2(direction, 1) * force);
 	}
 
