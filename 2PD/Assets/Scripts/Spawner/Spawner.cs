@@ -171,6 +171,7 @@ public class Spawner : MonoBehaviour
 	public void OnTriggerEnter2D(Collider2D col)
 	{
 		if(!activateOnTriggerEnter) return;
+		EventActivate.Invoke();
 
 	}
 	
