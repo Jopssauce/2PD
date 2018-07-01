@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
 	public Sprite on;
 	public Sprite off;
 	public List<SpawnEntities> prefabs;
-	public List<GameObject> allPrefabs;
+	public List<GameObject> allSpawnedPrefabs;
 	public List<GameObject> spawnAreas;
 	public SpawnerEvents EventActivate;
 	public SpawnerEvents EventDeactivate;
@@ -44,7 +44,7 @@ public class Spawner : MonoBehaviour
 	public void Spawn(GameObject prefab, Vector2 pos)
 	{
 		GameObject temp = Instantiate(prefab, pos, prefab.transform.rotation);
-		allPrefabs.Add(temp);
+		allSpawnedPrefabs.Add(temp);
 	}
 
 	public Vector2 GetRandomPoint2D(GameObject spawnArea)
@@ -105,16 +105,16 @@ public class Spawner : MonoBehaviour
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
 			GameObject spawnArea = spawnAreas[tempSpawnIndex];
-			int spawnEntityCount = allPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID);
+			int spawnEntityCount = allSpawnedPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID);
 
-			if (allPrefabs.Count - 1 <= maxTotalSpawn && infiniteSpawning)
+			if (allSpawnedPrefabs.Count - 1 <= maxTotalSpawn && infiniteSpawning)
 			{
 				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
 					Spawn(toSpawn, GetRandomPoint2D(spawnArea));
 				}
 			}
-			else if(allPrefabs.Count - 1 <= maxTotalSpawn && !infiniteSpawning)
+			else if(allSpawnedPrefabs.Count - 1 <= maxTotalSpawn && !infiniteSpawning)
 			{
 				if (spawnEntityCount <= toSpawnEntity.amountToSpawn)
 				{
