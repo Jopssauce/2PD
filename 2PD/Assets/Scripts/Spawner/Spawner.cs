@@ -89,8 +89,6 @@ public class Spawner : MonoBehaviour
 			
 			yield return new WaitForSeconds(waveInterval);
 			StopCoroutine(spawnPrefab);
-
-			Debug.Log("stop");
 		}
 
 	}
