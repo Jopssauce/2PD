@@ -96,9 +96,10 @@ public class Spawner : MonoBehaviour
 				currentWave++;
 			}
 			yield return new WaitForSeconds(waveInterval);
-			if(autoDeactivate) EventDeactivate.Invoke();
-			StopCoroutine(spawnPrefab);
+			
 		}
+		if(autoDeactivate) EventDeactivate.Invoke();
+		StopCoroutine(spawnPrefab);
 
 	}
 
