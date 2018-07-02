@@ -28,7 +28,7 @@ public class Container : Interactable {
 		if(isInteracted) isInteractable = false;
 	}
 	
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
 		//if (isInteractable == true && player == currentPlayer)
 		//{

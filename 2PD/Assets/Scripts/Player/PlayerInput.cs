@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour {
         state = GamePad.GetState(player.playerIndex);
 		if (Input.GetKeyDown(interact) || prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && player.canInteract == true) 
 		{
-			player.EventOnInteract.Invoke(player);
+			player.EventOnInteract.Invoke(player.gameObject);
 		}
 		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && player.canCombat == true) 
 		{

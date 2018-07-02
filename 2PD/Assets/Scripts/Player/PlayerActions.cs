@@ -32,7 +32,7 @@ public class PlayerActions : MonoBehaviour {
 		}
 	}
 
-	public void Throw(PlayerController player)
+	public void Throw(GameObject obj)
 	{
 		if (objectToActOn != null && objectToActOn.GetComponent<Carryable>())
 		{
@@ -52,7 +52,7 @@ public class PlayerActions : MonoBehaviour {
 
 	}
 
-	public void LetGo(PlayerController player)
+	public void LetGo(GameObject obj)
 	{
 		if (objectToActOn != null && objectToActOn.isGrabbable == true)
 		{

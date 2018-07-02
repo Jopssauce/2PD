@@ -16,7 +16,7 @@ public class NPCInteract : Interactable {
 		}
 	}
 
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
 		EventInteract.Invoke();
 		Debug.Log ("Merchant");

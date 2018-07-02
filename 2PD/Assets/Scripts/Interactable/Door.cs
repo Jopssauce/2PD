@@ -8,11 +8,6 @@ public class Door : Interactable
 {
 	public bool isOpen;
 	public bool autoOpen = true;
-	public int requiredPlayers;
-	public List<Switch> switches;
-	public List<SapphireInteractable> sapphireInteractables;
-	public List<EnemyController> enemies;
-	public BaseItem keyRequired;
 	public GameObject targetLocation;
 	public UnityEvent EventOnOpen;
 	public UnityEvent EventOnClose;
@@ -20,26 +15,27 @@ public class Door : Interactable
 	public override void Start()
 	{
 		base.Start();
-		//requiredPlayers = gameManager.playerList.Capacity;
 	}
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
-		if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted)
-			 && (sapphireInteractables.All(saph => saph.hasBeenHit) || sapphireInteractables.All(saph => saph.isOn)) ) 
+		if (players.Count == requiredPlayers && !autoOpen) 
 		{	
 			OpenDoor();
 			EventInteract.Invoke();
 			if(isOpen == false) return;
-			//SetPlayersLocation(targetLocation.transform.position);
 		}
+	}
+
+	public override void Activate(GameObject obj)
+	{
+
 	}
 
 	void LateUpdate()
 	{
 		if (autoOpen == true)
 		{
-			if (players.Count == requiredPlayers && enemies.All(enemies => enemies == null) && SearchForKey() == true && switches.All(button => button.isInteracted)
-			 && (sapphireInteractables.All(saph => saph.hasBeenHit) || sapphireInteractables.All(saph => saph.isOn)) ) 
+			if (players.Count == requiredPlayers) 
 			{
 				OpenDoor();
 			}
@@ -79,19 +75,6 @@ public class Door : Interactable
 		doorCol.enabled = true;
 		EventOnClose.Invoke();
 		isOpen = false;
-	}
-
-	bool SearchForKey()
-	{
-		if(keyRequired == null) return true;
-		foreach (var item in gameManager.sharedInventory.itemInventory)
-		{
-			if (item.itemName == keyRequired.itemName)
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 
 

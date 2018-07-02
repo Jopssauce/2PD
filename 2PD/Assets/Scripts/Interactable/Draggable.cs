@@ -12,8 +12,9 @@ public class Draggable : Interactable {
 		gameManager = GameManager.instance;
 	}
 	
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
+		PlayerController player = obj.GetComponent<PlayerController>();
 		if (player != null)
 		{
 			player.GetComponent<PlayerActions>().objectToActOn = this;

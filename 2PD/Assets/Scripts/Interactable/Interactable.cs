@@ -13,6 +13,7 @@ public class Interactable : MonoBehaviour
 	public bool isCarryable;
 	public bool isGrabbable;
 	public bool playerCanTrigger = true;
+	public int requiredPlayers;
 	public PlayerController currentPlayer;
 	public GameObject prompt;
 	public List<PlayerController> players;
@@ -63,9 +64,9 @@ public class Interactable : MonoBehaviour
 
 	}
 
-	public virtual void Interact(PlayerController player){}
-	public virtual void Activate(PlayerController player){}
-	public virtual void Deactivate(PlayerController player){}
+	public virtual void Interact(GameObject actor){}
+	public virtual void Activate(GameObject actor){}
+	public virtual void Deactivate(GameObject actor){}
 
 	void TogglePrompt()
 	{

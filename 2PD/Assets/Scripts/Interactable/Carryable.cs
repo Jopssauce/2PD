@@ -17,8 +17,9 @@ public class Carryable : Interactable {
 		}
 	}
 	
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
+		PlayerController player = obj.GetComponent<PlayerController>();
 		if (currentPlayer == player && isInteractable == true)
 		{
 			player.GetComponent<PlayerActions>().objectToActOn = this;

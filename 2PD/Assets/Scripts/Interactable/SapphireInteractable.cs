@@ -20,6 +20,7 @@ public class SapphireInteractable : Interactable {
 		if (stayOnAfterHit && hasBeenHit)
 		{
 			isOn = true;
+			isInteracted = true;
 		}
 		
 	}
@@ -30,6 +31,7 @@ public class SapphireInteractable : Interactable {
 		if(col.gameObject.GetComponent<BulletBehaviour>().gemType == gemType)
 		{
 			hasBeenHit = true;
+			isInteracted = true;
 			EventInRange.Invoke();
 		} 
 		Debug.Log("test");

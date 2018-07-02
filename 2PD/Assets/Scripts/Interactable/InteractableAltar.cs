@@ -12,8 +12,9 @@ public class InteractableAltar : Interactable
 	public Sprite off;
 	public Sprite on;
 
-	public override void Interact(PlayerController player)
+	public override void Interact(GameObject obj)
 	{
+		PlayerController player = obj.GetComponent<PlayerController>();
 		SkillActor actor = player.GetComponent<SkillActor>();
 		Debug.Log(actor);
 		if(!actor.skills.Any(item => item.ID == skill.ID) && !giveToSpecificPlayer) actor.AddSkill(skill);
