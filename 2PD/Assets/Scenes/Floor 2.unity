@@ -904,11 +904,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.49
+      value: 1.642
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17245,7 +17245,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4152725736302550, guid: 608ffd6daf4c53147a777fb09f68340a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.634
+      value: 3.627
       objectReference: {fileID: 0}
     - target: {fileID: 4152725736302550, guid: 608ffd6daf4c53147a777fb09f68340a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17286,6 +17286,16 @@ Prefab:
     - target: {fileID: 4152725736302550, guid: 608ffd6daf4c53147a777fb09f68340a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 198853681857355840, guid: 608ffd6daf4c53147a777fb09f68340a,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294966271
+      objectReference: {fileID: 0}
+    - target: {fileID: 198853681857355840, guid: 608ffd6daf4c53147a777fb09f68340a,
+        type: 2}
+      propertyPath: randomSeed
+      value: -360032974
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 608ffd6daf4c53147a777fb09f68340a, type: 2}
