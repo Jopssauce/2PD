@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Aquamarine
   m_EditorClassIdentifier: 
+  GemImageDefault: {fileID: 21300000, guid: 3a34c00c254231644bf9c8ba6b81aa35, type: 3}
   ItemName: Aquamarine
   Description: "Aquamarine is a blue to green-blue gem-quality variety of beryl. \r\n\r\nOften
     found in the bedrock undersea, it gives off a soft-pale blue color when submerged
     in water."
   Location: 3rd Dungeon
-  IsDiscovered: 1
+  IsDiscovered: 0
