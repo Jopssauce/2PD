@@ -45,8 +45,13 @@ public class Interactable : MonoBehaviour
 	public UnityEvent EventInteract;
 	public UnityEvent EventInRange;
 	public UnityEvent EventOutRange;
+	public UnityEvent EventActivating;
+	public UnityEvent EventDeactivating;
+
 	public UnityEvent EventInteracted;
-	public UnityEvent EventInteractable;
+	public UnityEvent EventActivated;
+	public UnityEvent EventDeactivated;
+
 
 	public GameManager gameManager;
 
