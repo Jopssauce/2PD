@@ -148,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.037, y: 3.66, z: 0}
+  m_LocalPosition: {x: -0.44, y: 1.8900001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -345,8 +345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - {fileID: 114480459242229648, guid: 5accb0785c0e88243ae0932c8c6477ed, type: 2}
-  - {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d, type: 2}
-  - {fileID: 114347694970758000, guid: 4e4bc48aa2692404abebb61508a6fe86, type: 2}
   currentSkill: {fileID: 0}
   index: 0
   EventOnSkillForward:
@@ -409,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnHealthDepleted: 0
   health: 0
   maxHealth: 100
   EventOnHealthChange:
@@ -417,6 +416,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventOnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnDestroy:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -448,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a05785b087b5934ea27fc11cede68c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerID: 0
+  ID: 0
   playerIndex: 0
   playerSpeed: 1
   canMove: 1
@@ -535,7 +539,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 7d508e19a70d70746ae412fe8710433a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e2bbccd7310d644b84a01a6da845e0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
