@@ -13,7 +13,7 @@ public class InteractableChecker : MonoBehaviour
 	public bool areAllEnemiesDead;
 	public bool areItemsInInventory;
 	public bool areAllEnemiesInSpawnerDead;
-	
+	public Spawner spawner;
 	public UnityEvent TriggerChecks;
 	public UnityEvent EventOnAllInteracted;
 	public UnityEvent EventOnAllEnemiesDead;
@@ -23,7 +23,7 @@ public class InteractableChecker : MonoBehaviour
 	public List<Interactable> genericInteractable;
 	public List<EnemyController> enemies;
 	public List<BaseItem> itemsRequired;
-	public Spawner spawner;
+	
 
 	void Start()
 	{
