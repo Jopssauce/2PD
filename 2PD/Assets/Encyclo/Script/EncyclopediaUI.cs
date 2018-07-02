@@ -10,6 +10,8 @@ public class EncyclopediaUI : MonoBehaviour {
 
 	public Image GemPlace;
 
+	public List<Button> Buttons;
+
 	[SerializeField]
 	private TextMeshProUGUI ItemNameUI;
 
@@ -19,27 +21,17 @@ public class EncyclopediaUI : MonoBehaviour {
 	[SerializeField]
 	private TextMeshProUGUI ItemLocationUI;
 
-	[SerializeField]
-	private List<TextMeshProUGUI> ButtonText;
 
-	void Start()
-	{
-		for (int i = 0; i < Items.Count; i++) 
-		{
-			ButtonText [i].text = Items [i].ItemName;
-		}
-	}
-	// Use this for initialization
 
 	public void DisplayUI(int index)
 	{
+		ItemNameUI.text = Items [index].ItemName;
+		ItemDescriptionUI.text = Items [index].Description;
+		ItemLocationUI.text = Items [index].Location;
+
 		if (Items [index].IsDiscovered) 
 		{
-			ItemNameUI.text = Items [index].ItemName;
-			ItemDescriptionUI.text = Items [index].Description;
-			ItemLocationUI.text = Items [index].Location;
-			GemPlace.sprite = Items [index].GemImage;
 		}
-		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Hover);
 	}
 }
