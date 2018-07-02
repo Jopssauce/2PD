@@ -18,7 +18,7 @@ public class Door : Interactable
 	}
 	public override void Interact(GameObject actor)
 	{
-		if (players.Count == requiredPlayers && !autoOpen) 
+		if (players.Count == requiredPlayers && !autoOpen && playerCanTrigger) 
 		{	
 			OpenDoor();
 			EventInteract.Invoke();
