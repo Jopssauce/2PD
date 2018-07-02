@@ -25,12 +25,12 @@ public class PressurePad : Interactable
 		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
 		{
 			OnSprite();
-			//isInteracted = true;
+			isInteracted = true;
 		}
 		else
 		{
 			OffSprite();
-			//isInteracted = false;
+			isInteracted = false;
 		}
 		
 	}
