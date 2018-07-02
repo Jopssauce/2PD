@@ -13,10 +13,9 @@ public class PressurePad : Interactable
 	public override void Start()
 	{
 		base.Start();
-		EventInRange.AddListener(SetInteracted);
+		EventInRange.AddListener(Interact);
 		//EventInRange.AddListener(OnSprite);
-		EventOutRange.AddListener(SetInteracted);
-		EventOutRange.AddListener(OffSprite);
+		EventOutRange.AddListener(Interact);
 		//gameManager.playerList.First(player => player.playerID == playerIDRequired).EventOnInteract.AddListener(Interact);
 	}
 
@@ -35,19 +34,17 @@ public class PressurePad : Interactable
 		}
 		
 	}
-
-
-	void SetInteracted()
+	
+	public override void Interact(GameObject actor)
 	{
-		//if(players.Count == 0) return;
-		if (players.Any(player => player.ID == playerIDRequired) || players.Count > 0 && playerCanTrigger || allObjects.Any(item => item.gemType == objectRequired.gemType
-		|| allObjects.Any(obj => obj.id == objectRequired.id)) )
+		if (players.Any(player => player.ID == playerIDRequired) || players.Count > 0 && playerCanTrigger )
 		{
 			OnSprite();
 			isInteracted = !isInteracted;
-			EventInteracted.Invoke();
+			EventInteracted.Invoke(actor);
 		}
 	}
+
 
 	void OnSprite()
 	{

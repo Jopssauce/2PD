@@ -41,7 +41,7 @@ public class InteractableChecker : MonoBehaviour
 
 	public void checkAllInteracted()
 	{
-		if(genericInteractable.All(pad => pad.isInteracted == true)) 
+		if(genericInteractable.All(pad => pad.isInteracted == true) || genericInteractable.Count == 0) 
 		{
 			areAllInteractablesInteracted = true;
 			EventOnAllInteracted.Invoke();
@@ -52,7 +52,7 @@ public class InteractableChecker : MonoBehaviour
 
 	public void checkEnemies()
 	{
-		if(enemies.All(enemies => enemies == null)) 
+		if(enemies.All(enemies => enemies == null) || enemies.Count == 0) 
 		{
 			areAllEnemiesDead = true;
 			EventOnAllEnemiesDead.Invoke();
@@ -67,17 +67,21 @@ public class InteractableChecker : MonoBehaviour
 		{
 			if(!gameManager.sharedInventory.itemInventory.Any(t => t.itemID == item.itemID)) 
 			{
-				areAllEnemiesDead = false;
+				areItemsInInventory = false;
 				return;
 			}
 		}
-		areAllEnemiesDead = true;
+		areItemsInInventory = true;
 		EventOnAllItemsInInventory.Invoke();
 	}
 
 	public void checkSpawnerEnemies()
 	{
-		if(spawner == null) return;
+		if(spawner == null) 
+		{
+			areAllEnemiesInSpawnerDead = true;
+			return;
+		}
 		if(spawner.allSpawnedPrefabs.All(enemies => enemies == null) || spawner.allSpawnedPrefabs.Count == 1) 
 		{		
 			areAllEnemiesInSpawnerDead = true;

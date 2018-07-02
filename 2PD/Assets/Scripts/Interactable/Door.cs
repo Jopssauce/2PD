@@ -16,7 +16,7 @@ public class Door : Interactable
 	{
 		base.Start();
 	}
-	public override void Interact(GameObject obj)
+	public override void Interact(GameObject actor)
 	{
 		if (players.Count == requiredPlayers && !autoOpen) 
 		{	
@@ -26,22 +26,30 @@ public class Door : Interactable
 		}
 	}
 
-	public override void Activate(GameObject obj)
+	public override void Activate(GameObject actor)
 	{
+		OpenDoor();
+		EventActivated.Invoke(actor);
+	}
 
+	public override void Deactivate(GameObject actor)
+	{
+		CloseDoor();
+		EventDeactivated.Invoke(actor);
 	}
 
 	void LateUpdate()
 	{
 		if (autoOpen == true)
 		{
-			if (players.Count == requiredPlayers) 
+			checker.TriggerChecks.Invoke();
+			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
-				OpenDoor();
+				isOpen = true;
 			}
 			else
 			{
-				CloseDoor();
+				isOpen = false;
 			}
 		}
 		if (isOpen) 
@@ -77,7 +85,7 @@ public class Door : Interactable
 		isOpen = false;
 	}
 
-
+	
 
 
 

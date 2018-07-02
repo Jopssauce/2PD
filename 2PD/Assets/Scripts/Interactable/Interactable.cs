@@ -5,9 +5,12 @@ using UnityEngine.Networking;
 using UnityEngine.Events;
 using System.Linq;
 
+[System.Serializable]
+public class InteractableEvents : UnityEvent<GameObject> {}
 public class Interactable : MonoBehaviour 
 {	
 	public string id;
+	public bool stayInteracted;
 	public bool isInteracted;
 	public bool isInteractable;
 	public bool isCarryable;
@@ -18,6 +21,7 @@ public class Interactable : MonoBehaviour
 	public GameObject prompt;
 	public List<PlayerController> players;
 	public List<Interactable> allObjects;
+	public InteractableChecker checker;
 	public enum InteractableType
 	{
 		touch,
@@ -44,14 +48,14 @@ public class Interactable : MonoBehaviour
 	public InteractableType interactableType;
 	public LockType lockType;
 	public UnityEvent EventInteract;
-	public UnityEvent EventInRange;
-	public UnityEvent EventOutRange;
+	public InteractableEvents EventInRange;
+	public InteractableEvents EventOutRange;
 	public UnityEvent EventActivating;
 	public UnityEvent EventDeactivating;
 
-	public UnityEvent EventInteracted;
-	public UnityEvent EventActivated;
-	public UnityEvent EventDeactivated;
+	public InteractableEvents EventInteracted;
+	public InteractableEvents EventActivated;
+	public InteractableEvents EventDeactivated;
 
 
 	public GameManager gameManager;
@@ -61,7 +65,7 @@ public class Interactable : MonoBehaviour
 		currentPlayer = null;
 		isInteractable = false;
 		gameManager = GameManager.instance;
-
+		checker = GetComponent<InteractableChecker>();
 	}
 
 	public virtual void Interact(GameObject actor){}
@@ -80,14 +84,14 @@ public class Interactable : MonoBehaviour
 		{		
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.AddListener(Interact);
 			players.Add(col.gameObject.GetComponent<PlayerController>());
-			EventInRange.Invoke();
+			EventInRange.Invoke(col.gameObject);
 			isInteractable = true;
 			TogglePrompt();
 		}
 		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()) == false)
 		{
 			allObjects.Add(col.gameObject.GetComponent<Interactable>());
-			EventInRange.Invoke();
+			EventInRange.Invoke(col.gameObject);
 		} 
 		
 
@@ -98,14 +102,14 @@ public class Interactable : MonoBehaviour
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			col.gameObject.GetComponent<PlayerController>().EventOnInteract.RemoveListener(Interact);
-			EventOutRange.Invoke();
+			EventOutRange.Invoke(col.gameObject);
 			isInteractable = false;
 			TogglePrompt();
 		}
 		if(col.gameObject.GetComponent<Interactable>() && allObjects.Any(item => item.GetComponent<Interactable>() == col.gameObject.GetComponent<Interactable>()))
 		{
 			allObjects.Remove(col.gameObject.GetComponent<Interactable>());
-			EventOutRange.Invoke();
+			EventOutRange.Invoke(col.gameObject);
 		} 
 	}
 

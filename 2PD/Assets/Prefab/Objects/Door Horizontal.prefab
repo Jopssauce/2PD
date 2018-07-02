@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4817489216716888}
   - component: {fileID: 212360434893234308}
   - component: {fileID: 114206978120355572}
+  - component: {fileID: 114406290491826882}
   - component: {fileID: 61112159660986056}
   - component: {fileID: 95189859053707976}
   - component: {fileID: 114224989373971880}
-  - component: {fileID: 114406290491826882}
   m_Layer: 0
   m_Name: Door Horizontal
   m_TagString: Untagged
@@ -250,15 +250,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  stayInteracted: 0
   isInteracted: 0
   isInteractable: 0
   isCarryable: 0
   isGrabbable: 0
   playerCanTrigger: 1
+  requiredPlayers: 2
   currentPlayer: {fileID: 0}
   prompt: {fileID: 1307988494186550}
   players: []
   allObjects: []
+  checker: {fileID: 0}
   gemType: 0
   interactableType: 0
   lockType: 0
@@ -270,9 +273,19 @@ MonoBehaviour:
   EventInRange:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventOutRange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventActivating:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  EventOutRange:
+  EventDeactivating:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -280,21 +293,21 @@ MonoBehaviour:
   EventInteracted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  EventInteractable:
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventActivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   gameManager: {fileID: 0}
   isOpen: 0
   autoOpen: 1
-  requiredPlayers: 2
-  switches: []
-  sapphireInteractables: []
-  enemies: []
-  keyRequired: {fileID: 0}
   targetLocation: {fileID: 0}
   EventOnOpen:
     m_PersistentCalls:
