@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212654288778762922}
   - component: {fileID: 114775771844253590}
   - component: {fileID: 61444270978333848}
+  - component: {fileID: 114578877608812630}
   m_Layer: 0
   m_Name: Pressure Pad 1
   m_TagString: Untagged
@@ -67,6 +68,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.098195076, y: 0.080534935}
   m_EdgeRadius: 0
+--- !u!114 &114578877608812630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1830632477742040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60222b25945b2f4b96fb07544179457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areAllInteractablesInteracted: 0
+  areAllEnemiesDead: 0
+  areItemsInInventory: 0
+  areAllEnemiesInSpawnerDead: 0
+  TriggerChecks:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllInteracted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllEnemiesDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnAllItemsInInventory:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnEnemiesInSpawnerDead:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  genericInteractable: []
+  enemies: []
+  itemsRequired: []
+  spawner: {fileID: 0}
 --- !u!114 &114775771844253590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,9 +124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  isInteracted: 0
   isInteractable: 0
   isCarryable: 0
   isGrabbable: 0
+  playerCanTrigger: 1
   currentPlayer: {fileID: 0}
   prompt: {fileID: 0}
   players: []
@@ -126,12 +173,27 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventActivating:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventDeactivating:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   EventInteracted:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  EventInteractable:
+  EventActivated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventDeactivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -139,7 +201,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   playerIDRequired: 0
   objectRequired: {fileID: 0}
-  isInteracted: 0
   off: {fileID: 21300000, guid: 3a567e6a988af694a90a9cbdeaa2dac2, type: 3}
   on: {fileID: 21300000, guid: 01e9cde329935e54ea6f656cd31b8f7c, type: 3}
 --- !u!212 &212654288778762922
