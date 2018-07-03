@@ -14,6 +14,8 @@ public class MultipleTargetCamera : MonoBehaviour
 	public float smooth = 0.5f;
 	public float maxWidth = 20f;
 	public float test;
+
+	float zoom;
 	// Use this for initialization
 	void Start () 
 	{
@@ -38,8 +40,9 @@ public class MultipleTargetCamera : MonoBehaviour
 
 	void Zoom()
 	{
-		float zoom = Mathf.Lerp(minZoom, maxZoom, playerBounds.size.magnitude / maxWidth);
-		Camera.main.fieldOfView =  Mathf.Lerp(Camera.main.fieldOfView, zoom, Time.deltaTime);
+		zoom = Mathf.Lerp(minZoom, maxZoom, playerBounds.size.magnitude / maxWidth);
+		Camera.main.orthographicSize =  Mathf.Lerp(Camera.main.orthographicSize, zoom, Time.deltaTime);
+		//transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Lerp(transform.position.z, -zoom, Time.deltaTime));
 	}
 
 	public void GetPlayerBounds()
