@@ -13,8 +13,8 @@ public class Health : MonoBehaviour {
 	public UnityEvent EventOnHealthChange;
 	public UnityEvent EventOnHealthDepleted;
 	public UnityEvent EventOnDestroy;
-	public UnityEvent EventInvincible;
-	public UnityEvent EventWasInvincible;
+	public UnityEvent EventStartingInvulnerability;
+	public UnityEvent EventEndingInvulnerability;
 
 	[Header("Damage Modifiers")]
 	public float globalModifier = 1;
@@ -91,12 +91,22 @@ public class Health : MonoBehaviour {
 
 	public IEnumerator InvulnerabilityTimer()
 	{
-		EventInvincible.Invoke();
-		isInvulnerabilityTimerStarted = true;
+		StartInvulnerability();
 		yield return new WaitForSeconds(invulnerabilityTimer);
+		EndInvulnerability();
+	}
+
+	public void StartInvulnerability()
+	{
+		isInvulnerabilityTimerStarted = true;
+		EventStartingInvulnerability.Invoke();
+	}
+
+	public void EndInvulnerability()
+	{
 		isInvulnerabilityTimerStarted = false;
 		isInvulnerable = false;
-		EventWasInvincible.Invoke();
+		EventEndingInvulnerability.Invoke();
 	}
 
 	void OnDestroy()
