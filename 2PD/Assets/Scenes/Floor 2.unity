@@ -622,7 +622,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07936287, y: 0.3394246}
+  m_Offset: {x: -0.13055658, y: 0.2313497}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -633,7 +633,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5882187, y: 0.73196983}
+  m_Size: {x: 1.4858313, y: 0.51582}
   m_EdgeRadius: 0
 --- !u!4 &240487252
 Transform:
@@ -642,7 +642,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 240487250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.596, y: -2.92, z: 0}
+  m_LocalPosition: {x: -0.596, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1334411510}
@@ -2216,11 +2216,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: -0.26000002
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.74
+      value: -0.70800054
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2519,11 +2519,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.42999998
+      value: -0.37
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.9880004
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.z
@@ -31028,7 +31028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1600146207378640, guid: bd492258bbc8fde4faf67a7d729a3ff2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212902613583865166, guid: bd492258bbc8fde4faf67a7d729a3ff2,
         type: 2}
@@ -32943,22 +32943,22 @@ Prefab:
     - target: {fileID: 114130188004936598, guid: ff552e57defc7984791019c190c3d699,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114130188004936598, guid: ff552e57defc7984791019c190c3d699,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114130188004936598, guid: ff552e57defc7984791019c190c3d699,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114130188004936598, guid: ff552e57defc7984791019c190c3d699,
         type: 2}
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114130188004936598, guid: ff552e57defc7984791019c190c3d699,
         type: 2}
