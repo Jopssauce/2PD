@@ -7,7 +7,7 @@ public class Health : MonoBehaviour {
 	public bool destroyOnHealthDepleted;
 	bool isInvulnerable = false;
 	bool isInvulnerabilityTimerStarted;
-	public float health;
+	public float health { get; private set;}
 	public float maxHealth;
 	public float invulnerabilityTimer = 1;
 	public UnityEvent EventOnHealthChange;
