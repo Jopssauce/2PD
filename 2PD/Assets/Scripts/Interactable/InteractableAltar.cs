@@ -18,6 +18,9 @@ public class InteractableAltar : Interactable
 	[SerializeField]
 	private string UnobtainedDialogue;
 
+	[SerializeField]
+	private int encyclopediaIndex;
+
 	private UIManager uiManager;
 
 	void Start()
@@ -37,6 +40,7 @@ public class InteractableAltar : Interactable
 			{
 				actor.AddSkill (skill);
 				ShowDialogue (ObtainedDialogue);
+				uiManager.CanvasUI.encyclopedia.GetComponent<EncyclopediaUI> ().UnlockGemContent (encyclopediaIndex);
 				GetComponent<SpriteRenderer>().sprite = on;
 			} 
 
