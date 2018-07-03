@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class EncyclopediaUI : MonoBehaviour {
 
@@ -31,6 +32,9 @@ public class EncyclopediaUI : MonoBehaviour {
 		{
 			i.IsDiscovered = false;
 		}
+
+		//for (int i = 0; i < Items.Count; i++)
+		//	UnlockGemContent (i);
 	}
 
 	public void DisplayUI(int index)

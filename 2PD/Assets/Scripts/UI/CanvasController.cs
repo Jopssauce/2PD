@@ -24,6 +24,9 @@ public class CanvasController : MonoBehaviour {
 	[HideInInspector]
 	public bool isGamePaused = false;
 
+	[SerializeField]
+	private GameObject firstSelectedButton;
+
 
 
 	// Use this for initialization
