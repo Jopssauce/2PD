@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System.Linq;
 
 public class InteractableAltar : Interactable
@@ -11,22 +12,9 @@ public class InteractableAltar : Interactable
 
 	public Sprite off;
 	public Sprite on;
+	public UnityEvent EventOnWrongPlayer;
+	
 
-	[SerializeField]
-	private string ObtainedDialogue;
-
-	[SerializeField]
-	private string UnobtainedDialogue;
-
-	[SerializeField]
-	private int encyclopediaIndex;
-
-	private UIManager uiManager;
-
-	void Start()
-	{
-		uiManager = UIManager.instance;
-	}
 
 	public override void Interact(GameObject obj)
 	{
@@ -36,27 +24,23 @@ public class InteractableAltar : Interactable
 		if(!actor.skills.Any(item => item.ID == skill.ID) && !giveToSpecificPlayer) actor.AddSkill(skill);
 		if(!actor.skills.Any(item => item.ID == skill.ID) && giveToSpecificPlayer)
 		{
-			if (player.ID == playerID)
+			if (player.ID == playerID && !isInteracted)
 			{
 				actor.AddSkill (skill);
-				ShowDialogue (ObtainedDialogue);
-				uiManager.CanvasUI.encyclopedia.GetComponent<EncyclopediaUI> ().UnlockGemContent (encyclopediaIndex);
 				GetComponent<SpriteRenderer>().sprite = on;
+				isInteracted = true;
+				EventActivated.Invoke(obj);
+				EventInteracted.Invoke(obj);
 			} 
 
 			else
 			{
-				ShowDialogue (UnobtainedDialogue);
+				EventOnWrongPlayer.Invoke();
 			}
 			
 		}
 	}
 
-	void ShowDialogue(string dialogue)
-	{
-		uiManager.CanvasUI.dialogueBox.SetActive (true);
-		uiManager.CanvasUI.dialogue.text = dialogue;
-		StartCoroutine (uiManager.CanvasUI.HideDialogue ());
-	}
+
 	
 }
