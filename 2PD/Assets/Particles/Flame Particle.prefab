@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects: []
-  knockbackForce: 5
+  knockbackForce: 0
 --- !u!114 &114877981753824972
 MonoBehaviour:
   m_ObjectHideFlags: 1
