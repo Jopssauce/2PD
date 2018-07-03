@@ -9,11 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sunstone
+  m_Name: Beryl
   m_EditorClassIdentifier: 
-  ItemName: Sunstone
-  Description: "Sunstone belongs to the plagioclase feldspar group, and gets its name
-    from its unusual spangled or glittery appearance\r\n\r\nSunstone has been known
-    for many centuries and has been discovered in Viking burial mounds."
-  Location: Travelling Merchant
+  GemImageDefault: {fileID: 0}
+  ItemName: Beryl
+  Description: "The gemstone representing Scorpio.\r\n\r\nBeryl in its purest form
+    is completely colorless (goshenite). Trace impurities and coloring agents within
+    colorless beryl are responsible for the many different colored varieties of beryl."
+  Location: 
   IsDiscovered: 1

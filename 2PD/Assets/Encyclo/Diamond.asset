@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Diamond
   m_EditorClassIdentifier: 
+  GemImageDefault: {fileID: 0}
   ItemName: Diamond
   Description: "The hardest substance on earth.\r\n\r\nDiamond is the transparent,
     gemstone-quality crystalline form of carbon and it is indeed the hardest-known
     natural substance on Earth. Diamonds are not only prized and famed for their exceptional
     hardness, but also for their ability to refract and disperse light sources like
-    fire.\r\n"
-  Location: Can be found anywhere
+    fire.\r\n\r\nA diamond can only be broken by another diamond.\n\nDIAMOND IS UNBREAKABLE!!!!!!"
+  Location: 1st Dungeon
   IsDiscovered: 1

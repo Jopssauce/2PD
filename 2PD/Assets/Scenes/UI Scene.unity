@@ -231,6 +231,7 @@ MonoBehaviour:
   encyclopedia: {fileID: 1552567353}
   dialogueBox: {fileID: 1057359664}
   dialogue: {fileID: 855921030}
+  isGamePaused: 0
 --- !u!1 &114433007
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +645,7 @@ GameObject:
   - component: {fileID: 301758019}
   - component: {fileID: 301758022}
   m_Layer: 5
-  m_Name: Diamond
+  m_Name: Blood Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,7 +1354,7 @@ GameObject:
   - component: {fileID: 675204865}
   - component: {fileID: 675204868}
   m_Layer: 5
-  m_Name: Amber
+  m_Name: Garnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1775,7 +1776,7 @@ GameObject:
   - component: {fileID: 789600552}
   - component: {fileID: 789600555}
   m_Layer: 5
-  m_Name: Moonstone
+  m_Name: Chrysolite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2141,7 +2142,7 @@ GameObject:
   - component: {fileID: 899510954}
   - component: {fileID: 899510957}
   m_Layer: 5
-  m_Name: Sapphire
+  m_Name: Obsidian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2489,7 +2490,7 @@ GameObject:
   - component: {fileID: 1087586042}
   - component: {fileID: 1087586045}
   m_Layer: 5
-  m_Name: Obsidian
+  m_Name: Beryl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2700,7 +2701,7 @@ GameObject:
   - component: {fileID: 1130352050}
   - component: {fileID: 1130352053}
   m_Layer: 5
-  m_Name: Jade
+  m_Name: Emerald
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2830,149 +2831,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!1 &1135652772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1135652773}
-  - component: {fileID: 1135652776}
-  - component: {fileID: 1135652775}
-  - component: {fileID: 1135652774}
-  - component: {fileID: 1135652777}
-  m_Layer: 5
-  m_Name: Topaz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1135652773
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135652772}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1451489009}
-  m_Father: {fileID: 1703169565}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58.79998, y: -22.000008}
-  m_SizeDelta: {x: 56, y: 56}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1135652774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135652772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 03aa680a9d30f30478b82cd74de2c2fc,
-      type: 3}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1135652775}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1135652775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135652772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1a91f5c76919c5f47a7cacf33fefc14c, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1135652776
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135652772}
---- !u!114 &1135652777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1135652772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 9
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1552567355}
-          m_MethodName: DisplayUI
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 15
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &1163162716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +2913,7 @@ GameObject:
   - component: {fileID: 1170246632}
   - component: {fileID: 1170246635}
   m_Layer: 5
-  m_Name: Sunstone
+  m_Name: Flourite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3423,7 +3281,7 @@ GameObject:
   - component: {fileID: 1274588252}
   - component: {fileID: 1274588255}
   m_Layer: 5
-  m_Name: Iolite
+  m_Name: Agate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3994,7 +3852,7 @@ GameObject:
   - component: {fileID: 1441038351}
   - component: {fileID: 1441038354}
   m_Layer: 5
-  m_Name: Tanzanite
+  m_Name: Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4124,74 +3982,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!1 &1451489008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1451489009}
-  - component: {fileID: 1451489011}
-  - component: {fileID: 1451489010}
-  m_Layer: 5
-  m_Name: Image (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1451489009
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451489008}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1135652773}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2, y: -1.6999989}
-  m_SizeDelta: {x: 31.05, y: 30.86}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1451489010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451489008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1b27eaf1f90761c498cf3f13955f3eaf, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1451489011
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1451489008}
 --- !u!1 &1492395727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,7 +4289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1552567354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4538,19 +4328,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d8673ab82d79bf41ba970465b99e0c8, type: 2}
   - {fileID: 11400000, guid: 6cca1e70f8335cf4d8c175cd46574545, type: 2}
   - {fileID: 11400000, guid: a9490ec4c255ddb46948e505218e6440, type: 2}
-  - {fileID: 11400000, guid: c32068c07c837ee45850b122de95bb0d, type: 2}
+  - {fileID: 11400000, guid: 35108344a678e4647ae51ac30f5219ad, type: 2}
   - {fileID: 11400000, guid: 381b5f60817a3d84191616e67d2eba2d, type: 2}
-  - {fileID: 11400000, guid: 20a5e9b889470b7458eb3e956a8006e4, type: 2}
+  - {fileID: 11400000, guid: c32068c07c837ee45850b122de95bb0d, type: 2}
   - {fileID: 11400000, guid: b7b1946cf2787824ab117227a17d0f62, type: 2}
   - {fileID: 11400000, guid: 2ecce545b568d9b4b920c3ad516856f9, type: 2}
   - {fileID: 11400000, guid: 833ad6d5b0dd70b429aa5604ab8bf0f5, type: 2}
-  - {fileID: 11400000, guid: c21469b2db6aa0542ba9e0b2dbaebd7c, type: 2}
   - {fileID: 11400000, guid: c31df0504f82e15428ad652aa67dcab9, type: 2}
+  - {fileID: 11400000, guid: 20a5e9b889470b7458eb3e956a8006e4, type: 2}
   - {fileID: 11400000, guid: fa91a2a3549cb4c48bb6950364817fef, type: 2}
-  - {fileID: 11400000, guid: 35108344a678e4647ae51ac30f5219ad, type: 2}
+  - {fileID: 11400000, guid: c21469b2db6aa0542ba9e0b2dbaebd7c, type: 2}
   - {fileID: 11400000, guid: f4e608c08a8d5e8409518d1e2d9458fb, type: 2}
   - {fileID: 11400000, guid: 1911f3c49a928b0479285f1199abf924, type: 2}
-  - {fileID: 11400000, guid: 11065427404898147bbaee4564ed0792, type: 2}
   GemPlace: {fileID: 0}
   color:
     serializedVersion: 2
@@ -4574,7 +4363,7 @@ MonoBehaviour:
   - {fileID: 114433009}
   - {fileID: 782512313}
   - {fileID: 519288908}
-  - {fileID: 1451489010}
+  - {fileID: 0}
 --- !u!95 &1552567356
 Animator:
   serializedVersion: 3
@@ -4836,7 +4625,6 @@ RectTransform:
   - {fileID: 899510953}
   - {fileID: 1170246631}
   - {fileID: 1441038350}
-  - {fileID: 1135652773}
   m_Father: {fileID: 1552567354}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4858,7 +4646,7 @@ GameObject:
   - component: {fileID: 1719717197}
   - component: {fileID: 1719717200}
   m_Layer: 5
-  m_Name: Machalite
+  m_Name: Carnelian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5224,7 +5012,7 @@ GameObject:
   - component: {fileID: 1895276598}
   - component: {fileID: 1895276601}
   m_Layer: 5
-  m_Name: Quartz
+  m_Name: Topaz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5367,7 +5155,7 @@ GameObject:
   - component: {fileID: 1954173099}
   - component: {fileID: 1954173102}
   m_Layer: 5
-  m_Name: Lapis Lazuli
+  m_Name: Onyx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5664,7 +5452,7 @@ GameObject:
   - component: {fileID: 1996369410}
   - component: {fileID: 1996369413}
   m_Layer: 5
-  m_Name: Aquamarine
+  m_Name: Amethyst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5807,7 +5595,7 @@ GameObject:
   - component: {fileID: 2015113578}
   - component: {fileID: 2015113581}
   m_Layer: 5
-  m_Name: Emerald
+  m_Name: Sapphire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

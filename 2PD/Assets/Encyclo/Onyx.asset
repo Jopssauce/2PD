@@ -9,13 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
-  m_Name: Sapphire
+  m_Name: Onyx
   m_EditorClassIdentifier: 
   GemImageDefault: {fileID: 0}
-  ItemName: Sapphire
-  Description: "The gemstone representing Taurus.\r\n\r\nIt is the second hardest
-    substance on earth after diamond. Even though it is known for being blue, sapphires
-    are actually found in a variety of colors\r\n\r\nHas Electrical conductive properties
-    as well."
+  ItemName: Onyx
+  Description: "The gemstone representing Leo.\r\n\r\nOnyx is black and white banded
+    agate. Onyx takes its name from the Greek word \"onux\", which means fingernail;
+    this could be due to a Greek legend, in which Eros mischievously cut the fingernails
+    of Aphrodite with an arrowhead whilst she slept, and the gods turned the clippings
+    into stone."
   Location: 
   IsDiscovered: 1
