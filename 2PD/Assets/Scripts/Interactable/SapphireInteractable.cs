@@ -33,6 +33,8 @@ public class SapphireInteractable : Interactable {
 			hasBeenHit = true;
 			isInteracted = true;
 			EventInRange.Invoke(col.gameObject);
+			EventInteracted.Invoke(col.gameObject);
+			EventActivated.Invoke(col.gameObject);
 		} 
 		Debug.Log("test");
 	}
