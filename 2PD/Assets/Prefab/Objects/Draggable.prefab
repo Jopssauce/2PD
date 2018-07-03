@@ -164,13 +164,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  stayInteracted: 0
+  isInteracted: 0
   isInteractable: 1
   isCarryable: 0
   isGrabbable: 1
+  playerCanTrigger: 1
+  requiredPlayers: 0
   currentPlayer: {fileID: 0}
   prompt: {fileID: 1353789068553156}
   players: []
   allObjects: []
+  checker: {fileID: 0}
   gemType: 0
   interactableType: 0
   lockType: 0
@@ -182,9 +187,19 @@ MonoBehaviour:
   EventInRange:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventOutRange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventActivating:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  EventOutRange:
+  EventDeactivating:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -192,13 +207,18 @@ MonoBehaviour:
   EventInteracted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  EventInteractable:
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventActivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  EventDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   gameManager: {fileID: 0}
 --- !u!212 &212193798824452524
 SpriteRenderer:
@@ -278,12 +298,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 88f258682718f4e499902f64493211b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0a31a90577f69f4ea1b98664578771b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
