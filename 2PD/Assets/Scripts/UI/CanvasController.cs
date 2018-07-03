@@ -21,6 +21,9 @@ public class CanvasController : MonoBehaviour {
 
 	public TextMeshProUGUI dialogue;
 
+	[HideInInspector]
+	public bool isGamePaused = false;
+
 
 
 	// Use this for initialization
@@ -38,7 +41,15 @@ public class CanvasController : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.B))
 		{
-			encyclopedia.GetComponent<Animator>().SetTrigger("Open");
+			//encyclopedia.GetComponent<Animator>().SetTrigger("Open");
+			if (!isGamePaused)
+			{
+				Pause (encyclopedia);
+			}
+			else
+			{
+				Resume (encyclopedia);
+			}
 		}
 	}
 
@@ -53,5 +64,25 @@ public class CanvasController : MonoBehaviour {
 		
 		player1HpBar.fillAmount = gameManager.playerList[0].GetComponent<Health>().health / gameManager.playerList[0].GetComponent<Health>().maxHealth;
 		player2HpBar.fillAmount = gameManager.playerList[1].GetComponent<Health>().health / gameManager.playerList[1].GetComponent<Health>().maxHealth;
+	}
+
+	void Resume(GameObject UIElement)
+	{
+		UIElement.SetActive (false);
+		Time.timeScale = 1.0f;
+		isGamePaused = false;
+	}
+
+	void Pause(GameObject UiElement)
+	{
+		UiElement.SetActive (true);
+		Time.timeScale = 0.0f;
+		isGamePaused = true;
+	}
+
+	public IEnumerator HideDialogue()
+	{
+		yield return new WaitForSeconds(3.0f);
+		dialogueBox.SetActive(false);
 	}
 }

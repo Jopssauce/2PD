@@ -12,6 +12,19 @@ public class InteractableAltar : Interactable
 	public Sprite off;
 	public Sprite on;
 
+	[SerializeField]
+	private string ObtainedDialogue;
+
+	[SerializeField]
+	private string UnobtainedDialogue;
+
+	private UIManager uiManager;
+
+	void Start()
+	{
+		uiManager = UIManager.instance;
+	}
+
 	public override void Interact(GameObject obj)
 	{
 		PlayerController player = obj.GetComponent<PlayerController>();
@@ -23,16 +36,23 @@ public class InteractableAltar : Interactable
 			if (player.ID == playerID)
 			{
 				actor.AddSkill (skill);
-				Debug.Log ("OOOH Intersting Power");
+				ShowDialogue (ObtainedDialogue);
 				GetComponent<SpriteRenderer>().sprite = on;
 			} 
 
 			else
 			{
-				Debug.Log ("This is not for me but for other");
+				ShowDialogue (UnobtainedDialogue);
 			}
 			
 		}
+	}
+
+	void ShowDialogue(string dialogue)
+	{
+		uiManager.CanvasUI.dialogueBox.SetActive (true);
+		uiManager.CanvasUI.dialogue.text = dialogue;
+		StartCoroutine (uiManager.CanvasUI.HideDialogue ());
 	}
 	
 }
