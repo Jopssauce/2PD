@@ -182,7 +182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.33
+      value: -12.85
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2171,7 +2171,6 @@ MonoBehaviour:
   - {fileID: 619668276}
   - {fileID: 1449768556}
   sharedInventory: {fileID: 373282249}
-  eventSystem: {fileID: 1045131165}
 --- !u!4 &459354560
 Transform:
   m_ObjectHideFlags: 0
@@ -37644,10 +37643,6 @@ Prefab:
       propertyPath: m_Name
       value: Generic Enemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4918828765869634, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.07
-      objectReference: {fileID: 0}
     - target: {fileID: 1671564799364820, guid: c9c8ca530d50bc04fbfb400033be6808, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -43132,7 +43127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.3619995
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
