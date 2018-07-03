@@ -23,7 +23,7 @@ public class Switch : Interactable {
 		{
 			isInteracted = true;
 			GetComponent<SpriteRenderer>().sprite = on;
-			EventInteract.Invoke();
+			EventInteracted.Invoke(obj);
 		}
 	}
 
