@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Agate
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 0}
+  GemImageDefault: {fileID: 21300000, guid: 12338e02c108b0e489c793fb2b44a187, type: 3}
   ItemName: Agate
   Description: " The gemstone representing Gemini.\r\n\r\nIt is characterized by its
     fineness of grain and variety of color. Although agates may be found in various
     kinds of host rock, they are classically associated with volcanic rocks and can
     be common in certain metamorphic rocks.\r\n"
   Location: 
-  IsDiscovered: 1
+  IsDiscovered: 0

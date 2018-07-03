@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Topaz
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 0}
+  GemImageDefault: {fileID: 21300000, guid: 912ee8172e271634ead30aa7a9ce3a4a, type: 3}
   ItemName: Topaz
   Description: "The gemstone representing Saggitarius.\r\n\r\nTopaz in its natural
     state is a golden brown to yellow, a characteristic which means it is sometimes
     confused with the less valuable gemstone citrine.\r\n\r\nTopaz is commonly associated
     with silicic igneous rocks of the granite and rhyolite type."
   Location: Travelling Merchant
-  IsDiscovered: 1
+  IsDiscovered: 0

@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Blood Stone
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 0}
+  GemImageDefault: {fileID: 21300000, guid: 2e549e8cfe9e1284fbd3c3af115a3fac, type: 3}
   ItemName: Blood Stone
   Description: "The gemstone representing Aries.\r\n\r\nBloodstone is characterized
     by its dark green color and the presence of red, blood-like inclusions, which
     is how it earned its descriptive gemstone name."
   Location: Can be found anywhere
-  IsDiscovered: 1
+  IsDiscovered: 0

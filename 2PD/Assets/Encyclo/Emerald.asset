@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Emerald
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 0}
+  GemImageDefault: {fileID: 21300000, guid: 3afec300f99b0444fa389cf45da87fa2, type: 3}
   ItemName: Emerald
   Description: "The gemstone representing Cancer.\r\n\r\nEmerald is the most precious
     stone in the beryl group. The name comes from the old French word 'esmeralde',
     which was derived from the Greek word 'smaragdos' meaning 'green stone'. By definition,
     emerald is any medium to dark green beryl colored by chromium."
   Location: 3rd floor main dungeon
-  IsDiscovered: 1
+  IsDiscovered: 0

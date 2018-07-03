@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Garnet
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 21300000, guid: d951263a3d06dfc4da2c2f7607f2a194, type: 3}
+  GemImageDefault: {fileID: 21300000, guid: 2568b59f41336d2448f2d089ac8bdc2f, type: 3}
   ItemName: Garnet
   Description: "The gemstone representing Aquarius.\r\n\r\nGarnet most commonly occurs
     in red, and the origin of the name \"garnet\" lies in this deep red hue. The name

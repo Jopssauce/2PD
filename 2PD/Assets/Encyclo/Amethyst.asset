@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f616fd75d8663444902f1fa5dbdd6b1, type: 3}
   m_Name: Amethyst
   m_EditorClassIdentifier: 
-  GemImageDefault: {fileID: 21300000, guid: 3a34c00c254231644bf9c8ba6b81aa35, type: 3}
+  GemImageDefault: {fileID: 21300000, guid: d131b9c183fdc9d47abeca5332105dc0, type: 3}
   ItemName: Amethyst
   Description: "The gemstone representing Pisces.\r\n\r\nAmethyst is one of the most
     precious and valuable stones belonging to the quartz group of minerals.\r\n\r\nAmethyst
