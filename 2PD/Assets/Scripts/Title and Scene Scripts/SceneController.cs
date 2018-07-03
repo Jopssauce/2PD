@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class SceneController : MonoBehaviour 
 {
-	void Update()
+	public UnityEvent OnLoadScene;
+
+	void Start()
 	{
-		if (Input.GetKeyDown (KeyCode.B)) 
-		{
-			LoadScene ("Floor 1");
-			UnloadScene ("Title Scene");
-		}
+		OnLoadScene.AddListener (PlaySound);
 	}
 
 	public void LoadScene(string name)
 	{
-		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
-		SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+		if (!isSceneOpen (name))
+		{
+			OnLoadScene.Invoke ();
+			SceneManager.LoadSceneAsync (name, LoadSceneMode.Additive);
+		}
 	}
 
 	public void UnloadScene(string name)
 	{
-		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
 		SceneManager.UnloadSceneAsync (name);
 	}
 
@@ -31,5 +32,24 @@ public class SceneController : MonoBehaviour
 	{
 		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
 		Application.Quit ();
+	}
+
+	bool isSceneOpen(string SceneName)
+	{
+		Scene AudioScene = SceneManager.GetSceneByName(SceneName);
+		for (int i = 0; i < SceneManager.sceneCount; i++)
+		{
+			if (SceneManager.GetSceneAt(i) == AudioScene)
+			{
+
+				return true;
+			}
+		}
+		return false;
+	}
+
+	void PlaySound()
+	{
+		FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Select);
 	}
 }
