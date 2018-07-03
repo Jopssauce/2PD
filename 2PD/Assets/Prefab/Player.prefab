@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 114587856632812124}
   - component: {fileID: 114542999056310302}
   - component: {fileID: 114839025566115880}
+  - component: {fileID: 114338637637466216}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -224,7 +225,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: 7.0980005, z: 0}
+  m_LocalPosition: {x: 20.729, y: -6.8080006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -435,6 +436,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flickInterval: 0.1
   flickSize: 0.009
+--- !u!114 &114338637637466216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453793797800494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef16c91e199979b47b1725bcd3fc4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkInterval: 0.1
+  EventActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  sr: {fileID: 212265263585438818}
 --- !u!114 &114427544604220428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,6 +537,7 @@ MonoBehaviour:
   destroyOnHealthDepleted: 0
   health: 0
   maxHealth: 100
+  invulnerabilityTimer: 1
   EventOnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -524,6 +549,16 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventOnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventInvincible:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventWasInvincible:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
