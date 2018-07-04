@@ -21,8 +21,8 @@ public class ExitFloor : MonoBehaviour {
 	{
 		if (players.Count == requiredPlayers)
 		{
-			SceneManager.LoadSceneAsync(scene);
-			SceneManager.UnloadSceneAsync("UI Scene");
+			SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+			SceneManager.UnloadSceneAsync (SceneManager.GetActiveScene ());
 		}
 	}
 
