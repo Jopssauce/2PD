@@ -4,7 +4,7 @@ using UnityEngine;
 using XInputDotNetPure;
 public class PlayerInput : MonoBehaviour {
 	PlayerController player;
-	UIManager uiManager;
+
 	GamePadState state;
 	GamePadState prevState;
 
@@ -17,7 +17,6 @@ public class PlayerInput : MonoBehaviour {
 	 public virtual void Start()
     {
 		player = GetComponent<PlayerController>();
-		uiManager = UIManager.instance;
     }
 	void Update()
 	{
@@ -38,10 +37,6 @@ public class PlayerInput : MonoBehaviour {
 		if ((Input.GetKeyDown(skillBackward)) || prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed)
 		{
 			GetComponent<SkillActor>().EventOnSkillBackward.Invoke();
-		}
-		if (prevState.Buttons.Y == ButtonState.Released && state.Buttons.Y == ButtonState.Pressed) 
-		{
-			uiManager.CanvasUI.OpenEncyclopedia ();
 		}
 	}
 	public virtual void FixedUpdate()
