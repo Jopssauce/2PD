@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using XInputDotNetPure;
 
 public class CanvasController : MonoBehaviour {
 
@@ -45,17 +46,22 @@ public class CanvasController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.B))
 		{
 			//encyclopedia.GetComponent<Animator>().SetTrigger("Open");
-			if (!isGamePaused)
-			{
-				Pause (encyclopedia);
-			}
-			else
-			{
-				Resume (encyclopedia);
-			}
+		
 		}
 	}
 
+	public void OpenEncyclopedia()
+	{
+		Debug.Log (encyclopedia);
+		if (!isGamePaused)
+		{
+			Pause (encyclopedia);
+		}
+		else
+		{
+			Resume (encyclopedia);
+		}
+	}
 	
 	void UpdateUIText()
 	{
