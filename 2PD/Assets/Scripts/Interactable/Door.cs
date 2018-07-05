@@ -8,6 +8,7 @@ public class Door : Interactable
 {
 	public bool isOpen;
 	public bool autoOpen = true;
+	public bool openImmediatelyWithoutTrigger;
 	public GameObject targetLocation;
 	public UnityEvent EventOnOpen;
 	public UnityEvent EventOnClose;
@@ -44,6 +45,17 @@ public class Door : Interactable
 		{
 			checker.TriggerChecks.Invoke();
 			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
+			{
+				isOpen = true;
+			}
+			else
+			{
+				isOpen = false;
+			}
+		}
+		if(openImmediatelyWithoutTrigger == true)
+		{
+			if (checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
 				isOpen = true;
 			}
