@@ -379,7 +379,6 @@ MonoBehaviour:
   canInteract: 1
   canCombat: 1
   isMoving: 0
-  isAttacking: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
   lastPos: {x: 0, y: 0, z: 0}
@@ -524,8 +523,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 1588254809027310, guid: eb4411d963fe37343aefd3dc6920cbf8, type: 2}
   playercontroller: {fileID: 0}
-  attackCooldown: 0.5
+  attackCooldown: 0.2
   canAttack: 1
+  EventAttacking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114876301403890932}
+        m_MethodName: IsAttacking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventAttacked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114876301403890932}
+        m_MethodName: NotAttacking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114876301403890932
 MonoBehaviour:
   m_ObjectHideFlags: 1
