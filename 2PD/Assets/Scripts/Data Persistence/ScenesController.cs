@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScenesController : MonoBehaviour {
-
-	public Scene titleScene;
+	public static ScenesController instance;
 	public void Awake()
 	{
+		instance = this;
 		if(!isSceneOpen("Title Scene")) SceneManager.LoadSceneAsync("Title Scene", LoadSceneMode.Additive);
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName("Title Scene"));
 	}
 
 	
@@ -24,6 +25,18 @@ public class ScenesController : MonoBehaviour {
 			}
 		}
 		return false;
+	}
+
+	public void LoadSceneWithUI(string name)
+	{
+		if(!isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
+		if(!isSceneOpen(name)) SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
+	}
+
+	public void UnLoadSceneWithUI(string name)
+	{
+		if(isSceneOpen(name)) SceneManager.UnloadSceneAsync(name);
 	}
 
 	
