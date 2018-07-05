@@ -2273,6 +2273,7 @@ MonoBehaviour:
   - {fileID: 619668276}
   - {fileID: 1449768556}
   sharedInventory: {fileID: 373282249}
+  checkpoint: {fileID: 0}
 --- !u!4 &459354560
 Transform:
   m_ObjectHideFlags: 0
@@ -46568,6 +46569,11 @@ Prefab:
       propertyPath: spawner
       value: 
       objectReference: {fileID: 1811259736}
+    - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: openImmediatelyWithoutTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
   m_IsPrefabParent: 0
@@ -134364,6 +134370,11 @@ Prefab:
       propertyPath: genericInteractable.Array.data[1]
       value: 
       objectReference: {fileID: 825718598}
+    - target: {fileID: 114752555235706468, guid: ca7831a1161d0b54294a527cb7e1a60c,
+        type: 2}
+      propertyPath: openImmediatelyWithoutTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
   m_IsPrefabParent: 0
