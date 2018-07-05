@@ -12,7 +12,7 @@ public class ScenesController : MonoBehaviour {
 	}
 
 	
-	bool isSceneOpen(string name)
+	public bool isSceneOpen(string name)
 	{
 		Scene UIscene = SceneManager.GetSceneByName(name);
 		for (int i = 0; i < SceneManager.sceneCount; i++)
