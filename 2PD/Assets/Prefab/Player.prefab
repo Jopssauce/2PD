@@ -225,7 +225,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453793797800494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.729, y: -6.8080006, z: 0}
+  m_LocalPosition: {x: -0.37, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513115422693128}
@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkInterval: 0.1
+  sr: {fileID: 212265263585438818}
   EventActivate:
     m_PersistentCalls:
       m_Calls: []
@@ -458,7 +459,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  sr: {fileID: 212265263585438818}
 --- !u!114 &114427544604220428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - {fileID: 114480459242229648, guid: 5accb0785c0e88243ae0932c8c6477ed, type: 2}
+  - {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d, type: 2}
   currentSkill: {fileID: 0}
   index: 0
   EventOnSkillForward:
@@ -523,6 +524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 1483431508703012, guid: 36e28fcf598118740988397f80fa1419, type: 2}
   playercontroller: {fileID: 0}
+  attackCooldown: 0.5
+  canAttack: 1
 --- !u!114 &114839025566115880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -535,7 +538,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnHealthDepleted: 0
-  health: 0
   maxHealth: 100
   invulnerabilityTimer: 1
   EventOnHealthChange:
@@ -619,6 +621,7 @@ MonoBehaviour:
   canInteract: 1
   canCombat: 1
   isMoving: 0
+  isAttacking: 0
   direction: {x: 0, y: 0, z: 0}
   lastDirection: 0
   lastPos: {x: 0, y: 0, z: 0}
