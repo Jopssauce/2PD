@@ -34,6 +34,7 @@ public class Spawner : MonoBehaviour
 	public SpawnerEvents EventOnCleanList;
 
 	IEnumerator spawnPrefab;
+	IEnumerator spawning;
 
 	void Start()
 	{
@@ -82,7 +83,7 @@ public class Spawner : MonoBehaviour
 	public IEnumerator Spawning()
 	{
 		
-		while (spawnWaves > 0 || infiniteSpawning)
+		while (currentWave != spawnWaves || infiniteSpawning)
 		{
 			
 			if (currentWave != spawnWaves && !infiniteSpawning)
@@ -98,8 +99,10 @@ public class Spawner : MonoBehaviour
 			yield return new WaitForSeconds(waveInterval);
 			
 		}
+		StopCoroutine(spawning);
+					Debug.Log("test");
 		if(autoDeactivate) EventDeactivate.Invoke();
-		StopCoroutine(spawnPrefab);
+		StopCoroutine(spawning);
 
 	}
 
@@ -141,7 +144,8 @@ public class Spawner : MonoBehaviour
 		{
 			isActivated = true;
 			Debug.Log("Spawner Activated");
-			StartCoroutine(Spawning());
+			spawning = Spawning();
+			StartCoroutine(spawning);
 			OnSprite();
 			EventOnActivate.Invoke();
 		}
@@ -154,6 +158,7 @@ public class Spawner : MonoBehaviour
 			isActivated = false;
 			StopAllCoroutines();
 			OffSprite();
+
 			EventOnDeactivate.Invoke();
 		}
 	}

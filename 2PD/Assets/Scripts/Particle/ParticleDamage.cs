@@ -20,11 +20,11 @@ public class ParticleDamage : MonoBehaviour {
 		
 		foreach (var item in collisionEvents)
 		{
-			if (item.colliderComponent.gameObject.tag != "Player")
+			if (!item.colliderComponent.GetComponent<PlayerController>())
        	 	{
            		return;
         	}
-			if (item.colliderComponent.gameObject.tag == "Player")
+			if (item.colliderComponent.GetComponent<PlayerController>())
        	 	{
            		//item.colliderComponent.gameObject.GetComponent<PlayerStats>().DeductHp(4);
 				GetComponent<DamageActor>().DealDamage(4, item.colliderComponent.gameObject, GetComponent<DamageActor>().damageType);

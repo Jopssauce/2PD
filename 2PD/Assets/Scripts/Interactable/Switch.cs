@@ -19,7 +19,7 @@ public class Switch : Interactable {
 	public override void Interact(GameObject obj)
 	{
 		PlayerController player = obj.GetComponent<PlayerController>();
-		if (player.ID == playerIDRequired || player.ID == -1)
+		if (player.ID == playerIDRequired || playerIDRequired == -1)
 		{
 			isInteracted = true;
 			GetComponent<SpriteRenderer>().sprite = on;

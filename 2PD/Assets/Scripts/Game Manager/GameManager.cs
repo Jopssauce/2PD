@@ -6,9 +6,12 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
-	ScenesController scenesController;
+	UIManager uiManager;
+	public bool isRespawning = false;
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
+	public GameObject checkpoint;
+	IEnumerator respawn;
 	void Awake()
 	{
 		instance = this;
@@ -18,21 +21,23 @@ public class GameManager : MonoBehaviour {
 			player.ID = id;
 			id++;
 		}
+		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
-		scenesController = ScenesController.instance;
-		scenesController.LoadScene("UI Scene");
+		
 	}
 	
 	void LateUpdate () 
 	{
-		if (playerList.Any(player => player.GetComponent<Health>().health <= 0))
+		if(uiManager == null) uiManager = UIManager.instance;
+		if (playerList.Any(player => player.GetComponent<Health>().health <= 0) && !isRespawning)
 		{
-			SceneManager.LoadSceneAsync("Game Over Scene");
-			SceneManager.UnloadSceneAsync("UI Scene");
+			isRespawning = true;
+			respawn = RespawnPlayers();
+			StartCoroutine(respawn);
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
 		{
@@ -40,7 +45,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	bool isScenesControllerOpen()
+	bool isUIOpen()
 	{
 		Scene UIscene = SceneManager.GetSceneByName("UI Scene");
 		for (int i = 0; i < SceneManager.sceneCount; i++)
@@ -53,6 +58,33 @@ public class GameManager : MonoBehaviour {
 		}
 		return false;
 	}
+
+
+
+	public IEnumerator RespawnPlayers()
+	{
+		foreach (var player in playerList)
+		{
+			player.canMove = false;
+			uiManager.CanvasUI.youDied.gameObject.SetActive(true);
+		}
+		yield return new WaitForSeconds(5);
+		if (checkpoint == null)
+		{
+			SceneManager.LoadSceneAsync("Game Over Scene");
+			SceneManager.UnloadSceneAsync("UI Scene");
+		}
+		foreach (var player in playerList)
+		{
+			player.GetComponent<Health>().AddHp(player.GetComponent<Health>().maxHealth);
+			player.transform.position = checkpoint.transform.position;
+			player.canMove = true;
+		}
+		isRespawning = false;
+		uiManager.CanvasUI.youDied.gameObject.SetActive(false);
+	}
+
+	
 
 	
 }

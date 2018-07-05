@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114212741376805768}
   - component: {fileID: 61635191490808866}
   - component: {fileID: 50204577357603832}
+  - component: {fileID: 114787249573103104}
   m_Layer: 31
   m_Name: Malachite Pick Up
   m_TagString: Untagged
@@ -156,7 +157,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114787249573103104}
+        m_MethodName: UnlockGemContent
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Amount: 5
@@ -164,6 +176,17 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   isSharedItem: 0
   item: {fileID: 114753645077001298, guid: 2dd7f6602484ed948bd11d8b5f3d37e1, type: 2}
+--- !u!114 &114787249573103104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1954941525920296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212699348023434532
 SpriteRenderer:
   m_ObjectHideFlags: 1

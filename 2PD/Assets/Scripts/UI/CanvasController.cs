@@ -10,6 +10,7 @@ public class CanvasController : MonoBehaviour {
 
 	public TextMeshProUGUI player1Health;
 	public TextMeshProUGUI player2Health;
+	public TextMeshProUGUI youDied;
 	public Image player1HpBar;
 	public Image player2HpBar;
 
@@ -69,14 +70,14 @@ public class CanvasController : MonoBehaviour {
 		player2HpBar.fillAmount = gameManager.playerList[1].GetComponent<Health>().health / gameManager.playerList[1].GetComponent<Health>().maxHealth;
 	}
 
-	void Resume(GameObject UIElement)
+	public void Resume(GameObject UIElement)
 	{
 		UIElement.SetActive (false);
 		Time.timeScale = 1.0f;
 		isGamePaused = false;
 	}
 
-	void Pause(GameObject UiElement)
+	public void Pause(GameObject UiElement)
 	{
 		UiElement.SetActive (true);
 		Time.timeScale = 0.0f;
@@ -86,6 +87,18 @@ public class CanvasController : MonoBehaviour {
 	public IEnumerator HideDialogue()
 	{
 		yield return new WaitForSeconds(3.0f);
-		dialogueBox.SetActive(false);
+		Resume (dialogueBox);
+	}
+
+	public void OpenEnycloepdia()
+	{
+		if (!isGamePaused)
+			{
+				Pause (encyclopedia);
+			}
+			else
+			{
+				Resume (encyclopedia);
+			}
 	}
 }

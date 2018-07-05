@@ -34,7 +34,6 @@ public class PlayerAnimationController : MonoBehaviour
 	}
 	public void IsAttacking()
 	{
-		Debug.Log("test");
 		animator.SetBool("IsAttacking", true);
 	}
 
