@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Damage Overtime
   sprite: {fileID: 0}
-  buffType: 0
+  buffType: 2
   receiver: {fileID: 0}
   isActivated: 0
   duration: 5
@@ -69,6 +69,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   color:
     serializedVersion: 2
-    rgba: 0
-  effectInterval: 0.4
+    rgba: 4294967295
+  effectInterval: 0.6
   damage: 2

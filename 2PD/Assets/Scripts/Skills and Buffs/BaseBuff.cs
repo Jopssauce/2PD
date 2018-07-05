@@ -8,7 +8,8 @@ public class BaseBuff : MonoBehaviour
 	public enum BuffType
 	{
 		standard,
-		infuse
+		infuse,
+		damageOvertime
 	}
 	public string ID;
 	public Sprite sprite;

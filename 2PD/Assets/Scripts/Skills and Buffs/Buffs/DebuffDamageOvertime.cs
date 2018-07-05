@@ -32,7 +32,10 @@ public class DebuffDamageOvertime : BaseBuff
 
 		while(true)
 		{
-			receiver.GetComponent<Health>().DeductHp(damage);
+			if (receiver.GetComponent<Health>().fireModifier > 0)
+			{
+				receiver.GetComponent<Health>().DeductHpWhileInvulnerable(damage);
+			}
 			yield return new WaitForSeconds(effectInterval);		
 		}
 		
