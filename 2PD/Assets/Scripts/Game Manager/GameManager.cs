@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
+	public GameObject checkpoint;
 	void Awake()
 	{
 		instance = this;
