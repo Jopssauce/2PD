@@ -8,8 +8,7 @@ public class ScenesController : MonoBehaviour {
 	public void Awake()
 	{
 		instance = this;
-		if(!isSceneOpen("Title Scene")) SceneManager.LoadSceneAsync("Title Scene", LoadSceneMode.Additive);
-		SceneManager.SetActiveScene(SceneManager.GetSceneByName("Title Scene"));
+		
 	}
 
 	
@@ -34,9 +33,24 @@ public class ScenesController : MonoBehaviour {
 		SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
 	}
 
-	public void UnLoadSceneWithUI(string name)
+	public void UnLoadScene(string name)
 	{
 		if(isSceneOpen(name)) SceneManager.UnloadSceneAsync(name);
+	}
+
+	public void LoadScene(string name)
+	{
+		if(!isSceneOpen(name)) SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
+	}
+
+	void LoadTitleSceneOnStart()
+	{
+		if(!isSceneOpen("Title Scene") && !isSceneOpen("Floor 1") && !isSceneOpen("Floor 2"))
+		{
+			SceneManager.LoadSceneAsync("Title Scene", LoadSceneMode.Additive);
+			SceneManager.SetActiveScene(SceneManager.GetSceneByName("Title Scene"));
+		}
 	}
 
 	
