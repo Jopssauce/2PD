@@ -6,11 +6,11 @@ public class MeleeCombat : PlayerCombat {
 
 	public override void Attack()
     {
-		CmdSpawnObject(objPrefab);
+		base.Attack();
 		Debug.Log("melee");
     }
 
-	public override void CmdSpawnObject(GameObject obj)
+	public override void CmdSpawnAttackPrefab(GameObject obj)
 	{
 		GameObject bullet = Instantiate(obj, playercontroller.directions[playercontroller.lastDirection].transform.position, playercontroller.directions[playercontroller.lastDirection].transform.rotation, this.transform);
 		bullet.GetComponent<MeleeAttack>().direction = playercontroller.direction;
