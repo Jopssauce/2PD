@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051295440420622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26000002, y: -0.70800054, z: 0}
+  m_LocalPosition: {x: 13.612999, y: -13.332, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510165312953486}
@@ -216,7 +216,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &61670755998775274
@@ -380,7 +380,6 @@ MonoBehaviour:
   canCombat: 1
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
-  lastDirection: 0
   lastPos: {x: 0, y: 0, z: 0}
   directions:
   - {fileID: 1334614303273728}
@@ -461,7 +460,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - {fileID: 114480459242229648, guid: 5accb0785c0e88243ae0932c8c6477ed, type: 2}
-  - {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31, type: 2}
   currentSkill: {fileID: 0}
   index: 0
   EventOnSkillForward:
@@ -524,6 +522,7 @@ MonoBehaviour:
   objPrefab: {fileID: 1588254809027310, guid: eb4411d963fe37343aefd3dc6920cbf8, type: 2}
   playercontroller: {fileID: 0}
   attackCooldown: 0.2
+  offset: 0.2
   canAttack: 1
   EventAttacking:
     m_PersistentCalls:
