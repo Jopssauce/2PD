@@ -8,7 +8,6 @@ public class MeleeCombat : PlayerCombat {
     {
 		base.Attack();
 		Debug.Log("melee");
-		EventAttacked.Invoke();
     }
 
 	public override void CmdSpawnAttackPrefab(GameObject obj)

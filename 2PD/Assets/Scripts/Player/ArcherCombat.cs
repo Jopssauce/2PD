@@ -10,7 +10,6 @@ public class ArcherCombat : PlayerCombat
     {
 			base.Attack();
 			Debug.Log("projectile");
-			EventAttacked.Invoke();
     }
 
 		public override void CmdSpawnAttackPrefab(GameObject obj)

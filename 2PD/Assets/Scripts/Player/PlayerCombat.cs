@@ -46,5 +46,6 @@ public class PlayerCombat : MonoBehaviour
 		canAttack = true;
 		playercontroller.canMove = true;
 		isAttackCooldownStarted = false;
+		EventAttacked.Invoke();
 	}
 }

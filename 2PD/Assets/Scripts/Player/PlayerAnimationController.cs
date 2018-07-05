@@ -28,4 +28,14 @@ public class PlayerAnimationController : MonoBehaviour
 		animator.SetBool ("IsWalking", true);
 	}
 
+	public void NotAttacking()
+	{
+		animator.SetBool("IsAttacking", false);
+	}
+	public void IsAttacking()
+	{
+		Debug.Log("test");
+		animator.SetBool("IsAttacking", true);
+	}
+
 }

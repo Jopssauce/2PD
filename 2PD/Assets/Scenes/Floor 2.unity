@@ -2271,11 +2271,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114225704708674108, guid: 860c5820248d01a4b968ad0316f84e52,
-        type: 2}
-      propertyPath: skills.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.26000002
@@ -2308,18 +2303,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114225704708674108, guid: 860c5820248d01a4b968ad0316f84e52,
-        type: 2}
-      propertyPath: skills.Array.data[1]
-      value: 
-      objectReference: {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31,
-        type: 2}
-    - target: {fileID: 114225704708674108, guid: 860c5820248d01a4b968ad0316f84e52,
-        type: 2}
-      propertyPath: skills.Array.data[2]
-      value: 
-      objectReference: {fileID: 114441675975026584, guid: e96c62c06fd49cd46812941cc0538c83,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
   m_IsPrefabParent: 0
@@ -2574,10 +2557,15 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114427544604220428, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
-      propertyPath: skills.Array.size
-      value: 2
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2615,12 +2603,61 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114427544604220428, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
-      propertyPath: skills.Array.data[1]
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d,
+      objectReference: {fileID: 955568010}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 955568010}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsAttacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NotAttacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: EventAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: attackCooldown
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
   m_IsPrefabParent: 0
@@ -2909,6 +2946,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1466904989368318, guid: 7b3a6d8710ee00843b68d53689ecd7da,
     type: 2}
   m_PrefabInternal: {fileID: 939720829}
+--- !u!114 &955568010 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114587856632812124, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+    type: 2}
+  m_PrefabInternal: {fileID: 797348119}
+  m_Script: {fileID: 11500000, guid: 1cc3e0adc0300d743a3b71a9b1d8a348, type: 3}
 --- !u!1001 &958702710
 Prefab:
   m_ObjectHideFlags: 0
