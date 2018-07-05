@@ -394,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropOnDestroy: 1
   pickupsToDrop:
-  - {fileID: 114212741376805768, guid: 132c1dabfadde20479efe0c6a7f3aa13, type: 2}
+  - {fileID: 114181298281989726, guid: 4cc266d90d1c9fc4c8aa2a3ca8c715c4, type: 2}
   guaranteedPickupsToDrop: []
   itemDropAmt: 1
   EventOnDrop:
@@ -421,7 +421,6 @@ MonoBehaviour:
   canCombat: 1
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
-  lastDirection: 0
   lastPos: {x: 0, y: 0, z: 0}
   directions: []
   EventOnLeft:
