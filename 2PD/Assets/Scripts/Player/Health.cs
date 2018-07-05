@@ -29,18 +29,33 @@ public class Health : MonoBehaviour {
 	
 	public virtual void DeductHp(float amt)
 	{
+		if(isInvulnerable)
+		{
+			return;
+		} 
+
 		if (amt <= 0) amt = 0;
 		//if(!isServer) return;
 		health -= amt;
 		if(health <= 0)
 		{
 			health = 0;
-			EventOnHealthDepleted.Invoke();	
+			EventOnHealthDepleted.Invoke();
 			if(destroyOnHealthDepleted) OnHealthDepeleted();
-			Debug.Log("Depleted");
+			Debug.Log("Depleted");	
 		} 
-		
+		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
+		if(!isInvulnerable)
+		{
+			if (!isInvulnerabilityTimerStarted)
+			{
+				isInvulnerable = true;
+				invulTimer = InvulnerabilityTimer();
+				StartCoroutine(invulTimer);
+			}
+
+		}
 	}
 
 	public virtual void DeductHp(float amt, GameObject actor)
@@ -51,6 +66,32 @@ public class Health : MonoBehaviour {
 			return;
 		} 
 
+		if (amt <= 0) amt = 0;
+		//if(!isServer) return;
+		health -= amt;
+		if(health <= 0)
+		{
+			health = 0;
+			EventOnHealthDepleted.Invoke();
+			if(destroyOnHealthDepleted) OnHealthDepeleted();
+			Debug.Log("Depleted");	
+		} 
+		Debug.Log("Hit");
+		EventOnHealthChange.Invoke();
+		if(!isInvulnerable)
+		{
+			if (!isInvulnerabilityTimerStarted)
+			{
+				isInvulnerable = true;
+				invulTimer = InvulnerabilityTimer();
+				StartCoroutine(invulTimer);
+			}
+
+		}
+	}
+
+	public virtual void DeductHpWhileInvulnerable(float amt)
+	{
 		if (amt <= 0) amt = 0;
 		//if(!isServer) return;
 		health -= amt;
