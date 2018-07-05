@@ -36761,7 +36761,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1939112927862646, guid: ca7831a1161d0b54294a527cb7e1a60c,
     type: 2}
   m_PrefabInternal: {fileID: 1710497264}
---- !u!114 &558408341
+--- !u!114 &558408334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -36769,7 +36769,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 558408333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9189f436c8c6acb49ae527f5f54f536a, type: 3}
+  m_Script: {fileID: 11500000, guid: 437f4c2c205aff64fbd8e94bbdbb3576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChestToSpawn: {fileID: 1295029639}
