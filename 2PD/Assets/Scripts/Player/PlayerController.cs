@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     public bool canCombat = true;
 	public bool isMoving = false;
     public Vector3 direction;
-	public int lastDirection;
 	public Vector3 lastPos;
 	public List<GameObject> directions;
 
@@ -141,9 +140,7 @@ public class PlayerController : MonoBehaviour
 	{
 		{
 			transform.position += new Vector3 ( -1 * playerSpeed * Time.deltaTime , 0, 0);
-			lastDirection = 2;
-			direction.x = -1;
-        	direction.y = 0;
+			direction = -transform.right;
             //transform.eulerAngles = transform.forward * 90;
 			GetComponent<SpriteRenderer> ().flipX = false;
 		}
@@ -152,9 +149,7 @@ public class PlayerController : MonoBehaviour
 	{
 		{
 			transform.position += new Vector3 ( 1 * playerSpeed * Time.deltaTime , 0, 0);
-			lastDirection = 3;
-			direction.x = 1;
-        	direction.y = 0;
+			direction = transform.right;
 			GetComponent<SpriteRenderer> ().flipX = true;
             //transform.eulerAngles = -transform.forward * 90;
 		}
@@ -163,9 +158,7 @@ public class PlayerController : MonoBehaviour
 	{
 		{
 			transform.position += new Vector3 ( 0, 1 * playerSpeed * Time.deltaTime, 0);
-			lastDirection = 0;
-			direction.x = 0;
-        	direction.y = 1;
+			direction = transform.up;
             //transform.eulerAngles = transform.forward * 0;
 		}
 	}
@@ -173,9 +166,7 @@ public class PlayerController : MonoBehaviour
 	{
 		{
 			transform.position += new Vector3 ( 0, -1 * playerSpeed * Time.deltaTime, 0);
-			lastDirection = 1;
-			direction.x = 0;
-        	direction.y = -1;
+			direction = -transform.up;
             //transform.eulerAngles = transform.forward * 180;
 		}
 	}

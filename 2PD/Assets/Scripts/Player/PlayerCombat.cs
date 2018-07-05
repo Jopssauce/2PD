@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
 	public float attackCooldown = 0.5f;
-
+	public float offset = 0.2f;
 	public bool canAttack = true;
 	protected bool isAttackCooldownStarted = false;
 
@@ -33,7 +33,9 @@ public class PlayerCombat : MonoBehaviour
 	//[Command]
 	public virtual void CmdSpawnAttackPrefab(GameObject obj)
 	{
-		GameObject bullet = Instantiate(obj, playercontroller.directions[playercontroller.lastDirection].transform.position, playercontroller.directions[playercontroller.lastDirection].transform.rotation);
+		Vector3 pos = transform.position + playercontroller.direction * offset;
+		GameObject bullet = Instantiate(obj, pos, obj.transform.rotation);
+		ChangeRotation(bullet);
 		//NetworkServer.Spawn(bullet);
 	}
 
@@ -47,5 +49,25 @@ public class PlayerCombat : MonoBehaviour
 		playercontroller.canMove = true;
 		isAttackCooldownStarted = false;
 		EventAttacked.Invoke();
+	}
+
+	public void ChangeRotation(GameObject obj)
+	{
+		if (playercontroller.direction.x == -1)
+		{
+			obj.transform.rotation = Quaternion.Euler(0,0, 90);
+		}
+		else if (playercontroller.direction.x == 1)
+		{
+			obj.transform.rotation = Quaternion.Euler(0,0, -90);
+		}
+		if (playercontroller.direction.y == -1)
+		{
+			obj.transform.rotation = Quaternion.Euler(0,0, -180);
+		}
+		if (playercontroller.direction.x == 1)
+		{
+			transform.rotation = Quaternion.Euler(0,0, 0);
+		}
 	}
 }

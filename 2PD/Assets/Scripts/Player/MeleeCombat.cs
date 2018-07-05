@@ -12,7 +12,9 @@ public class MeleeCombat : PlayerCombat {
 
 	public override void CmdSpawnAttackPrefab(GameObject obj)
 	{
-		GameObject bullet = Instantiate(obj, playercontroller.directions[playercontroller.lastDirection].transform.position, playercontroller.directions[playercontroller.lastDirection].transform.rotation, this.transform);
+		Vector3 pos = transform.position + playercontroller.direction * offset;
+		GameObject bullet = Instantiate(obj, pos, obj.transform.rotation);
+		ChangeRotation(bullet);
 		bullet.GetComponent<MeleeAttack>().direction = playercontroller.direction;
 		//NetworkServer.Spawn(bullet);
 	}
