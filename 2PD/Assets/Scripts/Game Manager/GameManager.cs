@@ -6,7 +6,6 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
-	ScenesController scenesController;
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
 	void Awake()
@@ -18,13 +17,13 @@ public class GameManager : MonoBehaviour {
 			player.ID = id;
 			id++;
 		}
+		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
-		scenesController = ScenesController.instance;
-		scenesController.LoadScene("UI Scene");
+		
 	}
 	
 	void LateUpdate () 
@@ -40,7 +39,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	bool isScenesControllerOpen()
+	bool isUIOpen()
 	{
 		Scene UIscene = SceneManager.GetSceneByName("UI Scene");
 		for (int i = 0; i < SceneManager.sceneCount; i++)
