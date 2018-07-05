@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueEvent : MonoBehaviour
+public class AltarInteract : MonoBehaviour
 {
 	UIManager uiManager;
 
@@ -16,5 +16,10 @@ public class DialogueEvent : MonoBehaviour
 		uiManager.CanvasUI.GetComponent<CanvasController>().dialogueBox.SetActive (true);
 		uiManager.CanvasUI.GetComponent<CanvasController>().dialogue.text = dialogue;
 		StartCoroutine (uiManager.CanvasUI.HideDialogue ());
+	}
+
+	public void UnlockGemContent(int index)
+	{
+		uiManager.CanvasUI.GetComponent<CanvasController> ().encyclopedia.GetComponent<EncyclopediaUI> ().UnlockGemContent (index);
 	}
 }
