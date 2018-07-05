@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
+using UnityEngine.Events;
 
 public class PlayerCombat : MonoBehaviour 
 {
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
 	public float attackCooldown = 0.5f;
+
 	public bool canAttack = true;
 	protected bool isAttackCooldownStarted = false;
 
+	public UnityEvent EventAttacking;
+	public UnityEvent EventAttacked;
+	
 	protected IEnumerator startAttackCooldown;
 	public virtual void Start()
 	{
@@ -20,6 +24,7 @@ public class PlayerCombat : MonoBehaviour
 	public virtual void Attack()
     {
 		if(!canAttack) return;
+		EventAttacking.Invoke();
 		CmdSpawnAttackPrefab(objPrefab);
 		startAttackCooldown = StartAttackCooldown();
 		StartCoroutine(startAttackCooldown);
@@ -36,8 +41,10 @@ public class PlayerCombat : MonoBehaviour
 	{
 		canAttack = false;
 		isAttackCooldownStarted = true;
+		playercontroller.canMove = false;
 		yield return new WaitForSeconds(attackCooldown);
 		canAttack = true;
+		playercontroller.canMove = true;
 		isAttackCooldownStarted = false;
 	}
 }
