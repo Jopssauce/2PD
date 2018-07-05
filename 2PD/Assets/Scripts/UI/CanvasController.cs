@@ -88,4 +88,16 @@ public class CanvasController : MonoBehaviour {
 		yield return new WaitForSeconds(3.0f);
 		dialogueBox.SetActive(false);
 	}
+
+	public void OpenEnycloepdia()
+	{
+		if (!isGamePaused)
+			{
+				Pause (encyclopedia);
+			}
+			else
+			{
+				Resume (encyclopedia);
+			}
+	}
 }
