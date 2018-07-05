@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 58549347221162868}
   - component: {fileID: 50244900498920204}
   - component: {fileID: 114622467318134838}
+  - component: {fileID: 95921825562343514}
   m_Layer: 0
   m_Name: Bat Enemy
   m_TagString: Untagged
@@ -169,6 +170,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13793632, y: 0.11886668}
   m_EdgeRadius: 0
+--- !u!95 &95921825562343514
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811733348285554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4c3e835505dfa843827b5f0cf9cfa51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108532222938260314
 Light:
   m_ObjectHideFlags: 1
@@ -272,7 +290,6 @@ MonoBehaviour:
   canCombat: 1
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
-  lastDirection: 0
   lastPos: {x: 0, y: 0, z: 0}
   directions: []
   EventOnLeft:
@@ -364,8 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnHealthDepleted: 1
-  health: 0
   maxHealth: 15
+  invulnerabilityTimer: 1
   EventOnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -377,6 +394,16 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventOnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventStartingInvulnerability:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventEndingInvulnerability:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -439,12 +466,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 1cfa93c3fdbe6aa49b7fe92db0bc6b8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ba797b602bf87a4980818248a41622f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
