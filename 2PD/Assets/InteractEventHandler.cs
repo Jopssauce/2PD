@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AltarInteract : MonoBehaviour
+public class InteractEventHandler : MonoBehaviour
 {
 	UIManager uiManager;
 

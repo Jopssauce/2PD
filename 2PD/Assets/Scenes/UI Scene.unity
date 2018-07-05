@@ -4330,7 +4330,7 @@ MonoBehaviour:
   Items:
   - {fileID: 11400000, guid: 3d8673ab82d79bf41ba970465b99e0c8, type: 2}
   - {fileID: 11400000, guid: 6cca1e70f8335cf4d8c175cd46574545, type: 2}
-  - {fileID: 11400000, guid: a9490ec4c255ddb46948e505218e6440, type: 2}
+  - {fileID: 11400000, guid: 0b512c99e6168d74ab57a3ab354ff409, type: 2}
   - {fileID: 11400000, guid: 35108344a678e4647ae51ac30f5219ad, type: 2}
   - {fileID: 11400000, guid: 381b5f60817a3d84191616e67d2eba2d, type: 2}
   - {fileID: 11400000, guid: c32068c07c837ee45850b122de95bb0d, type: 2}
@@ -4338,11 +4338,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ecce545b568d9b4b920c3ad516856f9, type: 2}
   - {fileID: 11400000, guid: 833ad6d5b0dd70b429aa5604ab8bf0f5, type: 2}
   - {fileID: 11400000, guid: c31df0504f82e15428ad652aa67dcab9, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 20a5e9b889470b7458eb3e956a8006e4, type: 2}
   - {fileID: 11400000, guid: fa91a2a3549cb4c48bb6950364817fef, type: 2}
   - {fileID: 11400000, guid: c21469b2db6aa0542ba9e0b2dbaebd7c, type: 2}
   - {fileID: 11400000, guid: f4e608c08a8d5e8409518d1e2d9458fb, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1911f3c49a928b0479285f1199abf924, type: 2}
   GemPlace: {fileID: 0}
   color:
     serializedVersion: 2
