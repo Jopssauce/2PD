@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 58239476775714606}
   - component: {fileID: 50317707029574482}
   - component: {fileID: 114436874485243116}
+  - component: {fileID: 114330995427091976}
   m_Layer: 0
   m_Name: Generic Enemy
   m_TagString: Untagged
@@ -218,6 +219,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   type: 0
+--- !u!114 &114330995427091976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671564799364820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef16c91e199979b47b1725bcd3fc4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkInterval: 0.1
+  sr: {fileID: 212283840674104906}
+  EventActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114342001538399390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,8 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnHealthDepleted: 1
-  health: 0
   maxHealth: 15
+  invulnerabilityTimer: 0.4
   EventOnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -285,6 +309,38 @@ MonoBehaviour:
   EventOnDestroy:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventStartingInvulnerability:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114330995427091976}
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventEndingInvulnerability:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114330995427091976}
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   globalModifier: 1
