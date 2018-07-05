@@ -10,6 +10,7 @@ public class CanvasController : MonoBehaviour {
 
 	public TextMeshProUGUI player1Health;
 	public TextMeshProUGUI player2Health;
+	public TextMeshProUGUI youDied;
 	public Image player1HpBar;
 	public Image player2HpBar;
 

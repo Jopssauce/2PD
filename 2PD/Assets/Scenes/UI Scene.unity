@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Health: {fileID: 296457894}
   player2Health: {fileID: 1492395729}
+  youDied: {fileID: 1585804704}
   player1HpBar: {fileID: 591143833}
   player2HpBar: {fileID: 1271508537}
   sharedGold: {fileID: 407705797}
@@ -4437,7 +4438,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: <color=red>YOU DIED</color>
+  m_text: <color=red>PARTNER DIED</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: beaf50e95ff38a246851b70fa835043f, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 059a116a1a58f074db2d65b84ad61bd6, type: 2}
@@ -4513,11 +4514,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
