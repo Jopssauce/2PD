@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class EnemyAI : MonoBehaviour {
 
 	public List<PlayerController> players;
+	public EnemyController enemyController;
 	public float moveSpeed;
 	public Vector3 targetDirection;
 	public float distanceToTarget;
@@ -33,9 +34,10 @@ public class EnemyAI : MonoBehaviour {
 	public virtual void ChasePlayer ()
 	{
 		//transform.position = Vector2.MoveTowards (transform.position, players[0].transform.position, moveSpeed * Time.deltaTime);
-		targetDirection = players[0].transform.position - this.transform.position;
+		targetDirection = players[0].transform.position - enemyController.transform.position;
 		ResetDirection();
 		transform.position += targetDirection * moveSpeed * Time.deltaTime;
+		enemyController.transform.position += targetDirection * moveSpeed * Time.deltaTime;
 	}
 
 	public virtual IEnumerator Wander()
@@ -53,7 +55,7 @@ public class EnemyAI : MonoBehaviour {
 
 	public void ResetDirection()
 	{
-		distanceToTarget = Vector2.Distance(players[0].transform.position, this.transform.position);
+		distanceToTarget = Vector2.Distance(players[0].transform.position, enemyController.transform.position);
 		if(distanceToTarget < stopRange) targetDirection = Vector2.zero;
 	}
 
@@ -73,6 +75,8 @@ public class EnemyAI : MonoBehaviour {
 		{
 			players.Remove(col.gameObject.GetComponent<PlayerController>());
 			EventExitRange.Invoke();
+			
+			this.gameObject.transform.localPosition = new Vector2(0,0);
 		}
 	}
 }
