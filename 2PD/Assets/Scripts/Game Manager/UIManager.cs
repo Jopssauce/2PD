@@ -13,5 +13,12 @@ public class UIManager : MonoBehaviour {
 		gameManager = GameManager.instance;
 		instance = this;
 	}
+
+	public void ActivateDialogue(string dialogue)
+	{
+		CanvasUI.GetComponent<CanvasController>().dialogueBox.SetActive (true);
+		CanvasUI.GetComponent<CanvasController>().dialogue.text = dialogue;
+		StartCoroutine (CanvasUI.GetComponent<CanvasController>().HideDialogue ());
+	}
 	
 }

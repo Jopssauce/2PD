@@ -13,10 +13,9 @@ public class InteractEventHandler : MonoBehaviour
 
 	public void ActivateDialogue(string dialogue)
 	{
-		uiManager.CanvasUI.GetComponent<CanvasController>().dialogueBox.SetActive (true);
-		uiManager.CanvasUI.GetComponent<CanvasController>().dialogue.text = dialogue;
-		StartCoroutine (uiManager.CanvasUI.HideDialogue ());
+		uiManager.ActivateDialogue (dialogue);
 	}
+
 
 	public void UnlockGemContent(int index)
 	{

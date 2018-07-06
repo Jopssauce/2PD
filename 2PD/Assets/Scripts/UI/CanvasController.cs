@@ -86,8 +86,9 @@ public class CanvasController : MonoBehaviour {
 
 	public IEnumerator HideDialogue()
 	{
-		yield return new WaitForSeconds(3.0f);
-		Resume (dialogueBox);
+		yield return new WaitForSeconds(1.0f);
+		dialogueBox.SetActive (false);
+		Debug.Log ("Seconds Done");
 	}
 
 	public void OpenEnycloepdia()
