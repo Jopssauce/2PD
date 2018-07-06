@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class InteractEventHandler : MonoBehaviour
 {
-	UIManager uiManager;
+	GameManager gameManager;
 
 	void Start()
 	{
-		uiManager = UIManager.instance;
+		gameManager = GameManager.instance;
 	}
 
 	public void ActivateDialogue(string dialogue)
 	{
-		uiManager.ActivateDialogue (dialogue);
+		gameManager.uiManager.ActivateDialogue (dialogue);
 	}
 
 
 	public void UnlockGemContent(int index)
 	{
-		uiManager.CanvasUI.GetComponent<CanvasController> ().encyclopedia.GetComponent<EncyclopediaUI> ().UnlockGemContent (index);
+		gameManager.uiManager.CanvasUI.GetComponent<CanvasController> ().encyclopedia.GetComponent<EncyclopediaUI> ().UnlockGemContent (index);
 	}
 }

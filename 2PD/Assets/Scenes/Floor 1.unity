@@ -178,11 +178,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 31.940002
+      value: 13.150001
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.0600014
+      value: -17.19
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2811,6 +2811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a124e9dc9f328874bae13375de195831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
   isRespawning: 0
   playerList:
   - {fileID: 619668276}
@@ -36698,7 +36699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195942906}
   - component: {fileID: 1195942905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pit Fall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37017,7 +37018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254582869}
   - component: {fileID: 1254582868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pit Fall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37723,7 +37724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325550514}
   - component: {fileID: 1325550513}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pit Fall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38528,11 +38529,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 29.739
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.651
+      value: -17.99
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -39308,6 +39309,11 @@ Prefab:
     - target: {fileID: 4213441638354024, guid: e6be902f3993a2744a5a381b7b79ade2, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.0922227
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249639400570030, guid: e6be902f3993a2744a5a381b7b79ade2,
+        type: 2}
+      propertyPath: maxHealth
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6be902f3993a2744a5a381b7b79ade2, type: 2}
@@ -41564,7 +41570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735860295}
   - component: {fileID: 1735860294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pit Fall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42684,7 +42690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886456466}
   - component: {fileID: 1886456465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pit Fall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
