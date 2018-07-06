@@ -47,7 +47,7 @@ public class PlayerActions : MonoBehaviour {
 	{
 		if (objectToActOn != null && objectToActOn.isGrabbable == true)
 		{
-			//objectToActOn.transform.parent = GetComponent<PlayerController>().directions[GetComponent<PlayerController>().lastDirection].transform;
+			objectToActOn.transform.parent = GetComponent<PlayerController>().directions[GetComponent<PlayerController>().lastDirection].transform;
 		}
 
 	}
