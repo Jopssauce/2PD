@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Sapphire
+  sprite: {fileID: 21300000, guid: 07e45128eb8084a4f856412ba97c0939, type: 3}
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []

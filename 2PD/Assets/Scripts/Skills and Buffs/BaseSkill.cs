@@ -12,6 +12,7 @@ public class BaseSkill : MonoBehaviour
 	}
 	SkillActor actor;
 	public string ID;
+    public Sprite sprite;
 	public UnityEvent EventOnActivate;
 
 	public virtual void Start()

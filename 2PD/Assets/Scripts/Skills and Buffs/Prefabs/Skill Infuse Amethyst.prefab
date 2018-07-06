@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Amethyst
+  sprite: {fileID: 21300000, guid: d131b9c183fdc9d47abeca5332105dc0, type: 3}
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
