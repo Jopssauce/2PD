@@ -26,17 +26,6 @@ public class EncyclopediaUI : MonoBehaviour {
 	[SerializeField]
 	private List<Image> images;
 
-	void Start()
-	{
-		foreach (EncyclopediaItems i in Items)
-		{
-			i.IsDiscovered = false;
-		}
-
-		//for (int i = 0; i < Items.Count; i++)
-		//	UnlockGemContent (i);
-	}
-
 	public void DisplayUI(int index)
 	{
 		ItemNameUI.text = Items [index].ItemName;

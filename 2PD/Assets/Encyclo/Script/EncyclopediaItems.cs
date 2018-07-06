@@ -14,6 +14,4 @@ public class EncyclopediaItems : ScriptableObject
 
 	[TextArea]
 	public string Location;
-
-	public bool IsDiscovered;
 }
