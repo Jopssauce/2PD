@@ -512,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 35.1, y: -3.5999756}
+  m_AnchoredPosition: {x: 35.100098, y: -3.6000977}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296457894
@@ -4017,7 +4017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.1, y: -3.5999756}
+  m_AnchoredPosition: {x: 49.100098, y: -3.6000977}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492395729
@@ -4338,11 +4338,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ecce545b568d9b4b920c3ad516856f9, type: 2}
   - {fileID: 11400000, guid: 833ad6d5b0dd70b429aa5604ab8bf0f5, type: 2}
   - {fileID: 11400000, guid: c31df0504f82e15428ad652aa67dcab9, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 11065427404898147bbaee4564ed0792, type: 2}
   - {fileID: 11400000, guid: fa91a2a3549cb4c48bb6950364817fef, type: 2}
   - {fileID: 11400000, guid: c21469b2db6aa0542ba9e0b2dbaebd7c, type: 2}
   - {fileID: 11400000, guid: f4e608c08a8d5e8409518d1e2d9458fb, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a9490ec4c255ddb46948e505218e6440, type: 2}
   GemPlace: {fileID: 0}
   color:
     serializedVersion: 2
