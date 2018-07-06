@@ -26,6 +26,13 @@ public class EncyclopediaUI : MonoBehaviour {
 	[SerializeField]
 	private List<Image> images;
 
+	void Start()
+	{
+
+		for (int i = 0; i < Items.Count; i++)
+			images [i].sprite = Items [i].GemImageDefault;
+	}
+
 	public void DisplayUI(int index)
 	{
 		ItemNameUI.text = Items [index].ItemName;
@@ -37,7 +44,6 @@ public class EncyclopediaUI : MonoBehaviour {
 
 	public void UnlockGemContent(int index)
 	{
-		images [index].sprite = Items [index].GemImageDefault;
 		images [index].color = color;
 	}
 }
