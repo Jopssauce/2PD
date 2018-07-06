@@ -35,7 +35,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4228135112376444}
-  - component: {fileID: 114399185961002704}
   - component: {fileID: 114182785821204888}
   - component: {fileID: 58174770501922180}
   - component: {fileID: 114832416474256046}
@@ -57,7 +56,6 @@ GameObject:
   - component: {fileID: 212283840674104906}
   - component: {fileID: 114987814277451990}
   - component: {fileID: 114439275090388498}
-  - component: {fileID: 114342001538399390}
   - component: {fileID: 114987374637630960}
   - component: {fileID: 50317707029574482}
   - component: {fileID: 114436874485243116}
@@ -80,9 +78,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671564799364820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.898, y: -11.674, z: 0}
-  m_LocalScale: {x: 0.80808014, y: 0.8333326, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.299, y: -0.408, z: 0}
+  m_LocalScale: {x: 0.80807996, y: 0.83333, z: 1}
   m_Children:
   - {fileID: 4228135112376444}
   - {fileID: 4918828765869634}
@@ -277,46 +275,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114342001538399390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671564799364820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94346a124f287844b6b331211bba61c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players: []
-  moveSpeed: 1
-  targetDirection: {x: 0, y: 0, z: 0}
-  distanceToTarget: 0
-  stopRange: 0.14
-  EventInRange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  EventExitRange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114399185961002704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392305247391950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e056606585df87489e84a7f31d925b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackTimer: 2
-  damage: 5
-  enemyAI: {fileID: 114342001538399390}
 --- !u!114 &114436874485243116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTimer: 2
   damage: 5
-  enemyAI: {fileID: 114342001538399390}
+  enemyAI: {fileID: 114832416474256046}
 --- !u!114 &114832416474256046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,6 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  enemyController: {fileID: 114987814277451990}
   moveSpeed: 1
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
