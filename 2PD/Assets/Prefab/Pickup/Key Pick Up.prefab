@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4374142830506094}
   - component: {fileID: 61688867521769072}
-  m_Layer: 31
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114392607037064894}
   - component: {fileID: 61305514461414792}
   - component: {fileID: 50079914646104566}
-  m_Layer: 31
+  m_Layer: 10
   m_Name: Key Pick Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,5 +206,5 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
