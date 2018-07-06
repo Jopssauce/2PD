@@ -569,6 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41538040e7a7b4b4ab3289b0313c707a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageNumberPrefab: {fileID: 1099453753578542, guid: b1dfa22ff3974a4489f8e31b7f665383,
+    type: 2}
   destroyOnHealthDepleted: 0
   maxHealth: 100
   invulnerabilityTimer: 1
@@ -582,6 +584,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventReceivedDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: HealthEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   EventOnDestroy:
     m_PersistentCalls:
       m_Calls: []
@@ -655,6 +661,7 @@ MonoBehaviour:
   isMoving: 0
   direction: {x: 0, y: 0, z: 0}
   lastPos: {x: 0, y: 0, z: 0}
+  lastDirection: 0
   directions:
   - {fileID: 1793585112031984}
   - {fileID: 1978311893902018}

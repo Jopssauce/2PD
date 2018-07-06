@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using TMPro;
+[System.Serializable]
+public class HealthEvent : UnityEvent<float> {}
 public class Health : MonoBehaviour {
+	public GameObject damageNumberPrefab;
 	public bool destroyOnHealthDepleted;
 	bool isInvulnerable = false;
 	bool isInvulnerabilityTimerStarted;
@@ -12,6 +15,7 @@ public class Health : MonoBehaviour {
 	public float invulnerabilityTimer = 1;
 	public UnityEvent EventOnHealthChange;
 	public UnityEvent EventOnHealthDepleted;
+	public HealthEvent EventReceivedDamage;
 	public UnityEvent EventOnDestroy;
 	public UnityEvent EventStartingInvulnerability;
 	public UnityEvent EventEndingInvulnerability;
@@ -25,6 +29,11 @@ public class Health : MonoBehaviour {
 	void Awake()
 	{
 		health = maxHealth;
+	}
+
+	void Start()
+	{
+		EventReceivedDamage.AddListener(SpawnDamageNumber);
 	}
 	
 	public virtual void DeductHp(float amt)
@@ -46,6 +55,7 @@ public class Health : MonoBehaviour {
 		} 
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
+		EventReceivedDamage.Invoke(amt);
 		if(!isInvulnerable)
 		{
 			if (!isInvulnerabilityTimerStarted)
@@ -78,6 +88,7 @@ public class Health : MonoBehaviour {
 		} 
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
+		EventReceivedDamage.Invoke(amt);
 		if(!isInvulnerable)
 		{
 			if (!isInvulnerabilityTimerStarted)
@@ -104,6 +115,7 @@ public class Health : MonoBehaviour {
 		} 
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
+		EventReceivedDamage.Invoke(amt);
 		if(!isInvulnerable)
 		{
 			if (!isInvulnerabilityTimerStarted)
@@ -153,5 +165,13 @@ public class Health : MonoBehaviour {
 	void OnDestroy()
 	{
 		EventOnDestroy.Invoke();
+	}
+
+	public void SpawnDamageNumber(float damage)
+	{
+		if(damageNumberPrefab == null) return;
+		GameObject temp = Instantiate(damageNumberPrefab,transform.position, transform.rotation);
+		temp.GetComponent<TextMeshPro>().text = damage.ToString();
+		temp.GetComponent<DamageNumberAnimator>().StartAnim();
 	}
 }

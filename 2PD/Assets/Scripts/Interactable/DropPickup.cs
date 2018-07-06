@@ -22,7 +22,7 @@ public class DropPickup : MonoBehaviour {
 
 	void DropItemsRandom()
 	{
-		
+		if(pickupsToDrop.Count == 0) return;
 		int rItem = Random.Range(0, pickupsToDrop.Count);
 		Pickup item = Instantiate(pickupsToDrop [rItem], this.transform.position, pickupsToDrop [rItem].transform.rotation);
 		item.EnableGravity();
