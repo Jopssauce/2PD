@@ -47,10 +47,11 @@ public class Door : Interactable
 			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
 				isOpen = true;
+				OpenDoor ();
 			}
 			else
 			{
-				isOpen = false;
+				//isOpen = false;
 			}
 		}
 		if(openImmediatelyWithoutTrigger == true)
@@ -58,20 +59,14 @@ public class Door : Interactable
 			if (checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
 				isOpen = true;
+				OpenDoor ();
 			}
 			else
 			{
-				isOpen = false;
+				//isOpen = false;
 			}
 		}
-		if (isOpen) 
-		{
-			OpenDoor();
-		}
-		else
-		{
-			CloseDoor();
-		}
+
 		
 	}
 
