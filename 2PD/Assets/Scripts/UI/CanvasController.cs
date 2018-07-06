@@ -13,8 +13,10 @@ public class CanvasController : MonoBehaviour {
 	public TextMeshProUGUI youDied;
 	public Image player1HpBar;
 	public Image player2HpBar;
+    public Image player1SkillGem;
+    public Image player2SkillGem;
 
-	public TextMeshProUGUI sharedGold;
+    public TextMeshProUGUI sharedGold;
 
 	public GameObject encyclopedia;
 
@@ -36,8 +38,10 @@ public class CanvasController : MonoBehaviour {
 		gameManager = UIManager.instance.gameManager;
 		foreach (var player in gameManager.playerList)
 		{
-			player.GetComponent<Health>().EventOnHealthChange.AddListener(UpdateUIText);
-		}
+            player.GetComponent<Health>().EventOnHealthChange.AddListener(UpdateUIText);
+            player.GetComponent<SkillActor>().EventOnSkillBackward.AddListener(UpdateUIText);
+            player.GetComponent<SkillActor>().EventOnSkillForward.AddListener(UpdateUIText);
+        }
 		UpdateUIText();
 	}
 
@@ -64,10 +68,12 @@ public class CanvasController : MonoBehaviour {
 		sharedGold.text = gameManager.sharedInventory.GetComponent<Currency>().gold.ToString();
 		player2Health.text = gameManager.playerList[1].GetComponent<Health>().health.ToString();
 
-
 		
 		player1HpBar.fillAmount = gameManager.playerList[0].GetComponent<Health>().health / gameManager.playerList[0].GetComponent<Health>().maxHealth;
 		player2HpBar.fillAmount = gameManager.playerList[1].GetComponent<Health>().health / gameManager.playerList[1].GetComponent<Health>().maxHealth;
+
+        player1SkillGem.sprite = gameManager.playerList[0].GetComponent<SkillActor>().currentSkill.sprite;
+        player2SkillGem.sprite = gameManager.playerList[1].GetComponent<SkillActor>().currentSkill.sprite;
 	}
 
 	public void Resume(GameObject UIElement)
