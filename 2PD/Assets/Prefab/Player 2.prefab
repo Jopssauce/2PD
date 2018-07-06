@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 106
   interact: 107
-  skillForward: 120
+  skillForward: 110
   skillBackward: 109
 --- !u!114 &114929823329720262
 MonoBehaviour:
