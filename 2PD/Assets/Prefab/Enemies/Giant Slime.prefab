@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  moveSpeed: 1
+  moveSpeed: 0.5
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
   stopRange: 0.14
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnHealthDepleted: 1
-  maxHealth: 15
+  maxHealth: 10000
   invulnerabilityTimer: 0.4
   EventOnHealthChange:
     m_PersistentCalls:

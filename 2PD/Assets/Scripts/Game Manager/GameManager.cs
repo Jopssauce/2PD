@@ -6,7 +6,7 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
-	UIManager uiManager;
+	public UIManager uiManager;
 	public bool isRespawning = false;
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
