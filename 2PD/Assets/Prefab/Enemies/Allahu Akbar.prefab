@@ -60,11 +60,11 @@ GameObject:
   - component: {fileID: 50493220645438974}
   - component: {fileID: 114212490334121436}
   - component: {fileID: 114190063844824930}
-  - component: {fileID: 95683756123722988}
   - component: {fileID: 61436923898067294}
   - component: {fileID: 114465763533959692}
   - component: {fileID: 114148559799309060}
   - component: {fileID: 114273758579896846}
+  - component: {fileID: 95882366132982300}
   m_Layer: 14
   m_Name: Allahu Akbar
   m_TagString: Untagged
@@ -79,8 +79,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767045046133916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.36, y: 2.94, z: 0}
-  m_LocalScale: {x: 0.80807996, y: 0.83333, z: 1}
+  m_LocalPosition: {x: 2.635905, y: 22.10758, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4504825899531364}
   - {fileID: 4797727838597522}
@@ -160,7 +160,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000056251884, y: -0.0063698553}
+  m_Offset: {x: -0.0048794746, y: -0.04013139}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -171,9 +171,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1535877, y: 0.120410256}
+  m_Size: {x: 0.21213341, y: 0.18793333}
   m_EdgeRadius: 0
---- !u!95 &95683756123722988
+--- !u!95 &95882366132982300
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -182,7 +182,7 @@ Animator:
   m_GameObject: {fileID: 1767045046133916}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c1b696986eb2b24fb56f217ef8f4485, type: 2}
+  m_Controller: {fileID: 9100000, guid: b26c5c18b444f1444b5b617bc08e174f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -549,7 +549,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 88c1135613b6d4348ba6b6324f3c5f97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c67afea936b195e4cbbd249b1a460566, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
