@@ -21,7 +21,7 @@ public class Explosion : MonoBehaviour
 				damageActor.DealDamage (damage, item.gameObject, DamageActor.DamageTypes.standard);
 				if (item.GetComponent<Rigidbody2D>()) 
 				{
-					item.GetComponent<Rigidbody2D>().AddForce(item.GetComponent<PlayerController>().direction * explosionForce, ForceMode2D.Force);
+					
 				}
 			}
 		}

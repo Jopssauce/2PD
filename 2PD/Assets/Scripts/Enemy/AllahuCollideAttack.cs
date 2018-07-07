@@ -12,6 +12,7 @@ public class AllahuCollideAttack : EnemyCollideAttack {
 			if(enemyAI.players.Count > 0) 
 			{
 				Instantiate (explosionPrefab, transform.position, explosionPrefab.transform.rotation);
+				col.gameObject.GetComponent<Rigidbody2D>().AddForce(col.gameObject.GetComponent<PlayerController>().direction * 300, ForceMode2D.Force);
 				Destroy (this.gameObject);
 			}		
 
