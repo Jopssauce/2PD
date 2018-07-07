@@ -56,6 +56,7 @@ MonoBehaviour:
   buffType: 0
   receiver: {fileID: 0}
   isActivated: 0
+  duration: 1
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
@@ -69,6 +70,6 @@ MonoBehaviour:
   color:
     serializedVersion: 2
     rgba: 4282664009
-  slowModifier: 0.2
+  slowModifier: 0.7
   damageModifier: 0
   tempModifier: 0
