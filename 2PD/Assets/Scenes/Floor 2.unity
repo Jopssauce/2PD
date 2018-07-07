@@ -1793,6 +1793,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82c4d15f5915fa14aa79d2fad89250ab, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &460147718 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114614253070948278, guid: 0772ff28fe9ce064ca3415e6d89839c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 768514418}
+  m_Script: {fileID: 11500000, guid: 47df93a190b4c834281168cc187bc70f, type: 3}
 --- !u!1 &460200655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2807,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5156a15d91ebdc14496a8bb788687ea9, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &630946367 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114614253070948278, guid: 0772ff28fe9ce064ca3415e6d89839c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1362476370}
+  m_Script: {fileID: 11500000, guid: 47df93a190b4c834281168cc187bc70f, type: 3}
 --- !u!1 &647292627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,11 +3385,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: 6.93
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.57
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3880,6 +3892,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff552e57defc7984791019c190c3d699, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &768514418
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451888434322912, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_Name
+      value: Ground Torch Trigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &778701581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +4021,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
       value: -11.32
@@ -3998,6 +4061,31 @@ Prefab:
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1665776002}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TorchActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -4291,6 +4379,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.02
@@ -4326,6 +4419,31 @@ Prefab:
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 460147718}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TorchActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -5091,6 +5209,14 @@ Prefab:
     - target: {fileID: 4138542780357882, guid: a8eedec04551a7e4c81808405816c321, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940033570201408, guid: a8eedec04551a7e4c81808405816c321, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213124004747620, guid: a8eedec04551a7e4c81808405816c321, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8eedec04551a7e4c81808405816c321, type: 2}
@@ -40099,6 +40225,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1201921851
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451888434322912, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_Name
+      value: Ground Torch Trigger (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1201921852 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114614253070948278, guid: 0772ff28fe9ce064ca3415e6d89839c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1201921851}
+  m_Script: {fileID: 11500000, guid: 47df93a190b4c834281168cc187bc70f, type: 3}
 --- !u!1001 &1211850370
 Prefab:
   m_ObjectHideFlags: 0
@@ -40960,6 +41138,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd492258bbc8fde4faf67a7d729a3ff2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1362476370
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 126
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1365513600
 Prefab:
@@ -43640,6 +43860,58 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca7831a1161d0b54294a527cb7e1a60c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1665776001
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370490778608822, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451888434322912, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+      propertyPath: m_Name
+      value: Ground Torch Trigger (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0772ff28fe9ce064ca3415e6d89839c2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1665776002 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114614253070948278, guid: 0772ff28fe9ce064ca3415e6d89839c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1665776001}
+  m_Script: {fileID: 11500000, guid: 47df93a190b4c834281168cc187bc70f, type: 3}
 --- !u!1 &1681136498
 GameObject:
   m_ObjectHideFlags: 0
@@ -44242,6 +44514,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.14
@@ -44273,6 +44550,31 @@ Prefab:
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_RootOrder
       value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 630946367}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TorchActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
@@ -44824,6 +45126,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4829408168582344, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.64
@@ -44859,6 +45166,31 @@ Prefab:
     - target: {fileID: 1051410042458816, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
       propertyPath: m_Name
       value: Shootable Target (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1201921852}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TorchActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195462749349304, guid: b30c25828150a0d41b37fff8f357273b,
+        type: 2}
+      propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b30c25828150a0d41b37fff8f357273b, type: 2}
