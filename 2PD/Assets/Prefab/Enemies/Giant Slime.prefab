@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 114025382670020738}
   - component: {fileID: 58425580253872596}
   - component: {fileID: 114541579684645330}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  enemyController: {fileID: 0}
   moveSpeed: 0.5
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  enemyController: {fileID: 0}
   moveSpeed: 1
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
