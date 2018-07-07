@@ -9,15 +9,14 @@ public class Explosion : MonoBehaviour
 	public float radius = 0.7f;
 	public float explosionForce = 50;
 	public float damage = 10;
-	void Update()
+	void Start()
 	{
 		damageActor = GetComponent<DamageActor> ();
 		entities = Physics2D.OverlapCircleAll (transform.position, radius);
 
 		foreach (var item in entities) 
 		{
-			Debug.Log (item);
-			if (GetComponent<Health> ()) 
+			if (item.GetComponent<Health> ()) 
 			{
 				damageActor.DealDamage (damage, item.gameObject, DamageActor.DamageTypes.standard);
 				if (item.GetComponent<Rigidbody2D>()) 
