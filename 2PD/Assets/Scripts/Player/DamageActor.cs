@@ -31,4 +31,22 @@ public class DamageActor : MonoBehaviour {
 		}
 		
 	}
+
+	public void DealDamageThrougInvul(float damage, GameObject target, DamageTypes type)
+	{
+		Health player = target.GetComponentInParent<Health>();
+		switch (type)
+		{
+			case DamageTypes.standard :
+			player.DeductHpWhileInvulnerable( (damage * player.globalModifier) );
+			break;
+			case DamageTypes.fire :
+			player.DeductHpWhileInvulnerable( (damage * player.fireModifier * player.globalModifier) );
+			break;
+			case DamageTypes.lava :
+			player.DeductHpWhileInvulnerable( (damage * player.fireModifier * player.globalModifier) );
+			break;
+		}
+		
+	}
 }

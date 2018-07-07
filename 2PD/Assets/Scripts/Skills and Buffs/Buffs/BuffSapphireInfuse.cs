@@ -9,6 +9,7 @@ public class BuffSapphireInfuse : BaseBuff
     public override void Activate(BuffReceiver receiver)
     {
         base.Activate(receiver);
+        receiver.GetComponent<SpriteRenderer>().color = color;
         ArcherCombat combat = receiver.GetComponent<ArcherCombat>();
         if (isActivated == true)
         {

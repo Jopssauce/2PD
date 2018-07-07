@@ -14,6 +14,7 @@ public class BuffQuartzInfuse : BaseBuff
        
         PlayerController player = receiver.GetComponent<PlayerController>();
         base.Activate(receiver);
+        receiver.GetComponent<SpriteRenderer>().color = color;
         if (isActivated == true)
         {
             speed = player.playerSpeed;

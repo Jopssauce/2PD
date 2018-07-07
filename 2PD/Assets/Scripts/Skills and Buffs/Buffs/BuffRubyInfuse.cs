@@ -13,6 +13,7 @@ public class BuffRubyInfuse : BaseBuff
     {
         PlayerController player = receiver.GetComponent<PlayerController>();
         base.Activate(receiver);
+        receiver.GetComponent<SpriteRenderer>().color = color;
         if (isActivated == true)
         {
 			Vector3 playerPos = player.transform.position;
