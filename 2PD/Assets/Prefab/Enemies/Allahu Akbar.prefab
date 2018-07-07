@@ -63,8 +63,8 @@ GameObject:
   - component: {fileID: 95683756123722988}
   - component: {fileID: 61436923898067294}
   - component: {fileID: 114465763533959692}
-  - component: {fileID: 114225710895946524}
   - component: {fileID: 114148559799309060}
+  - component: {fileID: 114273758579896846}
   m_Layer: 14
   m_Name: Allahu Akbar
   m_TagString: Untagged
@@ -359,7 +359,7 @@ MonoBehaviour:
   globalModifier: 1
   fireModifier: 1
   lavaModifier: 1
---- !u!114 &114225710895946524
+--- !u!114 &114273758579896846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -367,12 +367,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767045046133916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e056606585df87489e84a7f31d925b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d4360d4cbf90e74d8148662ea6843c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 2
-  damage: 5
+  attackTimer: 0
+  damage: 0
   enemyAI: {fileID: 114048017112925146}
+  explosionPrefab: {fileID: 1467407095105770, guid: 2990e09c7fd216043847e72a2babb3d8,
+    type: 2}
 --- !u!114 &114413212301535498
 MonoBehaviour:
   m_ObjectHideFlags: 1
