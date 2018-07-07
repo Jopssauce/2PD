@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour {
 	public UnityEvent EventInRange;
 	public UnityEvent EventExitRange;
 
-	void FixedUpdate()
+	void LateUpdate()
 	{
 		if(players.Count == 0)
 		{
