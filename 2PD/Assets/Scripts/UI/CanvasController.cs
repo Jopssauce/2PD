@@ -92,7 +92,7 @@ public class CanvasController : MonoBehaviour {
 
 	public IEnumerator HideDialogue()
 	{
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(5.0f);
 		dialogueBox.SetActive (false);
 		Debug.Log ("Seconds Done");
 	}
