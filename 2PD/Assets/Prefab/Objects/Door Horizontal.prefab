@@ -258,7 +258,7 @@ MonoBehaviour:
   playerCanTrigger: 1
   requiredPlayers: 2
   currentPlayer: {fileID: 0}
-  prompt: {fileID: 1307988494186550}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   checker: {fileID: 0}
@@ -308,6 +308,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   isOpen: 0
   autoOpen: 1
+  openImmediatelyWithoutTrigger: 0
   targetLocation: {fileID: 0}
   EventOnOpen:
     m_PersistentCalls:
@@ -357,6 +358,7 @@ MonoBehaviour:
   areAllEnemiesDead: 0
   areItemsInInventory: 0
   areAllEnemiesInSpawnerDead: 0
+  spawner: {fileID: 0}
   TriggerChecks:
     m_PersistentCalls:
       m_Calls: []
@@ -385,7 +387,6 @@ MonoBehaviour:
   genericInteractable: []
   enemies: []
   itemsRequired: []
-  spawner: {fileID: 0}
 --- !u!212 &212279371365841706
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -428,7 +429,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212360434893234308
 SpriteRenderer:

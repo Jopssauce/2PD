@@ -385,7 +385,7 @@ MonoBehaviour:
   canInteract: 1
   canCombat: 1
   isMoving: 0
-  direction: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: -1, z: 0}
   lastPos: {x: 0, y: 0, z: 0}
   lastDirection: 0
   directions:
