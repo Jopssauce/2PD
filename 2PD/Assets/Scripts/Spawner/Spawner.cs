@@ -114,7 +114,8 @@ public class Spawner : MonoBehaviour
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
 			GameObject spawnArea = spawnAreas[tempSpawnIndex];
-			int spawnEntityCount = allSpawnedPrefabs.Count(p => p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID);
+			int spawnEntityCount = allSpawnedPrefabs.Count(p =>
+				(p.gameObject != null) && (p.gameObject.GetComponent<PlayerController>().ID == toSpawnEntity.prefab.GetComponent<PlayerController>().ID));
 
 			if (allSpawnedPrefabs.Count - 1 <= maxTotalSpawn && infiniteSpawning)
 			{
