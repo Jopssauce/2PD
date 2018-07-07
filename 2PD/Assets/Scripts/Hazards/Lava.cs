@@ -9,9 +9,9 @@ public class Lava : MonoBehaviour {
 	{
 		if(buff == null) return;
 		BuffReceiver receiver = col.gameObject.GetComponent<BuffReceiver>();
-		if(receiver.GetComponent<PlayerController>().ID == 5) return;
+		
 		if(receiver == null) return;
-
+		if(receiver.GetComponent<PlayerController>().ID == 5) return;
 		if (receiver.buffs.Any(p => p.ID == buff.ID) == false)
 		{
 			
