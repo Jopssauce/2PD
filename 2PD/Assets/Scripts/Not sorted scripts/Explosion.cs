@@ -18,7 +18,7 @@ public class Explosion : MonoBehaviour
 		{
 			if (item.GetComponent<Health> ()) 
 			{
-				damageActor.DealDamage (damage, item.gameObject, DamageActor.DamageTypes.standard);
+				damageActor.DealDamageThrougInvul (damage, item.gameObject, DamageActor.DamageTypes.standard);
 				if (item.GetComponent<Rigidbody2D>()) 
 				{
 					
