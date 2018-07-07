@@ -313,7 +313,7 @@ MonoBehaviour:
   playerCanTrigger: 1
   requiredPlayers: 0
   currentPlayer: {fileID: 0}
-  prompt: {fileID: 1989836458030918}
+  prompt: {fileID: 0}
   players: []
   allObjects: []
   checker: {fileID: 0}
@@ -363,6 +363,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   isOpen: 0
   autoOpen: 1
+  openImmediatelyWithoutTrigger: 0
   targetLocation: {fileID: 0}
   EventOnOpen:
     m_PersistentCalls:
