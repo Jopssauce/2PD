@@ -27,7 +27,7 @@ public class BaseBuff : MonoBehaviour
 	public virtual void Activate(BuffReceiver receiver) 
 	{ 
 		isActivated = !isActivated;
-		receiver.GetComponent<SpriteRenderer>().color = color;
+		
 		EventOnActivated.Invoke(); 
 	}
 
