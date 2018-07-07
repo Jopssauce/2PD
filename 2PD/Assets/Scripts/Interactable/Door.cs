@@ -8,6 +8,7 @@ public class Door : Interactable
 {
 	public bool isOpen;
 	public bool autoOpen = true;
+	public bool autoClose;
 	public bool openImmediatelyWithoutTrigger;
 	public GameObject targetLocation;
 	public UnityEvent EventOnOpen;
@@ -51,7 +52,12 @@ public class Door : Interactable
 			}
 			else
 			{
-				//isOpen = false;
+				if(autoClose)
+				{
+					isOpen = false;
+					CloseDoor();
+				}
+				
 			}
 		}
 		if(openImmediatelyWithoutTrigger == true)
@@ -63,7 +69,11 @@ public class Door : Interactable
 			}
 			else
 			{
-				//isOpen = false;
+				if(autoClose)
+				{
+					isOpen = false;
+					CloseDoor();
+				}
 			}
 		}
 
