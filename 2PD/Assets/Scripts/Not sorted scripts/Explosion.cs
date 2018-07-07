@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Explosion : MonoBehaviour 
+{
+	DamageActor damageActor;
+	public Collider2D[] entities;
+	public float radius = 0.7f;
+	public float explosionForce = 50;
+	public float damage = 10;
+	void Update()
+	{
+		damageActor = GetComponent<DamageActor> ();
+		entities = Physics2D.OverlapCircleAll (transform.position, radius);
+
+		foreach (var item in entities) 
+		{
+			Debug.Log (item);
+			if (GetComponent<Health> ()) 
+			{
+				damageActor.DealDamage (damage, item.gameObject, DamageActor.DamageTypes.standard);
+				if (item.GetComponent<Rigidbody2D>()) 
+				{
+					item.GetComponent<Rigidbody2D>().AddForce(item.GetComponent<PlayerController>().direction * explosionForce, ForceMode2D.Force);
+				}
+			}
+		}
+	}
+
+	void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere (transform.position, radius);
+	}
+}
