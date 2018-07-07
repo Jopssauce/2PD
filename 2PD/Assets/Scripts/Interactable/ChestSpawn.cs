@@ -14,10 +14,21 @@ public class ChestSpawn : MonoBehaviour
 
 	void LateUpdate()
 	{
-		if (checker.areAllEnemiesDead) {
+		if (checker.areAllEnemiesDead) 
+		{
 			ChestToSpawn.SetActive (true);
 		} 
 		else 
+		{
+			ChestToSpawn.SetActive (false);
+		}
+
+		if (checker.areAllEnemiesInSpawnerDead)
+		{
+			ChestToSpawn.SetActive (true);
+		}
+
+		else
 		{
 			ChestToSpawn.SetActive (false);
 		}
