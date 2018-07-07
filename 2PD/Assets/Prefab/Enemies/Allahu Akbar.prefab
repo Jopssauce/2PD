@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4504825899531364}
   - component: {fileID: 114473429473568234}
   - component: {fileID: 58735786755336596}
-  - component: {fileID: 114048017112925146}
+  - component: {fileID: 114591623335330208}
   m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
@@ -226,33 +226,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114048017112925146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425997455143134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94346a124f287844b6b331211bba61c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players: []
-  enemyController: {fileID: 114922199638872348}
-  moveSpeed: 1
-  targetDirection: {x: 0, y: 0, z: 0}
-  distanceToTarget: 0
-  stopRange: 0.14
-  EventInRange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  EventExitRange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114148559799309060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTimer: 0
   damage: 0
-  enemyAI: {fileID: 114048017112925146}
+  enemyAI: {fileID: 114591623335330208}
   explosionPrefab: {fileID: 1467407095105770, guid: 2990e09c7fd216043847e72a2babb3d8,
     type: 2}
 --- !u!114 &114413212301535498
@@ -456,6 +429,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageType: 0
   type: 0
+--- !u!114 &114591623335330208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425997455143134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ba25817c3157449aa7ab126e629100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
+  enemyController: {fileID: 114922199638872348}
+  moveSpeed: 1
+  targetDirection: {x: 0, y: 0, z: 0}
+  distanceToTarget: 0
+  stopRange: 0.14
+  EventInRange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventExitRange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114922199638872348
 MonoBehaviour:
   m_ObjectHideFlags: 1
