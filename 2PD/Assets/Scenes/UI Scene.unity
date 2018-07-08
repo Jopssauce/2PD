@@ -2399,6 +2399,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114051913869119338, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: color.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf89860c003b40e42989db12ebf8dc29, type: 2}
   m_IsPrefabParent: 0
