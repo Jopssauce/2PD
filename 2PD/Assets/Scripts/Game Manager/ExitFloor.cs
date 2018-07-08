@@ -19,7 +19,7 @@ public class ExitFloor : MonoBehaviour {
 		gameManager = GameManager.instance;
 	}
 
-	void Exit()
+	public void Exit()
 	{
 		if (players.Count == requiredPlayers)
 		{

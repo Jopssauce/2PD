@@ -7,11 +7,18 @@ using UnityEngine.Events;
 public class SceneController : MonoBehaviour 
 {
 	public UnityEvent OnLoadScene;
+	PersistentDataManager persistentData;
 
 	void Start()
 	{
 		OnLoadScene.AddListener (PlaySound);
 	}
+
+	public void LateUpdate()
+	{
+		if(persistentData == null)persistentData = PersistentDataManager.instance;
+	}
+
 
 	public void LoadScene(string name)
 	{
@@ -25,6 +32,11 @@ public class SceneController : MonoBehaviour
 	public void UnloadScene(string name)
 	{
 		SceneManager.UnloadSceneAsync (name);
+	}
+
+	public void Exit(string scene)
+	{
+		persistentData.StartChangeScene(scene);
 	}
 
 	// Only Works on build
