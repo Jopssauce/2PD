@@ -37739,6 +37739,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1054392002
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.636
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1054614408
 GameObject:
   m_ObjectHideFlags: 0
@@ -46835,265 +46877,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1860751126
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.636
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -12.271
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-      propertyPath: m_RootOrder
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 212842560156716096, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e23f631f28499824ca4f483d06b5ac91,
-        type: 3}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: on
-      value: 
-      objectReference: {fileID: 21300000, guid: b8ae9797ea2c47c49b39f9a3b9b024ee,
-        type: 3}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: off
-      value: 
-      objectReference: {fileID: 21300000, guid: e23f631f28499824ca4f483d06b5ac91,
-        type: 3}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: skill
-      value: 
-      objectReference: {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d,
-        type: 2}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: giveToSpecificPlayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: playerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: ObtainedDialogue
-      value: Obtained obsidian
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: UnobtainedDialogue
-      value: Warrior maybe you can use this
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: WarriorDialogue
-      value: Obsidian Obtained
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: ArcherDialogue
-      value: Warrior, maybe this is for you.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: encyclopediaIndex
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1860751128}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventOnWrongPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Warrior get it.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1860751128}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1860751128}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UnlockGemContent
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Obsidian Obtained press the [L] or [R] button to switch between your
-        infusions.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1860751129}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
-        type: 2}
-      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: Select
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &1860751127 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1671568075596032, guid: 2c0158423e579a54099437dc346f52d9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1860751126}
---- !u!114 &1860751128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860751127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1860751129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860751127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1862895371
 GameObject:
   m_ObjectHideFlags: 0

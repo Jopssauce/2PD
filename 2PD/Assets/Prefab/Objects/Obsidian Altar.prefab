@@ -54,6 +54,8 @@ GameObject:
   - component: {fileID: 61772276007388142}
   - component: {fileID: 212842560156716096}
   - component: {fileID: 114693990813159708}
+  - component: {fileID: 114183101907056184}
+  - component: {fileID: 114089936954636636}
   m_Layer: 0
   m_Name: Obsidian Altar
   m_TagString: Untagged
@@ -94,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671568075596032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.961525, y: -16.722134, z: 0}
+  m_LocalPosition: {x: 12.636, y: -12.271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4384846944571890}
@@ -152,6 +154,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5280962, y: 0.5399151}
   m_EdgeRadius: 0
+--- !u!114 &114089936954636636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671568075596032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114183101907056184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671568075596032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114693990813159708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,7 +230,41 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventInteracted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114183101907056184}
+        m_MethodName: ActivateDialogue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Obsidian Obtained press the [L] or [R] button to switch
+            between your infusions.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114183101907056184}
+        m_MethodName: UnlockGemContent
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114089936954636636}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   EventActivated:
@@ -220,14 +278,25 @@ MonoBehaviour:
     m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   gameManager: {fileID: 0}
-  skill: {fileID: 114137789328579102, guid: 3efe3f7aee726154599c285b8aba6c31, type: 2}
+  skill: {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d, type: 2}
   giveToSpecificPlayer: 1
-  playerID: 1
-  off: {fileID: 21300000, guid: 86b1c0a3affbb9f408d57d05dac015a3, type: 3}
+  playerID: 0
+  off: {fileID: 21300000, guid: e23f631f28499824ca4f483d06b5ac91, type: 3}
   on: {fileID: 21300000, guid: b8ae9797ea2c47c49b39f9a3b9b024ee, type: 3}
   EventOnWrongPlayer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114183101907056184}
+        m_MethodName: ActivateDialogue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Warrior get it.
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &212130344972211416
@@ -308,7 +377,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 86b1c0a3affbb9f408d57d05dac015a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e23f631f28499824ca4f483d06b5ac91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
