@@ -21,6 +21,11 @@ public class TitleManager : MonoBehaviour {
 		
 	}
 
+	void Start()
+	{
+		FindObjectOfType<AudioManager> ().PlayMusic (MusicStrings.Music_Title);
+	}
+
 	bool isAudioOpen()
 	{
 		Scene AudioScene = SceneManager.GetSceneByName("Audio");

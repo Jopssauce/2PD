@@ -123,7 +123,7 @@ Prefab:
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}
       propertyPath: Sounds.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_LocalPosition.x
@@ -220,6 +220,36 @@ Prefab:
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}
       propertyPath: Sounds.Array.data[5].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[6].name
+      value: ChestOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[6].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e77c168b28f5304d952af1685b909b8, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[6].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[7].name
+      value: SkillChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[7].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: da92c21bdab889948b59cdb7b1e263cd, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[7].Volume
       value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

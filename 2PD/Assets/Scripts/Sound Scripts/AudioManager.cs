@@ -28,11 +28,6 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
-	void Start()
-	{
-		PlayMusic (MusicStrings.Music_BGM);
-	}
-
 	public void Play (string name)
 	{
 		SoundFX s = Array.Find (Sounds, sound => sound.name == name);
