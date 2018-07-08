@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Damage Overtime
   sprite: {fileID: 0}
+  particle: {fileID: 198646489822832250, guid: 8bd4eaeb34e2f06479ebe69217d447f7, type: 2}
   buffType: 2
   receiver: {fileID: 0}
   isActivated: 0
@@ -63,6 +64,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventOnActivated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  EventOnDeactivated:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
