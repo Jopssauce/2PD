@@ -26,7 +26,7 @@ public class SkillActor : MonoBehaviour {
 
 	public void SkillForward()
 	{
-		if(skills.Count <= 0) return;
+		if(skills.Count <= 0 || skills.Count == 1) return;
 		index++;
 		if(index > skills.Count - 1) index = 0;
 		currentSkill = skills[index];
@@ -34,7 +34,7 @@ public class SkillActor : MonoBehaviour {
 	}
 	public void SkillBackward()
 	{
-		if(skills.Count <= 0) return;
+		if(skills.Count <= 0 || skills.Count == 1) return;
 		index--;
 		if(index < 0) index = skills.Count - 1;
 		currentSkill = skills[index];
