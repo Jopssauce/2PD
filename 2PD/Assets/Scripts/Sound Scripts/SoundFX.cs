@@ -21,6 +21,7 @@ public class SoundFX
 public class MusicStrings
 {
 	public static string Music_Title = "Title";
+	public static string Music_Dungeon = "DungeonMusic";
 	public static string SoundFx_Select = "Select";
 	public static string SoundFx_Hover = "Hover";
 	public static string SoundFx_ArrowShoot = "ArrowShoot";
