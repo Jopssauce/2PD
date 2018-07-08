@@ -42,6 +42,7 @@ public class PressurePad : Interactable
 			OnSprite();
 			isInteracted = !isInteracted;
 			EventInteracted.Invoke(actor);
+			EventActivated.Invoke(actor);
 		}
 	}
 
