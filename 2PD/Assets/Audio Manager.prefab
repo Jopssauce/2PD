@@ -88,7 +88,7 @@ MonoBehaviour:
     Loop: 0
     Volume: 0.5
   - name: SkillChange
-    SoundEffect: {fileID: 8300000, guid: da92c21bdab889948b59cdb7b1e263cd, type: 3}
+    SoundEffect: {fileID: 8300000, guid: 24e95d94a75c9cb4cadf4ed3000170a8, type: 3}
     Source: {fileID: 0}
     Loop: 0
     Volume: 0.5
@@ -110,6 +110,11 @@ MonoBehaviour:
   Music:
   - name: Title
     SoundEffect: {fileID: 8300000, guid: c98b5896e7908cd4f889d45a538e8ffa, type: 3}
+    Source: {fileID: 0}
+    Loop: 1
+    Volume: 0.5
+  - name: DungeonMusic
+    SoundEffect: {fileID: 8300000, guid: 396f8bfd1981df444b98dd111cb5952f, type: 3}
     Source: {fileID: 0}
     Loop: 1
     Volume: 0.5
