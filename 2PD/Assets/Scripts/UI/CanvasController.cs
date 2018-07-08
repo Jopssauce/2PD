@@ -78,6 +78,7 @@ public class CanvasController : MonoBehaviour {
 
 	public void Resume(GameObject UIElement)
 	{
+		encyclopedia.GetComponent<InventoryActor>().interactable = null;
 		UIElement.SetActive (false);
 		Time.timeScale = 1.0f;
 		isGamePaused = false;
@@ -105,6 +106,7 @@ public class CanvasController : MonoBehaviour {
 			}
 			else
 			{
+				
 				Resume (encyclopedia);
 			}
 	}
