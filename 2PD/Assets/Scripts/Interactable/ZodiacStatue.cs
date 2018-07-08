@@ -38,9 +38,10 @@ public class ZodiacStatue : Interactable
 	public void ToggleEncylopedia()
 	{
 		isToggled = !isToggled;
+		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
 		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
-		if(!isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-		if(isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
+		//if(isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
+		//if(!isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
 	}
 
 
