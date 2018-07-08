@@ -7,6 +7,7 @@ using System.Linq;
 public class InteractableAltar : Interactable
 {
 	public BaseSkill skill;
+	public BaseItem item;
 	public bool giveToSpecificPlayer;
 	public int playerID;
 
@@ -27,6 +28,7 @@ public class InteractableAltar : Interactable
 			if (player.ID == playerID && !isInteracted)
 			{
 				actor.AddSkill (skill);
+				gameManager.sharedInventory.AddItem(item);
 				GetComponent<SpriteRenderer>().sprite = on;
 				isInteracted = true;
 				EventActivated.Invoke(obj);
