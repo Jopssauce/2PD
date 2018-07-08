@@ -32,7 +32,11 @@ public class EncyclopediaUI : MonoBehaviour {
 	{
 
 		for (int i = 0; i < Items.Count; i++)
+		{
+			if (Items [i] == null)
+				continue;
 			images [i].sprite = Items [i].GemImageDefault;
+		}
 	}
 
 	public void DisplayUI(int index)
