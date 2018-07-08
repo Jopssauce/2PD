@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70642b892c014f4090c1aa122366493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Agate
+  itemName: Obsidian
   itemID: 1
   isUsable: 0
   isConsumable: 1
