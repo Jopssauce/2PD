@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		if(persistentData == null)
+		{
+			 persistentData = PersistentDataManager.instance;
+			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
+		}
 		
 	}
 	

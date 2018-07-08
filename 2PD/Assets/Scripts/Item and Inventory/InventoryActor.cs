@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class InventoryActor : MonoBehaviour 
 {
@@ -9,12 +10,23 @@ public class InventoryActor : MonoBehaviour
 	Inventory inventory;
 	GameManager gameManager;
 	EncyclopediaUI encylopedia;
+	PersistentDataManager dataManager;
 	public Interactable interactable;
 	public List<InventorySlot> inventorySlots;
 
 	void Start()
 	{
 		encylopedia = GetComponent<EncyclopediaUI>();
+		dataManager = PersistentDataManager.instance;
+		foreach (var item in inventorySlots)
+		{
+			if(item.item != null) 
+			{
+				if(dataManager.sharedInventory.itemInventory.Where(gem => gem != null).Any(gem => gem.itemName == item.item.itemName)) item.image.color = new Color32(255,255,255,255);
+			}
+			
+		}
+	
 	}
 
 	public void LateUpdate()

@@ -11,18 +11,28 @@ public class ExitFloor : MonoBehaviour {
 	public UnityEvent EventInRange;
 	public UnityEvent EventOutRange;
 	public string scene;
+	GameManager gameManager;
 
 	void Start()
 	{
 		EventInRange.AddListener(Exit);
+		gameManager = GameManager.instance;
 	}
 
 	void Exit()
 	{
 		if (players.Count == requiredPlayers)
 		{
-			SceneManager.LoadSceneAsync(scene);
+			
+			foreach (var item in gameManager.sharedInventory.itemInventory)
+			{
+				if(item==null) continue;
+				gameManager.persistentData.sharedInventory.AddItem(item); 
+			}
 			SceneManager.UnloadSceneAsync("UI Scene");
+			gameManager.persistentData.StartChangeScene(scene);
+			
+			
 		}
 	}
 
