@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61519965799722972}
   - component: {fileID: 50062540413649056}
   - component: {fileID: 114184566836919780}
+  - component: {fileID: 114307018945379244}
   m_Layer: 31
   m_Name: Blood Stone
   m_TagString: Untagged
@@ -155,6 +156,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114307018945379244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824079810497420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114392284414474898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,6 +202,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Obtained Blood Stone press the Y button to access the
             Gemstone Encyclopedia to know more about the gemstone.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114307018945379244}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
