@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-
+public class SceneEvents : UnityEvent<Scene>{}
 public class PersistentDataManager : MonoBehaviour {
 	public static PersistentDataManager instance;
 	public Inventory sharedInventory;
 	string seenToActive;
+	public SceneEvents EventSceneLoaded;
 	// Use this for initialization
 	void Awake () {
 		instance = this;
 		SceneManager.sceneLoaded += OnSceneLoaded;
+		SceneManager.sceneLoaded += ReturnLoadedScene;
 	}
 	
 	// Update is called once per frame
@@ -39,5 +42,11 @@ public class PersistentDataManager : MonoBehaviour {
 	{
 		if(!SceneManager.GetSceneByName(seenToActive).isLoaded) return;
 		SceneManager.SetActiveScene(SceneManager.GetSceneByName(seenToActive));
+		
+	}
+
+	void ReturnLoadedScene(Scene scene, LoadSceneMode loadSceneMode)
+	{
+		EventSceneLoaded.Invoke(scene);
 	}
 }
