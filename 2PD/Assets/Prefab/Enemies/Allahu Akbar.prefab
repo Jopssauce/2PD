@@ -276,7 +276,7 @@ MonoBehaviour:
   damageNumberPrefab: {fileID: 1099453753578542, guid: b1dfa22ff3974a4489f8e31b7f665383,
     type: 2}
   destroyOnHealthDepleted: 1
-  maxHealth: 15
+  maxHealth: 1
   invulnerabilityTimer: 0.4
   EventOnHealthChange:
     m_PersistentCalls:

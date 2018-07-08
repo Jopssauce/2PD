@@ -8,6 +8,7 @@ using System.Linq;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 	public UIManager uiManager;
+	public PersistentDataManager persistentData;
 	public bool isRespawning = false;
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour {
 			player.ID = id;
 			id++;
 		}
+		if(!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
 		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
 	}
 
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour {
 	void LateUpdate () 
 	{
 		if(uiManager == null) uiManager = UIManager.instance;
+		if(persistentData == null) persistentData = PersistentDataManager.instance;
 		if (playerList.Any(player => player.GetComponent<Health>().health <= 0) && !isRespawning)
 		{
 			isRespawning = true;
@@ -51,6 +54,20 @@ public class GameManager : MonoBehaviour {
 	bool isUIOpen()
 	{
 		Scene UIscene = SceneManager.GetSceneByName("UI Scene");
+		for (int i = 0; i < SceneManager.sceneCount; i++)
+		{
+			if (SceneManager.GetSceneAt(i) == UIscene)
+			{
+				
+				return true;
+			}
+		}
+		return false;
+	}
+
+	bool isPersistentOpen()
+	{
+		Scene UIscene = SceneManager.GetSceneByName("Persistent Scene");
 		for (int i = 0; i < SceneManager.sceneCount; i++)
 		{
 			if (SceneManager.GetSceneAt(i) == UIscene)
