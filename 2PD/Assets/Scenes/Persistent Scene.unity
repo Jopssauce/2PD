@@ -170,6 +170,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1784818920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1784818923}
+  - component: {fileID: 1784818922}
+  - component: {fileID: 1784818921}
+  m_Layer: 0
+  m_Name: Shared Inventory Completed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1784818921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784818920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85084d530f8e33e42851f485b4ab5377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  onCurrencyChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1784818922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784818920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2d0cc98e5b4d643805bf3cc39b53ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySlots: 10
+  itemInventory:
+  - {fileID: 114132750097258960, guid: a60b37437c7e9cb4cb892c19505596b1, type: 2}
+  - {fileID: 114048667154495772, guid: 0f501889515c027469f0d6b5ab997325, type: 2}
+  - {fileID: 114402229034026822, guid: 4bca0df40b85adf42b8644829854b9ac, type: 2}
+  - {fileID: 114499568227854082, guid: 77b3f77c14420f846a4d4bd36981ea9d, type: 2}
+  - {fileID: 114963309990434750, guid: 49ecac2daf599a94eaf7aa6a502829d4, type: 2}
+  - {fileID: 114269121630790120, guid: 5fefc93e21284844681e8426946f9b74, type: 2}
+  - {fileID: 114779314546988054, guid: 3f33d81dbfe1449418e085ecede51388, type: 2}
+  - {fileID: 114581550769875128, guid: 63fba2639edaf39419ce152a6f53e743, type: 2}
+  - {fileID: 114244854070280150, guid: 9704bb055bb946540b0404166cff5d23, type: 2}
+  - {fileID: 114330054531919984, guid: ef795d46a9f432846a6913dba6989ccb, type: 2}
+  - {fileID: 114753645077001298, guid: 2dd7f6602484ed948bd11d8b5f3d37e1, type: 2}
+  - {fileID: 114485287090438762, guid: 490b7f776f76db44982dd1e66f80d2d4, type: 2}
+  - {fileID: 114474378395651848, guid: 2088ae229f686b54ba6e2be5b0254ee7, type: 2}
+  - {fileID: 114566612478686054, guid: 8772f8b8b394bd04ca584e2bc1212777, type: 2}
+  - {fileID: 114623299169529578, guid: 2e2b036fe4d3efc46b6254fc2e6f7b96, type: 2}
+  - {fileID: 114637644635982824, guid: a6a6f140d8acf3645ba1321aba62bf47, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  inventoryChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1784818923
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784818920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2814713, y: -9.042995, z: -0.0073242188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1862334286
 Prefab:
   m_ObjectHideFlags: 0
