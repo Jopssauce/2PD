@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4207513478665426}
   - component: {fileID: 114244854070280150}
   m_Layer: 0
-  m_Name: Sunstone
+  m_Name: Flourite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
