@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
+[System.Serializable]
 public class SceneEvents : UnityEvent<Scene>{}
 public class PersistentDataManager : MonoBehaviour {
 	public static PersistentDataManager instance;
