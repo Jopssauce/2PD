@@ -47,14 +47,12 @@ public class Door : Interactable
 			checker.TriggerChecks.Invoke();
 			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
-				isOpen = true;
 				OpenDoor ();
 			}
 			else
 			{
 				if(autoClose)
 				{
-					isOpen = false;
 					CloseDoor();
 				}
 				
@@ -64,14 +62,12 @@ public class Door : Interactable
 		{
 			if (checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
 			{
-				isOpen = true;
 				OpenDoor ();
 			}
 			else
 			{
 				if(autoClose)
 				{
-					isOpen = false;
 					CloseDoor();
 				}
 			}
@@ -91,12 +87,14 @@ public class Door : Interactable
 
 	public void OpenDoor()
 	{
+		if(isOpen) return;
 		doorCol.enabled = false;
 		EventOnOpen.Invoke();
 		isOpen = true;
 	}
 	public void CloseDoor()
 	{
+		if(!isOpen) return;
 		doorCol.enabled = true;
 		EventOnClose.Invoke();
 		isOpen = false;
