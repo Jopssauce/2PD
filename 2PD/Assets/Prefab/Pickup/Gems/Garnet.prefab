@@ -187,7 +187,7 @@ MonoBehaviour:
   phyCollider: {fileID: 61486750706296972}
   gameManager: {fileID: 0}
   isSharedItem: 0
-  item: {fileID: 114753645077001298, guid: 2dd7f6602484ed948bd11d8b5f3d37e1, type: 2}
+  item: {fileID: 114330054531919984, guid: ef795d46a9f432846a6913dba6989ccb, type: 2}
 --- !u!114 &114787249573103104
 MonoBehaviour:
   m_ObjectHideFlags: 1
