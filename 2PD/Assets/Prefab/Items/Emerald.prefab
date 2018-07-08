@@ -55,7 +55,7 @@ MonoBehaviour:
   itemID: 3
   isUsable: 0
   isConsumable: 1
-  isStackable: 0
+  isStackable: 1
   isEquipable: 0
   maxStacks: 1
   stacksAmount: 1
