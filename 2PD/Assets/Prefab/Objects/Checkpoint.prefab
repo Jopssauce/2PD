@@ -57,6 +57,8 @@ GameObject:
   - component: {fileID: 61195077031007494}
   - component: {fileID: 114083874475502248}
   - component: {fileID: 95113205788694930}
+  - component: {fileID: 114030991445594752}
+  - component: {fileID: 114448097876705244}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -71,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992885432080036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23, y: 4.14, z: 0}
+  m_LocalPosition: {x: 16.305374, y: -5.1987376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4690136703968348}
@@ -172,6 +174,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114030991445594752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992885432080036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114083874475502248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +194,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114448097876705244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992885432080036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114585916872136628
@@ -286,7 +310,7 @@ MonoBehaviour:
   EventCheckpointSet:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114083874475502248}
+      - m_Target: {fileID: 114030991445594752}
         m_MethodName: ActivateDialogue
         m_Mode: 5
         m_Arguments:
@@ -295,6 +319,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Checkpoint Reached
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

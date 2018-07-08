@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 212984959573875224}
   - component: {fileID: 61841144224652186}
   - component: {fileID: 114130188004936598}
+  - component: {fileID: 114365134678850034}
   m_Layer: 0
   m_Name: Lever 1
   m_TagString: Untagged
@@ -123,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392696150696134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.252, y: -1.0521, z: 0}
+  m_LocalPosition: {x: 12.387, y: -17.341, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4220275597842456}
@@ -272,7 +273,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventInteracted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ChestOpen
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   EventActivated:
@@ -290,6 +302,17 @@ MonoBehaviour:
   buttonID: 0
   off: {fileID: 21300000, guid: 2284a781d061c3e4f948aa0e98e31567, type: 3}
   on: {fileID: 21300000, guid: 2767dfbf8e9542646b263174d6037b77, type: 3}
+--- !u!114 &114365134678850034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392696150696134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212645146804325972
 SpriteRenderer:
   m_ObjectHideFlags: 1

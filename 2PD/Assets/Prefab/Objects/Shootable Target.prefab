@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114195462749349304}
   - component: {fileID: 61474540144347696}
   - component: {fileID: 95566381784981372}
+  - component: {fileID: 114123209669682024}
   m_Layer: 9
   m_Name: Shootable Target
   m_TagString: Untagged
@@ -85,6 +86,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114123209669682024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051410042458816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114195462749349304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +141,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114123209669682024}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
