@@ -66,6 +66,7 @@ public class CameraArea : MonoBehaviour {
 	public void Deactivate()
 	{
 		isTransitioning = false;
+		Debug.Log("Deactivate");
 		Camera.main.GetComponent<MultipleTargetCamera>().isEnabled = true;
 		index = 0;
 		StopAllCoroutines();
@@ -74,6 +75,7 @@ public class CameraArea : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
+		if(!activateOnTriggerEnter) return;
 		if(!col.gameObject.CompareTag("Player")) return;
 		if(isTransitioning) return;
 		Activate();
