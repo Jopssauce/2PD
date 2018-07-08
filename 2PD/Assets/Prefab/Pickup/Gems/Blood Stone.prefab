@@ -198,7 +198,7 @@ MonoBehaviour:
   phyCollider: {fileID: 61638776508327386}
   gameManager: {fileID: 0}
   isSharedItem: 0
-  item: {fileID: 114753645077001298, guid: 2dd7f6602484ed948bd11d8b5f3d37e1, type: 2}
+  item: {fileID: 114499568227854082, guid: 77b3f77c14420f846a4d4bd36981ea9d, type: 2}
 --- !u!212 &212953756685152860
 SpriteRenderer:
   m_ObjectHideFlags: 1

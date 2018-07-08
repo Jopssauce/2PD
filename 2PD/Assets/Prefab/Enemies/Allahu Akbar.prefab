@@ -330,7 +330,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   globalModifier: 1
-  fireModifier: 1
+  fireModifier: 0
   lavaModifier: 1
 --- !u!114 &114273758579896846
 MonoBehaviour:
