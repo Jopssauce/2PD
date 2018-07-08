@@ -36,7 +36,7 @@ public class MultipleTargetCamera : MonoBehaviour
 
 		Vector3 newPos = playerBounds.center + offset;
 
-		transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, smooth);
+		Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, newPos, ref velocity, smooth);
 		Zoom();
 	}
 
