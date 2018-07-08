@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
-
+public class EncyclopediaEvents : UnityEvent<int> {}
 public class EncyclopediaUI : MonoBehaviour {
 
 	public List<EncyclopediaItems> Items;
@@ -26,7 +26,7 @@ public class EncyclopediaUI : MonoBehaviour {
 
 	[SerializeField]
 	private List<Image> images;
-	public UnityEvent EventUnlockedGem;
+	public EncyclopediaEvents EventUnlockedGem;
 	void Start()
 	{
 
@@ -46,6 +46,6 @@ public class EncyclopediaUI : MonoBehaviour {
 	public void UnlockGemContent(int index)
 	{
 		images [index].color = color;
-		EventUnlockedGem.Invoke();
+		EventUnlockedGem.Invoke(index);
 	}
 }
