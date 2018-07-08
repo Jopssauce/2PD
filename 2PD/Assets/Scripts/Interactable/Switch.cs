@@ -22,7 +22,7 @@ public class Switch : Interactable {
 		if (player.ID == playerIDRequired || playerIDRequired == -1)
 		{
 			isInteracted = true;
-			GetComponent<SpriteRenderer>().sprite = on;
+			if(GetComponent<SpriteRenderer>())GetComponent<SpriteRenderer>().sprite = on;
 			EventInteracted.Invoke(obj);
 		}
 	}
