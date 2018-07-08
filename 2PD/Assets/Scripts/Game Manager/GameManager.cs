@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
 	public GameObject checkpoint;
+	public UnityEvent OnStart;
 	public UnityEvent EventLoadingCheckpoint;
 	public UnityEvent EventLoadedCheckpoint;
 	IEnumerator respawn;
@@ -37,7 +38,8 @@ public class GameManager : MonoBehaviour {
 			 persistentData = PersistentDataManager.instance;
 			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
 		}
-		
+
+		OnStart.Invoke ();
 	}
 	
 	void LateUpdate () 
