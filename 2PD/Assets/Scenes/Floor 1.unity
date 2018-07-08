@@ -171,6 +171,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114427544604220428, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: skills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
       value: 12.92
@@ -242,6 +247,12 @@ Prefab:
       propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: SwordSwing
       objectReference: {fileID: 0}
+    - target: {fileID: 114427544604220428, guid: 23b42d1a3f8d75b4783386c907c7dc09,
+        type: 2}
+      propertyPath: skills.Array.data[1]
+      value: 
+      objectReference: {fileID: 114003822024481908, guid: 25535dfd1bc3c6c49bc183043f927b3d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
   m_IsPrefabParent: 0
@@ -2787,7 +2798,9 @@ Prefab:
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Select
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114183101907056184, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
+    - {fileID: 114089936954636636, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &329899641 stripped
