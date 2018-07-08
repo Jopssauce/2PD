@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 114209742467807306}
   - component: {fileID: 114591544366054404}
   - component: {fileID: 114895252823303696}
+  - component: {fileID: 114928074560334580}
   m_Layer: 0
   m_Name: Generic Enemy
   m_TagString: Untagged
@@ -303,11 +304,33 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventReceivedDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114928074560334580}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SlimeAttacked
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: HealthEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   EventOnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114928074560334580}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SlimeDeath
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventStartingInvulnerability:
@@ -434,6 +457,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffs: []
   instance: {fileID: 0}
+--- !u!114 &114928074560334580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671564799364820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114987374637630960
 MonoBehaviour:
   m_ObjectHideFlags: 1

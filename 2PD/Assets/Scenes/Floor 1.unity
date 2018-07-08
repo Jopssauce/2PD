@@ -179,7 +179,7 @@ Prefab:
     - target: {fileID: 114971330575192454, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
       propertyPath: EventOnAttack.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
@@ -308,7 +308,7 @@ Prefab:
     - target: {fileID: 114834254585345936, guid: 23b42d1a3f8d75b4783386c907c7dc09,
         type: 2}
       propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Select
+      value: SwordSwing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
@@ -40535,6 +40535,11 @@ Prefab:
       propertyPath: skills.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
       value: 12.220999
@@ -40590,6 +40595,36 @@ Prefab:
       value: 
       objectReference: {fileID: 1099453753578542, guid: b1dfa22ff3974a4489f8e31b7f665383,
         type: 2}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1449768558}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114868789992088210, guid: 860c5820248d01a4b968ad0316f84e52,
+        type: 2}
+      propertyPath: EventAttacking.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: ArrowShoot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
   m_IsPrefabParent: 0
@@ -40599,6 +40634,22 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1449768555}
   m_Script: {fileID: 11500000, guid: 6a05785b087b5934ea27fc11cede68c3, type: 3}
+--- !u!1 &1449768557 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1051295440420622, guid: 860c5820248d01a4b968ad0316f84e52,
+    type: 2}
+  m_PrefabInternal: {fileID: 1449768555}
+--- !u!114 &1449768558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1449768557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1457720514
 GameObject:
   m_ObjectHideFlags: 0

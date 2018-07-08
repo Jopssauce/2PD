@@ -195,7 +195,7 @@ Prefab:
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}
       propertyPath: Sounds.Array.data[4].name
-      value: SlimeAttack
+      value: SlimeAttacked
       objectReference: {fileID: 0}
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}

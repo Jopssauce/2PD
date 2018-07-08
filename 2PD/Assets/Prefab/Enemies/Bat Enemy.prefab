@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 114180124692380014}
   - component: {fileID: 114031161500890996}
   - component: {fileID: 114732564759852752}
+  - component: {fileID: 114735802884250910}
   m_Layer: 0
   m_Name: Bat Enemy
   m_TagString: Untagged
@@ -340,11 +341,33 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   EventReceivedDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114735802884250910}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SlimeAttacked
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: HealthEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   EventOnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114735802884250910}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SlimeDeath
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventStartingInvulnerability:
@@ -513,6 +536,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buffs: []
   instance: {fileID: 0}
+--- !u!114 &114735802884250910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1729906342064396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212142182146807542
 SpriteRenderer:
   m_ObjectHideFlags: 1
