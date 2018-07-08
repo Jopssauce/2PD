@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour {
 	public List<PlayerController> playerList;
 	public Inventory sharedInventory;
 	public GameObject checkpoint;
+	public UnityEvent EventLoadingCheckpoint;
+	public UnityEvent EventLoadedCheckpoint;
 	IEnumerator respawn;
 	void Awake()
 	{
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour {
 			player.canMove = false;
 			uiManager.CanvasUI.youDied.gameObject.SetActive(true);
 		}
+		EventLoadingCheckpoint.Invoke();
 		yield return new WaitForSeconds(5);
 		if (checkpoint == null)
 		{
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour {
 		}
 		isRespawning = false;
 		uiManager.CanvasUI.youDied.gameObject.SetActive(false);
+		EventLoadedCheckpoint.Invoke();
 	}
 
 	
