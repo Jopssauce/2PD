@@ -16,4 +16,16 @@ public class AudioEventHandler : MonoBehaviour {
 		if(audioManager != null)
 			audioManager.Play (name);
 	}
+
+	public void PlayBGM(string name)
+	{
+		if (audioManager != null)
+			audioManager.PlayMusic (name);
+	}
+
+	public void StopBGM(string name)
+	{
+		if (audioManager != null)
+			audioManager.StopMusic (name);
+	}
 }

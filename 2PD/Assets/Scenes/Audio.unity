@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1041.8252
@@ -151,6 +156,71 @@ Prefab:
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.data[0].name
+      value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[2].name
+      value: SwordSwing
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[2].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c2214c276dac944ab0ec6f9eaa53a6a, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[2].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].name
+      value: ArrowShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f066184e8c0c064597f6cfc1c013b80, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[3].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[4].name
+      value: SlimeAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[4].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: ed41a0384b8bbda488efad1d56cf1c51, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[4].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[5].name
+      value: SlimeDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[5].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 047124f84b62a7248852c1f8d76771a8, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[5].Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
