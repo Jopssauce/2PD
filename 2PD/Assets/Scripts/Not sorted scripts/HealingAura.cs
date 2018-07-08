@@ -27,7 +27,7 @@ public class HealingAura : MonoBehaviour
 		if(isActivated == false) return; 
 		foreach (var item in players)
 		{
-			if(item == null) return;
+			if(item == null) continue;
 			BuffReceiver receiver = item.GetComponent<BuffReceiver>();
 			if(receiver.gameObject == null) return;
 			if (receiver.buffs.Any(p => p.buffType == buff.buffType) == true)

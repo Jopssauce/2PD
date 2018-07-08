@@ -41,7 +41,7 @@ public class BaseBuff : MonoBehaviour
 	public virtual void Deactivate(BuffReceiver receiver) 
 	{ 
 		isActivated = false;
-		Destroy(tempParticle);
+		Destroy(tempParticle, 1);
 		EventOnDeactivated.Invoke(); 
 	}
 
