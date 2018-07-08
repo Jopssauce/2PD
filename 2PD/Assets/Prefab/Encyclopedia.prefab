@@ -817,11 +817,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ecce545b568d9b4b920c3ad516856f9, type: 2}
   - {fileID: 11400000, guid: 833ad6d5b0dd70b429aa5604ab8bf0f5, type: 2}
   - {fileID: 11400000, guid: c31df0504f82e15428ad652aa67dcab9, type: 2}
-  - {fileID: 11400000, guid: 20a5e9b889470b7458eb3e956a8006e4, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: fa91a2a3549cb4c48bb6950364817fef, type: 2}
   - {fileID: 11400000, guid: c21469b2db6aa0542ba9e0b2dbaebd7c, type: 2}
   - {fileID: 11400000, guid: f4e608c08a8d5e8409518d1e2d9458fb, type: 2}
-  - {fileID: 11400000, guid: 1911f3c49a928b0479285f1199abf924, type: 2}
+  - {fileID: 0}
   GemPlace: {fileID: 0}
   color:
     serializedVersion: 2
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  item: {fileID: 0}
+  item: {fileID: 114637644635982824, guid: a6a6f140d8acf3645ba1321aba62bf47, type: 2}
 --- !u!114 &114345838769792996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  item: {fileID: 0}
+  item: {fileID: 114269121630790120, guid: 5fefc93e21284844681e8426946f9b74, type: 2}
 --- !u!114 &114588734539531424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  item: {fileID: 0}
+  item: {fileID: 114402229034026822, guid: 4bca0df40b85adf42b8644829854b9ac, type: 2}
 --- !u!114 &114719462428694384
 MonoBehaviour:
   m_ObjectHideFlags: 1
