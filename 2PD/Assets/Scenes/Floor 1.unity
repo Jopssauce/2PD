@@ -1713,6 +1713,11 @@ Prefab:
       propertyPath: m_Name
       value: Camera Area (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114335197548400722, guid: 998e93af2bd8d324787a367e3047a980,
+        type: 2}
+      propertyPath: transitionInterval
+      value: 1.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
   m_IsPrefabParent: 0
@@ -35272,6 +35277,11 @@ Prefab:
       propertyPath: destinations.Array.data[2]
       value: 
       objectReference: {fileID: 2034047458}
+    - target: {fileID: 114335197548400722, guid: 998e93af2bd8d324787a367e3047a980,
+        type: 2}
+      propertyPath: transitionInterval
+      value: 1.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
   m_IsPrefabParent: 0
@@ -35740,6 +35750,11 @@ Prefab:
     - target: {fileID: 1317237957720406, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
       propertyPath: m_Name
       value: Camera Area (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114335197548400722, guid: 998e93af2bd8d324787a367e3047a980,
+        type: 2}
+      propertyPath: transitionInterval
+      value: 1.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
@@ -42122,6 +42137,11 @@ Prefab:
       propertyPath: m_Name
       value: Camera Area (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114335197548400722, guid: 998e93af2bd8d324787a367e3047a980,
+        type: 2}
+      propertyPath: transitionInterval
+      value: 1.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
   m_IsPrefabParent: 0
@@ -46747,6 +46767,11 @@ Prefab:
     - target: {fileID: 1317237957720406, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
       propertyPath: m_Name
       value: Camera Area (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114335197548400722, guid: 998e93af2bd8d324787a367e3047a980,
+        type: 2}
+      propertyPath: transitionInterval
+      value: 1.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 998e93af2bd8d324787a367e3047a980, type: 2}
