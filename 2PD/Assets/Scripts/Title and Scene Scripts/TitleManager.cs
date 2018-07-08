@@ -16,9 +16,8 @@ public class TitleManager : MonoBehaviour {
 
 	void Awake()
 	{
-		if(!isAudioOpen())
-			SceneManager.LoadSceneAsync("Audio", LoadSceneMode.Additive);
-		
+		if(!isPersistentOpen())
+			SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
 	}
 
 	void Start()
@@ -26,9 +25,9 @@ public class TitleManager : MonoBehaviour {
 		FindObjectOfType<AudioManager> ().PlayMusic (MusicStrings.Music_Title);
 	}
 
-	bool isAudioOpen()
+	bool isPersistentOpen()
 	{
-		Scene AudioScene = SceneManager.GetSceneByName("Audio");
+		Scene AudioScene = SceneManager.GetSceneByName("Persistent Scene");
 		for (int i = 0; i < SceneManager.sceneCount; i++)
 		{
 			if (SceneManager.GetSceneAt(i) == AudioScene)
