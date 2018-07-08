@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61379616197575512}
   - component: {fileID: 50813856879230778}
   - component: {fileID: 114844344977644126}
+  - component: {fileID: 114014064558804210}
   m_Layer: 31
   m_Name: Ruby
   m_TagString: Untagged
@@ -144,6 +145,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.090804726, y: 0.08820832}
   m_EdgeRadius: 0
+--- !u!114 &114014064558804210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880878217437782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114131369337084098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +191,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Obtained Ruby press the Y button to access the Gemstone
             Encyclopedia to know more about the gemstone.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114014064558804210}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114269987921358578}
   - component: {fileID: 61941839843565370}
   - component: {fileID: 50735494986025464}
+  - component: {fileID: 114082884958695962}
   m_Layer: 10
   m_Name: Currency Pick Up
   m_TagString: Untagged
@@ -143,6 +144,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.091184884, y: 0.09557725}
   m_EdgeRadius: 0
+--- !u!114 &114082884958695962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1003225458380658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114269987921358578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +168,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114082884958695962}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Amount: 5
