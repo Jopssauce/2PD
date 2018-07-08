@@ -37894,6 +37894,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
+        type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 114485287090438762, guid: 490b7f776f76db44982dd1e66f80d2d4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
   m_IsPrefabParent: 0
@@ -44609,6 +44615,7 @@ GameObject:
   - component: {fileID: 1651743934}
   - component: {fileID: 1651743933}
   - component: {fileID: 1651743935}
+  - component: {fileID: 1651743936}
   m_Layer: 0
   m_Name: Exit Collider
   m_TagString: Untagged
@@ -44670,7 +44677,18 @@ MonoBehaviour:
   players: []
   EventInRange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1651743936}
+        m_MethodName: StopBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DungeonMusic
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   EventOutRange:
@@ -44679,6 +44697,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   scene: Floor 2
+--- !u!114 &1651743936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651743932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1664050546
 Prefab:
   m_ObjectHideFlags: 0
