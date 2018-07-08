@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+[System.Serializable]
 public class EncyclopediaEvents : UnityEvent<int> {}
 public class EncyclopediaUI : MonoBehaviour {
 
