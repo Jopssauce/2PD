@@ -719,6 +719,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114773712446409936, guid: 9c8a15f2a135ae54d99fc847ff76fd99,
+        type: 2}
+      propertyPath: guaranteedPickupsToDrop.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4958039637581522, guid: 9c8a15f2a135ae54d99fc847ff76fd99, type: 2}
       propertyPath: m_LocalPosition.x
       value: 30.44
@@ -756,6 +761,18 @@ Prefab:
       propertyPath: playerSpeed
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 114773712446409936, guid: 9c8a15f2a135ae54d99fc847ff76fd99,
+        type: 2}
+      propertyPath: pickupsToDrop.Array.data[0]
+      value: 
+      objectReference: {fileID: 114562986363138106, guid: 189919ed64a5d3e43b5044cb66f363c7,
+        type: 2}
+    - target: {fileID: 114773712446409936, guid: 9c8a15f2a135ae54d99fc847ff76fd99,
+        type: 2}
+      propertyPath: guaranteedPickupsToDrop.Array.data[0]
+      value: 
+      objectReference: {fileID: 114562986363138106, guid: 189919ed64a5d3e43b5044cb66f363c7,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c8a15f2a135ae54d99fc847ff76fd99, type: 2}
   m_IsPrefabParent: 0
@@ -2814,6 +2831,12 @@ Prefab:
       propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Select
       objectReference: {fileID: 0}
+    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
+        type: 2}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 114623299169529578, guid: 2e2b036fe4d3efc46b6254fc2e6f7b96,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114183101907056184, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
     - {fileID: 114089936954636636, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
@@ -3819,6 +3842,11 @@ MonoBehaviour:
   - {fileID: 1449768556}
   sharedInventory: {fileID: 373282249}
   checkpoint: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   EventLoadingCheckpoint:
     m_PersistentCalls:
       m_Calls: []
