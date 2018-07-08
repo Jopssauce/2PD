@@ -5,6 +5,7 @@ using UnityEngine;
 public class MultipleTargetCamera : MonoBehaviour 
 {
 	GameManager gameManager;
+	public bool isEnabled = true;
 	public List<PlayerController> players;
 	public Bounds playerBounds; 
 	public float minZoom, maxZoom;
@@ -29,6 +30,7 @@ public class MultipleTargetCamera : MonoBehaviour
 	
 	void LateUpdate()
 	{
+		if(!isEnabled) return;
 		GetPlayerBounds();
 		if(gameManager.playerList.Count == 0) return;
 
