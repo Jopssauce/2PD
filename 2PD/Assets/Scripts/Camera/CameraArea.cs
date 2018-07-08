@@ -7,7 +7,7 @@ public class CameraArea : MonoBehaviour {
 
 	GameManager gameManager;
 	public bool isEnabled = true;
-	public bool isTransitioning;
+	public bool isTransitioning {get ; private set;}
 	public bool activateOnTriggerEnter = true;
 	public float transitionInterval = 1f;
 	public float minZoom, maxZoom;
