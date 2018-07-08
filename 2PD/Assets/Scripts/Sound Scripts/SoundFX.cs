@@ -29,4 +29,7 @@ public class MusicStrings
 	public static string SoundFx_SlimeDeath = "SlimeDeath";
 	public static string SoundFx_ChestOpen = "ChestOpen";
 	public static string SoundFx_SkillChange = "SkillChange";
+	public static string SoundFx_Platform = "Platform";
+	public static string SoundFx_BatAttacked = "BatAttacked";
+	public static string SoundFx_BatDeath = "BatDeath";
 }

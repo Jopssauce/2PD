@@ -123,7 +123,7 @@ Prefab:
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}
       propertyPath: Sounds.Array.size
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_LocalPosition.x
@@ -250,6 +250,51 @@ Prefab:
     - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
         type: 2}
       propertyPath: Sounds.Array.data[7].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[8].name
+      value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[8].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: a5a746f4027775b46a3873d4b387ac86, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[8].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[9].name
+      value: BatAttacked
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[9].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 733a1138d6cf61e40b207ae19fbc26c8, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[9].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[10].name
+      value: BatDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[10].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: f01f48b380297764ea4b54c54c6b5e4e, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Sounds.Array.data[10].Volume
       value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
