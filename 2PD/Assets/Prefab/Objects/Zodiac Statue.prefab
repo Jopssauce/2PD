@@ -220,7 +220,10 @@ MonoBehaviour:
     m_TypeName: InteractableEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   gameManager: {fileID: 0}
-  itemRequired: {fileID: 0}
+  itemRequired: {fileID: 114330054531919984, guid: ef795d46a9f432846a6913dba6989ccb,
+    type: 2}
+  on: {fileID: 0}
+  off: {fileID: 0}
 --- !u!212 &212279815491185756
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -298,7 +301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: d0a31a90577f69f4ea1b98664578771b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

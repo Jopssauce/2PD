@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryActor : MonoBehaviour 
 {
@@ -29,6 +30,7 @@ public class InventoryActor : MonoBehaviour
 		if(inventorySlots[index].item.itemName == interactable.GetComponent<ZodiacStatue>().itemRequired.itemName)
 		{
 			interactable.Activate(this.gameObject);
+			Debug.Log("test");
 		}
 	}
 
