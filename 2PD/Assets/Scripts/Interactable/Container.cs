@@ -38,7 +38,7 @@ public class Container : Interactable {
 
 	void DropItemsRandom()
 	{
-		
+		if(itemsToDrop.Count == 0) return;
 		int rItem = Random.Range(0, itemsToDrop.Count);
 		Pickup item = Instantiate(itemsToDrop [rItem], this.transform.position, itemsToDrop [rItem].transform.rotation);
 		item.EnableGravity();
