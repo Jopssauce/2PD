@@ -19,7 +19,7 @@ public class CameraArea : MonoBehaviour {
 	Vector3 newPos;
 	public UnityEvent EventActivated;
 	public UnityEvent EventDeactivated;
-
+	[Header("DESTINATIONS========================================================")]
 	public List<CameraDestination> destinations;
 
 	IEnumerator transition;
