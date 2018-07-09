@@ -21,7 +21,11 @@ public class PersistentDataManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.F6))
+		{
+			SceneManager.UnloadSceneAsync("UI Scene");
+			StartChangeScene("Floor 2");
+		} 
 	}
 
 	public void StartChangeScene(string scene)
