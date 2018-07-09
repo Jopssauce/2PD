@@ -105,8 +105,8 @@ public class GameManager : MonoBehaviour {
 		yield return new WaitForSeconds(5);
 		if (checkpoint == null)
 		{
-			SceneManager.LoadSceneAsync("Game Over Scene");
 			SceneManager.UnloadSceneAsync("UI Scene");
+			persistentData.StartChangeScene("Game Over Scene");
 		}
 		foreach (var player in playerList)
 		{
