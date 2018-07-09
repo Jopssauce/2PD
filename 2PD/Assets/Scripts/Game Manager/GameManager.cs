@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 		}
 		if(!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
 		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
+		OnStart.Invoke ();
 	}
 
 	// Use this for initialization
@@ -38,8 +39,6 @@ public class GameManager : MonoBehaviour {
 			 persistentData = PersistentDataManager.instance;
 			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
 		}
-
-		OnStart.Invoke ();
 	}
 	
 	void LateUpdate () 
