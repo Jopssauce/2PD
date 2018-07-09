@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour {
 		{
 			SceneManager.UnloadSceneAsync("UI Scene");
 			persistentData.StartChangeScene("Game Over Scene");
+			yield break;
 		}
 		foreach (var player in playerList)
 		{
