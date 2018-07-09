@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 618685870}
   - component: {fileID: 618685869}
   - component: {fileID: 618685872}
+  - component: {fileID: 618685873}
   m_Layer: 0
   m_Name: Retry
   m_TagString: Untagged
@@ -480,6 +481,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f737d24d9be13e545abf3fdd33b5d152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventOnRetry:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 618685873}
+        m_MethodName: StopBGM
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DungeonMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &618685873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618685867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &668581353
