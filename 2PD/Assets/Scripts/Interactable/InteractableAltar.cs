@@ -28,7 +28,7 @@ public class InteractableAltar : Interactable
 			if (player.ID == playerID && !isInteracted)
 			{
 				actor.AddSkill (skill);
-				gameManager.sharedInventory.AddItem(item);
+				if(item != null)gameManager.sharedInventory.AddItem(item);
 				GetComponent<SpriteRenderer>().sprite = on;
 				isInteracted = true;
 				EventActivated.Invoke(obj);
