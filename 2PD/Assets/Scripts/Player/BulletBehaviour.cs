@@ -21,7 +21,7 @@ public class BulletBehaviour : MonoBehaviour {
 			return;
 		if (col.gameObject.GetComponentInParent<Health>()) 
 		{
-			
+			if(col.gameObject.GetComponentInParent<PlayerController>().ID == 1) return;
 			GetComponent<DamageActor>().DealDamage(damage, col.gameObject, GetComponent<DamageActor>().damageType);
 			col.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(direction * knocbackForce, ForceMode2D.Force);
 		}
