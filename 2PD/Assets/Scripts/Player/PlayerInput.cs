@@ -65,25 +65,25 @@ public class PlayerInput : MonoBehaviour {
         //if (!isLocalPlayer) return;
 		if (player.canMove == true && player.ID == 0) 
 		{
-			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX1") < 0) 
+			if (state.ThumbSticks.Left.X < 0 || state.DPad.Left == ButtonState.Pressed || Input.GetAxisRaw("KeyboardX1") < 0) 
 			{
 				//Debug.Log ("Horizontal");
 				player.EventOnLeft.Invoke();
                 player.EventOnMove.Invoke();
 			}
-			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX1") > 0) 
+			if (state.ThumbSticks.Left.X > 0 || state.DPad.Right == ButtonState.Pressed || Input.GetAxisRaw("KeyboardX1") > 0) 
 			{
 				//Debug.Log ("Horizontal");
 				player.EventOnRight.Invoke();
                 player.EventOnMove.Invoke();
 			}
-            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY1") < 0) 
+            if (state.ThumbSticks.Left.Y < 0 || state.DPad.Down == ButtonState.Pressed || Input.GetAxisRaw("KeyboardY1") < 0) 
 			{
 				//Debug.Log ("Vertical");
 				player.EventOnDown.Invoke();
                 player.EventOnMove.Invoke();
 			}
-			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY1") > 0) 
+			if (state.ThumbSticks.Left.Y > 0 || state.DPad.Up == ButtonState.Pressed || Input.GetAxisRaw("KeyboardY1") > 0) 
 			{
 				//Debug.Log ("Vertical");
 				player.EventOnUp.Invoke();
@@ -92,25 +92,25 @@ public class PlayerInput : MonoBehaviour {
 		}
 		if (player.canMove == true && player.ID == 1) 
 		{
-			if (state.ThumbSticks.Left.X < 0 || Input.GetAxisRaw("KeyboardX2") < 0) 
+			if (state.ThumbSticks.Left.X < 0 || state.DPad.Left == ButtonState.Pressed || Input.GetAxisRaw("KeyboardX2") < 0) 
 			{
 				//Debug.Log ("Horizontal2");
 				player.EventOnLeft.Invoke();
                 player.EventOnMove.Invoke();
 			}
-			if (state.ThumbSticks.Left.X > 0 || Input.GetAxisRaw("KeyboardX2") > 0) 
+			if (state.ThumbSticks.Left.X > 0 || state.DPad.Right == ButtonState.Pressed || Input.GetAxisRaw("KeyboardX2") > 0) 
 			{
 				//Debug.Log ("Horizontal2");
 				player.EventOnRight.Invoke();
                 player.EventOnMove.Invoke();
 			}
-            if (state.ThumbSticks.Left.Y < 0 || Input.GetAxisRaw("KeyboardY2") < 0) 
+            if (state.ThumbSticks.Left.Y < 0 || state.DPad.Down == ButtonState.Pressed || Input.GetAxisRaw("KeyboardY2") < 0) 
 			{
 				//Debug.Log ("Vertical2");
 				player.EventOnDown.Invoke();
                 player.EventOnMove.Invoke();
 			}
-			if (state.ThumbSticks.Left.Y > 0 || Input.GetAxisRaw("KeyboardY2") > 0) 
+			if (state.ThumbSticks.Left.Y > 0 || state.DPad.Up == ButtonState.Pressed || Input.GetAxisRaw("KeyboardY2") > 0) 
 			{
 				//Debug.Log ("Vertical2");
 				player.EventOnUp.Invoke();

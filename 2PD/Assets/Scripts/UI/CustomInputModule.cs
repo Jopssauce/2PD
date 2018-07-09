@@ -10,7 +10,7 @@ namespace UnityEngine.EventSystems
         private float m_PrevActionTime;
         private Vector2 m_LastMoveVector;
         private int m_ConsecutiveMoveCount = 0;
-
+		
         private Vector2 m_LastMousePosition;
         private Vector2 m_MousePosition;
 
@@ -32,15 +32,20 @@ namespace UnityEngine.EventSystems
         {
             get { return InputMode.Mouse; }
         }
-
+		[SerializeField]
+		bool isJoyStick = false;
         [SerializeField]
         private string m_HorizontalAxis = "Horizontal";
+		[SerializeField]
+        private string m_HorizontalAxis2 = "Axis 6";
 
         /// <summary>
         /// Name of the vertical axis for movement (if axis events are used).
         /// </summary>
         [SerializeField]
         private string m_VerticalAxis = "Vertical";
+		[SerializeField]
+        private string m_VerticalAxis2 = "Axis 7";
 
         /// <summary>
         /// Name of the submit button.
@@ -159,7 +164,10 @@ namespace UnityEngine.EventSystems
             shouldActivate |= input.GetButtonDown(m_SubmitButton);
             shouldActivate |= input.GetButtonDown(m_CancelButton);
             shouldActivate |= !Mathf.Approximately(input.GetAxisRaw(m_HorizontalAxis), 0.0f);
+			shouldActivate |= !Mathf.Approximately(input.GetAxisRaw(m_HorizontalAxis2), 0.0f);
+			
             shouldActivate |= !Mathf.Approximately(input.GetAxisRaw(m_VerticalAxis), 0.0f);
+			shouldActivate |= !Mathf.Approximately(input.GetAxisRaw(m_VerticalAxis2), 0.0f);
             shouldActivate |= (m_MousePosition - m_LastMousePosition).sqrMagnitude > 0.0f;
             shouldActivate |= input.GetMouseButtonDown(0);
 
@@ -357,25 +365,57 @@ namespace UnityEngine.EventSystems
 
         private Vector2 GetRawMoveVector()
         {
-            Vector2 move = Vector2.zero;
-            move.x = input.GetAxisRaw(m_HorizontalAxis);
-            move.y = input.GetAxisRaw(m_VerticalAxis);
 
-            if (input.GetButtonDown(m_HorizontalAxis))
+            Vector2 move = Vector2.zero;
+			Vector2 move2 = Vector2.zero;
+            move.x = input.GetAxisRaw(m_HorizontalAxis);
+			move2.x = input.GetAxisRaw(m_HorizontalAxis2);
+			
+            move.y = input.GetAxisRaw(m_VerticalAxis);
+			move2.y = input.GetAxisRaw(m_VerticalAxis2);
+
+            if (input.GetButtonDown(m_HorizontalAxis) )
             {
-                if (move.x < 0)
+				//isJoyStick = true;
+                if (move.x < 0 || move2.x < 0 )
                     move.x = -1f;
-                if (move.x > 0)
+					move2.x = -1f;
+                if (move.x > 0 || move2.x > 0  )
                     move.x = 1f;
+					move2.x = 1f;
+            }
+			if ( input.GetButtonDown(m_HorizontalAxis2))
+            {
+				//isJoyStick = false;
+                if (move.x < 0 || move2.x < 0 )
+                    move.x = -1f;
+					move2.x = -1f;
+                if (move.x > 0 || move2.x > 0  )
+                    move.x = 1f;
+					move2.x = 1f;
             }
             if (input.GetButtonDown(m_VerticalAxis))
             {
-                if (move.y < 0)
+				//isJoyStick = true;
+                if (move.y < 0 || move2.y < 0)
                     move.y = -1f;
-                if (move.y > 0)
+					move2.y = -1f;
+                if (move.y > 0 || move2.y > 0)
                     move.y = 1f;
+					move2.y = 1f;
             }
-            return move;
+			  if (input.GetButtonDown(m_VerticalAxis2))
+            {
+				//isJoyStick = false;
+                if (move.y < 0 || move2.y < 0){}
+                    move.y = -1f;
+					move2.y = -1f;
+                if (move.y > 0 || move2.y > 0)
+                    move.y = 1f;
+					move2.y = 1f;
+            }
+            if(isJoyStick) return move;
+			else return move2;
         }
 
         /// <summary>
@@ -393,7 +433,7 @@ namespace UnityEngine.EventSystems
             }
 
             // If user pressed key again, always allow event
-            bool allow = input.GetButtonDown(m_HorizontalAxis) || input.GetButtonDown(m_VerticalAxis);
+            bool allow = input.GetButtonDown(m_HorizontalAxis) || input.GetButtonDown(m_VerticalAxis) || input.GetButtonDown(m_VerticalAxis2) || input.GetButtonDown(m_HorizontalAxis2);
             bool similarDir = (Vector2.Dot(movement, m_LastMoveVector) > 0);
             if (!allow)
             {
