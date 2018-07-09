@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class SceneEvents : UnityEvent<Scene>{}
 public class PersistentDataManager : MonoBehaviour {
 	public static PersistentDataManager instance;
+	public Canvas loadingScreen;
 	public Inventory sharedInventory;
 	string seenToActive;
 	public SceneEvents EventSceneLoaded;
+	public AsyncOperation sceneAsync;
 	// Use this for initialization
 	void Awake () {
 		instance = this;
@@ -25,13 +27,14 @@ public class PersistentDataManager : MonoBehaviour {
 	public void StartChangeScene(string scene)
 	{
 		AsyncOperation asnyc = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-			
+		sceneAsync = asnyc;
 		StartCoroutine(ChangeScene(asnyc, scene));
 	}
 
 	public IEnumerator ChangeScene(AsyncOperation asnyc, string scene)
 	{
 		seenToActive = scene;
+		loadingScreen.gameObject.SetActive(true);
 		yield return asnyc.isDone;
 		Debug.Log("Test");
 		SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
@@ -42,6 +45,7 @@ public class PersistentDataManager : MonoBehaviour {
 	{
 		if(!SceneManager.GetSceneByName(seenToActive).isLoaded) return;
 		SceneManager.SetActiveScene(SceneManager.GetSceneByName(seenToActive));
+		loadingScreen.gameObject.SetActive(false);
 		
 	}
 
