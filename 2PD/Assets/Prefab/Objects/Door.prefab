@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 61054135081478496}
   - component: {fileID: 95345465186126716}
   - component: {fileID: 114100469667870336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,6 +363,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   isOpen: 0
   autoOpen: 1
+  autoClose: 0
   openImmediatelyWithoutTrigger: 0
   targetLocation: {fileID: 0}
   EventOnOpen:
