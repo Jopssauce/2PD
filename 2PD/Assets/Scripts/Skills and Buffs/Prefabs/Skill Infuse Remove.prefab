@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Remove
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 7f1376e649e738d4db4b4588e698cc5b, type: 3}
   EventOnActivate:
     m_PersistentCalls:
       m_Calls: []
