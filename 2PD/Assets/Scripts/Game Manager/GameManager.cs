@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	public UnityEvent OnStart;
 	public UnityEvent EventLoadingCheckpoint;
 	public UnityEvent EventLoadedCheckpoint;
+	public GameObject debugSpawn;
 	IEnumerator respawn;
 	void Awake()
 	{
@@ -52,10 +53,15 @@ public class GameManager : MonoBehaviour {
 			respawn = RespawnPlayers();
 			StartCoroutine(respawn);
 		}
-		if (Input.GetKeyDown(KeyCode.F5))
+		if(Input.GetKeyDown(KeyCode.F2) && isRespawning == false)
 		{
-			SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-		}
+			if(debugSpawn == null) return;
+			foreach (var player in playerList)
+			{
+				player.transform.position = debugSpawn.transform.position;
+			}
+		} 
+	
 	}
 
 	bool isUIOpen()
