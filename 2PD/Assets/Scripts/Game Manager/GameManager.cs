@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour {
 	public UnityEvent OnStart;
 	public UnityEvent EventLoadingCheckpoint;
 	public UnityEvent EventLoadedCheckpoint;
-
-	AudioManager audioManager;
 	IEnumerator respawn;
 	void Awake()
 	{
@@ -30,7 +28,6 @@ public class GameManager : MonoBehaviour {
 		}
 		if(!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
 		if(!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
-		audioManager = FindObjectOfType<AudioManager> ();
 	}
 
 	// Use this for initialization
@@ -41,6 +38,8 @@ public class GameManager : MonoBehaviour {
 			 persistentData = PersistentDataManager.instance;
 			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
 		}
+
+		OnStart.Invoke();
 	}
 	
 	void LateUpdate () 
@@ -57,12 +56,6 @@ public class GameManager : MonoBehaviour {
 		{
 			SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
 		}
-	}
-
-	void OnEnable()
-	{
-		PlayMusic ();
-		//OnStart.Invoke();
 	}
 
 	bool isUIOpen()
@@ -119,13 +112,4 @@ public class GameManager : MonoBehaviour {
 		uiManager.CanvasUI.youDied.gameObject.SetActive(false);
 		EventLoadedCheckpoint.Invoke();
 	}
-
-	void PlayMusic()
-	{
-		Debug.Log ("Called");
-		if (audioManager != null)
-			audioManager.PlayMusic (MusicStrings.Music_Dungeon);
-	}
-
-	
 }
