@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4470226145710054}
   - component: {fileID: 114335197548400722}
   - component: {fileID: 61221075369749404}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Camera Area
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 1
-  isTransitioning: 0
   activateOnTriggerEnter: 1
   transitionInterval: 1
   minZoom: 0
