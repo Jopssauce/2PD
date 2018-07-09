@@ -262,6 +262,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1041.8252
@@ -293,6 +298,26 @@ Prefab:
     - target: {fileID: 4299437703025004, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.data[1].name
+      value: DungeonMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.data[1].SoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 396f8bfd1981df444b98dd111cb5952f, type: 3}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.data[1].Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261498200674154, guid: 987df51f7ad9fec43a88f52409b48659,
+        type: 2}
+      propertyPath: Music.Array.data[1].Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 987df51f7ad9fec43a88f52409b48659, type: 2}

@@ -41,9 +41,6 @@ public class GameManager : MonoBehaviour {
 			 persistentData = PersistentDataManager.instance;
 			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
 		}
-
-		PlayMusic ();
-		//OnStart.Invoke();
 	}
 	
 	void LateUpdate () 
@@ -60,6 +57,12 @@ public class GameManager : MonoBehaviour {
 		{
 			SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
 		}
+	}
+
+	void OnEnable()
+	{
+		PlayMusic ();
+		//OnStart.Invoke();
 	}
 
 	bool isUIOpen()
@@ -119,7 +122,8 @@ public class GameManager : MonoBehaviour {
 
 	void PlayMusic()
 	{
-		if(audioManager != null)
+		Debug.Log ("Called");
+		if (audioManager != null)
 			audioManager.PlayMusic (MusicStrings.Music_Dungeon);
 	}
 

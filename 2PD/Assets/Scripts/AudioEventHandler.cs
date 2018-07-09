@@ -6,7 +6,7 @@ public class AudioEventHandler : MonoBehaviour {
 
 	private AudioManager audioManager;
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		audioManager = FindObjectOfType<AudioManager> ();
 	}
@@ -21,6 +21,8 @@ public class AudioEventHandler : MonoBehaviour {
 	{
 		if (audioManager != null)
 			audioManager.PlayMusic (name);
+		else
+			Debug.Log ("null");
 	}
 
 	public void StopBGM(string name)
