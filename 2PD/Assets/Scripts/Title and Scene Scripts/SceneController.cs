@@ -36,6 +36,7 @@ public class SceneController : MonoBehaviour
 
 	public void Exit(string scene)
 	{
+		OnLoadScene.Invoke ();
 		persistentData.StartChangeScene(scene);
 	}
 
