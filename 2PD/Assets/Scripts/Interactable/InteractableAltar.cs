@@ -9,6 +9,7 @@ public class InteractableAltar : Interactable
 	public BaseSkill skill;
 	public BaseItem item;
 	public bool giveToSpecificPlayer;
+    public bool activateOnce = true;
 	public int playerID;
 
 	public Sprite off;
@@ -19,6 +20,7 @@ public class InteractableAltar : Interactable
 
 	public override void Interact(GameObject obj)
 	{
+        if (isInteracted == true && activateOnce) return;
 		PlayerController player = obj.GetComponent<PlayerController>();
 		SkillActor actor = player.GetComponent<SkillActor>();
 		Debug.Log(actor);

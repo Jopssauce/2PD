@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Checkpoint : MonoBehaviour {
 	GameManager gameManager;
 	public Animator anim;
+    public bool activateOnce;
+    public bool isActivated;
 	
 	public UnityEvent EventSettingCheckPoint;
 	public UnityEvent EventCheckpointSet;
@@ -18,8 +20,10 @@ public class Checkpoint : MonoBehaviour {
 	
 	public void SetCheckpoint()
 	{
+        if (isActivated && activateOnce) return;
 		gameManager.checkpoint = this.gameObject;
 		anim.SetBool("IsActivated", true);
+        isActivated = true;
 		EventCheckpointSet.Invoke();
 	}
 }
