@@ -54,7 +54,7 @@ MonoBehaviour:
   ID: 
   sprite: {fileID: 0}
   particle: {fileID: 198718940560156674, guid: 6b14a8eb9b8ff0f409560de5e7997968, type: 2}
-  buffType: 0
+  buffType: 2
   receiver: {fileID: 0}
   isActivated: 0
   duration: 1
