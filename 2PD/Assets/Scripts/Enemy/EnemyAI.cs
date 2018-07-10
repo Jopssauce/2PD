@@ -53,7 +53,7 @@ public class EnemyAI : MonoBehaviour {
 		
 	}
 
-	public void ResetDirection()
+	public virtual void ResetDirection()
 	{
 		distanceToTarget = Vector2.Distance(players[0].transform.position, enemyController.transform.position);
 		if(distanceToTarget < stopRange) targetDirection = Vector2.zero;

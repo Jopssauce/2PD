@@ -1,32 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class AllahuAI : EnemyAI {
 	GameManager gameManager;
 	public float range = 5;
 	public override void ChasePlayer ()
 	{
-		//transform.position = Vector2.MoveTowards (transform.position, players[0].transform.position, moveSpeed * Time.deltaTime);
-		//targetDirection = players[0].transform.position - enemyController.transform.position;
-		//ResetDirection();
-		//transform.position += targetDirection * moveSpeed * Time.deltaTime;
-		//enemyController.transform.position += targetDirection.normalized * moveSpeed * Time.deltaTime;
+        if (players.Count == 0) return;
+        targetDirection = players[0].transform.position - enemyController.transform.position;
+        targetDirection.Normalize();
+		ResetDirection();
+		enemyController.transform.position += targetDirection.normalized * moveSpeed * Time.deltaTime;
 	}
 
 	void LateUpdate()
 	{
-		if(gameManager == null) gameManager = GameManager.instance;
-		enemyController.transform.position += targetDirection.normalized * moveSpeed * Time.deltaTime;
+        float distance = 0;
 
-		foreach (var item in gameManager.playerList)
-		{
-			if(Vector2.Distance(transform.position, item.transform.position) < range) targetDirection = item.transform.position - enemyController.transform.position;
-			targetDirection.Normalize();
-		}
-	}
+        if (gameManager == null) gameManager = GameManager.instance;
+        foreach (var item in gameManager.playerList)
+        {
+            distance = Vector2.Distance(transform.position, item.transform.position);
+            if (distanceToTarget < range && players.Any(player => player.ID == item.gameObject.GetComponent<PlayerController>().ID) == false)
+            {
+                players.Add(item);
+            }
+            if (distance > range && players.Any(player => player.ID == item.gameObject.GetComponent<PlayerController>().ID) == true)
+            {
+                players.Remove(item);
+            }
+        }
+        ChasePlayer();
+    }
 
-	public override void OnTriggerEnter2D(Collider2D col)
+    public override void ResetDirection()
+    {
+        if (players.Count == 0) return;
+        distanceToTarget = Vector2.Distance(players[0].transform.position, enemyController.transform.position);
+        if (distanceToTarget < stopRange) targetDirection = Vector2.zero;
+    }
+
+    public override void OnTriggerEnter2D(Collider2D col)
 	{
 
 	}
