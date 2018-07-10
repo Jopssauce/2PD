@@ -109,7 +109,7 @@ public class Spawner : MonoBehaviour
 	public IEnumerator SpawnPrefab(int prefabIndex, int tempSpawnIndex)
 	{
 		float counter = 0;
-		while (counter != enemiesPerWave)
+		while (counter != enemiesPerWave && allSpawnedPrefabs.Count != maxTotalSpawn)
 		{
 			GameObject toSpawn = prefabs[prefabIndex].prefab.gameObject;
 			SpawnEntities toSpawnEntity = prefabs[prefabIndex];
