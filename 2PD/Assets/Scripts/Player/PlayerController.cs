@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 	public UnityEvent EventOnDown;
     //[SyncEvent]
     public UnityEvent EventOnMove;
+
+	public UnityEvent EventOnDialogue;
 	public class eventOnInteract : UnityEvent<GameObject>
     {
 

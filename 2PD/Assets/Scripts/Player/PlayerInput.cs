@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour {
 		if (Input.GetKeyDown(interact) || prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && player.canInteract == true) 
 		{
 			player.EventOnInteract.Invoke(player.gameObject);
+			player.EventOnDialogue.Invoke ();
 		}
 		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && player.canCombat == true) 
 		{
@@ -46,6 +47,11 @@ public class PlayerInput : MonoBehaviour {
 		if (prevState.Buttons.Y == ButtonState.Released && state.Buttons.Y == ButtonState.Pressed)
 		{
 			uiManager.CanvasUI.OpenEnycloepdia();
+		}
+
+		if (prevState.Buttons.Start == ButtonState.Released && state.Buttons.Start == ButtonState.Pressed)
+		{
+			uiManager.CanvasUI.OpenPauseMenu();
 		}
 	}
 	public virtual void FixedUpdate()

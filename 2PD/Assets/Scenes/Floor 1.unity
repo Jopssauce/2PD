@@ -1337,7 +1337,7 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -1348,11 +1348,11 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2041346234}
+      objectReference: {fileID: 1477578087}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlaySFX
+      value: CheckPointSet
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -1362,7 +1362,27 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2294,6 +2314,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4261966567305528, guid: 6f3fede295981094095240f592b2da61, type: 2}
       propertyPath: m_LocalPosition.x
       value: 16.305374
@@ -2330,7 +2355,52 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 1477578087}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckPointSet
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f3fede295981094095240f592b2da61, type: 2}
   m_IsPrefabParent: 0
@@ -4321,7 +4391,7 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -4332,11 +4402,11 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2041346234}
+      objectReference: {fileID: 1477578087}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlaySFX
+      value: CheckPointSet
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -4346,7 +4416,27 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -43394,6 +43484,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1477578087 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114030991445594752, guid: 6f3fede295981094095240f592b2da61,
+    type: 2}
+  m_PrefabInternal: {fileID: 1603561380}
+  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
 --- !u!1 &1479453642
 GameObject:
   m_ObjectHideFlags: 0
@@ -43720,7 +43816,7 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -43731,11 +43827,11 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2041346234}
+      objectReference: {fileID: 1477578087}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlaySFX
+      value: CheckPointSet
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -43745,7 +43841,27 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -44860,6 +44976,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4261966567305528, guid: 6f3fede295981094095240f592b2da61, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11.312
@@ -44896,10 +45017,55 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2041346234}
+      objectReference: {fileID: 1477578087}
     - target: {fileID: 1992885432080036, guid: 6f3fede295981094095240f592b2da61, type: 2}
       propertyPath: m_Name
       value: Checkpoint (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckPointSet
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114083874475502248, guid: 6f3fede295981094095240f592b2da61, type: 2}
@@ -114477,7 +114643,7 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -114488,11 +114654,11 @@ Prefab:
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2041346234}
+      objectReference: {fileID: 1477578087}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlaySFX
+      value: CheckPointSet
       objectReference: {fileID: 0}
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
@@ -114502,7 +114668,27 @@ Prefab:
     - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
         type: 2}
       propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2041346234}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787635010404054, guid: 6f3fede295981094095240f592b2da61,
+        type: 2}
+      propertyPath: EventCheckpointSet.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class CanvasController : MonoBehaviour {
 
@@ -22,13 +23,23 @@ public class CanvasController : MonoBehaviour {
 
 	public GameObject dialogueBox;
 
+	public GameObject pauseMenu;
+
 	public TextMeshProUGUI dialogue;
+
+	public CheckpointAnim checkpointAnim;
 
 	[HideInInspector]
 	public bool isGamePaused = false;
 
 	[SerializeField]
-	private GameObject firstSelectedButton;
+	private GameObject firstSelectedButtonEncyclopedia;
+
+	[SerializeField]
+	private GameObject firstSelectedButtonPause;
+
+	[SerializeField]
+	private EventSystem eventSystem;
 
 
 
@@ -93,14 +104,24 @@ public class CanvasController : MonoBehaviour {
 
 	public IEnumerator HideDialogue()
 	{
-		float timer = 5.0f;
-		yield return new WaitForSeconds(timer);
+		float timer = 3.0f;
+		Time.timeScale = 0.0f;
+		yield return new WaitForSecondsRealtime(timer);
+		Time.timeScale = 1.0f;
 		dialogueBox.SetActive (false);
 		Debug.Log ("Seconds Done");
 	}
 
+	public IEnumerator HideCheckpointNotif()
+	{
+		float timer = 3.0f;
+		yield return new WaitForSecondsRealtime(timer);
+		checkpointAnim.ChangeAnimState (false);
+	}
+
 	public void OpenEnycloepdia()
 	{
+		eventSystem.SetSelectedGameObject (firstSelectedButtonEncyclopedia);
 		if (!isGamePaused)
 			{
 				Pause (encyclopedia);
@@ -110,5 +131,21 @@ public class CanvasController : MonoBehaviour {
 				
 				Resume (encyclopedia);
 			}
+	}
+
+	public void OpenPauseMenu()
+	{
+		eventSystem.SetSelectedGameObject (firstSelectedButtonPause);
+		Pause (pauseMenu);
+	}
+
+	public void TimeScaleControl(float timer)
+	{
+		Time.timeScale = timer;
+	}
+
+	public void CheckPointAnimation(bool state)
+	{
+		checkpointAnim.ChangeAnimState (state);
 	}
 }
