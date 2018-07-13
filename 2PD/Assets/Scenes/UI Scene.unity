@@ -1368,7 +1368,7 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 1368570599915020, guid: cf89860c003b40e42989db12ebf8dc29,
     type: 2}
-  m_PrefabInternal: {fileID: 1682485879}
+  m_PrefabInternal: {fileID: 1681212121}
 --- !u!1 &695082149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,12 +2826,12 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 1688524236950384, guid: cf89860c003b40e42989db12ebf8dc29,
     type: 2}
-  m_PrefabInternal: {fileID: 1682485879}
+  m_PrefabInternal: {fileID: 1681212121}
 --- !u!224 &1552567354 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224332959330422396, guid: cf89860c003b40e42989db12ebf8dc29,
     type: 2}
-  m_PrefabInternal: {fileID: 1682485879}
+  m_PrefabInternal: {fileID: 1681212121}
 --- !u!1 &1585804702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3054,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673187961}
---- !u!1001 &1682485879
+--- !u!1001 &1681212121
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3150,6 +3150,36 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114184101542982940, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114184101542982940, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543246562557494, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543246562557494, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482665238165274, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482665238165274, guid: cf89860c003b40e42989db12ebf8dc29,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf89860c003b40e42989db12ebf8dc29, type: 2}
