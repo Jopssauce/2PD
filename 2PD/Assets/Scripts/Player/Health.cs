@@ -56,7 +56,7 @@ public class Health : MonoBehaviour {
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
 		EventReceivedDamage.Invoke(amt);
-		if(!isInvulnerable)
+		if(!isInvulnerable && amt > 0)
 		{
 			if (!isInvulnerabilityTimerStarted)
 			{
@@ -89,7 +89,7 @@ public class Health : MonoBehaviour {
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
 		EventReceivedDamage.Invoke(amt);
-		if(!isInvulnerable)
+		if(!isInvulnerable && amt > 0)
 		{
 			if (!isInvulnerabilityTimerStarted)
 			{
@@ -116,7 +116,7 @@ public class Health : MonoBehaviour {
 		Debug.Log("Hit");
 		EventOnHealthChange.Invoke();
 		EventReceivedDamage.Invoke(amt);
-		if(!isInvulnerable)
+		if(!isInvulnerable && amt > 0)
 		{
 			if (!isInvulnerabilityTimerStarted)
 			{
@@ -169,7 +169,7 @@ public class Health : MonoBehaviour {
 
 	public void SpawnDamageNumber(float damage)
 	{
-		if(damageNumberPrefab == null) return;
+		if(damageNumberPrefab == null || damage <= 0) return;
 		GameObject temp = Instantiate(damageNumberPrefab,transform.position, transform.rotation);
 		temp.GetComponent<TextMeshPro>().text = damage.ToString();
 		temp.GetComponent<DamageNumberAnimator>().StartAnim();
