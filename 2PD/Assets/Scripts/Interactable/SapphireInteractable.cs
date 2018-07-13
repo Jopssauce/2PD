@@ -25,16 +25,32 @@ public class SapphireInteractable : Interactable {
 		
 	}
 
+	public override void Activate (GameObject actor)
+	{
+		hasBeenHit = true;
+		isInteracted = true;
+		PlayAnimOn ();
+		EventInRange.Invoke(actor);
+		EventInteracted.Invoke(actor);
+		EventActivated.Invoke(actor);
+	}
+
+	public override void Deactivate (GameObject actor)
+	{
+		hasBeenHit = false;
+		isInteracted = false;
+		PlayAnimOff ();
+		EventInteracted.Invoke(actor);
+		EventDeactivated.Invoke(actor);
+	}
+
+
 	public override void OnTriggerEnter2D(Collider2D col)
 	{
 		if(!col.gameObject.GetComponent<BulletBehaviour>()) return;
 		if(col.gameObject.GetComponent<BulletBehaviour>().gemType == gemType)
 		{
-			hasBeenHit = true;
-			isInteracted = true;
-			EventInRange.Invoke(col.gameObject);
-			EventInteracted.Invoke(col.gameObject);
-			EventActivated.Invoke(col.gameObject);
+			Activate (col.gameObject);
 		} 
 		Debug.Log("test");
 	}
@@ -43,8 +59,15 @@ public class SapphireInteractable : Interactable {
 		
 	}
 
-	public void PlayAnim()
+	public void PlayAnimOn()
 	{
+		am.SetBool ("Off", false);
 		am.SetBool ("On", true);
+	}
+
+	public void PlayAnimOff()
+	{
+		am.SetBool ("On", false);
+		am.SetBool ("Off", true);
 	}
 }
