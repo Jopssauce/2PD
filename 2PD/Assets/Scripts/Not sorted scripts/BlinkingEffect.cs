@@ -41,7 +41,7 @@ public class BlinkingEffect : MonoBehaviour
 			prevColor = sr.color;
 			sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0);
 			yield return new WaitForSeconds(blinkInterval);
-			sr.color = prevColor;
+			sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1);
 			yield return new WaitForSeconds(blinkInterval);
 		}
 		
