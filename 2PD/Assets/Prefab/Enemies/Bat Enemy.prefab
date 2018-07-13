@@ -288,6 +288,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventOnDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   EventOnHoldInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -508,7 +513,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  particleOnDeath: {fileID: 198176942293827298, guid: c4c074c265184f849a2635c06d254943,
+  particleOnDeath: {fileID: 198281236745271558, guid: 60f2ef56d88dffd4abd38edda7d2397f,
     type: 2}
 --- !u!114 &114634417330911506
 MonoBehaviour:
