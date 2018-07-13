@@ -1375,6 +1375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartButton: {fileID: 1674995951}
   ExitButton: {fileID: 2118403487}
+  titleEventSystem: {fileID: 1825689298}
+  firstSelectStart: {fileID: 1674995949}
 --- !u!4 &1740629097
 Transform:
   m_ObjectHideFlags: 0
@@ -1454,8 +1456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31812f1bf8431f43ae0ceb13fe04f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isJoyStick: 0
   m_HorizontalAxis: Horizontal
+  m_HorizontalAxis2: Axis 6
   m_VerticalAxis: Vertical
+  m_VerticalAxis2: Axis 7
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10

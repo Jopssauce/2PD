@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TitleManager : MonoBehaviour {
 
@@ -12,7 +13,14 @@ public class TitleManager : MonoBehaviour {
 	[SerializeField]
 	private Button ExitButton;
 
+	[SerializeField]
+	private EventSystem titleEventSystem;
+
+	[SerializeField]
+	private GameObject firstSelectStart;
+
 	private float Timer = 13.0f;
+	private bool IsDone = false;
 
 	void Awake()
 	{
@@ -51,6 +59,12 @@ public class TitleManager : MonoBehaviour {
 		{
 			StartButton.gameObject.SetActive (true);
 			ExitButton.gameObject.SetActive (true);
+
+			if (!IsDone) 
+			{
+				IsDone = true;
+				titleEventSystem.SetSelectedGameObject (firstSelectStart);
+			}
 		}
 	}
 
