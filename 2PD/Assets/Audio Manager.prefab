@@ -107,6 +107,11 @@ MonoBehaviour:
     Source: {fileID: 0}
     Loop: 0
     Volume: 0.5
+  - name: Explosion
+    SoundEffect: {fileID: 8300000, guid: 9ae6b835735ca2540bc893f14016ed92, type: 3}
+    Source: {fileID: 0}
+    Loop: 0
+    Volume: 0.5
   Music:
   - name: Title
     SoundEffect: {fileID: 8300000, guid: c98b5896e7908cd4f889d45a538e8ffa, type: 3}
