@@ -40,6 +40,20 @@ public class PersistentDataManager : MonoBehaviour {
 		StartCoroutine(ChangeScene(asnyc, scene));
 	}
 
+	public bool isSceneOpen(string SceneName)
+	{
+		Scene scene = SceneManager.GetSceneByName(SceneName);
+		for (int i = 0; i < SceneManager.sceneCount; i++)
+		{
+			if (SceneManager.GetSceneAt(i) == scene)
+			{
+
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public IEnumerator ChangeScene(AsyncOperation asnyc, string scene)
 	{
 		seenToActive = scene;

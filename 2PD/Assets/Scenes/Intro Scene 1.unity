@@ -23398,6 +23398,8 @@ MonoBehaviour:
   - {fileID: 1903626848}
   - {fileID: 1970332272}
   grid: {fileID: 887452794}
+  pDataManager: {fileID: 0}
+  id: {fileID: 759660509}
 --- !u!4 &618548317
 Transform:
   m_ObjectHideFlags: 0
@@ -23550,6 +23552,11 @@ MonoBehaviour:
   - The day he died he gave us a book.
   - It was an encyclopedia of sorts, it had details about grandfather's adventures
   - He was a gem artisan, a person who researches on gemstones.
+  EventDialogueEnded:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &870453838
 GameObject:
   m_ObjectHideFlags: 0
