@@ -11,6 +11,7 @@ public class PersistentDataManager : MonoBehaviour
     public static PersistentDataManager instance;
     public Canvas loadingScreen;
     public Inventory sharedInventory;
+    public Inventory completeInventory;
     string seenToActive;
     public SceneEvents EventSceneLoaded;
     public AsyncOperation sceneAsync;
@@ -28,22 +29,26 @@ public class PersistentDataManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F5))
         {
 
-				for (int i = 0; i < GetSceneAmount("Floor 1") - 1; i++)
-				{
-					SceneManager.UnloadSceneAsync("Floor 1");
-				}
-                if(isSceneOpen("UI Scene"))SceneManager.UnloadSceneAsync("UI Scene");
-                StartChangeScene("Floor 1");
-            
+            for (int i = 0; i < GetSceneAmount("Floor 1") - 1; i++)
+            {
+                SceneManager.UnloadSceneAsync("Floor 1");
+            }
+            if (isSceneOpen("UI Scene")) SceneManager.UnloadSceneAsync("UI Scene");
+            StartChangeScene("Floor 1");
+
 
         }
         if (Input.GetKeyDown(KeyCode.F6))
         {
 
-                if(isSceneOpen("UI Scene"))SceneManager.UnloadSceneAsync("UI Scene");
-                StartChangeScene("Floor 2");
-            
+            if (isSceneOpen("UI Scene")) SceneManager.UnloadSceneAsync("UI Scene");
+            StartChangeScene("Floor 2");
 
+
+        }
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            sharedInventory = completeInventory;
         }
     }
 

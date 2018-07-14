@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 1988606478}
   sharedInventory: {fileID: 1939725452}
+  completeInventory: {fileID: 1784818922}
   EventSceneLoaded:
     m_PersistentCalls:
       m_Calls: []
