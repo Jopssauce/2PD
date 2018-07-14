@@ -9,11 +9,14 @@ public class Flickering : MonoBehaviour {
 	IEnumerator flicker;
 	Vector3 prevScale;
 	Vector3 newScale;
-	void Start()
+
+
+	void OnEnable()
 	{
 		flicker = Flicker();
 		StartCoroutine(flicker);
 	}
+
 
 	public IEnumerator Flicker()
 	{
