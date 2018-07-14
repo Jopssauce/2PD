@@ -9,6 +9,9 @@ public class Switch : Interactable {
 
 	public Sprite off;
 	public Sprite on;
+
+	public bool canDeactivate = false;
+	bool isActivated;
 	
 	public override void Start()
 	{
@@ -21,11 +24,28 @@ public class Switch : Interactable {
 		PlayerController player = obj.GetComponent<PlayerController>();
 		if (player.ID == playerIDRequired || playerIDRequired == -1)
 		{
-			isInteracted = true;
-			if(GetComponent<SpriteRenderer>())GetComponent<SpriteRenderer>().sprite = on;
-			EventInteracted.Invoke(obj);
+			isActivated = !isActivated;
+			if(isActivated) Activate(obj);
+			if(!isActivated && canDeactivate) Deactivate(obj);
+			
 		}
+		EventInteracted.Invoke(obj);
 	}
+
+	public override void Activate(GameObject actor)
+	{
+		isInteracted = true;
+		if(GetComponent<SpriteRenderer>())GetComponent<SpriteRenderer>().sprite = on;
+		EventActivated.Invoke(actor);
+	}
+
+	public override void Deactivate(GameObject actor)
+	{
+		isInteracted = false;
+		if(GetComponent<SpriteRenderer>())GetComponent<SpriteRenderer>().sprite = off;
+		EventDeactivated.Invoke(actor);
+	}
+
 
 	
 
