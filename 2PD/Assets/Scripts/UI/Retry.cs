@@ -23,6 +23,7 @@ public class Retry : MonoBehaviour {
 
 	public void RetryClick()
 	{
+		if(persistentData.isSceneOpen("Title scene")) return;
 		persistentData.StartChangeScene("Title Scene");
 		EventOnRetry.Invoke();
 	}
