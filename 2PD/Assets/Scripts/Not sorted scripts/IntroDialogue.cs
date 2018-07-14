@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class IntroDialogue : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class IntroDialogue : MonoBehaviour
     [TextArea]
     public List<string> dialogue;
     IEnumerator startDialogue;
-
+	public UnityEvent EventDialogueEnded;
     void Start()
     {
         sentences = new Queue<string>();
@@ -42,6 +43,7 @@ public class IntroDialogue : MonoBehaviour
             if (sentences.Count == 0)
             {
                 EndDialogue();
+				EventDialogueEnded.Invoke();
                 yield break;
             }
 
