@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12bdf6eb618aca4c89c1958b8bf7b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: P
   player1Health: {fileID: 296457894}
   player2Health: {fileID: 1492395729}
   youDied: {fileID: 1585804704}
@@ -238,7 +239,7 @@ MonoBehaviour:
   encyclopedia: {fileID: 1552567353}
   dialogueBox: {fileID: 1057359664}
   pauseMenu: {fileID: 288802363}
-  dialogue: {fileID: 855921030}
+  dialogueText: {fileID: 855921030}
   checkpointAnim: {fileID: 1510022711}
   isGamePaused: 0
   firstSelectedButtonEncyclopedia: {fileID: 675204863}
