@@ -123,3 +123,8 @@ MonoBehaviour:
     Source: {fileID: 0}
     Loop: 1
     Volume: 0.5
+  - name: IntroMusic
+    SoundEffect: {fileID: 8300000, guid: fabc34ad57de94b48806d9ef3bac3717, type: 3}
+    Source: {fileID: 0}
+    Loop: 1
+    Volume: 0.5
