@@ -183,11 +183,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.93
+      value: 23.83
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.32
+      value: 7.39
       objectReference: {fileID: 0}
     - target: {fileID: 4540601978670544, guid: 23b42d1a3f8d75b4783386c907c7dc09, type: 2}
       propertyPath: m_LocalPosition.z
@@ -33402,7 +33402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -36358,7 +36358,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -41720,7 +41720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -43192,11 +43192,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.27
+      value: 13.28
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.34
+      value: -7.3000007
       objectReference: {fileID: 0}
     - target: {fileID: 4265068286804744, guid: 860c5820248d01a4b968ad0316f84e52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -44315,7 +44315,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -45269,7 +45269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -114876,7 +114876,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1729906342064396, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874254084621040, guid: da7888608f868104380e2e8ff1a9aa3b, type: 2}
       propertyPath: m_LocalScale.x
@@ -115302,7 +115302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.503382
+      value: 16.21
       objectReference: {fileID: 0}
     - target: {fileID: 4710757977152092, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -115356,6 +115356,16 @@ Prefab:
       value: 
       objectReference: {fileID: 114779314546988054, guid: 3f33d81dbfe1449418e085ecede51388,
         type: 2}
+    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
+        type: 2}
+      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Diamond Obtained press the [L] or [R] button to switch between your infusions.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693990813159708, guid: 2c0158423e579a54099437dc346f52d9,
+        type: 2}
+      propertyPath: EventInteracted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c0158423e579a54099437dc346f52d9, type: 2}
   m_IsPrefabParent: 0
