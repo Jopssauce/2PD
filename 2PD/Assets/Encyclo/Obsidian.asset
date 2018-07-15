@@ -17,4 +17,6 @@ MonoBehaviour:
     lava extruded from a volcano cools without crystal growth.
   Function: 'Infusion Item
 
-    [L] and [R] to switch'
+    [L] and [R] to switch
+
+    Allows the player to walk on Lava and through Fire, taking 0 damage.'
