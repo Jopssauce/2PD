@@ -13,10 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GemImageDefault: {fileID: 21300000, guid: e7d8926a7f04dad4d945732b0244f634, type: 3}
   ItemName: Carnelian
-  Description: "The gemstone representing Leo.\r\n\r\nOnyx is black and white banded
-    agate. Onyx takes its name from the Greek word \"onux\", which means fingernail;
-    this could be due to a Greek legend, in which Eros mischievously cut the fingernails
-    of Aphrodite with an arrowhead whilst she slept, and the gods turned the clippings
-    into stone."
-  Location: "1st Floor main dungeon, 1st Dungeon\r\n2nd Dungeon\r\n3rd Dungeon"
-  IsDiscovered: 0
+  Description: "The gemstone representing Virgo.\r\n\r\nCarnelian is classified by
+    its distinct color and is defined as a red-orange to brownish-red variety of chalcedony
+    quartz.\r\n"
+  Function: 

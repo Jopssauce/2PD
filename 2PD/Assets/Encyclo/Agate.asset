@@ -13,9 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GemImageDefault: {fileID: 21300000, guid: 12338e02c108b0e489c793fb2b44a187, type: 3}
   ItemName: Agate
-  Description: " The gemstone representing Gemini.\r\n\r\nIt is characterized by its
+  Description: "The gemstone representing Gemini.\r\n\r\nIt is characterized by its
     fineness of grain and variety of color. Although agates may be found in various
     kinds of host rock, they are classically associated with volcanic rocks and can
     be common in certain metamorphic rocks.\r\n"
-  Location: 
-  IsDiscovered: 0
+  Function: 
