@@ -6,6 +6,7 @@ public class ZodiacStatue : Interactable
 {
 	public BaseItem itemRequired;
 	bool isToggled;
+	public string dialogue;
 	public Sprite on;
 	public Sprite off;
 	void LateUpdate()
@@ -15,7 +16,9 @@ public class ZodiacStatue : Interactable
 	public override void Interact(GameObject actor)
 	{
 		if(isInteracted || Time.timeScale == 0) return;
-		ToggleEncylopedia();
+		gameManager.uiManager.CanvasUI.EventDialogueClosed.AddListener(gameManager.uiManager.CanvasUI.ForceOpen);
+		GetComponent<InteractEventHandler>().ActivateDialogue(dialogue);
+		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
 		//if(isInteracted) Activate(actor);
 		//if(!isInteracted) Deactivate(actor);
 		EventInteracted.Invoke(actor);
@@ -25,24 +28,19 @@ public class ZodiacStatue : Interactable
 		//gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
 		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
 		isInteracted = true;
-		ToggleEncylopedia();
+		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
+		gameManager.uiManager.CanvasUI.EventDialogueClosed.RemoveListener(gameManager.uiManager.CanvasUI.ForceOpen);
 		EventActivated.Invoke(actor);
 	}
 	public override void Deactivate(GameObject actor)
 	{
 		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = null;
-		ToggleEncylopedia();
+		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
+		gameManager.uiManager.CanvasUI.EventDialogueClosed.RemoveListener(gameManager.uiManager.CanvasUI.ForceOpen);
 		EventDeactivated.Invoke(actor);
 	}
 	
-	public void ToggleEncylopedia()
-	{
-		isToggled = !isToggled;
-		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
-		//if(isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-		//if(!isToggled)gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-	}
+
 
 
 

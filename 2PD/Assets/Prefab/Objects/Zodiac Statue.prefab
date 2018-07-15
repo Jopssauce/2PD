@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 114603079380950310}
   - component: {fileID: 61064201878220454}
   - component: {fileID: 114764825234727510}
+  - component: {fileID: 114854325279705976}
   m_Layer: 0
   m_Name: Zodiac Statue
   m_TagString: Untagged
@@ -245,6 +246,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   itemRequired: {fileID: 114330054531919984, guid: ef795d46a9f432846a6913dba6989ccb,
     type: 2}
+  dialogue: So mystical
   on: {fileID: 0}
   off: {fileID: 0}
 --- !u!114 &114764825234727510
@@ -256,6 +258,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f1e3456360299b4a9c9a64545af7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114854325279705976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612848423507968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a61e92439f8e946b88983c4f0e382f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212279815491185756

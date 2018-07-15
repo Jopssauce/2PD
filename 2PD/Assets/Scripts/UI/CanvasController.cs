@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class CanvasController : MonoBehaviour
 {
-
+    public UnityEvent EventDialogueClosed;
     GameManager gameManager;
     public string dialogue;
     IEnumerator startDialogue;
@@ -115,6 +116,8 @@ public class CanvasController : MonoBehaviour
         Time.timeScale = 1.0f;
         dialogueBox.SetActive (false);
         isGamePaused = false;
+        canCloseDialogue = false;
+        EventDialogueClosed.Invoke();
     }
 
     public IEnumerator HideCheckpointNotif()
@@ -137,6 +140,18 @@ public class CanvasController : MonoBehaviour
             Resume(encyclopedia);
         }
     }
+
+    public void ForceOpen()
+	{
+        eventSystem.SetSelectedGameObject(firstSelectedButtonEncyclopedia);
+	    Pause(encyclopedia);
+	}
+
+    public void ForceClose()
+	{
+        eventSystem.SetSelectedGameObject(firstSelectedButtonEncyclopedia);
+	    Resume(encyclopedia);
+	}
 
     public void OpenPauseMenu()
     {
