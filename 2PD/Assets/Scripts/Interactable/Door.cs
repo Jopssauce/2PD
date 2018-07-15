@@ -45,7 +45,7 @@ public class Door : Interactable
 		if (autoOpen == true)
 		{
 			checker.TriggerChecks.Invoke();
-			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
+			if (players.Count == requiredPlayers && checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory && checker.areAllEnemiesDead) 
 			{
 				OpenDoor ();
 			}
@@ -60,7 +60,7 @@ public class Door : Interactable
 		}
 		if(openImmediatelyWithoutTrigger == true)
 		{
-			if (checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory) 
+			if (checker.areAllEnemiesInSpawnerDead && checker.areAllInteractablesInteracted && checker.areItemsInInventory && checker.areAllEnemiesDead) 
 			{
 				OpenDoor ();
 			}
