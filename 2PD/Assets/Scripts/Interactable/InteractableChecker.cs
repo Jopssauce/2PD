@@ -82,8 +82,9 @@ public class InteractableChecker : MonoBehaviour
 			areAllEnemiesInSpawnerDead = true;
 			return;
 		}
-		if(spawner.allSpawnedPrefabs.All(enemies => enemies == null) || spawner.allSpawnedPrefabs.Count == 1) 
+		if(spawner.allSpawnedPrefabs.All(enemies => enemies == null) ) 
 		{		
+			if(spawner.isActivated) return;
 			areAllEnemiesInSpawnerDead = true;
 			EventOnEnemiesInSpawnerDead.Invoke();
 			return;
