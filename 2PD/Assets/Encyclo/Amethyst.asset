@@ -16,8 +16,8 @@ MonoBehaviour:
   Description: "The gemstone representing Pisces.\r\n\r\nAmethyst is one of the most
     precious and valuable stones belonging to the quartz group of minerals.\r\n\r\nAmethyst
     is known to have healing properties."
-  Function: 'Infusion Item
+  Function: '[L] and [R] to switch
 
-    [L] and [R] to switch
+    Amethyst arrows heal on
 
-    Amethyst arrows heal on impact.'
+    impact.'

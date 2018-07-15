@@ -18,8 +18,6 @@ MonoBehaviour:
     are not only prized and famed for their exceptional hardness, but also for their
     ability to refract and disperse light sources like fire.\r\n\r\nA diamond can
     only be broken by another diamond."
-  Function: 'Infusion Item
-
-    [L] and [R] to switch
+  Function: '[L] and [R] to switch
 
     Gives an attack boost when infused.'

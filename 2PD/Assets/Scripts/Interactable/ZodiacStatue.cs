@@ -5,6 +5,7 @@ using UnityEngine;
 public class ZodiacStatue : Interactable 
 {
 	public BaseItem itemRequired;
+	public GameObject particle;
 	bool isToggled;
 	public string dialogue;
 	public Sprite on;
@@ -27,6 +28,7 @@ public class ZodiacStatue : Interactable
 	{
 		//gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
 		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
+		particle.SetActive(true);
 		isInteracted = true;
 		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
 		gameManager.uiManager.CanvasUI.EventDialogueClosed.RemoveListener(gameManager.uiManager.CanvasUI.ForceOpen);
@@ -35,7 +37,7 @@ public class ZodiacStatue : Interactable
 	public override void Deactivate(GameObject actor)
 	{
 		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = null;
-		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
+		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
 		gameManager.uiManager.CanvasUI.EventDialogueClosed.RemoveListener(gameManager.uiManager.CanvasUI.ForceOpen);
 		EventDeactivated.Invoke(actor);
 	}
