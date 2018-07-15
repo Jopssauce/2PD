@@ -13,5 +13,5 @@ public class EncyclopediaItems : ScriptableObject
 	public string Description;
 
 	[TextArea]
-	public string Location;
+	public string Function;
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   ItemName: Obsidian
   Description: Obsidian is naturally occurring volcanic glass. It is formed when felsic
     lava extruded from a volcano cools without crystal growth.
-  Location: 1st dungeon
-  IsDiscovered: 0
+  Function: 'Infusion Item
+
+    [L] and [R] to switch'

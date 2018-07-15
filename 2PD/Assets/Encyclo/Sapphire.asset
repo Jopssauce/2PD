@@ -17,5 +17,6 @@ MonoBehaviour:
     substance on earth after diamond. Even though it is known for being blue, sapphires
     are actually found in a variety of colors\r\n\r\nHas Electrical conductive properties
     as well."
-  Location: 
-  IsDiscovered: 0
+  Function: 'Infusion Item
+
+    [L] and [R] to switch'

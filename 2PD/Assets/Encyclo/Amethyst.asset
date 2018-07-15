@@ -16,5 +16,6 @@ MonoBehaviour:
   Description: "The gemstone representing Pisces.\r\n\r\nAmethyst is one of the most
     precious and valuable stones belonging to the quartz group of minerals.\r\n\r\nAmethyst
     is known to have healing properties."
-  Location: 3rd Dungeon
-  IsDiscovered: 0
+  Function: 'Infusion Item
+
+    [L] and [R] to switch'

@@ -43,7 +43,7 @@ public class EncyclopediaUI : MonoBehaviour {
 	{
 		ItemNameUI.text = Items [index].ItemName;
 		ItemDescriptionUI.text = Items [index].Description;
-		ItemLocationUI.text = Items [index].Location;
+		ItemLocationUI.text = Items [index].Function;
 		if(FindObjectOfType<AudioManager>() != null)
 			FindObjectOfType<AudioManager> ().Play (MusicStrings.SoundFx_Hover);
 	}
