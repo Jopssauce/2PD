@@ -14,7 +14,7 @@ public class ZodiacStatue : Interactable
 	}
 	public override void Interact(GameObject actor)
 	{
-		if(isInteracted) return;
+		if(isInteracted || Time.timeScale == 0) return;
 		ToggleEncylopedia();
 		//if(isInteracted) Activate(actor);
 		//if(!isInteracted) Deactivate(actor);
@@ -30,8 +30,8 @@ public class ZodiacStatue : Interactable
 	}
 	public override void Deactivate(GameObject actor)
 	{
-		//gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = null;
-		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
+		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = null;
+		ToggleEncylopedia();
 		EventDeactivated.Invoke(actor);
 	}
 	
