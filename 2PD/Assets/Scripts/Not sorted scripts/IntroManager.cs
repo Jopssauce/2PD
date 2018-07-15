@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class IntroManager : MonoBehaviour {
 	public List<PlayerController> players;
 	public GameObject grid;
 	public PersistentDataManager pDataManager;
 	public IntroDialogue id;
+	public UnityEvent OnStart;
 	// Use this for initialization
 	void Start () {
 		id.EventDialogueEnded.AddListener(LoadGame);
+		OnStart.Invoke ();
 	}
 	
 	// Update is called once per frame
