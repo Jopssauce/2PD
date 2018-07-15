@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour {
 			 persistentData = PersistentDataManager.instance;
 			 sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
 		}
-
 		OnStart.Invoke();
 	}
 	

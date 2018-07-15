@@ -39,6 +39,9 @@ public class CanvasController : MonoBehaviour {
 	private GameObject firstSelectedButtonPause;
 
 	[SerializeField]
+	private GameObject firstSelectedDialogueButton;
+
+	[SerializeField]
 	private EventSystem eventSystem;
 
 
@@ -102,14 +105,11 @@ public class CanvasController : MonoBehaviour {
 		isGamePaused = true;
 	}
 
-	public IEnumerator HideDialogue()
+	public void HideDialogue()
 	{
-		float timer = 3.0f;
-		Time.timeScale = 0.0f;
-		yield return new WaitForSecondsRealtime(timer);
 		Time.timeScale = 1.0f;
 		dialogueBox.SetActive (false);
-		Debug.Log ("Seconds Done");
+		isGamePaused = false;
 	}
 
 	public IEnumerator HideCheckpointNotif()
@@ -147,5 +147,14 @@ public class CanvasController : MonoBehaviour {
 	public void CheckPointAnimation(bool state)
 	{
 		checkpointAnim.ChangeAnimState (state);
+	}
+
+	public void DialogueCanvas(string dialogueParam)
+	{
+		eventSystem.SetSelectedGameObject (firstSelectedDialogueButton);
+		dialogueBox.SetActive (true);
+		dialogue.text = dialogueParam;
+		Time.timeScale = 0.0f;
+		isGamePaused = true;
 	}
 }
