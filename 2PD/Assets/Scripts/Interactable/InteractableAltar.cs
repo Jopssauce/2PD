@@ -39,7 +39,7 @@ public class InteractableAltar : Interactable
 
 			else
 			{
-				EventOnWrongPlayer.Invoke();
+				if(Time.timeScale == 1)EventOnWrongPlayer.Invoke();
 			}
 			
 		}

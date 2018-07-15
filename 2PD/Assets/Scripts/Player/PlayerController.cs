@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     }
     public eventOnInteract EventOnInteract = new eventOnInteract();
+	public UnityEvent EventOnInteractInput;
     public UnityEvent EventOnHoldInteract;
     //[SyncEvent]
     public  UnityEvent EventOnAttack;
