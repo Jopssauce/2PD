@@ -17,8 +17,6 @@ MonoBehaviour:
     substance on earth after diamond. Even though it is known for being blue, sapphires
     are actually found in a variety of colors\r\n\r\nHas Electrical conductive properties
     as well."
-  Function: 'Infusion Item
+  Function: '[L] and [R] to switch
 
-    [L] and [R] to switch
-
-    Allows the player to shoot floating Sapphire and power it up with electricity'
+    Allows the player to shoot floating Sapphire and activate it.'
