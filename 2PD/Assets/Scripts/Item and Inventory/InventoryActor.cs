@@ -48,7 +48,7 @@ public class InventoryActor : MonoBehaviour
 		else if(inventorySlots[index].item.itemName != interactable.GetComponent<ZodiacStatue>().itemRequired.itemName)
 		{
 			Debug.Log(inventorySlots[index].item.itemName + " " + interactable.GetComponent<ZodiacStatue>().itemRequired.itemName);
-			interactable.Deactivate(this.gameObject);
+			//interactable.Deactivate(this.gameObject);
 			
 		}
 	}
