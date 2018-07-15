@@ -76,4 +76,4 @@ MonoBehaviour:
   color:
     serializedVersion: 2
     rgba: 16774144
-  melee: {fileID: 1049949254870426, guid: 0a24ea069c0d04c40a2679bd08d99474, type: 2}
+  melee: {fileID: 1483431508703012, guid: 36e28fcf598118740988397f80fa1419, type: 2}

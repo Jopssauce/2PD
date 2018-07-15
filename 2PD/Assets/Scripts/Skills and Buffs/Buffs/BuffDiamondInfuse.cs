@@ -10,10 +10,10 @@ public class BuffDiamondInfuse : BaseBuff {
     {
         base.Activate(receiver);
         receiver.GetComponent<SpriteRenderer>().color = color;
-        ArcherCombat combat = receiver.GetComponent<ArcherCombat>();
+        MeleeCombat combat = receiver.GetComponent<MeleeCombat>();
         if (isActivated == true)
         {
-            if(!receiver.GetComponent<ArcherCombat>()) return;
+            if(!receiver.GetComponent<MeleeCombat>()) return;
             temp = combat.objPrefab;
             combat.objPrefab = melee;
             Debug.Log("Do" + this.name);
