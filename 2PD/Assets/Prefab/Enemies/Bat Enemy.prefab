@@ -140,7 +140,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436999828351412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -293,6 +293,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventOnInteractInput:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   EventOnHoldInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -423,7 +428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   enemyController: {fileID: 114153870089211396}
-  moveSpeed: 1
+  moveSpeed: 0.5
+  range: 0.8
   targetDirection: {x: 0, y: 0, z: 0}
   distanceToTarget: 0
   stopRange: 0.14

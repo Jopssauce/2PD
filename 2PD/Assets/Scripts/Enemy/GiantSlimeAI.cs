@@ -54,5 +54,8 @@ public class GiantSlimeAI : EnemyAI
 		spawner.EventDeactivate.Invoke ();
 	}
 
-
+	public override IEnumerator Wander()
+	{
+		yield break;
+	}
 }

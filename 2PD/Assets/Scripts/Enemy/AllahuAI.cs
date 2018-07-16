@@ -4,8 +4,6 @@ using UnityEngine;
 using System.Linq;
 
 public class AllahuAI : EnemyAI {
-	GameManager gameManager;
-	public float range = 5;
 	public override void ChasePlayer ()
 	{
         if (players.Count == 0) return;
@@ -17,6 +15,7 @@ public class AllahuAI : EnemyAI {
 
 	void LateUpdate()
 	{
+        range = 5;
         float distance = 0;
 
         if (gameManager == null) gameManager = GameManager.instance;
@@ -42,14 +41,7 @@ public class AllahuAI : EnemyAI {
         if (distanceToTarget < stopRange) targetDirection = Vector2.zero;
     }
 
-    public override void OnTriggerEnter2D(Collider2D col)
-	{
-
-	}
-	public override void OnTriggerExit2D(Collider2D col)
-	{
-
-	}
+   
 
 	void OnDrawGizmosSelected()
 	{
