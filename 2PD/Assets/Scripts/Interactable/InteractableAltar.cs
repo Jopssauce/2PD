@@ -15,12 +15,12 @@ public class InteractableAltar : Interactable
 	public Sprite off;
 	public Sprite on;
 	public UnityEvent EventOnWrongPlayer;
-	
+    bool canInput = true;
 
 
 	public override void Interact(GameObject obj)
 	{
-        if (isInteracted == true && activateOnce) return;
+        if (isInteracted == true && activateOnce || Time.timeScale == 0 || !canInput) return;
 		PlayerController player = obj.GetComponent<PlayerController>();
 		SkillActor actor = player.GetComponent<SkillActor>();
 		Debug.Log(actor);
@@ -45,6 +45,11 @@ public class InteractableAltar : Interactable
 		}
 	}
 
-
+    IEnumerator Delay()
+    {
+        canInput = false;
+        yield return new WaitForSecondsRealtime(0.5f);
+        canInput = true;
+    }
 	
 }

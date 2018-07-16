@@ -46033,6 +46033,10 @@ Prefab:
       propertyPath: EventInRange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 1315132868258962, guid: 82c4d15f5915fa14aa79d2fad89250ab, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82c4d15f5915fa14aa79d2fad89250ab, type: 2}
   m_IsPrefabParent: 0
