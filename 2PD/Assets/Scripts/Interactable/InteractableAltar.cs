@@ -21,7 +21,9 @@ public class InteractableAltar : Interactable
 	public override void Interact(GameObject obj)
 	{
         if (isInteracted == true && activateOnce || Time.timeScale == 0 || !canInput) return;
-		PlayerController player = obj.GetComponent<PlayerController>();
+        canInput = false;
+        StartCoroutine(Delay());
+        PlayerController player = obj.GetComponent<PlayerController>();
 		SkillActor actor = player.GetComponent<SkillActor>();
 		Debug.Log(actor);
 		if(!actor.skills.Any(item => item.ID == skill.ID) && !giveToSpecificPlayer) actor.AddSkill(skill);
