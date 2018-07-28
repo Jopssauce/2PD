@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D col)
 	{
-		direction = Vector3.zero;
+		//direction = Vector3.zero;
 	}
     public void OnCollisionExit2D(Collision2D col)
 	{
