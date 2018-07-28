@@ -9,7 +9,6 @@ public class PlayerCombat : MonoBehaviour
 	public PlayerController playercontroller;
 	public float attackCooldown = 0.5f;
 	public float offset = 0.2f;
-	public bool canAttack = true;
 	protected bool isAttackCooldownStarted = false;
 
 	public UnityEvent EventAttacking;
@@ -23,7 +22,7 @@ public class PlayerCombat : MonoBehaviour
 	}
 	public virtual void Attack()
     {
-		if(!canAttack) return;
+		if(!playercontroller.canCombat) return;
 		EventAttacking.Invoke();
 		CmdSpawnAttackPrefab(objPrefab);
 		startAttackCooldown = StartAttackCooldown();
@@ -41,11 +40,11 @@ public class PlayerCombat : MonoBehaviour
 
 	public IEnumerator StartAttackCooldown()
 	{
-		canAttack = false;
+		playercontroller.canCombat = false;
 		isAttackCooldownStarted = true;
 		playercontroller.canMove = false;
 		yield return new WaitForSeconds(attackCooldown);
-		canAttack = true;
+		playercontroller.canCombat = true;
 		playercontroller.canMove = true;
 		isAttackCooldownStarted = false;
 		EventAttacked.Invoke();
