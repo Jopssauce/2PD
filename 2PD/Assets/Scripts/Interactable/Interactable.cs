@@ -13,7 +13,6 @@ public class Interactable : MonoBehaviour
 	public bool stayInteracted;
 	public bool isInteracted;
 	public bool isInteractable;
-	public bool isCarryable;
 	public bool isGrabbable;
 	public bool playerCanTrigger = true;
 	public int requiredPlayers;

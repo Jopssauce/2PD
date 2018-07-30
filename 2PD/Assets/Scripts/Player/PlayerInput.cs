@@ -30,7 +30,6 @@ public class PlayerInput : MonoBehaviour {
 		if (Input.GetKeyDown(interact) || prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed && player.canInteract == true) 
 		{
 			player.EventOnInteract.Invoke(player.gameObject);
-			player.EventOnDialogue.Invoke ();
 			player.EventOnInteractInput.Invoke();
 		}
 		if (Input.GetKeyDown(attack) || prevState.Buttons.B == ButtonState.Released && state.Buttons.B == ButtonState.Pressed && player.canCombat == true) 

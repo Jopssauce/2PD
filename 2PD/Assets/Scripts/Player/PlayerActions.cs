@@ -11,38 +11,15 @@ public class PlayerActions : MonoBehaviour {
 	void Start () 
 	{
 		canAction = false;
-		GetComponent<PlayerController>().EventOnInteract.AddListener(Throw);
-
-
-
 		GetComponent<PlayerController>().EventOnInteract.AddListener(LetGo);
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		Lift();
 		Grab();
 	}
 
-	public void Lift()
-	{
-		if (objectToActOn != null && objectToActOn.isCarryable == true)
-		{
-			objectToActOn.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.2f, this.transform.position.z);
-		}
-	}
-
-	public void Throw(GameObject obj)
-	{
-		if (objectToActOn != null && objectToActOn.GetComponent<Carryable>())
-		{
-			objectToActOn.GetComponent<Rigidbody2D>().AddForce( (Vector2)this.GetComponent<PlayerController>().direction * 100);
-			objectToActOn.GetComponent<Carryable>().EnableGravity();
-			objectToActOn.currentPlayer = null;
-			objectToActOn = null;
-		}
-	}
 
 	public void Grab()
 	{

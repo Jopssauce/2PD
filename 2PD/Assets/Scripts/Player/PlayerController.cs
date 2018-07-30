@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     //[SyncEvent]
     public UnityEvent EventOnMove;
 
-	public UnityEvent EventOnDialogue;
 	public class eventOnInteract : UnityEvent<GameObject>
     {
 
@@ -46,8 +45,7 @@ public class PlayerController : MonoBehaviour
     //[SyncEvent]
     public  UnityEvent EventOnAttack;
 
-    public GameObject projectilePrefab;
-	public GameObject projectileSpawnPoint;
+
    
 
     public virtual void Start()
@@ -179,12 +177,4 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-    public void OnCollisionEnter2D(Collision2D col)
-	{
-		//direction = Vector3.zero;
-	}
-    public void OnCollisionExit2D(Collision2D col)
-	{
-    
-	}
 }
