@@ -12,8 +12,6 @@ public class SceneLoader : MonoBehaviour {
 
 	public static SceneLoader instance;
     public Canvas loadingScreen;
-    public Inventory sharedInventory;
-    public Inventory completeInventory;
     string seenToActive;
     public SceneEvents EventSceneLoaded;
     public AsyncOperation sceneAsync;
@@ -47,10 +45,6 @@ public class SceneLoader : MonoBehaviour {
             StartChangeScene("Floor 2");
 
 
-        }
-        if (Input.GetKeyDown(KeyCode.F9))
-        {
-            sharedInventory = completeInventory;
         }
     }
 
