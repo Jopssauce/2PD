@@ -1,57 +1,116 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
-public class ScenesController : MonoBehaviour {
-	public static ScenesController instance;
-	public void Awake()
-	{
-		instance = this;
-		
-	}
+public class ScenesController : MonoBehaviour
+{
+    public static ScenesController instance;
+    public Canvas loadingScreen;
+    public Inventory sharedInventory;
+    public Inventory completeInventory;
+    string seenToActive;
+    public SceneEvents EventSceneLoaded;
+    public AsyncOperation sceneAsync;
+    // Use this for initialization
+    void Awake()
+    {
+        instance = this;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += ReturnLoadedScene;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
 
-	
-	public bool isSceneOpen(string name)
-	{
-		Scene UIscene = SceneManager.GetSceneByName(name);
-		for (int i = 0; i < SceneManager.sceneCount; i++)
-		{
-			if (SceneManager.GetSceneAt(i) == UIscene)
-			{
-				
-				return true;
-			}
-		}
-		return false;
-	}
+            for (int i = 0; i < GetSceneAmount("Floor 1") - 1; i++)
+            {
+                SceneManager.UnloadSceneAsync("Floor 1");
+            }
+            if (isSceneOpen("UI Scene")) SceneManager.UnloadSceneAsync("UI Scene");
+            StartChangeScene("Floor 1");
 
-	public void LoadSceneWithUI(string name)
-	{
-		if(!isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
-		if(!isSceneOpen(name)) SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
-		SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
-	}
 
-	public void UnLoadScene(string name)
-	{
-		if(isSceneOpen(name)) SceneManager.UnloadSceneAsync(name);
-	}
+        }
+        if (Input.GetKeyDown(KeyCode.F6))
+        {
 
-	public void LoadScene(string name)
-	{
-		if(!isSceneOpen(name)) SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
-		SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
-	}
+            if (isSceneOpen("UI Scene")) SceneManager.UnloadSceneAsync("UI Scene");
+            StartChangeScene("Floor 2");
 
-	void LoadTitleSceneOnStart()
-	{
-		if(!isSceneOpen("Title Scene") && !isSceneOpen("Floor 1") && !isSceneOpen("Floor 2"))
-		{
-			SceneManager.LoadSceneAsync("Title Scene", LoadSceneMode.Additive);
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName("Title Scene"));
-		}
-	}
 
-	
+        }
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            sharedInventory = completeInventory;
+        }
+    }
+
+    public void StartChangeScene(string scene)
+    {
+        AsyncOperation asnyc = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        sceneAsync = asnyc;
+        StartCoroutine(ChangeScene(asnyc, scene));
+    }
+
+    public bool isSceneOpen(string SceneName)
+    {
+        Scene scene = SceneManager.GetSceneByName(SceneName);
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i) == scene)
+            {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int GetSceneAmount(string sceneName)
+    {
+        int amt = 0;
+        //return SceneManager.GetAllScenes().Count(scene => scene.name == sceneName);
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name == sceneName) amt++;
+        }
+        return amt;
+    }
+
+    public IEnumerator ChangeScene(AsyncOperation asnyc, string scene)
+    {
+        seenToActive = scene;
+        loadingScreen.gameObject.SetActive(true);
+        yield return asnyc.isDone;
+        Debug.Log("Test");
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        if (!SceneManager.GetSceneByName(seenToActive).isLoaded) return;
+        StartCoroutine(SetSceneToActive());
+
+    }
+
+    IEnumerator SetSceneToActive()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(seenToActive));
+        loadingScreen.gameObject.SetActive(false);
+    }
+
+    void ReturnLoadedScene(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        EventSceneLoaded.Invoke(scene);
+    }
+
+
+
 }
