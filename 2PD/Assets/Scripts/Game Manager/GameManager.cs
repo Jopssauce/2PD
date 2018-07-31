@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             id++;
         }
         if (!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
-        if (!isUIOpen()) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
+        if (persistentData.isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
     }
 
     // Use this for initialization
@@ -65,19 +65,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    bool isUIOpen()
-    {
-        Scene UIscene = SceneManager.GetSceneByName("UI Scene");
-        for (int i = 0; i < SceneManager.sceneCount; i++)
-        {
-            if (SceneManager.GetSceneAt(i) == UIscene)
-            {
-
-                return true;
-            }
-        }
-        return false;
-    }
 
     bool isPersistentOpen()
     {
