@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class SceneController : MonoBehaviour 
 {
 	public UnityEvent OnLoadScene;
-	PersistentDataManager persistentData;
+	SceneLoader sceneLoader;
 
 	void Start()
 	{
@@ -16,7 +16,7 @@ public class SceneController : MonoBehaviour
 
 	public void LateUpdate()
 	{
-		if(persistentData == null)persistentData = PersistentDataManager.instance;
+		if(sceneLoader == null)sceneLoader = SceneLoader.instance;
 	}
 
 
@@ -36,9 +36,9 @@ public class SceneController : MonoBehaviour
 
 	public void Exit(string scene)
 	{
-		if(persistentData.isSceneOpen(scene)) return;
+		if(sceneLoader.isSceneOpen(scene)) return;
 		OnLoadScene.Invoke ();
-		persistentData.StartChangeScene(scene);
+		sceneLoader.StartChangeScene(scene);
 	}
 
 	// Only Works on build

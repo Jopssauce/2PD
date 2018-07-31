@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour {
-	PersistentDataManager dataManager;	
+	SceneLoader sceneLoader;	
 	public Text progress;
 	void Start () {
-		dataManager = PersistentDataManager.instance;
+		sceneLoader = SceneLoader.instance;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(dataManager.sceneAsync == null) dataManager = PersistentDataManager.instance;
-		progress.text = dataManager.sceneAsync.progress * 100 + "%";
+		if(sceneLoader.sceneAsync == null) sceneLoader = SceneLoader.instance;
+		progress.text = sceneLoader.sceneAsync.progress * 100 + "%";
 	}
 }

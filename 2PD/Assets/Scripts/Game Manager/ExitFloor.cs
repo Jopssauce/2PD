@@ -30,7 +30,7 @@ public class ExitFloor : MonoBehaviour {
 				gameManager.persistentData.sharedInventory.AddItem(item); 
 			}
 			SceneManager.UnloadSceneAsync("UI Scene");
-			gameManager.persistentData.StartChangeScene(scene);
+			gameManager.sceneLoader.StartChangeScene(scene);
 			
 			
 		}

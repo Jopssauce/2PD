@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public UIManager uiManager;
     public PersistentDataManager persistentData;
+    public SceneLoader sceneLoader;
     public bool isRespawning = false;
     public List<PlayerController> playerList;
     public Inventory sharedInventory;
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
             id++;
         }
         if (!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
-        if (persistentData.isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
+        if (sceneLoader.isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
     }
 
     // Use this for initialization
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         if (uiManager == null) uiManager = UIManager.instance;
         if (persistentData == null) persistentData = PersistentDataManager.instance;
+        if (sceneLoader == null) sceneLoader = SceneLoader.instance;
         if (playerList.Any(player => player.GetComponent<Health>().health <= 0) && !isRespawning)
         {
             isRespawning = true;
@@ -92,7 +94,7 @@ public class GameManager : MonoBehaviour
         if (checkpoint == null)
         {
             SceneManager.UnloadSceneAsync("UI Scene");
-            persistentData.StartChangeScene("Game Over Scene");
+            sceneLoader.StartChangeScene("Game Over Scene");
             yield break;
         }
         foreach (var player in playerList)

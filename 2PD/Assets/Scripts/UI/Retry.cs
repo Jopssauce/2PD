@@ -5,26 +5,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
 public class Retry : MonoBehaviour {
-	PersistentDataManager persistentData;
+	SceneLoader sceneLoader;
 	public UnityEvent EventOnRetry;
 	void Start () 
 	{
-		if(persistentData == null)
+		if(sceneLoader == null)
 		{
-			 persistentData = PersistentDataManager.instance;
+			 sceneLoader = SceneLoader.instance;
 		}
 
 	}
 	
 	void LateUpdate () 
 	{
-		if(persistentData == null) persistentData = PersistentDataManager.instance;
+		if(sceneLoader == null) sceneLoader = SceneLoader.instance;
 	}
 
 	public void RetryClick()
 	{
-		if(persistentData.isSceneOpen("Title scene")) return;
-		persistentData.StartChangeScene("Title Scene");
+		if(sceneLoader.isSceneOpen("Title scene")) return;
+		sceneLoader.StartChangeScene("Title Scene");
 		EventOnRetry.Invoke();
 	}
 }

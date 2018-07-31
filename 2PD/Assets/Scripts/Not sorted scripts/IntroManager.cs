@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class IntroManager : MonoBehaviour {
 	public List<PlayerController> players;
 	public GameObject grid;
-	public PersistentDataManager pDataManager;
+	public SceneLoader sceneLoader;
 	public IntroDialogue id;
 	public UnityEvent OnStart;
 	// Use this for initialization
@@ -18,7 +18,7 @@ public class IntroManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(pDataManager == null) pDataManager = PersistentDataManager.instance;
+		if(sceneLoader == null) sceneLoader = SceneLoader.instance;
 		foreach (var player in players)
 		{
 			player.EventOnDown.Invoke();
@@ -29,7 +29,7 @@ public class IntroManager : MonoBehaviour {
 	public void LoadGame()
 	{
 		if(SceneManager.GetActiveScene().name == "Floor 1") return;
-		pDataManager.StartChangeScene("Floor 1");
+		sceneLoader.StartChangeScene("Floor 1");
 	}
 
 	public void OnTriggerEnter2D(Collider2D col)
