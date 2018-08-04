@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             id++;
         }
         if (!isPersistentOpen()) SceneManager.LoadSceneAsync("Persistent Scene", LoadSceneMode.Additive);
-        if (sceneLoader.isSceneOpen("UI Scene")) SceneManager.LoadSceneAsync("UI Scene", LoadSceneMode.Additive);
+        if (sceneLoader == null) sceneLoader = SceneLoader.instance;
     }
 
     // Use this for initialization
@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
             persistentData = PersistentDataManager.instance;
             sharedInventory.itemInventory = persistentData.sharedInventory.itemInventory.ToList();
         }
+        if (sceneLoader == null) sceneLoader = SceneLoader.instance;
+        if (!sceneLoader.isSceneOpen("UI Scene")) StartCoroutine(sceneLoader.DelayLoadScene("UI Scene", 1, LoadSceneMode.Additive));
         OnStart.Invoke();
     }
 

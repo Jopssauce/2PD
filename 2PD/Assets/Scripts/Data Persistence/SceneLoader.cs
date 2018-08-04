@@ -48,6 +48,12 @@ public class SceneLoader : MonoBehaviour {
         }
     }
 
+    public IEnumerator DelayLoadScene(string scene, float delay, LoadSceneMode mode)
+    {
+        yield return new WaitForSeconds(delay);
+        yield return SceneManager.LoadSceneAsync(scene, mode);
+    }
+
     public void StartChangeScene(string scene)
     {
         AsyncOperation asnyc = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
