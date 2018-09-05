@@ -342,7 +342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 20 Damage
 --- !u!222 &67054955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -416,7 +416,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '40 HP
+
+'
 --- !u!222 &73862430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -767,7 +769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: +10% Attack Speed
 --- !u!222 &630221917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -841,7 +843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: +10% Attack Speed
 --- !u!222 &665694558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1164,7 +1166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 40 Damage
 --- !u!222 &748245942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1382,7 +1384,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 20 HP
 --- !u!222 &976105464
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1663,7 +1665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 30 Damage
 --- !u!222 &1099653707
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1737,7 +1739,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: +10% Attack Speed
 --- !u!222 &1263745004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2529,7 +2531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 30 HP
 --- !u!222 &2075630950
 CanvasRenderer:
   m_ObjectHideFlags: 0
