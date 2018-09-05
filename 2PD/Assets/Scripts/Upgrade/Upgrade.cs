@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour 
 {
-	interface IUpgradeable<T>
-	{
-		void Upgrade(int amt);
-		void Upgrade();
-	}
-	
+}
+
+public interface IUpgradeable<T>
+{
+	void Upgrade(T value);
 }
