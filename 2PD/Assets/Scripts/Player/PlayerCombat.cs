@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
 	public float damage;
+	public float attackSpeed = 10;
 	public float attackCooldown = 0.5f;
 	public float offset = 0.2f;
 	protected bool isAttackCooldownStarted = false;
@@ -79,5 +80,6 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
     public void AttackSpeedUpgrade(float value)
     {
         attackCooldown -= value;
+		if(attackCooldown <= 0.1) attackCooldown = 0.1f;
     }
 }
