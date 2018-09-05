@@ -14,9 +14,9 @@ public class BaseItem : MonoBehaviour
 	public bool isConsumable;
 	public bool isStackable;
 	public bool isEquipable;
-	public int maxStacks = 64;
+	public int maxAmount = 64;
 	
-	public int stacksAmount = 1;
+	public int amount = 1;
 
 	public Sprite itemSprite;
 	

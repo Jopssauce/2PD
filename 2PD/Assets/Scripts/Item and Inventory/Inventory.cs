@@ -26,19 +26,19 @@ public class Inventory : MonoBehaviour
 			{
 				i = FindItemSlot(item);
 				
-				prev = itemInventory[i].stacksAmount;
+				prev = itemInventory[i].amount;
 				//Adds item stack to add
-				toAdd = item.stacksAmount;
+				toAdd = item.amount;
 				//Adds toAdd and prev stacks
 				current = toAdd + prev;
 				//Extra stacks are remembered to add them to next slot
-				extraStack =  (current - itemInventory[i].maxStacks);	
+				extraStack =  (current - itemInventory[i].maxAmount);	
 				if (extraStack < 0)
 				{
 					extraStack = 0;
 				}
 				//Then extra stacks are subtracted from current
-				itemInventory[i].stacksAmount = current - extraStack;
+				itemInventory[i].amount = current - extraStack;
 				//Debug.Log(i + " " + prev + " " + toAdd + " " + extraStack + " " + current + " " + itemInventory[i].stacksAmount);
 			}
 			else
@@ -107,9 +107,9 @@ public class Inventory : MonoBehaviour
 			index++;
 			if (i != null)
 			{
-				if (i.itemID == item.itemID )
+				if (i.itemName == item.itemName )
 				{
-					if (i.stacksAmount >= i.maxStacks)
+					if (i.amount >= i.maxAmount)
 					{
 						continue;
 					}
@@ -188,7 +188,7 @@ public class Inventory : MonoBehaviour
 	
 	public bool IsInventoryFull()
 	{
-		if (FindEmptySlot() == -1 && itemInventory[itemInventory.Count - 1].stacksAmount == itemInventory[itemInventory.Count - 1].maxStacks) {
+		if (FindEmptySlot() == -1 && itemInventory[itemInventory.Count - 1].amount == itemInventory[itemInventory.Count - 1].maxAmount) {
 			return true;
 		}
 		return false;
