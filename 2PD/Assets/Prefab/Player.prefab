@@ -547,9 +547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 1483431508703012, guid: 36e28fcf598118740988397f80fa1419, type: 2}
   playercontroller: {fileID: 0}
+  damage: 8
   attackCooldown: 0.3
   offset: 0.2
-  canAttack: 1
   EventAttacking:
     m_PersistentCalls:
       m_Calls:
@@ -727,6 +727,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  EventOnInteractInput:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   EventOnHoldInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -737,9 +742,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  projectilePrefab: {fileID: 1588254809027310, guid: eb4411d963fe37343aefd3dc6920cbf8,
-    type: 2}
-  projectileSpawnPoint: {fileID: 1793585112031984}
 --- !u!114 &114988855549655152
 MonoBehaviour:
   m_ObjectHideFlags: 1

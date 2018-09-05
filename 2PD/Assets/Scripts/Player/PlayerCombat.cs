@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
 {
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
+	public float damage;
 	public float attackCooldown = 0.5f;
 	public float offset = 0.2f;
 	protected bool isAttackCooldownStarted = false;

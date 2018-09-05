@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb696de6675ac004aac5e1cb4ad4a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 0
   direction: {x: 0, y: 0}
   knocbackForce: 100
 --- !u!212 &212268712371222938

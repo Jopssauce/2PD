@@ -18,6 +18,7 @@ public class ArcherCombat : PlayerCombat
 		GameObject bullet = Instantiate(obj, pos, obj.transform.rotation);
 		ChangeRotation(bullet);
 		bullet.GetComponent<BulletBehaviour>().direction = playercontroller.direction;
+		bullet.GetComponent<BulletBehaviour>().damage = damage;
 		//NetworkServer.Spawn(bullet);
 	}
 	

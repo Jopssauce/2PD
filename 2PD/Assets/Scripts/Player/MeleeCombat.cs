@@ -16,6 +16,7 @@ public class MeleeCombat : PlayerCombat {
 		GameObject bullet = Instantiate(obj, pos, obj.transform.rotation);
 		ChangeRotation(bullet);
 		bullet.GetComponent<MeleeAttack>().direction = playercontroller.direction;
+		bullet.GetComponent<MeleeAttack>().damage = damage;
 		//NetworkServer.Spawn(bullet);
 	}
 }
