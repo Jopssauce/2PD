@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
 	public float damage;
-	public float attackSpeed = 10;
+	public float attackSpeedModifier = 0;
 	public float attackCooldown = 0.5f;
 	public float offset = 0.2f;
 	protected bool isAttackCooldownStarted = false;
@@ -45,7 +45,7 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 		playercontroller.canCombat = false;
 		isAttackCooldownStarted = true;
 		playercontroller.canMove = false;
-		yield return new WaitForSeconds(attackCooldown);
+		yield return new WaitForSeconds(GetAttackSpeed());
 		playercontroller.canCombat = true;
 		playercontroller.canMove = true;
 		isAttackCooldownStarted = false;
@@ -72,6 +72,12 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 		}
 	}
 
+	public float GetAttackSpeed()
+	{
+		float value = (attackSpeedModifier * attackCooldown) - attackCooldown;
+		return Mathf.Abs (value);
+	}
+
     public void DamageUpgrade(float value)
     {
         damage += value;
@@ -79,7 +85,7 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 
     public void AttackSpeedUpgrade(float value)
     {
-        attackCooldown -= value;
+        attackSpeedModifier += value;
 		if(attackCooldown <= 0.1) attackCooldown = 0.1f;
     }
 }
