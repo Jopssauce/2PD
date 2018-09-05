@@ -11,3 +11,8 @@ public interface IDamageUpgrade<T>
 {
 	void DamageUpgrade(T value);
 }
+
+public interface IAttackSpeedUpgrade<T>
+{
+	void AttackSpeedUpgrade(T value);
+}
