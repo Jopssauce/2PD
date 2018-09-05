@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class PlayerStats : MonoBehaviour {
 	
-	Inventory sharedInventory;
 	public Health healthComponent;
 	public UnityEvent EventOnStatChanged;
 	public UnityEvent EventOnDead;
@@ -22,7 +21,6 @@ public class PlayerStats : MonoBehaviour {
 
 	void Start()
 	{
-		sharedInventory = GameManager.instance.sharedInventory;
 		healthComponent.EventOnHealthDepleted.AddListener(OnHealthDepleted);
 	}
 	
@@ -35,7 +33,6 @@ public class PlayerStats : MonoBehaviour {
 	public virtual void AddCurrency(float damage)
 	{
 		//if(!isServer) return;
-		sharedInventory.GetComponent<Currency>().AddCurrency(damage);
 		EventOnStatChanged.Invoke();
 	}
 	
