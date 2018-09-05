@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerCombat : MonoBehaviour 
+public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 {
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
@@ -70,4 +70,14 @@ public class PlayerCombat : MonoBehaviour
 			transform.rotation = Quaternion.Euler(0,0, 0);
 		}
 	}
+
+    public void DamageUpgrade(float value)
+    {
+        damage += value;
+    }
+
+    public void AttackSpeedUpgrade(float value)
+    {
+        attackCooldown -= value;
+    }
 }

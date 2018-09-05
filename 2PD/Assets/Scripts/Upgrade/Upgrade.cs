@@ -7,12 +7,10 @@ public interface IHealthUpgrade<T>
 	void HealthUpgrade(T value);
 }
 
-public interface IDamageUpgrade<T>
+public interface ICombatUpgrade
 {
-	void DamageUpgrade(T value);
+	void DamageUpgrade(float value);
+	void AttackSpeedUpgrade(float value);
 }
 
-public interface IAttackSpeedUpgrade<T>
-{
-	void AttackSpeedUpgrade(T value);
-}
+
