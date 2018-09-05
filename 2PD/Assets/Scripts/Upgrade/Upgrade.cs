@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upgrade : MonoBehaviour 
+public interface IHealthUpgrade<T>
 {
+	void HealthUpgrade(T value);
 }
 
-public interface IUpgradeable<T>
+public interface IDamageUpgrade<T>
 {
-	void Upgrade(T value);
+	void DamageUpgrade(T value);
 }
