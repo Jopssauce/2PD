@@ -57,8 +57,8 @@ MonoBehaviour:
   isConsumable: 1
   isStackable: 1
   isEquipable: 0
-  maxStacks: 1
-  stacksAmount: 1
+  maxAmount: 64
+  amount: 1
   itemSprite: {fileID: 21300000, guid: e7d8926a7f04dad4d945732b0244f634, type: 3}
   itemUsed:
     m_PersistentCalls:
