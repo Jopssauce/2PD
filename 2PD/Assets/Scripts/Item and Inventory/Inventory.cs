@@ -162,6 +162,17 @@ public class Inventory : MonoBehaviour
 		inventoryChanged.Invoke();
 	}
 
+	public int GetTotalItemOfType(BaseItem item)
+	{
+		int value = 0;
+		IEnumerable<BaseItem> items = itemInventory.Where(x => x.itemName == item.itemName);
+		foreach (var i in items)
+		{
+			value += item.amount;
+		}
+		return value;
+	}
+
 	//Switches item slot 1 with slot 2. Only works if both slots are not null
 	public void SwitchItem(int slot1, int slot2)
 	{
