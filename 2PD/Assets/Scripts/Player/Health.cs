@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using TMPro;
 [System.Serializable]
 public class HealthEvent : UnityEvent<float> {}
-public class Health : MonoBehaviour, IHealthUpgrade<float> {
+public class Health : MonoBehaviour {
 	public GameObject damageNumberPrefab;
 	public bool destroyOnHealthDepleted;
 	bool isInvulnerable = false;
@@ -175,9 +175,5 @@ public class Health : MonoBehaviour, IHealthUpgrade<float> {
 		temp.GetComponent<DamageNumberAnimator>().StartAnim();
 	}
 
-	//IHealthUpgrade
-    public void HealthUpgrade(float value)
-    {
-        maxHealth += value;
-    }
+
 }

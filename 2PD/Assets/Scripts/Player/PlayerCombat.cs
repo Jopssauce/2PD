@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerCombat : MonoBehaviour, ICombatUpgrade
+public class PlayerCombat : MonoBehaviour
 {
 	public GameObject objPrefab;
 	public PlayerController playercontroller;
@@ -77,15 +77,4 @@ public class PlayerCombat : MonoBehaviour, ICombatUpgrade
 		float value = (attackSpeedModifier * attackCooldown) - attackCooldown;
 		return Mathf.Abs (value);
 	}
-
-    public void DamageUpgrade(float value)
-    {
-        damage += value;
-    }
-
-    public void AttackSpeedUpgrade(float value)
-    {
-        attackSpeedModifier += value;
-		if(attackCooldown <= 0.1) attackCooldown = 0.1f;
-    }
 }
