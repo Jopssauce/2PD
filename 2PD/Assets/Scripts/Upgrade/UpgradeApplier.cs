@@ -41,6 +41,10 @@ public class UpgradeApplier: MonoBehaviour
 			{
 				item.isAcquired = true;
 			}
+			else
+			{
+				item.isAcquired = false;
+			}
 		}
 		//Checks if all requirements have been met
 		if(upgrade.requirements.All(x => x.isAcquired == true) && wallet.gold >= upgrade.cost) return true;

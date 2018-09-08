@@ -8,6 +8,9 @@ public class Upgrade : ScriptableObject
 	public float maxHealth;
 	public float damage;
 	public float attackSpeed;
+	[Range(0.0f, 1.0f)]
+	public float dodgeChance;
+	public float damageReduction;
 
 	public int cost;
 	public List<UpgradeRequirement> requirements;
