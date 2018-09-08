@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[SerializeField]
+[System.Serializable]
 public class UpgradeRequirement 
 {
 	//To be used in a serialized list
