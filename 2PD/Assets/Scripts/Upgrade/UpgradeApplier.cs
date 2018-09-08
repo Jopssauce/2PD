@@ -32,16 +32,18 @@ public class UpgradeApplier: MonoBehaviour
 	public bool CheckRequirements(Upgrade upgrade)
 	{
 		Inventory inventory = gameManager.sharedInventory;
+		Currency wallet = inventory.GetComponent<Currency>();
 		// Sets bool of requirements
 		foreach (var item in upgrade.requirements)
 		{
+			//If total item in invetory is greater that item amount required then true
 			if(inventory.GetTotalItemOfType(item.item) >= item.amount)
 			{
 				item.isAcquired = true;
 			}
 		}
 		//Checks if all requirements have been met
-		if(upgrade.requirements.All(x => x.isAcquired == true)) return true;
+		if(upgrade.requirements.All(x => x.isAcquired == true) && wallet.gold >= upgrade.cost) return true;
 		return false;
 	}
 
