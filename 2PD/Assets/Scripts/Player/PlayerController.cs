@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	public bool isMoving = false;
     public Vector3 direction;
 	public Vector3 lastPos;
+	public Vector3 velocity;
 	public int lastDirection;
 	public List<GameObject> directions;
 
@@ -55,6 +56,12 @@ public class PlayerController : MonoBehaviour
         EventOnUp.AddListener (MoveUp);
 		EventOnDown.AddListener (MoveDown);
     }
+
+	void FixedUpdate()
+	{
+		transform.position += velocity.normalized * playerSpeed * Time.deltaTime;
+		velocity = Vector3.zero;
+	}
 
     //public override void OnStartLocalPlayer()
    // {
@@ -144,6 +151,7 @@ public class PlayerController : MonoBehaviour
 			transform.position += new Vector3 ( -1 * playerSpeed * Time.deltaTime , 0, 0);
 			direction = -transform.right;
 			lastDirection = 2;
+			velocity = direction;
             //transform.eulerAngles = transform.forward * 90;
 			GetComponent<SpriteRenderer> ().flipX = false;
 		}
@@ -154,6 +162,7 @@ public class PlayerController : MonoBehaviour
 			transform.position += new Vector3 ( 1 * playerSpeed * Time.deltaTime , 0, 0);
 			direction = transform.right;
 			lastDirection = 3;
+			velocity = direction;
 			GetComponent<SpriteRenderer> ().flipX = true;
             //transform.eulerAngles = -transform.forward * 90;
 		}
@@ -164,6 +173,7 @@ public class PlayerController : MonoBehaviour
 			transform.position += new Vector3 ( 0, 1 * playerSpeed * Time.deltaTime, 0);
 			direction = transform.up;
 			lastDirection = 0;
+			velocity = direction;
             //transform.eulerAngles = transform.forward * 0;
 		}
 	}
@@ -173,6 +183,7 @@ public class PlayerController : MonoBehaviour
 			transform.position += new Vector3 ( 0, -1 * playerSpeed * Time.deltaTime, 0);
 			direction = -transform.up;
 			lastDirection = 1;
+			velocity = direction;
             //transform.eulerAngles = transform.forward * 180;
 		}
 	}
