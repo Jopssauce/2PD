@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a71ae9c3e8cc74083da2de3640fd1c, type: 3}
+  m_Name: Dodge Chance 30%
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  damage: 0
+  attackSpeed: 0
+  dodgeChance: 0.3
+  damageReduction: 0
+  cost: 500
+  requirements:
+  - item: {fileID: 114330054531919984, guid: ef795d46a9f432846a6913dba6989ccb, type: 2}
+    amount: 10
+    isAcquired: 0
+  - item: {fileID: 114566612478686054, guid: 8772f8b8b394bd04ca584e2bc1212777, type: 2}
+    amount: 1
+    isAcquired: 0
