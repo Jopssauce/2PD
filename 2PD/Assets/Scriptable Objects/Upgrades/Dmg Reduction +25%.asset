@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a71ae9c3e8cc74083da2de3640fd1c, type: 3}
+  m_Name: Dmg Reduction +25%
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  damage: 0
+  attackSpeed: 0
+  dodgeChance: 0
+  damageReduction: 0.25
+  cost: 500
+  requirements:
+  - item: {fileID: 114132750097258960, guid: a60b37437c7e9cb4cb892c19505596b1, type: 2}
+    amount: 10
+    isAcquired: 0
+  - item: {fileID: 114566612478686054, guid: 8772f8b8b394bd04ca584e2bc1212777, type: 2}
+    amount: 1
+    isAcquired: 0
