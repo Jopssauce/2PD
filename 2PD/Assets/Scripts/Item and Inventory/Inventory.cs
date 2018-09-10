@@ -204,4 +204,16 @@ public class Inventory : MonoBehaviour
 		}
 		return false;
 	}
+
+	public void DeductItems(BaseItem item, int amount)
+	{
+		int totalItems = GetTotalItemOfType(item);
+		if(totalItems >= amount)
+		{
+			//prevAmount = amount
+			//currentAmount = amount - item.amount
+			//difference = prevAmount - currentAmount
+			//item.amount = item.amount - difference
+		}
+	}
 }

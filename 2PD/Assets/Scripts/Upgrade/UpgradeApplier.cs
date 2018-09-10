@@ -51,6 +51,14 @@ public class UpgradeApplier: MonoBehaviour
 		return false;
 	}
 
+	void TransactUpgrade(Inventory inventory, Upgrade upgrade)
+	{
+		Currency wallet = inventory.GetComponent<Currency>();
+		//Transaction
+		wallet.gold -= upgrade.cost;
+		
+	}
+
     void AddHealth(Health health, float value)
     {
 		if(health == null) return;
