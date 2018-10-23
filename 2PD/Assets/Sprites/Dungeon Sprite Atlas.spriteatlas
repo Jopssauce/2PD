@@ -3,10 +3,11 @@
 --- !u!687078895 &4343727234628468602
 SpriteAtlas:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Dungeon Sprite Atlas
   m_EditorData:
+    serializedVersion: 2
     textureSettings:
       serializedVersion: 2
       anisoLevel: 1
@@ -19,7 +20,7 @@ SpriteAtlas:
       crunchedCompression: 0
       sRGB: 1
     platformSettings: []
-    packingParameters:
+    packingSettings:
       serializedVersion: 2
       padding: 4
       blockOffset: 1
