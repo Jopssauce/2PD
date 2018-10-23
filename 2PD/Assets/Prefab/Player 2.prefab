@@ -34,6 +34,7 @@ GameObject:
   - component: {fileID: 114100067195324470}
   - component: {fileID: 114559574897871546}
   - component: {fileID: 114474420860198496}
+  - component: {fileID: 114729013940912874}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -554,6 +555,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114729013940912874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051295440420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a44f12844aec804c94222729f8994d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114868789992088210
 MonoBehaviour:
   m_ObjectHideFlags: 1
