@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBounds : MonoBehaviour 
 {
 	public int offset;
-	public int boundsSize = 100;
+	public int boundsSize;
 	public bool isEnabled;
 	Vector3 worldToScreenPoint;
 	Vector3 screenToWorldPoint;
@@ -22,6 +22,7 @@ public class PlayerBounds : MonoBehaviour
 		cameraPixel = new Vector2(main.scaledPixelWidth, main.scaledPixelHeight);
 		worldToScreenPoint = main.WorldToScreenPoint(this.transform.position);
 		screenToWorldPoint = main.ScreenToWorldPoint(this.transform.position);
+		//If player is outside of camera stop trying to keep the player inside
 		if(worldToScreenPoint.x >= cameraPixel.x + boundsSize || worldToScreenPoint.x <= -boundsSize || worldToScreenPoint.y >= cameraPixel.y + boundsSize || worldToScreenPoint.y <= -boundsSize) return;
 		if(worldToScreenPoint.x >= cameraPixel.x - offset)
 		{

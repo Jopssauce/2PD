@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 38
-  boundsSize: 100
+  boundsSize: 1
   isEnabled: 1
 --- !u!114 &114868789992088210
 MonoBehaviour:
