@@ -24,6 +24,11 @@ public class CameraArea : MonoBehaviour {
 
 	IEnumerator transition;
 
+	void Start()
+	{
+		gameManager = GameManager.instance;
+	}
+
 	void LateUpdate()
 	{
 		if(!isTransitioning) return;
@@ -43,6 +48,11 @@ public class CameraArea : MonoBehaviour {
 	{	
 		isTransitioning = true;	
 		Camera.main.GetComponent<MultipleTargetCamera>().isEnabled = false;
+		foreach (var player in gameManager.playerList)
+		{
+			player.GetComponent<PlayerBounds>().isEnabled = false;
+			player.GetComponent<PlayerController>().canMove = false;
+		}
 		while (isTransitioning && destinations.Count > 0 && index != destinations.Count)
 		{
 			newPos = destinations[index].transform.position;
@@ -68,6 +78,11 @@ public class CameraArea : MonoBehaviour {
 		isTransitioning = false;
 		Debug.Log("Deactivate");
 		Camera.main.GetComponent<MultipleTargetCamera>().isEnabled = true;
+		foreach (var player in gameManager.playerList)
+		{
+			player.GetComponent<PlayerBounds>().isEnabled = true;
+			player.GetComponent<PlayerController>().canMove = true;
+		}
 		index = 0;
 		StopAllCoroutines();
 		EventDeactivated.Invoke();

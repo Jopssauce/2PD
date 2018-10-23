@@ -759,6 +759,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 38
+  boundsSize: 100
+  isEnabled: 1
 --- !u!114 &114988855549655152
 MonoBehaviour:
   m_ObjectHideFlags: 1
