@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBounds : MonoBehaviour 
 {
+	public int offset;
 	Vector3 worldToScreenPoint;
 	Vector3 screenToWorldPoint;
 	Vector2 cameraPixel;
@@ -22,22 +23,22 @@ public class PlayerBounds : MonoBehaviour
 		worldToScreenPoint = main.WorldToScreenPoint(this.transform.position);
 		screenToWorldPoint = main.ScreenToWorldPoint(this.transform.position);
 
-		if(worldToScreenPoint.x >= cameraPixel.x)
+		if(worldToScreenPoint.x >= cameraPixel.x - offset)
 		{
-			pos.x = main.ScreenToWorldPoint(new Vector2(cameraPixel.x, worldToScreenPoint.y) ).x;
+			pos.x = main.ScreenToWorldPoint(new Vector2(cameraPixel.x  - offset, worldToScreenPoint.y) ).x;
 		}
-		if(worldToScreenPoint.x <= 0)
+		if(worldToScreenPoint.x <= offset)
 		{
-			pos.x = main.ScreenToWorldPoint(new Vector2(0, worldToScreenPoint.y) ).x;
+			pos.x = main.ScreenToWorldPoint(new Vector2(offset, worldToScreenPoint.y) ).x;
 		}
 
-		if(worldToScreenPoint.y >= cameraPixel.y)
+		if(worldToScreenPoint.y >= cameraPixel.y - offset)
 		{
-			pos.y = main.ScreenToWorldPoint(new Vector2(worldToScreenPoint.x, cameraPixel.y) ).y;
+			pos.y = main.ScreenToWorldPoint(new Vector2(worldToScreenPoint.x, cameraPixel.y - offset) ).y;
 		}
-		if(worldToScreenPoint.y <= 0)
+		if(worldToScreenPoint.y <= offset)
 		{
-			pos.y = main.ScreenToWorldPoint(new Vector2(worldToScreenPoint.x, 0) ).y;
+			pos.y = main.ScreenToWorldPoint(new Vector2(worldToScreenPoint.x, offset) ).y;
 		}
 		transform.position = pos;
 	}
