@@ -58,12 +58,20 @@ public class GameManager : MonoBehaviour
             respawn = RespawnPlayers();
             StartCoroutine(respawn);
         }
-        if (Input.GetKeyDown(KeyCode.F2) && isRespawning == false)
+        /*if (Input.GetKeyDown(KeyCode.F2) && isRespawning == false)
         {
             if (debugSpawn == null) return;
             foreach (var player in playerList)
             {
                 player.transform.position = debugSpawn.transform.position;
+            }
+        }*/
+        if (Input.GetKeyDown(KeyCode.F3) && isRespawning == false)
+        {
+            if (checkpoint == null) return;
+            foreach (var player in playerList)
+            {
+                player.transform.position = checkpoint.transform.position;
             }
         }
 
