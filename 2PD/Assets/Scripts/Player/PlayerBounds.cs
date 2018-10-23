@@ -13,14 +13,11 @@ public class PlayerBounds : MonoBehaviour
 	Camera main;
 	Vector3 pos;
 
-	void Start()
-	{
-		main = Camera.main;
-	}
-
 	void Update()
 	{
-		if(!isEnabled) return;
+		if(main == null) main = Camera.main;
+		if(!isEnabled || main == null) return;
+		
 		pos = transform.position;
 		cameraPixel = new Vector2(main.scaledPixelWidth, main.scaledPixelHeight);
 		worldToScreenPoint = main.WorldToScreenPoint(this.transform.position);
