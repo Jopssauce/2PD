@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllahuCollideAttack : EnemyCollideAttack {
+public class FlameBallCollideAttack : EnemyCollideAttack {
 	public GameObject explosionPrefab;
 
 

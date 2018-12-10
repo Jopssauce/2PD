@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class AllahuAI : EnemyAI {
+public class FlameBallAI : EnemyAI {
 	public override void ChasePlayer ()
 	{
         if (players.Count == 0) return;
