@@ -14,9 +14,7 @@ public class PressurePad : Interactable
 	{
 		base.Start();
 		EventInRange.AddListener(Interact);
-		//EventInRange.AddListener(OnSprite);
 		EventOutRange.AddListener(Interact);
-		//gameManager.playerList.First(player => player.playerID == playerIDRequired).EventOnInteract.AddListener(Interact);
 	}
 
 	void LateUpdate()

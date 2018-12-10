@@ -30,10 +30,7 @@ public class Container : Interactable {
 	
 	public override void Interact(GameObject obj)
 	{
-		//if (isInteractable == true && player == currentPlayer)
-		//{
-			EventInteract.Invoke();
-		//}
+		EventInteract.Invoke();
 	}
 
 	void DropItemsRandom()

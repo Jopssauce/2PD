@@ -16,7 +16,6 @@ public class Switch : Interactable {
 	public override void Start()
 	{
 		base.Start();
-		//gameManager.playerList.First(player => player.playerID == playerIDRequired).EventOnInteract.AddListener(Interact);
 	}
 
 	public override void Interact(GameObject obj)

@@ -21,14 +21,10 @@ public class ZodiacStatue : Interactable
 		gameManager.uiManager.CanvasUI.EventDialogueClosed.AddListener(gameManager.uiManager.CanvasUI.ForceOpen);
 		GetComponent<InteractEventHandler>().ActivateDialogue(dialogue);
 		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-		//if(isInteracted) Activate(actor);
-		//if(!isInteracted) Deactivate(actor);
 		EventInteracted.Invoke(actor);
 	}
 	public override void Activate(GameObject actor)
 	{
-		//gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = this;
-		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
 		particle.SetActive(true);
 		isInteracted = true;
 		gameManager.uiManager.CanvasUI.OpenEnycloepdia();
@@ -38,7 +34,6 @@ public class ZodiacStatue : Interactable
 	public override void Deactivate(GameObject actor)
 	{
 		gameManager.uiManager.CanvasUI.encyclopedia.GetComponent<InventoryActor>().interactable = null;
-		//gameManager.uiManager.CanvasUI.OpenEnycloepdia();
 		gameManager.uiManager.CanvasUI.EventDialogueClosed.RemoveListener(gameManager.uiManager.CanvasUI.ForceOpen);
 		EventDeactivated.Invoke(actor);
 	}
