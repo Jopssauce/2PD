@@ -1,6 +1,8 @@
 # Gems of Yggdra (College Project)
+**[Game Trailer](https://vimeo.com/289092517)**
+
 Gems of Yggdra is a 2 Player Couch CO-OP Action Adventure Puzzle game about a brother and sister trying to get out of a trapped dungeon. The game has recieved the title of Best Capstone 2 during the Benilde July Incendium 2018. 
-I worked as the Lead Developer of the project and worked on the majority of the game mechanics and systems.
+I worked as the Lead Developer of the project and worked on the majority of the game mechanics and systems. 
 
 <p align="center">
   <img src="https://i.imgur.com/l75Ddh2.jpg">
