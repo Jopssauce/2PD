@@ -46,3 +46,8 @@ Infusions are skills provided by certain gems that the player can use to combat 
 <img src="https://i.imgur.com/7PMk4yn.png" width="45%"></img>
 </p>
 Levels feauture a variety of handcrafted interactable puzzles and enemies to challenge the player as they progress throught the game.
+
+## Build
+Playable Builds of the game can be found here:
+- November 17, 2018 [Gems of Yggdra 1.4.3](https://drive.google.com/open?id=18mYG2EF-XGnyjyAeWxM31Xezxl0nFKmU)
+- October 24, 2018 [Gems of Yggdra 1.4.2](https://drive.google.com/open?id=1LeffhRkNiRLSZjOxP0su1GxeUCgjYLuF)
